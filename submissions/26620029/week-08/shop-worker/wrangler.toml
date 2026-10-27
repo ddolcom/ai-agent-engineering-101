@@ -4,7 +4,8 @@ compatibility_date = "2025-09-01"
 
 [vars]
 # ---- shop identity ----
-SHOP_NAME = "Ddolcom's Best (26620029)" # name on the market board, in the Agent Card and in every receipt
+# SHOP_NAME = "Ddolcom's Best (26620029)"  # wanted name; the market refuses it on join (409) and it may break receipt checks, ask the instructor how to rename
+SHOP_NAME = "Ddolcom's BEST SHOP" # name on the market board, in the Agent Card and in every receipt
 
 # ---- shop policy (change, then: npx wrangler@4 deploy) ----
 # Reserves are fixed in code: lamp 100, chair 180, bookshelf 260. An ask below a reserve is raised to it.
