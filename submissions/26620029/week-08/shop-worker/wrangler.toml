@@ -18,8 +18,8 @@ SHOP_NAME = "Ddolcom's BEST SHOP" # name on the market board, in the Agent Card 
 ASK_LAMP = 115                    # opening ask per item (was 150, +50% over reserve; now +15%)
 ASK_CHAIR = 200                   # was 260, +44% over reserve; now +11%
 ASK_BOOKSHELF = 290               # was 380, +46% over reserve; now +12%
-ACCEPT_AFTER = 2                  # from the Nth buyer offer: accept if offer >= reserve and >= halfway to our ask (was 3)
-ACCEPT_ANY = 3                    # from the Nth buyer offer: accept any offer >= reserve (was 5)
+ACCEPT_AFTER = 1                  # from the Nth buyer offer: accept if offer >= reserve and >= halfway to our ask (was 2, week-07: 3)
+ACCEPT_ANY = 2                    # from the Nth buyer offer: accept any offer >= reserve (was 3, week-07: 5)
 MAX_TURNS = 18                    # buyer messages before the shop ends the talk (was 12)
 FAST_AFTER = 12                  # after this many buyer messages each counter moves at least halfway from our ask to the reserve
 SALES_STYLE = "Sell as high as you can for the first 12 buyer messages, coming down in steady steps. After 12 buyer messages, cut the price faster toward the reserve: a deal at a small margin is better than no deal. Maximize the number of closed deals; a thin margin is fine."
