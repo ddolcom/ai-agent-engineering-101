@@ -18,6 +18,7 @@ const DEFAULTS = {
   ACCEPT_AFTER: 3,   // from this buyer offer on, accept an offer >= reserve that is >= halfway to our ask
   ACCEPT_ANY: 5,     // from this buyer offer on, accept any offer >= reserve (no deal lost by 1)
   MAX_TURNS: 12,     // buyer messages before the shop ends the talk
+  FAST_AFTER: 12,    // after this many buyer messages every counter moves at least halfway from our ask to the reserve
   SALES_STYLE: "Sell as high as you can, but a deal at or above the reserve is better than losing the buyer.",
 };
 const MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
@@ -29,7 +30,7 @@ function policy(env) {
   };
   const ask = { lamp: num("ASK_LAMP"), chair: num("ASK_CHAIR"), bookshelf: num("ASK_BOOKSHELF") };
   for (const k of Object.keys(ask)) ask[k] = Math.max(ask[k], RESERVE[k]);   // an ask below the reserve is not allowed
-  return { ask, acceptAfter: num("ACCEPT_AFTER"), acceptAny: num("ACCEPT_ANY"), maxTurns: num("MAX_TURNS"),
+  return { ask, acceptAfter: num("ACCEPT_AFTER"), acceptAny: num("ACCEPT_ANY"), maxTurns: num("MAX_TURNS"), fastAfter: num("FAST_AFTER"),
            style: (env && env.SALES_STYLE) || DEFAULTS.SALES_STYLE };
 }
 
@@ -153,6 +154,7 @@ async function decide(env, t) {
 
   let price = move && Number.isFinite(Number(move.price)) ? Math.round(Number(move.price)) : ruleCounter(t, pol);
   if (price > t.ask) price = t.ask;                        // never raise our own ask
+  if (t.turns > pol.fastAfter) price = Math.min(price, Math.round((t.ask + reserve) / 2));   // long talk: close the gap faster
   if (price < reserve) price = reserve;                     // the model may forget the floor; the code does not
   if (offer !== null && offer >= reserve && price <= offer) return { action: "accept" };   // our counter would undercut the offer
   return { action: "counter", price };
