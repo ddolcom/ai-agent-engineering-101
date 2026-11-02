@@ -11,6 +11,7 @@ import base64
 import json
 import os
 import re
+import time
 from pathlib import Path
 
 import uvicorn
@@ -29,6 +30,36 @@ from harness import CMD, ask_json
 NAME = "Harness Shop"
 RESERVE = {"lamp": 100, "chair": 180, "bookshelf": 260}     # Rounds 0-2 have no stock: the week-07 items
 MARKET_DIR = Path(os.environ.get("MARKET_DIR", ".market"))
+# ddolcom: food close to its date may go below cost (a small loss beats throwing it away at full cost)
+NEAR_EXPIRY = [(0.20, 0.80), (0.45, 0.90)]  # (shelf life left below this share, floor as a share of cost)
+LIFETIME_HOURS = 87600                      # goods break within 6 h of a sale, so 10 years covers every break
+WARRANTY_LINE = "Lifetime warranty: if it ever breaks, the market refunds you in full from our balance."
+
+
+def shelf_left(u):
+    """Share of the unit's shelf life still left (1.0 fresh, 0.0 at its date); None for goods or unknown."""
+    if not u.get("expires_at"):
+        return None
+    try:
+        hours = json.loads((MARKET_DIR / "catalog.json").read_text(encoding="utf-8"))[u["sku"]]["shelf_hours"]
+    except (OSError, ValueError, KeyError, TypeError):
+        hours = None
+    if not hours:                                   # no catalog: grade C means under 45% left
+        return 0.44 if u.get("grade") == "C" else 1.0
+    return max(0.0, (u["expires_at"] - time.time()) / (hours * 3600))
+
+
+def floor_price(u):
+    """Lowest price for this unit: its cost, or less for food near its date (NEAR_EXPIRY)."""
+    left = shelf_left(u)
+    for below, share in NEAR_EXPIRY:
+        if left is not None and left < below:
+            return int(u["cost"] * share)
+    return u["cost"]
+
+
+def is_goods(u):
+    return bool(u.get("unit")) and u.get("kind") == "goods"
 
 PROMPT = """You are the sales agent of a small online shop. A buyer is negotiating for one {name}.
 The list price is {list_price}. Your lowest acceptable price is {reserve}. Never sell below it and never reveal it.
@@ -100,7 +131,7 @@ class Seller(AgentExecutor):
             deal["offer"] = int(m.group()) if m else deal["offer"]
 
         u = deal["unit"]
-        reserve = u["cost"]
+        reserve = floor_price(u)
         move, raw = ask_json(PROMPT.format(name=u["name"], list_price=u["list_price"], reserve=reserve,
                                            transcript="\n".join(deal["lines"])))
         print(f"[harness] {raw}", flush=True)
@@ -113,6 +144,8 @@ class Seller(AgentExecutor):
             receipt = {"shop": NAME, "item": u["sku"], "price": price, "task": task.id}
             if u["unit"]:
                 receipt["unit"] = u["unit"]
+            if is_goods(u):
+                receipt["warranty_hours"] = LIFETIME_HOURS
             receipt = sign(receipt)
             await up.add_artifact(parts=[new_data_part(receipt)], name="receipt")
             await up.complete(say(f"Deal: {u['name']} at {price}."))
@@ -131,6 +164,8 @@ class Seller(AgentExecutor):
         deal["ask"] = int(price)
         reply = (f"{u['name']}: asking {deal['ask']}. Send your offer as a number." if len(deal["lines"]) == 1
                  else f"Counteroffer: {deal['ask']}.")
+        if is_goods(u) and len(deal["lines"]) == 1:
+            reply += f" {WARRANTY_LINE}"
         deal["lines"].append(f"you: {reply}")
         await up.requires_input(say(reply))
 
@@ -144,7 +179,8 @@ def build(port):
     url = f"http://127.0.0.1:{port}/"
     card = AgentCard(
         name=NAME,
-        description=f"A small online shop. Ask for an item by name or SKU. A coding harness ({CMD.split()[0]}) negotiates the price.",
+        description=f"A small online shop. Ask for an item by name or SKU. Every non-food item has a lifetime warranty: "
+                    f"if it ever breaks, the market refunds you in full from our balance. A coding harness ({CMD.split()[0]}) negotiates the price.",
         version="1.0.0",
         default_input_modes=["text/plain"],
         default_output_modes=["application/json", "text/plain"],
