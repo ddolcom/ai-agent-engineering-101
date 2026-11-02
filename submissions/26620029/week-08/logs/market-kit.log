@@ -1,0 +1,84 @@
+17:10:57 [kit] market_kit 4, D:\ai-agent-engineering-101\submissions\26620029\week-08
+17:11:08 [tunnel] https://carpet-char-special-amendment.trycloudflare.com, waiting until it answers
+17:11:34 [shop] your seller on port 3997; others reach it through the kit at https://carpet-char-special-amendment.trycloudflare.com
+17:11:36 [market] shop registered as ddolcom, round 2
+17:11:37 [market] buyer registered as ddolcom, round 2
+17:11:39 [order o-344b084985fd] bookshelf, budget 270, round 2
+17:11:40 [kit] 33 shops in .market\shops.json, running market_buyer
+17:11:41 [buyer] [score] dyishappy: score 4.46 = reviews 4.46 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] q00: score 4.33 = reviews 4.31 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] YAHO1212: score 4.31 = reviews 4.29 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] oak-and-pine: score 4.28 = reviews 4.26 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] bright-living: score 4.26 = reviews 4.23 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] shaun0927: score 4.23 = reviews 4.21 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] 25620027: score 4.21 = reviews 4.20 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] Ddolcom's BEST SHOP: score 4.21 = reviews 4.16 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] elm-street: score 4.17 = reviews 4.14 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] bjeon01: score 4.12 = reviews 4.08 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] myeonggi: score 4.10 = reviews 4.08 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] moss-and-oak: score 4.06 = reviews 4.06 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] grand-furniture: score 4.04 = reviews 4.02 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] 11im: score 3.99 = reviews 3.97 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] chaewoonee: score 3.98 = reviews 3.94 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] yeonsong2: score 3.96 = reviews 3.92 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] shaun0927-lab1: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] yms979: score 3.89 = reviews 3.89 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] shaun0927-lab3: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] nocha12: score 3.83 = reviews 3.81 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] thisjonghoon: score 3.74 = reviews 3.73 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] JangSeongWoong: score 3.72 = reviews 3.72 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] kcwarni: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] shaun0927-lab2: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] fair-furniture: score 3.67 = reviews 3.64 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] corner-store: score 3.63 = reviews 3.59 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] lee-sungsoo: score 3.62 = reviews 3.61 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] mjforge: score 3.62 = reviews 3.59 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] cheapest-in-town: score 3.49 = reviews 3.48 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] ggari-shop: score 3.46 = reviews 3.44 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] dragonash: score 3.41 = reviews 3.40 (10), red flags 0, no trades of mine
+17:11:41 [buyer] [score] willow-goods: score 3.02 = reviews 3.00 (0), red flags 0, no trades of mine
+17:11:41 [buyer] [score] maple-home: score -0.51 = reviews 1.54 (10), red flags 10, no trades of mine
+17:11:41 [buyer] [choose] https://installations-adam-floor-wild.trycloudflare.com: dyishappy - score 4.46 = reviews 4.46 (10), red flags 0, no trades of mine
+17:11:41 [buyer] card: dyishappy -> https://installations-adam-floor-wild.trycloudflare.com/a2a/0
+17:11:41 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_FAILED | Shop busy; model concurrency limit reached
+17:11:41 [buyer] {"shop": "https://installations-adam-floor-wild.trycloudflare.com", "receipt": null, "stars": 3, "review": "No deal for the bookshelf within budget 270; my offers none."}
+17:11:41 [market] ledger #1947050: no deal, stars 3, verified False, review not shown
+17:11:57 [seller] [harness] {"action": "counter", "price": 380}
+17:12:01 [order o-f02138e2cf16] bookshelf, budget 230, round 2
+17:12:03 [kit] 33 shops in .market\shops.json, running market_buyer
+17:12:04 [buyer] [score] dyishappy: score 4.40 = reviews 4.46 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+17:12:04 [buyer] [score] q00: score 4.34 = reviews 4.31 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] YAHO1212: score 4.33 = reviews 4.29 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] oak-and-pine: score 4.28 = reviews 4.26 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] bright-living: score 4.25 = reviews 4.23 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] 25620027: score 4.24 = reviews 4.20 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] shaun0927: score 4.23 = reviews 4.21 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] Ddolcom's BEST SHOP: score 4.20 = reviews 4.16 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] elm-street: score 4.16 = reviews 4.14 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] bjeon01: score 4.12 = reviews 4.08 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] myeonggi: score 4.11 = reviews 4.08 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] grand-furniture: score 4.04 = reviews 4.02 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] moss-and-oak: score 4.03 = reviews 4.01 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] chaewoonee: score 3.99 = reviews 3.94 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] 11im: score 3.98 = reviews 3.97 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] yeonsong2: score 3.96 = reviews 3.92 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] shaun0927-lab3: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] shaun0927-lab1: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] nocha12: score 3.86 = reviews 3.81 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] thisjonghoon: score 3.76 = reviews 3.73 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] JangSeongWoong: score 3.75 = reviews 3.72 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] shaun0927-lab2: score 3.72 = reviews 3.67 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] yms979: score 3.72 = reviews 3.71 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] fair-furniture: score 3.69 = reviews 3.64 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] kcwarni: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] lee-sungsoo: score 3.63 = reviews 3.61 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] corner-store: score 3.60 = reviews 3.59 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] mjforge: score 3.52 = reviews 3.50 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] cheapest-in-town: score 3.51 = reviews 3.48 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] ggari-shop: score 3.45 = reviews 3.44 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] dragonash: score 3.44 = reviews 3.40 (10), red flags 0, no trades of mine
+17:12:04 [buyer] [score] willow-goods: score 3.03 = reviews 3.00 (0), red flags 0, no trades of mine
+17:12:04 [buyer] [score] maple-home: score -0.52 = reviews 1.54 (10), red flags 10, no trades of mine
+17:12:04 [buyer] [choose] https://installations-adam-floor-wild.trycloudflare.com: dyishappy - score 4.40 = reviews 4.46 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+17:12:04 [buyer] card: dyishappy -> https://installations-adam-floor-wild.trycloudflare.com/a2a/0
+17:12:05 [seller] [harness] {"action": "counter", "price": 180}
