@@ -1,7 +1,7 @@
 {
   "harness": "claude -p --model haiku (starter harness.py); market_buyer picks shops in code from reviews + memory",
   "seller": {
-    "cmd": "\"D:\\ai-agent-engineering-101\\.venv\\Scripts\\python.exe\" seller.py --port {port}"
+    "cmd": "\"D:\\ai-agent-engineering-101\\.venv\\Scripts\\python.exe\" seller_r3.py --port {port}"
   },
   "buyer": {
     "cmd": "\"D:\\ai-agent-engineering-101\\.venv\\Scripts\\python.exe\" buyer.py --url {url} --item {item} --budget {budget}"
