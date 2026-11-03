@@ -124,8 +124,10 @@ def plan(inv, catalog, demand, mem, cu=None):
         if len(buy) >= MAX_LINES:
             break
         sku = pick_sku(by_cat[cat], median, customers.best_sku(cu, cat), cheap_cat)
-        if sku["list_price"] > DEAR:
-            qty = min(qty, DEAR_QTY)
+        if sku["list_price"] > DEAR:                     # dear SKUs: at most DEAR_QTY in stock, not per line
+            qty = min(qty, DEAR_QTY - stock.get(cat, 0))
+            if qty <= 0:
+                continue
         qty = max(1, min(qty, int(LINE_SHARE * inv["balance"] / (sku["list_price"] * COST_GUESS))))
         cost = sku["list_price"] * COST_GUESS * qty
         if cost > spend:
