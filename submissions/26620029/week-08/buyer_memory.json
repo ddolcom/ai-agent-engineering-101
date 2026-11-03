@@ -1017,5 +1017,1713 @@
   "price": 180,
   "task": "933ddf00-8e98-4e05-be76-87c1328ae512",
   "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:17:08",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "yms979",
+  "offers": [
+   95,
+   100,
+   105
+  ],
+  "price": 103,
+  "task": "52266fe7-3e5d-4b44-9c09-3ea3aa6ff25f",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:17:39",
+  "item": "bookshelf",
+  "budget": 325,
+  "shop": "yms979",
+  "offers": [
+   250,
+   285
+  ],
+  "price": 277,
+  "task": "418fd277-295f-4399-932e-582c2aef52e6",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:18:06",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "yms979",
+  "offers": [
+   90,
+   97,
+   100
+  ],
+  "price": 100,
+  "task": "27b6d3aa-a207-4713-a7a8-5faff355733b",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:18:40",
+  "item": "chair",
+  "budget": 160,
+  "shop": "shaun0927",
+  "offers": [
+   140,
+   160
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:19:10",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "25620027",
+  "offers": [
+   240,
+   255,
+   263
+  ],
+  "price": 263,
+  "task": "113592a4-9e26-41cb-974d-13991003f67a",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:19:41",
+  "item": "chair",
+  "budget": 250,
+  "shop": "25620027",
+  "offers": [
+   170,
+   180
+  ],
+  "price": 180,
+  "task": "cfac98ab-95fa-4959-83fa-8bb8d9bb5ae8",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:20:01",
+  "item": "chair",
+  "budget": 225,
+  "shop": "25620027",
+  "offers": [
+   170,
+   180
+  ],
+  "price": 180,
+  "task": "abb0cedc-aff1-4e77-8f12-971366da4fb3",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:20:29",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "25620027",
+  "offers": [
+   90,
+   100
+  ],
+  "price": 100,
+  "task": "30d5cb85-919b-40a8-bf68-902aa74b53bf",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:20:49",
+  "item": "chair",
+  "budget": 225,
+  "shop": "25620027",
+  "offers": [
+   170,
+   180
+  ],
+  "price": 180,
+  "task": "c2ad9873-267f-42f9-bf38-4782fb7dbb9e",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:21:12",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "25620027",
+  "offers": [
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "d5514483-1c85-45b3-a148-6304488e34be",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:21:34",
+  "item": "lamp",
+  "budget": 140,
+  "shop": "25620027",
+  "offers": [
+   90,
+   100
+  ],
+  "price": 100,
+  "task": "77fc9116-6eaf-4437-b309-a57fe63779db",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:21:57",
+  "item": "chair",
+  "budget": 185,
+  "shop": "25620027",
+  "offers": [
+   165,
+   175,
+   180
+  ],
+  "price": 180,
+  "task": "0273dc0e-c2b6-4591-86c5-1477a22bdeaf",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:22:38",
+  "item": "bookshelf",
+  "budget": 295,
+  "shop": "25620027",
+  "offers": [
+   230,
+   258,
+   265
+  ],
+  "price": 265,
+  "task": "32bb29aa-0a35-419a-ae2e-2f947b8abf64",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:23:16",
+  "item": "chair",
+  "budget": 225,
+  "shop": "25620027",
+  "offers": [
+   175,
+   185
+  ],
+  "price": 185,
+  "task": "8742a0ba-3477-4c45-aaa7-a4b148aaae0d",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:23:35",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "25620027",
+  "offers": [
+   230,
+   250,
+   262
+  ],
+  "price": 262,
+  "task": "9f8bce25-0c51-4550-a2eb-b5de5a1503e5",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:24:06",
+  "item": "chair",
+  "budget": 160,
+  "shop": "25620027",
+  "offers": [
+   140,
+   150,
+   155,
+   160
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:24:54",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "25620027",
+  "offers": [
+   70,
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "47254d59-a85b-4e4f-8c88-61f377a3e8b3",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:25:21",
+  "item": "lamp",
+  "budget": 140,
+  "shop": "25620027",
+  "offers": [
+   85,
+   98,
+   100
+  ],
+  "price": 100,
+  "task": "4b4993ed-4fff-4005-a06d-091b4aae007e",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:25:46",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "25620027",
+  "offers": [
+   200,
+   215,
+   225,
+   230
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:26:29",
+  "item": "chair",
+  "budget": 250,
+  "shop": "25620027",
+  "offers": [
+   150,
+   170,
+   180
+  ],
+  "price": 180,
+  "task": "d2ff46b8-0254-4186-b94e-650fcb0d4af5",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:27:01",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "25620027",
+  "offers": [
+   85,
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "1eda1fd9-b1f4-4fca-a22a-99d5adc95fd5",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:27:25",
+  "item": "lamp",
+  "budget": 140,
+  "shop": "25620027",
+  "offers": [
+   85,
+   100
+  ],
+  "price": 100,
+  "task": "fd322c74-5647-43e7-a158-ad5a2ae79afb",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:27:46",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "25620027",
+  "offers": [
+   90,
+   100
+  ],
+  "price": 100,
+  "task": "8a30ad31-9c49-41e6-828b-e0795a7a32c7",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:28:23",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "25620027",
+  "offers": [
+   200,
+   245,
+   255,
+   262
+  ],
+  "price": 262,
+  "task": "7f4d1380-e9a8-4b0a-ba49-450fd0d36648",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:29:17",
+  "item": "chair",
+  "budget": 250,
+  "shop": "25620027",
+  "offers": [
+   160,
+   175,
+   180
+  ],
+  "price": 180,
+  "task": "d8dff8ec-dc23-4fc4-a5cd-56d4cb286a24",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:29:48",
+  "item": "chair",
+  "budget": 225,
+  "shop": "25620027",
+  "offers": [
+   150,
+   175,
+   180
+  ],
+  "price": 180,
+  "task": "f205a9b5-6325-4e9b-8159-13930caeab09",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:30:14",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "25620027",
+  "offers": [
+   220,
+   250,
+   262
+  ],
+  "price": 262,
+  "task": "0fb2115a-b0c3-4b13-8591-37764631df9a",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:30:49",
+  "item": "chair",
+  "budget": 225,
+  "shop": "25620027",
+  "offers": [
+   170,
+   180
+  ],
+  "price": 180,
+  "task": "31e67259-34dd-4d9d-91e1-43719293f723",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:31:18",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "25620027",
+  "offers": [
+   90,
+   100
+  ],
+  "price": 100,
+  "task": "0e61d2e9-c780-4d0e-9c81-60e40fcb227d",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:31:39",
+  "item": "chair",
+  "budget": 185,
+  "shop": "25620027",
+  "offers": [
+   165,
+   178,
+   183
+  ],
+  "price": 183,
+  "task": "04a37be1-3c6e-4d98-bf21-549224dda437",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:32:10",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "25620027",
+  "offers": [
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "d8f4a924-e3d2-407c-bdc4-ea76a757a0fd",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:32:29",
+  "item": "bookshelf",
+  "budget": 325,
+  "shop": "25620027",
+  "offers": [
+   230,
+   260
+  ],
+  "price": 260,
+  "task": "9f837990-aa79-409e-accf-5443c04cc8cc",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:33:15",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "25620027",
+  "offers": [
+   240,
+   255,
+   262
+  ],
+  "price": 262,
+  "task": "cd43af81-366e-4ccf-bcd9-6b217efae3bb",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:33:46",
+  "item": "chair",
+  "budget": 250,
+  "shop": "25620027",
+  "offers": [
+   160,
+   175,
+   182
+  ],
+  "price": 182,
+  "task": "8a2cdd27-6e1f-420b-8acc-752b64b1ec96",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:34:18",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "25620027",
+  "offers": [
+   90,
+   100
+  ],
+  "price": 100,
+  "task": "d8cdeb7d-de7e-440e-987d-efb18401716b",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:34:44",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "25620027",
+  "offers": [
+   230,
+   250,
+   262
+  ],
+  "price": 262,
+  "task": "402c9ebd-be62-492a-b075-6759e37b6348",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:35:18",
+  "item": "chair",
+  "budget": 185,
+  "shop": "25620027",
+  "offers": [
+   165,
+   178,
+   182
+  ],
+  "price": 182,
+  "task": "a28a112a-32a0-4c93-bc56-230e33e6a0e3",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:35:48",
+  "item": "chair",
+  "budget": 160,
+  "shop": "25620027",
+  "offers": [
+   130,
+   150,
+   155,
+   158,
+   160
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:36:34",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "yms979",
+  "offers": [
+   190,
+   225
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:37:07",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "yms979",
+  "offers": [
+   220,
+   240,
+   250,
+   255,
+   260
+  ],
+  "price": 260,
+  "task": "897ebb95-82af-46f5-b579-54fe0cca793a",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:38:10",
+  "item": "bookshelf",
+  "budget": 295,
+  "shop": "25620027",
+  "offers": [
+   245,
+   265
+  ],
+  "price": 265,
+  "task": "6840caa4-7886-4b06-b4be-0218fd9ac3ba",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:38:29",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "yms979",
+  "offers": [
+   240,
+   258,
+   260
+  ],
+  "price": 260,
+  "task": "736be884-9420-4113-923f-35fae6bb094d",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:39:06",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "yms979",
+  "offers": [
+   190,
+   220
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:39:40",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "yms979",
+  "offers": [
+   250,
+   265,
+   268
+  ],
+  "price": 268,
+  "task": "c897e62d-1933-4578-bb8e-158d885c8765",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:40:22",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "yms979",
+  "offers": [
+   100,
+   112
+  ],
+  "price": 108,
+  "task": "ca70fe7d-1413-464b-898a-4c13a917e8c2",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:40:43",
+  "item": "lamp",
+  "budget": 90,
+  "shop": "yms979",
+  "offers": [
+   80
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:41:10",
+  "item": "chair",
+  "budget": 160,
+  "shop": "25620027",
+  "offers": [
+   120,
+   140,
+   150,
+   155,
+   158
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:41:59",
+  "item": "chair",
+  "budget": 225,
+  "shop": "25620027",
+  "offers": [
+   170,
+   180
+  ],
+  "price": 180,
+  "task": "ed9a2a55-2abd-4f5c-97f8-17fbfbc21dd9",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:42:22",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "25620027",
+  "offers": [
+   85,
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "18941214-c270-48a1-91fd-94b8cb1a85de",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:42:48",
+  "item": "chair",
+  "budget": 205,
+  "shop": "25620027",
+  "offers": [
+   170,
+   180
+  ],
+  "price": 180,
+  "task": "46dd25eb-accf-49fa-ac46-f4aaa366b2ae",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:43:19",
+  "item": "lamp",
+  "budget": 90,
+  "shop": "25620027",
+  "offers": [
+   70,
+   85,
+   88,
+   90
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:44:12",
+  "item": "chair",
+  "budget": 250,
+  "shop": "25620027",
+  "offers": [
+   170,
+   180
+  ],
+  "price": 180,
+  "task": "9b5bafd1-ba6f-482a-b4e0-c5e1bfaffe9a",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:44:31",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "25620027",
+  "offers": [
+   90,
+   97,
+   100
+  ],
+  "price": 100,
+  "task": "0088635f-8182-458c-81ac-833b316bda28",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:44:59",
+  "item": "chair",
+  "budget": 225,
+  "shop": "25620027",
+  "offers": [
+   160,
+   180
+  ],
+  "price": 180,
+  "task": "60770859-0700-46c2-a6b5-ccf47afb2a88",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:45:26",
+  "item": "chair",
+  "budget": 250,
+  "shop": "25620027",
+  "offers": [
+   170,
+   175,
+   180
+  ],
+  "price": 180,
+  "task": "bbe2716a-85fd-4dde-89c9-668e667e73e8",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:45:49",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "25620027",
+  "offers": [
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "7289c17b-b930-4a15-aa41-5229b66b2607",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:46:18",
+  "item": "lamp",
+  "budget": 140,
+  "shop": "25620027",
+  "offers": [
+   90,
+   100
+  ],
+  "price": 100,
+  "task": "9082b87c-e8c1-4017-abb6-56ab1b013243",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:46:39",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "25620027",
+  "offers": [
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "0e1b3685-8c8b-4fd1-94ea-7d799de3a582",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:47:03",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "25620027",
+  "offers": [
+   250,
+   265
+  ],
+  "price": 265,
+  "task": "11bcaccb-091a-4791-aa1e-256dc1a9abc6",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:47:25",
+  "item": "chair",
+  "budget": 225,
+  "shop": "25620027",
+  "offers": [
+   160,
+   175,
+   180
+  ],
+  "price": 180,
+  "task": "5d993cf4-b733-4a3a-8735-7f519b6c4cda",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:48:04",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "25620027",
+  "offers": [
+   200,
+   215,
+   225,
+   230
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:48:49",
+  "item": "chair",
+  "budget": 185,
+  "shop": "25620027",
+  "offers": [
+   160,
+   175,
+   180
+  ],
+  "price": 180,
+  "task": "62d9e819-aeb4-41ff-95fc-110c71b3123c",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:49:21",
+  "item": "bookshelf",
+  "budget": 325,
+  "shop": "25620027",
+  "offers": [
+   200,
+   250,
+   240,
+   255,
+   260
+  ],
+  "price": 260,
+  "task": "d4d51a9e-12fa-4a1f-90a5-6e373c7fbe97",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:50:16",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "25620027",
+  "offers": [
+   200,
+   220,
+   225,
+   215,
+   225
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:50:55",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "yms979",
+  "offers": [
+   95,
+   109
+  ],
+  "price": 106,
+  "task": "a5e82c20-549b-4963-ab45-0a011c3ec8cf",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:51:19",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "yms979",
+  "offers": [
+   90,
+   98,
+   100
+  ],
+  "price": 100,
+  "task": "57b2f21b-c4e2-405f-bae9-8e1ce71b7293",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:51:52",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "yms979",
+  "offers": [
+   200,
+   230,
+   245,
+   260
+  ],
+  "price": 260,
+  "task": "bf8fedc2-64b1-4bb5-bb25-abadecd4e720",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:52:39",
+  "item": "chair",
+  "budget": 160,
+  "shop": "yms979",
+  "offers": [
+   140
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:53:15",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "yms979",
+  "offers": [
+   190,
+   215,
+   225
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:54:15",
+  "item": "bookshelf",
+  "budget": 325,
+  "shop": "yms979",
+  "offers": [
+   240,
+   255,
+   260
+  ],
+  "price": 260,
+  "task": "fe9456ef-5c67-42f4-8819-3c7f1a711bc9",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:54:59",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "25620027",
+  "offers": [
+   90,
+   100
+  ],
+  "price": 100,
+  "task": "a3239cf8-ecb7-42d9-9425-fffdbd0eff96",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:55:17",
+  "item": "bookshelf",
+  "budget": 295,
+  "shop": "yms979",
+  "offers": [
+   245,
+   260,
+   270
+  ],
+  "price": 267,
+  "task": "45f70392-5364-4f1d-be5b-28d534bd3abe",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:55:59",
+  "item": "chair",
+  "budget": 250,
+  "shop": "yms979",
+  "offers": [
+   180,
+   190
+  ],
+  "price": 190,
+  "task": "bfc618c1-cbfa-4819-a928-9a3e3a464ebe",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:56:39",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "yms979",
+  "offers": [
+   100,
+   112
+  ],
+  "price": 108,
+  "task": "c56e54f6-3733-46f7-9b86-62c01c51b02c",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:56:59",
+  "item": "chair",
+  "budget": 250,
+  "shop": "yms979",
+  "offers": [
+   170,
+   180,
+   182
+  ],
+  "price": 182,
+  "task": "87629ff3-3467-4ebf-afec-59342f82c9ca",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:57:42",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "yms979",
+  "offers": [
+   220,
+   235,
+   245,
+   255,
+   260
+  ],
+  "price": 260,
+  "task": "5a315639-3dc8-4d11-b11a-2ac0ed2a5f6a",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:58:38",
+  "item": "lamp",
+  "budget": 90,
+  "shop": "yms979",
+  "offers": [
+   70,
+   85,
+   90
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:59:20",
+  "item": "chair",
+  "budget": 250,
+  "shop": "yms979",
+  "offers": [
+   170,
+   180,
+   185
+  ],
+  "price": 185,
+  "task": "f05ea56d-c584-4d13-a8ad-43ec48a78a8f",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:00:00",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "yms979",
+  "offers": [
+   170,
+   200,
+   215,
+   230
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T10:00:54",
+  "item": "chair",
+  "budget": 250,
+  "shop": "yms979",
+  "offers": [
+   160,
+   173,
+   180
+  ],
+  "price": 180,
+  "task": "e1e8e58b-bf11-4dc5-8568-e6d23dd9808c",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:01:30",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "yms979",
+  "offers": [
+   260,
+   270,
+   272
+  ],
+  "price": 272,
+  "task": "7a5e6d03-5ab6-4b3f-b881-fd2af201b0d2",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:02:07",
+  "item": "chair",
+  "budget": 185,
+  "shop": "yms979",
+  "offers": [
+   150,
+   165,
+   175,
+   180
+  ],
+  "price": 180,
+  "task": "9d220f81-b734-4681-802f-0e2de13c4720",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:02:56",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "yms979",
+  "offers": [
+   95,
+   100,
+   105
+  ],
+  "price": 103,
+  "task": "a961ffb4-1502-45ae-8b48-78bc4c0040f6",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:03:39",
+  "item": "chair",
+  "budget": 250,
+  "shop": "elm-street",
+  "offers": [
+   150,
+   180,
+   200
+  ],
+  "price": 200,
+  "task": "33871d97-5cb1-4a7c-9d51-0e9e9b86831e",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:04:20",
+  "item": "chair",
+  "budget": 225,
+  "shop": "elm-street",
+  "offers": [
+   170,
+   200
+  ],
+  "price": 200,
+  "task": "05b42b99-353c-4512-be75-992698448808",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:04:40",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "elm-street",
+  "offers": [
+   90,
+   100,
+   103
+  ],
+  "price": 103,
+  "task": "3cb29c98-d322-439c-8915-3773a829b943",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:05:18",
+  "item": "lamp",
+  "budget": 140,
+  "shop": "elm-street",
+  "offers": [
+   110,
+   114
+  ],
+  "price": 114,
+  "task": "a6f19320-3eaa-441d-a6a9-df74c36bf1a8",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:05:42",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "elm-street",
+  "offers": [
+   100,
+   112
+  ],
+  "price": 112,
+  "task": "c15c1058-249e-4f37-b4c1-fa7edd7ae855",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:06:10",
+  "item": "bookshelf",
+  "budget": 325,
+  "shop": "elm-street",
+  "offers": [
+   270,
+   290
+  ],
+  "price": 330,
+  "task": "34219a19-251d-4a7e-a42a-c7243987625e",
+  "result": "cheated",
+  "problems": [
+   "agreed 290, receipt says 330",
+   "receipt price 330 above budget 325"
+  ]
+ },
+ {
+  "time": "2026-11-03T10:06:29",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "25620027",
+  "offers": [
+   90,
+   100
+  ],
+  "price": 100,
+  "task": "21971192-112e-478b-b823-ef63677bddeb",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:07:02",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "kimauve",
+  "offers": [
+   200,
+   220,
+   240,
+   250,
+   255,
+   260
+  ],
+  "price": 260,
+  "task": "86813e15-9cf6-4be2-9dec-08730e965219",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:07:52",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "kimauve",
+  "offers": [
+   200,
+   230,
+   245,
+   255,
+   260
+  ],
+  "price": 260,
+  "task": "24e6eabb-ef15-4405-82bf-b18b0fda37a9",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:08:38",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "kimauve",
+  "offers": [
+   180,
+   220,
+   260
+  ],
+  "price": 260,
+  "task": "021d5138-8769-4e5b-9d78-ebd403ffc1da",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:09:24",
+  "item": "chair",
+  "budget": 250,
+  "shop": "25620027",
+  "offers": [
+   180
+  ],
+  "price": 180,
+  "task": "612172c4-39b0-43f1-906a-dc97bac4bcfd",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:09:41",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "kimauve",
+  "offers": [
+   85,
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "4adbd842-871e-483d-ba70-468aa3a19af6",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:10:17",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "kimauve",
+  "offers": [
+   185,
+   210,
+   225,
+   230
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T10:11:04",
+  "item": "chair",
+  "budget": 225,
+  "shop": "kimauve",
+  "offers": [
+   140,
+   160,
+   170,
+   175,
+   180
+  ],
+  "price": 180,
+  "task": "032928c5-a118-4cfe-b6d9-f47f8a17abbc",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:11:52",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "kimauve",
+  "offers": [
+   90,
+   95,
+   97,
+   100
+  ],
+  "price": 100,
+  "task": "a36755e2-3a18-4f57-8f9e-a685098c7b97",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:12:35",
+  "item": "bookshelf",
+  "budget": 295,
+  "shop": "kimauve",
+  "offers": [
+   200,
+   230,
+   245,
+   260
+  ],
+  "price": 260,
+  "task": "1ae58c42-0a21-437b-a132-acec9a4c132f",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:13:32",
+  "item": "chair",
+  "budget": 225,
+  "shop": "25620027",
+  "offers": [
+   170,
+   185
+  ],
+  "price": 185,
+  "task": "de5ec801-9163-469a-a58f-c48ed4b9954e",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:13:54",
+  "item": "chair",
+  "budget": 250,
+  "shop": "kimauve",
+  "offers": [
+   150,
+   165,
+   170,
+   175,
+   180
+  ],
+  "price": 180,
+  "task": "00f7c85e-c8e2-4b89-a380-c839787e8e05",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:14:31",
+  "item": "chair",
+  "budget": 225,
+  "shop": "kimauve",
+  "offers": [
+   150,
+   165,
+   172,
+   176,
+   180
+  ],
+  "price": 180,
+  "task": "e690690a-07d3-4579-8af9-eda5983f57f5",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:15:22",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "kimauve",
+  "offers": [
+   90,
+   95,
+   98,
+   100
+  ],
+  "price": 100,
+  "task": "cfe75b27-4b42-4c67-b597-3d6b89c6f8bc",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:15:57",
+  "item": "chair",
+  "budget": 225,
+  "shop": "kimauve",
+  "offers": [
+   130,
+   160,
+   170,
+   175,
+   180
+  ],
+  "price": 180,
+  "task": "0c90493d-e1ad-4234-a2cf-f9321c3e106c",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:16:42",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "kimauve",
+  "offers": [
+   230,
+   245,
+   252,
+   256,
+   260
+  ],
+  "price": 260,
+  "task": "18c43345-773b-4d89-a218-d9f10ca2e080",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:17:25",
+  "item": "chair",
+  "budget": 250,
+  "shop": "kimauve",
+  "offers": [
+   130,
+   150,
+   165,
+   172,
+   176,
+   180
+  ],
+  "price": 180,
+  "task": "cc89f054-20f9-4afa-8325-c52e982e9ff6",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:18:11",
+  "item": "bookshelf",
+  "budget": 295,
+  "shop": "25620027",
+  "offers": [
+   200,
+   240,
+   255,
+   258,
+   260
+  ],
+  "price": 260,
+  "task": "c99a5ab3-fba0-45b0-b2d2-454faee5afe8",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:18:54",
+  "item": "chair",
+  "budget": 185,
+  "shop": "kimauve",
+  "offers": [
+   150,
+   165,
+   172,
+   180
+  ],
+  "price": 180,
+  "task": "4c08cbf0-30f1-46bf-ae75-6c5aeb8dade0",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T10:19:28",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "kimauve",
+  "offers": [
+   85,
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "bb269677-90ef-49c3-aef1-5723d69039a9",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:01:42",
+  "item": "chair",
+  "budget": 160,
+  "shop": "kimauve",
+  "offers": [
+   120,
+   140,
+   150,
+   155,
+   160
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T11:02:24",
+  "item": "chair",
+  "budget": 205,
+  "shop": "kimauve",
+  "offers": [
+   130,
+   155,
+   170,
+   185
+  ],
+  "price": 180,
+  "task": "99d1aa29-f3f8-4112-8191-113d43c0c4bf",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:03:00",
+  "item": "lamp",
+  "budget": 90,
+  "shop": "kimauve",
+  "offers": [
+   70,
+   80,
+   85,
+   88,
+   90
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T11:03:47",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "kimauve",
+  "offers": [
+   80,
+   90,
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "b66ccfc4-24af-4097-852d-cb3724ecfd7b",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:04:31",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "helenjeon101",
+  "offers": [
+   250,
+   265
+  ],
+  "price": 265,
+  "task": "e30fcb5f-d09e-47c0-b361-4e4550ef3a7d",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:05:05",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "helenjeon101",
+  "offers": [
+   95,
+   105
+  ],
+  "price": 105,
+  "task": "48945ba7-6877-4f3d-b48e-69ea0aee437b",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:05:35",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "helenjeon101",
+  "offers": [
+   95,
+   100
+  ],
+  "price": 100,
+  "task": "980ab67f-3484-4754-9101-db815ead5c9c",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:06:09",
+  "item": "chair",
+  "budget": 225,
+  "shop": "helenjeon101",
+  "offers": [
+   170,
+   180
+  ],
+  "price": 180,
+  "task": "25394c5f-6da8-4770-aa2e-5a326a879310",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:06:52",
+  "item": "chair",
+  "budget": 205,
+  "shop": "helenjeon101",
+  "offers": [
+   170,
+   185
+  ],
+  "price": 185,
+  "task": "31a85730-f561-42b7-b304-310a49333445",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:07:17",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "helenjeon101",
+  "offers": [
+   260
+  ],
+  "price": 260,
+  "task": "b41c846b-246a-4b36-acb8-ff1496b57ff0",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:07:50",
+  "item": "lamp",
+  "budget": 90,
+  "shop": "helenjeon101",
+  "offers": [
+   70,
+   85,
+   90
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T11:08:39",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "helenjeon101",
+  "result": "error",
+  "error": "'worth'"
+ },
+ {
+  "time": "2026-11-03T11:09:09",
+  "item": "chair",
+  "budget": 250,
+  "shop": "kimauve",
+  "offers": [
+   120,
+   150,
+   165,
+   172,
+   180
+  ],
+  "price": 180,
+  "task": "c4a55cd6-d834-4f7e-9790-b520b4a0bc32",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:19:23",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "helenjeon101",
+  "offers": [
+   95,
+   105
+  ],
+  "price": 105,
+  "task": "b2f78a3d-116e-44e1-945a-11343fb37ee9",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:19:58",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "helenjeon101",
+  "offers": [
+   95,
+   105
+  ],
+  "price": 105,
+  "task": "fd02398d-88df-4a16-985f-ddcd13aea2db",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T11:20:18",
+  "item": "chair",
+  "budget": 250,
+  "shop": "helenjeon101",
+  "offers": [
+   180
+  ],
+  "price": 180,
+  "task": "a22dc704-4e03-43f8-975b-31100fe53935",
+  "result": "deal"
  }
 ]
