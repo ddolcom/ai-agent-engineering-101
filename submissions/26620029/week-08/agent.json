@@ -10,6 +10,6 @@
     "cmd": "\"D:\\ai-agent-engineering-101\\.venv\\Scripts\\python.exe\" restock.py --state {state}"
   },
   "market_buyer": {
-    "cmd": "\"D:\\ai-agent-engineering-101\\.venv\\Scripts\\python.exe\" market_buyer.py --shops {shops} --item {item} --budget {budget}"
+    "cmd": "\"D:\\ai-agent-engineering-101\\.venv\\Scripts\\python.exe\" market_buyer.py --shops {shops} --item {item} --budget {budget} --order {order}"
   }
 }

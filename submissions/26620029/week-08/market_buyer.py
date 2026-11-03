@@ -13,9 +13,15 @@ How it works
                 and show the price we offered last. A mismatch is remembered as "cheated".
   4. remember : one JSON object per trade appended to buyer_memory.json (shops by name).
   5. report   : the last stdout line is the result JSON the kit sends to the market.
+
+Round 3 (week-08, ddolcom): with --order the buyer reads order.json. Only shops that stock one of the order's
+acceptable SKUs (shops.json "offers") are scored; the buyer asks for one SKU by name, preferring the highest list
+price within the budget (a deal is worth the SKU's list price to the user), checks the receipt names an acceptable
+SKU, and adds an "accept" policy so the kit pays only with the market's certificate and, for food, enough hours left.
 """
 import argparse
 import json
+import os
 import random
 import re
 import time
@@ -33,7 +39,7 @@ PRIOR, PRIOR_WEIGHT, DECAY = 3.0, 2.0, 0.85   # review score: shrink toward 3 st
 RED_FLAG = re.compile(r"receipt (said|says|was)|overcharg|higher than|more than (we|i) agreed|"
                       r"did not match|didn't match|mismatch|avoid|scam|cheat|fraud|fake|forged|unsigned", re.I)
 
-PROMPT = """You are a buying agent. Your user wants one {item}. The budget is {budget}.
+PROMPT = """You are a buying agent. Your user wants one {item}.{worth} The budget is {budget}.
 Never offer or agree to more than {budget}. Pay as little as you can, but shops may end the negotiation after a few low offers,
 so move toward the shop's price in real steps rather than by one or two. Walking away is fine when the shop will not come down to the budget.
 
@@ -112,6 +118,34 @@ def choose(shops, mem, item):
     return scored[0]
 
 
+def stocked(shops, order):
+    """Round 3: only shops that hold an acceptable SKU can sell; Rounds 0-2 (no acceptable list): all shops."""
+    if not order.get("acceptable"):
+        return shops
+    return [s for s in shops if s.get("offers")]
+
+
+def pick_offer(shop, budget, catalog):
+    """Round 3: the SKU to ask for, the highest list price within the budget (worth most to the user),
+    else the cheapest one the shop has. Returns the offer with its list price (None when unknown)."""
+    offers = [dict(o, list_price=(catalog.get(o["sku"]) or {}).get("list_price")) for o in shop.get("offers") or []]
+    if not offers:
+        return None
+    priced = [o for o in offers if o["list_price"]]
+    within = [o for o in priced if o["list_price"] <= budget]
+    if within:
+        return max(within, key=lambda o: o["list_price"])
+    return min(priced, key=lambda o: o["list_price"]) if priced else offers[0]
+
+
+def accept_policy(order):
+    """What the kit checks before paying: the market's certificate always; food must last the hours the user needs."""
+    policy = {"cert": True}
+    if order.get("kind") == "food" and order.get("use_within_hours"):
+        policy["min_hours_left"] = order["use_within_hours"]
+    return policy
+
+
 def reputation(shop, why):
     recent = [f"{r.get('stars')}* {str(r.get('review', ''))[:80]}" for r in (shop.get("reviews") or [])[:3]]
     return f"{why}. Recent reviews: " + (" | ".join(recent) if recent else "none")
@@ -141,8 +175,9 @@ def whole(x):
     return int(x) if isinstance(x, float) and x.is_integer() else x
 
 
-def negotiate(base_url, item, budget, rep):
-    """Returns (task, receipt or None, last offer we sent, number of offers, log of offers)."""
+def negotiate(base_url, item, budget, rep, opening=None, worth=""):
+    """Returns (task, receipt or None, last offer we sent, number of offers, log of offers).
+    Round 3 passes the opening line (name and SKU) and what the SKU is worth to the user."""
     card = httpx.get(base_url.rstrip("/") + "/.well-known/agent-card.json", timeout=15).json()
     ifaces = card.get("supportedInterfaces") or [{}]
     url = ifaces[0].get("url") or base_url
@@ -158,13 +193,14 @@ def negotiate(base_url, item, budget, rep):
         print(f"-> {text!r}  <- {t['status']['state']} | {said}", flush=True)
         return t, said
 
-    t, said = send(f"I want to buy a {item}")
-    lines = [f"you: I want to buy a {item}", f"shop: {said}"]
+    opening = opening or f"I want to buy a {item}"
+    t, said = send(opening)
+    lines = [f"you: {opening}", f"shop: {said}"]
     last_offer, offers, at_budget = None, [], 0
     for _ in range(MAX_OFFERS):
         if t["status"]["state"] != "TASK_STATE_INPUT_REQUIRED":
             break
-        move, raw = ask_json(PROMPT.format(item=item, budget=budget, card=card.get("description", ""),
+        move, raw = ask_json(PROMPT.format(item=item, worth=worth, budget=budget, card=card.get("description", ""),
                                            reputation=rep, transcript="\n".join(lines)))
         print(f"[harness] {raw}", flush=True)
         if not move or move.get("action") != "offer" or not isinstance(move.get("price"), (int, float)):
@@ -193,11 +229,11 @@ def negotiate(base_url, item, budget, rep):
     return t, rec, last_offer, offers
 
 
-def check_receipt(rec, t, item, budget, last_offer):
-    """List of problems with a receipt (empty when it looks honest)."""
+def check_receipt(rec, t, item, budget, last_offer, acceptable=()):
+    """List of problems with a receipt (empty when it looks honest). Round 3: any acceptable SKU is the item."""
     problems = []
     price = whole(rec.get("price"))
-    if rec.get("item") != item:
+    if rec.get("item") != item and rec.get("item") not in acceptable:
         problems.append(f"item {rec.get('item')!r} is not {item!r}")
     if last_offer is not None and isinstance(price, (int, float)) and price > last_offer:
         problems.append(f"agreed {last_offer}, receipt says {price}")
@@ -218,11 +254,22 @@ def main():
     ap.add_argument("--shops", required=True)
     ap.add_argument("--item", required=True)
     ap.add_argument("--budget", type=int, required=True)
+    ap.add_argument("--order", help="Round 3: the kit's order.json (acceptable SKUs, kind, use_within_hours)")
     a = ap.parse_args()
 
     shops = json.loads(Path(a.shops).read_text(encoding="utf-8"))
+    order = json.loads(Path(a.order).read_text(encoding="utf-8")) if a.order else {}
+    acceptable = order.get("acceptable") or []
+    if acceptable:
+        shops = stocked(shops, order)
+        if not shops:                                     # no line with "shop": the kit closes it as no deal, no review
+            print(f"[choose] no shop stocks an acceptable SKU for {a.item}", flush=True)
+            print(json.dumps({"receipt": None, "note": "no shop in stock"}), flush=True)
+            return
     mem = load_memory()
     result = {"shop": shops[0]["url"] if shops else "", "receipt": None, "stars": 3, "review": "No shop to trade with."}
+    if acceptable:
+        result["accept"] = accept_policy(order)
     entry = {"time": time.strftime("%Y-%m-%dT%H:%M:%S"), "item": a.item, "budget": a.budget}
     try:
         if not shops:
@@ -232,7 +279,16 @@ def main():
         result["shop"] = shop["url"]
         entry["shop"] = shop.get("name")
 
-        t, rec, last_offer, offers = negotiate(shop["url"], a.item, a.budget, reputation(shop, why))
+        opening, worth, want = None, "", a.item
+        if acceptable:
+            catalog = json.loads((Path(os.environ.get("MARKET_DIR", ".market")) / "catalog.json").read_text(encoding="utf-8"))
+            o = pick_offer(shop, a.budget, catalog)
+            opening, want, entry["sku"] = f"I want to buy {o['name']} ({o['sku']})", o["name"], o["sku"]
+            if o.get("list_price"):
+                worth = f" It is worth {o['list_price']} to them (its list price)."
+            print(f"[offer] {o['sku']} {o['name']} list {o.get('list_price')}, budget {a.budget}", flush=True)
+
+        t, rec, last_offer, offers = negotiate(shop["url"], want, a.budget, reputation(shop, why), opening, worth)
         entry["offers"] = offers
         if rec is None:
             entry["result"] = "walk"
@@ -240,7 +296,7 @@ def main():
                                           f"my offers {offers or 'none'}.")
         else:
             result["receipt"] = rec                       # exactly the data Part the shop issued
-            problems = check_receipt(rec, t, a.item, a.budget, last_offer)
+            problems = check_receipt(rec, t, a.item, a.budget, last_offer, acceptable)
             price = whole(rec.get("price"))
             entry.update(price=price, task=rec.get("task"))
             if any(p.startswith(("agreed", "receipt price", "item")) for p in problems):
