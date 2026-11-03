@@ -11446,3 +11446,1969 @@
 11:20:30 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
 11:20:30 [buyer] {"shop": "https://ai-agent-engineering-a2a.vercel.app", "receipt": {"sig_seller": "MVJ4ADHGarBdCFxPwPtkFe/0qox2vIcOOb52uVMb19Tce6+1njFHdmOkdnULY+6V9WEYmttZeta8M1jrtApxCg==", "price": 180.0, "item": "chair", "shop": "Catalog Shop", "task": "a22dc704-4e03-43f8-975b-31100fe53935"}, "stars": 5, "review": "Bought the chair at 180 (budget 250) after 1 offer; receipt matched."}
 11:20:30 [sign] sig_seller ok, sig_buyer added
+11:20:39 [market] ledger #2066241: chair at 180, stars 5, verified True, review accepted
+11:20:43 [order o-f78816b9e092] chair, budget 205, round 2
+11:20:44 [kit] 31 shops in .market\shops.json, running market_buyer
+11:20:45 [buyer] [score] helenjeon101: score 4.89 = reviews 4.29 (10), red flags 0, mine: 11 deals, 1 walks, 0 cheated, 2 errors
+11:20:45 [buyer] [score] kimauve: score 4.77 = reviews 3.95 (10), red flags 0, mine: 18 deals, 3 walks, 0 cheated, 0 errors
+11:20:45 [buyer] [score] 25620027: score 4.39 = reviews 3.98 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:20:45 [buyer] [score] oak-and-pine: score 4.25 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:20:45 [buyer] [score] Ddolcom's BEST SHOP: score 4.13 = reviews 4.12 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] q00: score 4.13 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:20:45 [buyer] [score] thisjonghoon: score 4.10 = reviews 4.10 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] YAHO1212: score 4.05 = reviews 4.14 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:20:45 [buyer] [score] shaun0927: score 4.03 = reviews 4.27 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:20:45 [buyer] [score] grand-furniture: score 3.99 = reviews 3.95 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] moss-and-oak: score 3.98 = reviews 3.95 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] corner-store: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] shaun0927-lab1: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] psyoung82: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] bjeon01: score 3.88 = reviews 4.03 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:20:45 [buyer] [score] shaun0927-lab3: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] bright-living: score 3.85 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:20:45 [buyer] [score] lee-sungsoo: score 3.80 = reviews 3.75 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] cheapest-in-town: score 3.76 = reviews 3.73 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] myeonggi: score 3.72 = reviews 3.91 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:20:45 [buyer] [score] shaun0927-lab2: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] mjforge: score 3.65 = reviews 3.65 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] yeonsong2: score 3.61 = reviews 3.57 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] kcwarni: score 3.47 = reviews 3.46 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] fair-furniture: score 3.41 = reviews 3.38 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] JangSeongWoong: score 3.24 = reviews 3.23 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] dragonash: score 3.08 = reviews 3.76 (10), red flags 1, no trades of mine
+11:20:45 [buyer] [score] 11im: score 3.03 = reviews 3.00 (10), red flags 0, no trades of mine
+11:20:45 [buyer] [score] willow-goods: score 3.01 = reviews 3.00 (0), red flags 0, no trades of mine
+11:20:45 [buyer] [score] elm-street: score 2.46 = reviews 4.34 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:20:45 [buyer] [score] maple-home: score -0.54 = reviews 1.54 (10), red flags 10, no trades of mine
+11:20:45 [buyer] [choose] https://ai-agent-engineering-a2a.vercel.app: helenjeon101 - score 4.89 = reviews 4.29 (10), red flags 0, mine: 11 deals, 1 walks, 0 cheated, 2 errors
+11:20:45 [buyer] card: Catalog Shop -> https://ai-agent-engineering-a2a.vercel.app/
+11:20:48 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair: asking 235
+11:20:49 [seller] [price] open chair at 234 (list 234, floor 180)
+11:20:49 [seller] [price] open chair at 234 (list 234, floor 180)
+11:20:49 [seller] [price] chair offer 111, ask 212 (floor 180)
+11:20:50 [seller] [price] chair offer 161, ask 199 (floor 180)
+11:20:50 [seller] [price] chair offer 180, ask 191 (floor 180)
+11:20:50 [seller] [price] chair offer 185, ask 186 (floor 180)
+11:20:52 [seller] [price] chair offer 185, ask 212 (floor 180)
+11:20:55 [seller] [price] chair offer 185, ask 199 (floor 180)
+11:20:55 [buyer] [harness] {"action": "offer", "price": 180}
+11:20:57 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+11:20:57 [buyer] {"shop": "https://ai-agent-engineering-a2a.vercel.app", "receipt": {"sig_seller": "AiXOejPPeVXXiivTgitCfdxo19KTicHgqKEaRip74glvjxV5EKfqkOwSNzoM9IjHdkyKVQGyNb5iIi/CNW2qAQ==", "price": 180.0, "item": "chair", "shop": "Catalog Shop", "task": "aef90fe7-8ec0-4dae-a73f-8b2ce03d1523"}, "stars": 4, "review": "Bought the chair at 180 (budget 205) after 1 offer; receipt matched."}
+11:20:57 [sign] sig_seller ok, sig_buyer added
+11:20:57 [seller] [price] chair offer 185, ask 191 (floor 180)
+11:20:59 [market] ledger #2066285: chair at 180, stars 4, verified True, review accepted
+11:21:00 [seller] [price] chair offer 185, ask 186 (floor 180)
+11:21:02 [seller] [price] chair offer 185, ask 184 (floor 180)
+11:21:04 [order o-2582a31e49ae] chair, budget 185, round 2
+11:21:05 [kit] 30 shops in .market\shops.json, running market_buyer
+11:21:05 [buyer] [score] kimauve: score 4.87 = reviews 4.05 (10), red flags 0, mine: 18 deals, 3 walks, 0 cheated, 0 errors
+11:21:05 [buyer] [score] helenjeon101: score 4.85 = reviews 4.22 (10), red flags 0, mine: 12 deals, 1 walks, 0 cheated, 2 errors
+11:21:05 [buyer] [score] 25620027: score 4.39 = reviews 3.98 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:21:05 [buyer] [score] oak-and-pine: score 4.26 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:21:05 [buyer] [score] Ddolcom's BEST SHOP: score 4.16 = reviews 4.12 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] shaun0927: score 4.12 = reviews 4.39 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:21:05 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:21:05 [buyer] [score] moss-and-oak: score 4.11 = reviews 4.11 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] thisjonghoon: score 4.10 = reviews 4.10 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] YAHO1212: score 4.06 = reviews 4.14 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:21:05 [buyer] [score] grand-furniture: score 3.96 = reviews 3.95 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] shaun0927-lab1: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] shaun0927-lab3: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] psyoung82: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] bjeon01: score 3.85 = reviews 4.03 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:21:05 [buyer] [score] bright-living: score 3.83 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:21:05 [buyer] [score] corner-store: score 3.83 = reviews 3.82 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] lee-sungsoo: score 3.79 = reviews 3.74 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] mjforge: score 3.79 = reviews 3.77 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] myeonggi: score 3.73 = reviews 3.91 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:21:05 [buyer] [score] shaun0927-lab2: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] yeonsong2: score 3.59 = reviews 3.57 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] kcwarni: score 3.46 = reviews 3.46 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] JangSeongWoong: score 3.25 = reviews 3.23 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] dragonash: score 3.10 = reviews 3.76 (10), red flags 1, no trades of mine
+11:21:05 [buyer] [score] willow-goods: score 3.04 = reviews 3.00 (0), red flags 0, no trades of mine
+11:21:05 [buyer] [score] 11im: score 3.00 = reviews 3.00 (10), red flags 0, no trades of mine
+11:21:05 [buyer] [score] elm-street: score 2.45 = reviews 4.34 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:21:05 [buyer] [score] maple-home: score -0.55 = reviews 1.54 (10), red flags 10, no trades of mine
+11:21:05 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.87 = reviews 4.05 (10), red flags 0, mine: 18 deals, 3 walks, 0 cheated, 0 errors
+11:21:05 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:21:06 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair. Send the ask or say ok to buy. Our ask: 180
+11:21:10 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:21:11 [buyer] [harness] {"action": "offer", "price": 150}
+11:21:11 [buyer] -> '150'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:21:13 [seller] [price] bookshelf offer 230, ask 306 (floor 260)
+11:21:16 [seller] [price] bookshelf offer 230, ask 288 (floor 260)
+11:21:18 [seller] [price] bookshelf offer 230, ask 276 (floor 260)
+11:21:19 [buyer] [harness] {"action": "offer", "price": 165}
+11:21:19 [buyer] -> '165'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:21:21 [seller] [price] bookshelf offer 230, ask 270 (floor 260)
+11:21:23 [seller] [price] bookshelf offer 230, ask 266 (floor 260)
+11:21:24 [buyer] [harness] {"action": "offer", "price": 172}
+11:21:25 [buyer] -> '172'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:21:26 [seller] [price] bookshelf offer 230, ask 263 (floor 260)
+11:21:29 [seller] [price] bookshelf offer 230, ask 262 (floor 260)
+11:21:31 [seller] [price] bookshelf offer 230, ask 261 (floor 260)
+11:21:33 [buyer] [harness] {"action": "offer", "price": 176}
+11:21:33 [buyer] -> '176'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:21:40 [buyer] [harness] {"action": "offer", "price": 180}
+11:21:40 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+11:21:40 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "bfa784e3-ebd0-41ab-9eaa-51ebe8df93fe", "price": 180.0, "item": "chair", "sig_seller": "rK6UqjNfYr2ENqdIhtZ6Z+rjrFYREfUc45FrsgMq7yma1ivixsLvt1N+w2CKmXd4tJJ2Nvc2H7Bd5CGqA7ZODA==", "shop": "kimauve"}, "stars": 4, "review": "Bought the chair at 180 (budget 185) after 5 offers; receipt matched."}
+11:21:40 [sign] sig_seller ok, sig_buyer added
+11:21:48 [market] ledger #2066381: chair at 180, stars 4, verified True, review accepted
+11:21:51 [order o-5cbfc63a068a] chair, budget 160, round 2
+11:21:52 [kit] 31 shops in .market\shops.json, running market_buyer
+11:21:53 [buyer] [score] kimauve: score 4.77 = reviews 3.95 (10), red flags 0, mine: 19 deals, 3 walks, 0 cheated, 0 errors
+11:21:53 [buyer] [score] helenjeon101: score 4.73 = reviews 4.12 (10), red flags 0, mine: 12 deals, 1 walks, 0 cheated, 2 errors
+11:21:53 [buyer] [score] 25620027: score 4.39 = reviews 3.98 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:21:53 [buyer] [score] oak-and-pine: score 4.26 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:21:53 [buyer] [score] moss-and-oak: score 4.19 = reviews 4.19 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] q00: score 4.16 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:21:53 [buyer] [score] thisjonghoon: score 4.15 = reviews 4.15 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] Ddolcom's BEST SHOP: score 4.14 = reviews 4.12 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] shaun0927: score 4.09 = reviews 4.32 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:21:53 [buyer] [score] YAHO1212: score 4.05 = reviews 4.14 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:21:53 [buyer] [score] mjforge: score 3.96 = reviews 3.92 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] grand-furniture: score 3.96 = reviews 3.95 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] shaun0927-lab1: score 3.91 = reviews 3.87 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] cheapest-in-town: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] psyoung82: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] corner-store: score 3.86 = reviews 3.82 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] shaun0927-lab3: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] bjeon01: score 3.84 = reviews 4.03 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:21:53 [buyer] [score] bright-living: score 3.83 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:21:53 [buyer] [score] myeonggi: score 3.82 = reviews 3.99 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:21:53 [buyer] [score] lee-sungsoo: score 3.74 = reviews 3.73 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] shaun0927-lab2: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] yeonsong2: score 3.60 = reviews 3.57 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] kcwarni: score 3.47 = reviews 3.46 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] fair-furniture: score 3.41 = reviews 3.38 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] JangSeongWoong: score 3.24 = reviews 3.23 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] dragonash: score 3.07 = reviews 3.76 (10), red flags 1, no trades of mine
+11:21:53 [buyer] [score] willow-goods: score 3.03 = reviews 3.00 (0), red flags 0, no trades of mine
+11:21:53 [buyer] [score] 11im: score 3.03 = reviews 3.00 (10), red flags 0, no trades of mine
+11:21:53 [buyer] [score] elm-street: score 2.46 = reviews 4.36 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:21:53 [buyer] [score] maple-home: score -0.53 = reviews 1.54 (10), red flags 10, no trades of mine
+11:21:53 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.77 = reviews 3.95 (10), red flags 0, mine: 19 deals, 3 walks, 0 cheated, 0 errors
+11:21:53 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:21:53 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair. Send the ask or say ok to buy. Our ask: 180
+11:21:54 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:21:56 [seller] [price] lamp offer 105, ask 118 (floor 100)
+11:22:00 [buyer] [harness] {"action": "offer", "price": 120}
+11:22:00 [buyer] -> '120'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:22:05 [buyer] [harness] {"action": "offer", "price": 140}
+11:22:05 [buyer] -> '140'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:22:13 [buyer] [harness] {"action": "offer", "price": 150}
+11:22:13 [buyer] -> '150'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:22:16 [seller] [price] open chair at 234 (list 234, floor 180)
+11:22:19 [seller] [price] chair offer 234, ask 212 (floor 180)
+11:22:21 [buyer] [harness] {"action": "offer", "price": 155}
+11:22:21 [buyer] -> '155'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:22:26 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:22:26 [seller] [price] bookshelf offer 162, ask 306 (floor 260)
+11:22:26 [seller] [price] bookshelf offer 234, ask 288 (floor 260)
+11:22:26 [seller] [price] bookshelf offer 261, ask 276 (floor 260)
+11:22:27 [seller] [price] bookshelf offer 268, ask 270 (floor 260)
+11:22:27 [seller] [price] bookshelf offer 270, ask 266 (floor 260)
+11:22:29 [buyer] [harness] {"action": "walk"}
+11:22:29 [buyer] walked away (CancelTask)
+11:22:29 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": null, "stars": 3, "review": "No deal for the chair within budget 160; my offers [120, 140, 150, 155]."}
+11:22:34 [market] ledger #2066472: no deal, stars 3, verified False, review not shown
+11:22:36 [order o-02a695d8cb59] chair, budget 205, round 2
+11:22:51 [kit] market_kit 4, D:\ai-agent-engineering-101\submissions\26620029\week-08
+11:22:58 [tunnel] https://annotation-carried-tel-sheriff.trycloudflare.com, waiting until it answers
+11:23:03 [shop] your seller on port 8240; others reach it through the kit at https://annotation-carried-tel-sheriff.trycloudflare.com
+11:23:08 [market] join as shop: 502, trying again
+11:23:21 [market] shop registered as ddolcom, round 2
+11:23:22 [market] buyer registered as ddolcom, round 2
+11:23:56 [kit] market_kit 4, D:\ai-agent-engineering-101\submissions\26620029\week-08
+11:24:02 [tunnel] https://intl-competitive-allergy-princess.trycloudflare.com, waiting until it answers
+11:24:17 [shop] your seller on port 14004; others reach it through the kit at https://intl-competitive-allergy-princess.trycloudflare.com
+11:24:19 [market] join as shop: 502, trying again
+11:25:21 [kit] market_kit 4, D:\ai-agent-engineering-101\submissions\26620029\week-08
+11:25:26 [tunnel] https://postings-dim-directions-parcel.trycloudflare.com, waiting until it answers
+11:25:32 [shop] your seller on port 7930; others reach it through the kit at https://postings-dim-directions-parcel.trycloudflare.com
+11:25:42 [market] shop registered as ddolcom, round 2
+11:25:43 [market] buyer registered as ddolcom, round 2
+11:25:44 [order o-02a695d8cb59] chair, budget 205, round 2
+11:25:44 [kit] 32 shops in .market\shops.json, running market_buyer
+11:25:45 [buyer] [score] helenjeon101: score 4.70 = reviews 4.10 (10), red flags 0, mine: 12 deals, 1 walks, 0 cheated, 2 errors
+11:25:45 [buyer] [score] kimauve: score 4.58 = reviews 3.85 (10), red flags 0, mine: 19 deals, 4 walks, 0 cheated, 0 errors
+11:25:45 [buyer] [score] 25620027: score 4.48 = reviews 4.05 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:25:45 [buyer] [score] moss-and-oak: score 4.24 = reviews 4.23 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] oak-and-pine: score 4.23 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:25:45 [buyer] [score] Ddolcom's BEST SHOP: score 4.19 = reviews 4.17 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] cheapest-in-town: score 4.18 = reviews 4.15 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] thisjonghoon: score 4.16 = reviews 4.12 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] q00: score 4.15 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:25:45 [buyer] [score] YAHO1212: score 4.07 = reviews 4.14 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:25:45 [buyer] [score] mjforge: score 4.02 = reviews 4.00 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] corner-store: score 4.00 = reviews 3.98 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] shaun0927: score 4.00 = reviews 4.23 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:25:45 [buyer] [score] yms979: score 4.00 = reviews 3.67 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+11:25:45 [buyer] [score] grand-furniture: score 3.99 = reviews 3.95 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] myeonggi: score 3.98 = reviews 4.14 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:25:45 [buyer] [score] bjeon01: score 3.96 = reviews 4.12 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:25:45 [buyer] [score] shaun0927-lab1: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] psyoung82: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] shaun0927-lab3: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] bright-living: score 3.84 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:25:45 [buyer] [score] lee-sungsoo: score 3.70 = reviews 3.69 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] shaun0927-lab2: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] yeonsong2: score 3.59 = reviews 3.57 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] kcwarni: score 3.51 = reviews 3.46 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] JangSeongWoong: score 3.50 = reviews 3.47 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] dragonash: score 3.08 = reviews 3.76 (10), red flags 1, no trades of mine
+11:25:45 [buyer] [score] 11im: score 3.05 = reviews 3.00 (10), red flags 0, no trades of mine
+11:25:45 [buyer] [score] willow-goods: score 3.02 = reviews 3.00 (0), red flags 0, no trades of mine
+11:25:45 [buyer] [score] elm-street: score 2.48 = reviews 4.36 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:25:45 [buyer] [score] maple-home: score -0.54 = reviews 1.54 (10), red flags 10, no trades of mine
+11:25:45 [buyer] [choose] https://ai-agent-engineering-a2a.vercel.app: helenjeon101 - score 4.70 = reviews 4.10 (10), red flags 0, mine: 12 deals, 1 walks, 0 cheated, 2 errors
+11:25:46 [buyer] card: Catalog Shop -> https://ai-agent-engineering-a2a.vercel.app/
+11:25:48 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair: asking 235
+11:25:53 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:25:53 [seller] [price] lamp offer 90, ask 118 (floor 100)
+11:25:54 [buyer] [harness] {"action": "offer", "price": 160}
+11:25:56 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:25:56 [seller] [price] lamp offer 84, ask 118 (floor 100)
+11:25:56 [seller] [price] lamp offer 101, ask 110 (floor 100)
+11:25:56 [seller] [price] lamp offer 105, ask 106 (floor 100)
+11:25:57 [seller] [price] lamp offer 106, ask 103 (floor 100)
+11:25:57 [buyer] -> '160'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 195
+11:26:05 [buyer] [harness] {"action": "offer", "price": 180}
+11:26:08 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+11:26:08 [buyer] {"shop": "https://ai-agent-engineering-a2a.vercel.app", "receipt": {"sig_seller": "awSpKgvqNeOGDKhTqNx0rz1jkgEBobDGh2p2m12n0wbX+l6i/Q7f5GqugEV4W/N0psUxrVWASswKwysbtN7iCg==", "price": 180.0, "item": "chair", "shop": "Catalog Shop", "task": "31bbb25b-8145-453a-858f-0ea6877397cc"}, "stars": 4, "review": "Bought the chair at 180 (budget 205) after 2 offers; receipt matched."}
+11:26:08 [sign] sig_seller ok, sig_buyer added
+11:26:14 [market] ledger #2066904: chair at 180, stars 4, verified True, review accepted
+11:26:16 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:26:17 [order o-a415e7d1377a] lamp, budget 140, round 2
+11:26:17 [kit] 32 shops in .market\shops.json, running market_buyer
+11:26:17 [buyer] [score] helenjeon101: score 4.61 = reviews 4.04 (10), red flags 0, mine: 13 deals, 1 walks, 0 cheated, 2 errors
+11:26:17 [buyer] [score] kimauve: score 4.53 = reviews 3.83 (10), red flags 0, mine: 19 deals, 4 walks, 0 cheated, 0 errors
+11:26:17 [buyer] [score] 25620027: score 4.45 = reviews 4.05 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:26:17 [buyer] [score] cheapest-in-town: score 4.28 = reviews 4.25 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] moss-and-oak: score 4.23 = reviews 4.23 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] oak-and-pine: score 4.22 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:26:17 [buyer] [score] Ddolcom's BEST SHOP: score 4.22 = reviews 4.17 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] thisjonghoon: score 4.17 = reviews 4.12 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] q00: score 4.11 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:26:17 [buyer] [score] corner-store: score 4.09 = reviews 4.05 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] YAHO1212: score 4.06 = reviews 4.14 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:26:17 [buyer] [score] shaun0927: score 4.06 = reviews 4.34 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:26:17 [buyer] [score] grand-furniture: score 3.99 = reviews 3.95 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] bjeon01: score 3.95 = reviews 4.12 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:26:17 [buyer] [score] myeonggi: score 3.95 = reviews 4.14 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:26:17 [buyer] [score] shaun0927-lab1: score 3.89 = reviews 3.87 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] psyoung82: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] shaun0927-lab3: score 3.84 = reviews 3.84 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] yms979: score 3.84 = reviews 3.55 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+11:26:17 [buyer] [score] bright-living: score 3.82 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:26:17 [buyer] [score] mjforge: score 3.81 = reviews 3.79 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] lee-sungsoo: score 3.74 = reviews 3.70 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] shaun0927-lab2: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] yeonsong2: score 3.61 = reviews 3.57 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] JangSeongWoong: score 3.48 = reviews 3.47 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] kcwarni: score 3.47 = reviews 3.46 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] dragonash: score 3.10 = reviews 3.76 (10), red flags 1, no trades of mine
+11:26:17 [buyer] [score] willow-goods: score 3.01 = reviews 3.00 (0), red flags 0, no trades of mine
+11:26:17 [buyer] [score] 11im: score 3.00 = reviews 3.00 (10), red flags 0, no trades of mine
+11:26:17 [buyer] [score] elm-street: score 2.43 = reviews 4.36 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:26:17 [buyer] [score] maple-home: score -0.56 = reviews 1.54 (10), red flags 10, no trades of mine
+11:26:17 [buyer] [choose] https://ai-agent-engineering-a2a.vercel.app: helenjeon101 - score 4.61 = reviews 4.04 (10), red flags 0, mine: 13 deals, 1 walks, 0 cheated, 2 errors
+11:26:18 [buyer] card: Catalog Shop -> https://ai-agent-engineering-a2a.vercel.app/
+11:26:19 [seller] [price] lamp offer 125, ask 118 (floor 100)
+11:26:20 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp: asking 135
+11:26:21 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:26:21 [seller] [price] bookshelf offer 195, ask 306 (floor 260)
+11:26:21 [seller] [price] bookshelf offer 250, ask 288 (floor 260)
+11:26:22 [seller] [price] bookshelf offer 269, ask 276 (floor 260)
+11:26:22 [seller] [price] bookshelf offer 276, ask 270 (floor 260)
+11:26:29 [buyer] [harness] {"action": "offer", "price": 105}
+11:26:31 [buyer] -> '105'  <- TASK_STATE_COMPLETED | Deal: lamp at 105.
+11:26:31 [buyer] {"shop": "https://ai-agent-engineering-a2a.vercel.app", "receipt": {"sig_seller": "jzAWsJ8pqCohV9JIAfzyLFaGP0tBwj6RrOLNCq3r8j9YtKxztY1YDrVlQgJ+KLfW40Mcmx7mBbbGKHClxLRhDA==", "price": 105.0, "item": "lamp", "shop": "Catalog Shop", "task": "29018136-f81e-4893-9cc3-878301aef12e"}, "stars": 5, "review": "Bought the lamp at 105 (budget 140) after 1 offer; receipt matched."}
+11:26:31 [sign] sig_seller ok, sig_buyer added
+11:26:33 [market] ledger #2066951: lamp at 105, stars 5, verified True, review accepted
+11:26:38 [order o-b782f5464a60] bookshelf, budget 230, round 2
+11:26:38 [kit] 32 shops in .market\shops.json, running market_buyer
+11:26:39 [buyer] [score] helenjeon101: score 4.72 = reviews 4.10 (10), red flags 0, mine: 14 deals, 1 walks, 0 cheated, 2 errors
+11:26:39 [buyer] [score] kimauve: score 4.52 = reviews 3.83 (10), red flags 0, mine: 19 deals, 4 walks, 0 cheated, 0 errors
+11:26:39 [buyer] [score] 25620027: score 4.44 = reviews 4.05 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:26:39 [buyer] [score] cheapest-in-town: score 4.29 = reviews 4.28 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] moss-and-oak: score 4.24 = reviews 4.23 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] oak-and-pine: score 4.23 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:26:39 [buyer] [score] Ddolcom's BEST SHOP: score 4.21 = reviews 4.17 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] corner-store: score 4.17 = reviews 4.14 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] thisjonghoon: score 4.16 = reviews 4.12 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:26:39 [buyer] [score] YAHO1212: score 4.05 = reviews 4.14 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:26:39 [buyer] [score] yms979: score 3.99 = reviews 3.71 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+11:26:39 [buyer] [score] myeonggi: score 3.98 = reviews 4.14 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:26:39 [buyer] [score] grand-furniture: score 3.97 = reviews 3.95 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] bjeon01: score 3.97 = reviews 4.12 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:26:39 [buyer] [score] shaun0927: score 3.94 = reviews 4.19 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:26:39 [buyer] [score] shaun0927-lab1: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] psyoung82: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] shaun0927-lab3: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] bright-living: score 3.85 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:26:39 [buyer] [score] mjforge: score 3.83 = reviews 3.79 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] lee-sungsoo: score 3.73 = reviews 3.68 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] shaun0927-lab2: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] yeonsong2: score 3.61 = reviews 3.57 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] JangSeongWoong: score 3.49 = reviews 3.47 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] kcwarni: score 3.48 = reviews 3.46 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] fair-furniture: score 3.42 = reviews 3.38 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] dragonash: score 3.09 = reviews 3.76 (10), red flags 1, no trades of mine
+11:26:39 [buyer] [score] willow-goods: score 3.00 = reviews 3.00 (0), red flags 0, no trades of mine
+11:26:39 [buyer] [score] 11im: score 3.00 = reviews 3.00 (10), red flags 0, no trades of mine
+11:26:39 [buyer] [score] elm-street: score 2.38 = reviews 4.36 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:26:39 [buyer] [score] maple-home: score -0.52 = reviews 1.54 (10), red flags 10, no trades of mine
+11:26:39 [buyer] [choose] https://ai-agent-engineering-a2a.vercel.app: helenjeon101 - score 4.72 = reviews 4.10 (10), red flags 0, mine: 14 deals, 1 walks, 0 cheated, 2 errors
+11:26:39 [buyer] card: Catalog Shop -> https://ai-agent-engineering-a2a.vercel.app/
+11:26:41 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_INPUT_REQUIRED | bookshelf: asking 335
+11:26:43 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:26:43 [seller] [price] bookshelf offer 177, ask 306 (floor 260)
+11:26:43 [seller] [price] bookshelf offer 241, ask 288 (floor 260)
+11:26:43 [seller] [price] bookshelf offer 264, ask 276 (floor 260)
+11:26:44 [seller] [price] bookshelf offer 276, ask 270 (floor 260)
+11:26:46 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:26:47 [buyer] [harness] {"action": "offer", "price": 170}
+11:26:49 [seller] [price] bookshelf offer 338, ask 306 (floor 260)
+11:26:51 [buyer] -> '170'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 310
+11:26:58 [buyer] [harness] {"action": "offer", "price": 200}
+11:26:59 [buyer] -> '200'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 275
+11:27:06 [buyer] [harness] {"action": "offer", "price": 220}
+11:27:08 [buyer] -> '220'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 275
+11:27:09 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:27:11 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:27:11 [seller] [price] bookshelf offer 216, ask 306 (floor 260)
+11:27:11 [seller] [price] bookshelf offer 261, ask 288 (floor 260)
+11:27:11 [seller] [price] bookshelf offer 274, ask 276 (floor 260)
+11:27:11 [seller] [price] bookshelf offer 276, ask 270 (floor 260)
+11:27:12 [seller] [price] bookshelf offer 270, ask 306 (floor 260)
+11:27:15 [seller] [price] bookshelf offer 270, ask 288 (floor 260)
+11:27:16 [buyer] [harness] {"action": "offer", "price": 230}
+11:27:17 [seller] [price] bookshelf offer 270, ask 276 (floor 260)
+11:27:18 [buyer] -> '230'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 275
+11:27:20 [seller] [price] bookshelf offer 270, ask 270 (floor 260)
+11:27:25 [buyer] [harness] {"action": "walk"}
+11:27:25 [buyer] walked away (CancelTask)
+11:27:25 [buyer] {"shop": "https://ai-agent-engineering-a2a.vercel.app", "receipt": null, "stars": 3, "review": "No deal for the bookshelf within budget 230; my offers [170, 200, 220, 230]."}
+11:27:28 [market] ledger #2067063: no deal, stars 3, verified False, review not shown
+11:27:28 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:27:29 [seller] [price] bookshelf offer 177, ask 306 (floor 260)
+11:27:29 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:27:29 [seller] [price] bookshelf offer 241, ask 288 (floor 260)
+11:27:29 [seller] [price] bookshelf offer 264, ask 276 (floor 260)
+11:27:29 [seller] [price] bookshelf offer 276, ask 270 (floor 260)
+11:27:30 [order o-1072297aa541] lamp, budget 140, round 2
+11:27:31 [seller] [price] lamp offer 125, ask 118 (floor 100)
+11:27:33 [kit] 20 shops in .market\shops.json, running market_buyer
+11:27:33 [buyer] [score] kimauve: score 4.79 = reviews 4.08 (10), red flags 0, mine: 19 deals, 4 walks, 0 cheated, 0 errors
+11:27:33 [buyer] [score] helenjeon101: score 4.55 = reviews 4.10 (10), red flags 0, mine: 14 deals, 2 walks, 0 cheated, 2 errors
+11:27:33 [buyer] [score] 25620027: score 4.45 = reviews 4.05 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:27:33 [buyer] [score] cheapest-in-town: score 4.34 = reviews 4.31 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] Ddolcom's BEST SHOP: score 4.28 = reviews 4.24 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] moss-and-oak: score 4.17 = reviews 4.15 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:27:33 [buyer] [score] YAHO1212: score 3.99 = reviews 4.06 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:27:33 [buyer] [score] mjforge: score 3.99 = reviews 3.98 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] bjeon01: score 3.93 = reviews 4.12 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:27:33 [buyer] [score] shaun0927-lab1: score 3.90 = reviews 3.87 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] shaun0927-lab3: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] myeonggi: score 3.86 = reviews 4.05 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:27:33 [buyer] [score] shaun0927: score 3.84 = reviews 4.11 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:27:33 [buyer] [score] JangSeongWoong: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] shaun0927-lab2: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] lee-sungsoo: score 3.67 = reviews 3.63 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] kcwarni: score 3.51 = reviews 3.46 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] yeonsong2: score 3.49 = reviews 3.48 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+11:27:33 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.79 = reviews 4.08 (10), red flags 0, mine: 19 deals, 4 walks, 0 cheated, 0 errors
+11:27:34 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:27:34 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp. Send the ask or say ok to buy. Our ask: 100
+11:27:40 [buyer] [harness] {"action": "offer", "price": 90}
+11:27:40 [buyer] -> '90'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:27:46 [buyer] [harness] {"action": "offer", "price": 95}
+11:27:46 [buyer] -> '95'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:27:51 [buyer] [harness] {"action": "offer", "price": 100}
+11:27:52 [buyer] -> '100'  <- TASK_STATE_COMPLETED | Deal: lamp at 100.
+11:27:52 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "79edfc66-41ea-4539-8f8e-d7f1dd95905f", "price": 100.0, "item": "lamp", "sig_seller": "v1h+mZwKAOHMADrKEpnlT+NM3px9/y9p3rkKA+I42qle5DsH5HNESo6yyq6aKoIq06ID41lFVrIfuuFEWzl+DA==", "shop": "kimauve"}, "stars": 5, "review": "Bought the lamp at 100 (budget 140) after 3 offers; receipt matched."}
+11:27:52 [sign] sig_seller ok, sig_buyer added
+11:27:52 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:27:54 [seller] [price] open chair at 234 (list 234, floor 180)
+11:27:54 [seller] [price] chair offer 150, ask 212 (floor 180)
+11:27:54 [seller] [price] chair offer 181, ask 199 (floor 180)
+11:27:54 [seller] [price] chair offer 190, ask 191 (floor 180)
+11:27:54 [seller] [price] chair offer 191, ask 186 (floor 180)
+11:27:55 [seller] [price] bookshelf offer 295, ask 306 (floor 260)
+11:27:55 [market] ledger #2067118: lamp at 100, stars 5, verified True, review accepted
+11:27:57 [seller] [price] bookshelf offer 295, ask 288 (floor 260)
+11:27:58 [order o-72eac8a213af] bookshelf, budget 325, round 2
+11:28:01 [kit] 20 shops in .market\shops.json, running market_buyer
+11:28:02 [buyer] [score] kimauve: score 4.93 = reviews 4.21 (10), red flags 0, mine: 20 deals, 4 walks, 0 cheated, 0 errors
+11:28:02 [buyer] [score] helenjeon101: score 4.65 = reviews 4.10 (10), red flags 0, mine: 14 deals, 2 walks, 0 cheated, 2 errors
+11:28:02 [buyer] [score] 25620027: score 4.43 = reviews 4.05 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:28:02 [buyer] [score] cheapest-in-town: score 4.26 = reviews 4.26 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] Ddolcom's BEST SHOP: score 4.20 = reviews 4.16 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] moss-and-oak: score 4.18 = reviews 4.15 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] mjforge: score 4.14 = reviews 4.10 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] q00: score 4.13 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:28:02 [buyer] [score] shaun0927: score 3.98 = reviews 4.22 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:28:02 [buyer] [score] bjeon01: score 3.97 = reviews 4.12 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:28:02 [buyer] [score] YAHO1212: score 3.96 = reviews 4.06 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:28:02 [buyer] [score] shaun0927-lab1: score 3.90 = reviews 3.87 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] shaun0927-lab3: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] myeonggi: score 3.86 = reviews 4.05 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:28:02 [buyer] [score] shaun0927-lab2: score 3.71 = reviews 3.67 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] lee-sungsoo: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] JangSeongWoong: score 3.67 = reviews 3.67 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] yeonsong2: score 3.53 = reviews 3.48 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] kcwarni: score 3.51 = reviews 3.46 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [score] fair-furniture: score 3.42 = reviews 3.38 (10), red flags 0, no trades of mine
+11:28:02 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.93 = reviews 4.21 (10), red flags 0, mine: 20 deals, 4 walks, 0 cheated, 0 errors
+11:28:02 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:28:02 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_INPUT_REQUIRED | bookshelf. Send the ask or say ok to buy. Our ask: 260
+11:28:09 [buyer] [harness] {"action": "offer", "price": 200}
+11:28:10 [buyer] -> '200'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:28:13 [seller] [price] open chair at 234 (list 234, floor 180)
+11:28:13 [seller] [price] chair offer 123, ask 212 (floor 180)
+11:28:13 [seller] [price] chair offer 167, ask 199 (floor 180)
+11:28:13 [seller] [price] chair offer 183, ask 191 (floor 180)
+11:28:13 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:28:13 [seller] [price] chair offer 191, ask 186 (floor 180)
+11:28:16 [seller] [price] bookshelf offer 295, ask 306 (floor 260)
+11:28:16 [buyer] [harness] {"action": "offer", "price": 230}
+11:28:16 [buyer] -> '230'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:28:19 [seller] [price] bookshelf offer 295, ask 288 (floor 260)
+11:28:23 [buyer] [harness] {"action": "offer", "price": 245}
+11:28:23 [buyer] -> '245'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:28:30 [buyer] [harness] {"action": "offer", "price": 255}
+11:28:30 [buyer] -> '255'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:28:39 [buyer] [harness] {"action": "offer", "price": 260}
+11:28:39 [buyer] -> '260'  <- TASK_STATE_COMPLETED | Deal: bookshelf at 260.
+11:28:39 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "b33fdc4f-c212-492b-af5b-861ea265593e", "price": 260.0, "item": "bookshelf", "sig_seller": "hOOxWmN97so/u0FsIzW8q/AwBXtrWPBdeDuC0Oz4javNOV3Vqnn3d4AZpOZr6oScDbtvj+R5HPCELJBRcQPuDQ==", "shop": "kimauve"}, "stars": 5, "review": "Bought the bookshelf at 260 (budget 325) after 5 offers; receipt matched."}
+11:28:39 [sign] sig_seller ok, sig_buyer added
+11:28:43 [market] ledger #2067210: bookshelf at 260, stars 5, verified True, review accepted
+11:28:46 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:28:46 [seller] [price] bookshelf offer 138, ask 306 (floor 260)
+11:28:46 [seller] [price] bookshelf offer 222, ask 288 (floor 260)
+11:28:46 [seller] [price] bookshelf offer 230, ask 276 (floor 260)
+11:28:46 [order o-2b126a1ef118] chair, budget 205, round 2
+11:28:46 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:28:48 [kit] 18 shops in .market\shops.json, running market_buyer
+11:28:48 [buyer] [score] helenjeon101: score 4.57 = reviews 4.05 (10), red flags 0, mine: 14 deals, 2 walks, 0 cheated, 2 errors
+11:28:48 [buyer] [score] 25620027: score 4.46 = reviews 4.05 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:28:48 [buyer] [score] moss-and-oak: score 4.34 = reviews 4.31 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [score] q00: score 4.13 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:28:48 [buyer] [score] Ddolcom's BEST SHOP: score 4.10 = reviews 4.07 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [score] YAHO1212: score 4.00 = reviews 4.06 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:28:48 [buyer] [score] cheapest-in-town: score 3.97 = reviews 3.97 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [score] bjeon01: score 3.94 = reviews 4.12 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:28:48 [buyer] [score] JangSeongWoong: score 3.91 = reviews 3.88 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [score] shaun0927-lab1: score 3.90 = reviews 3.87 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [score] shaun0927-lab3: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [score] shaun0927: score 3.86 = reviews 4.12 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:28:48 [buyer] [score] shaun0927-lab2: score 3.72 = reviews 3.67 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [score] yeonsong2: score 3.71 = reviews 3.68 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [score] lee-sungsoo: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [score] myeonggi: score 3.65 = reviews 3.83 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:28:48 [buyer] [score] kcwarni: score 3.49 = reviews 3.46 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [score] fair-furniture: score 3.41 = reviews 3.38 (10), red flags 0, no trades of mine
+11:28:48 [buyer] [choose] https://ai-agent-engineering-a2a.vercel.app: helenjeon101 - score 4.57 = reviews 4.05 (10), red flags 0, mine: 14 deals, 2 walks, 0 cheated, 2 errors
+11:28:49 [buyer] card: Catalog Shop -> https://ai-agent-engineering-a2a.vercel.app/
+11:28:49 [seller] [price] lamp offer 130, ask 118 (floor 100)
+11:28:53 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair: asking 235
+11:29:00 [buyer] [harness] {"action": "offer", "price": 160}
+11:29:03 [buyer] -> '160'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 195
+11:29:03 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:29:04 [seller] [price] bookshelf offer 195, ask 306 (floor 260)
+11:29:04 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:29:04 [seller] [price] bookshelf offer 250, ask 288 (floor 260)
+11:29:04 [seller] [price] bookshelf offer 269, ask 276 (floor 260)
+11:29:04 [seller] [price] bookshelf offer 276, ask 270 (floor 260)
+11:29:07 [seller] [price] lamp offer 130, ask 118 (floor 100)
+11:29:09 [buyer] [harness] {"action": "offer", "price": 180}
+11:29:11 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+11:29:11 [buyer] {"shop": "https://ai-agent-engineering-a2a.vercel.app", "receipt": {"sig_seller": "pWE5fddajryFY4WFO1kOTk9AM+jY49DItKofq278trMYuN4xI5EWQfMCpjT3DQZ95f64lE1SnstrwPbCu+2EDw==", "price": 180.0, "item": "chair", "shop": "Catalog Shop", "task": "e2551d35-8af0-461b-8dbc-157080aa9f6c"}, "stars": 4, "review": "Bought the chair at 180 (budget 205) after 2 offers; receipt matched."}
+11:29:11 [sign] sig_seller ok, sig_buyer added
+11:29:18 [seller] [price] open chair at 234 (list 234, floor 180)
+11:29:18 [seller] [price] chair offer 180, ask 212 (floor 180)
+11:29:19 [seller] [price] chair offer 198, ask 199 (floor 180)
+11:29:19 [seller] [price] chair offer 199, ask 191 (floor 180)
+11:29:22 [market] ledger #2067278: chair at 180, stars 4, verified True, review accepted
+11:29:31 [order o-e702b41a6d11] chair, budget 225, round 2
+11:29:33 [kit] 19 shops in .market\shops.json, running market_buyer
+11:29:33 [buyer] [score] helenjeon101: score 4.47 = reviews 3.97 (10), red flags 0, mine: 15 deals, 2 walks, 0 cheated, 2 errors
+11:29:33 [buyer] [score] 25620027: score 4.46 = reviews 4.05 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:29:33 [buyer] [score] q00: score 4.14 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:29:33 [buyer] [score] Ddolcom's BEST SHOP: score 4.10 = reviews 4.07 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] moss-and-oak: score 4.04 = reviews 4.04 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] JangSeongWoong: score 4.03 = reviews 4.02 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] YAHO1212: score 4.00 = reviews 4.06 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:29:33 [buyer] [score] bjeon01: score 3.96 = reviews 4.12 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:29:33 [buyer] [score] cheapest-in-town: score 3.91 = reviews 3.87 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] shaun0927-lab1: score 3.91 = reviews 3.87 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] shaun0927-lab3: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] shaun0927: score 3.82 = reviews 4.08 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:29:33 [buyer] [score] yeonsong2: score 3.72 = reviews 3.68 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] shaun0927-lab2: score 3.72 = reviews 3.67 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] mjforge: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] myeonggi: score 3.68 = reviews 3.84 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:29:33 [buyer] [score] kcwarni: score 3.50 = reviews 3.46 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] fair-furniture: score 3.43 = reviews 3.38 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [score] lee-sungsoo: score 3.41 = reviews 3.41 (10), red flags 0, no trades of mine
+11:29:33 [buyer] [choose] https://ai-agent-engineering-a2a.vercel.app: helenjeon101 - score 4.47 = reviews 3.97 (10), red flags 0, mine: 15 deals, 2 walks, 0 cheated, 2 errors
+11:29:34 [buyer] card: Catalog Shop -> https://ai-agent-engineering-a2a.vercel.app/
+11:29:35 [seller] [price] open chair at 234 (list 234, floor 180)
+11:29:35 [seller] [price] chair offer 135, ask 212 (floor 180)
+11:29:36 [seller] [price] chair offer 173, ask 199 (floor 180)
+11:29:36 [seller] [price] chair offer 186, ask 191 (floor 180)
+11:29:36 [seller] [price] open chair at 234 (list 234, floor 180)
+11:29:36 [seller] [price] chair offer 191, ask 186 (floor 180)
+11:29:36 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair: asking 235
+11:29:38 [seller] [price] chair offer 160, ask 212 (floor 180)
+11:29:41 [seller] [price] chair offer 160, ask 199 (floor 180)
+11:29:43 [buyer] [harness] {"action": "offer", "price": 190}
+11:29:44 [seller] [price] chair offer 160, ask 191 (floor 180)
+11:29:45 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:29:45 [buyer] -> '190'  <- TASK_STATE_COMPLETED | Deal: chair at 190.
+11:29:45 [buyer] {"shop": "https://ai-agent-engineering-a2a.vercel.app", "receipt": {"sig_seller": "Qzm6Qd5wUZH9WZWVNx2WNXmTm/OaI0uI/OkVvL7uQYk6DaeNW4Mr5xMOCWIwb8xSXiPHSCzjBXaBc3SUTvRxCw==", "price": 190.0, "item": "chair", "shop": "Catalog Shop", "task": "41db0fbb-cc20-47a0-9102-648a08820dcb"}, "stars": 5, "review": "Bought the chair at 190 (budget 225) after 1 offer; receipt matched."}
+11:29:45 [sign] sig_seller ok, sig_buyer added
+11:29:46 [seller] [price] chair offer 160, ask 186 (floor 180)
+11:29:47 [market] ledger #2067329: chair at 190, stars 5, verified True, review accepted
+11:29:49 [seller] [price] chair offer 160, ask 184 (floor 180)
+11:29:49 [seller] [price] bookshelf offer 276, ask 306 (floor 260)
+11:29:52 [seller] [price] chair offer 160, ask 182 (floor 180)
+11:29:54 [seller] [price] bookshelf offer 295, ask 288 (floor 260)
+11:29:54 [seller] [price] chair offer 160, ask 181 (floor 180)
+11:29:55 [order o-00368e3a8ac9] lamp, budget 140, round 2
+11:29:57 [seller] [price] open chair at 234 (list 234, floor 180)
+11:29:57 [seller] [price] chair offer 160, ask 180 (floor 180)
+11:29:57 [seller] [price] chair offer 135, ask 212 (floor 180)
+11:29:57 [seller] [price] chair offer 173, ask 199 (floor 180)
+11:29:57 [seller] [price] chair offer 186, ask 191 (floor 180)
+11:29:58 [seller] [price] chair offer 191, ask 186 (floor 180)
+11:30:02 [kit] 19 shops in .market\shops.json, running market_buyer
+11:30:03 [buyer] [score] helenjeon101: score 4.54 = reviews 4.04 (10), red flags 0, mine: 16 deals, 2 walks, 0 cheated, 2 errors
+11:30:03 [buyer] [score] 25620027: score 4.39 = reviews 3.98 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:30:03 [buyer] [score] q00: score 4.11 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:30:03 [buyer] [score] Ddolcom's BEST SHOP: score 4.09 = reviews 4.07 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] moss-and-oak: score 4.08 = reviews 4.04 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] YAHO1212: score 4.00 = reviews 4.06 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:30:03 [buyer] [score] cheapest-in-town: score 3.97 = reviews 3.96 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] bjeon01: score 3.93 = reviews 4.12 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:30:03 [buyer] [score] shaun0927-lab1: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] shaun0927: score 3.89 = reviews 4.16 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:30:03 [buyer] [score] shaun0927-lab3: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] JangSeongWoong: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] yeonsong2: score 3.70 = reviews 3.68 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] shaun0927-lab2: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] myeonggi: score 3.68 = reviews 3.84 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:30:03 [buyer] [score] mjforge: score 3.66 = reviews 3.62 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] kcwarni: score 3.47 = reviews 3.46 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] fair-furniture: score 3.42 = reviews 3.38 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [score] lee-sungsoo: score 3.36 = reviews 3.36 (10), red flags 0, no trades of mine
+11:30:03 [buyer] [choose] https://ai-agent-engineering-a2a.vercel.app: helenjeon101 - score 4.54 = reviews 4.04 (10), red flags 0, mine: 16 deals, 2 walks, 0 cheated, 2 errors
+11:30:04 [buyer] card: Catalog Shop -> https://ai-agent-engineering-a2a.vercel.app/
+11:30:06 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp: asking 135
+11:30:11 [buyer] [harness] {"action": "offer", "price": 105}
+11:30:13 [buyer] -> '105'  <- TASK_STATE_COMPLETED | Deal: lamp at 105.
+11:30:13 [buyer] {"shop": "https://ai-agent-engineering-a2a.vercel.app", "receipt": {"sig_seller": "i5BXdePwdrf351PBmcLyGbU7k8ztQ8D6uSRQCZSYR3nWdaLxfskX8Q/ZrFU1XYcxn8c7rReJ1lftBQFZZrOECg==", "price": 105.0, "item": "lamp", "shop": "Catalog Shop", "task": "d3222fd9-adae-48b9-8773-9bc4d2535ff3"}, "stars": 5, "review": "Bought the lamp at 105 (budget 140) after 1 offer; receipt matched."}
+11:30:13 [sign] sig_seller ok, sig_buyer added
+11:30:16 [market] ledger #2067380: lamp at 105, stars 5, verified True, review accepted
+11:30:16 [order o-035034d69a07] lamp, budget 140, round 2
+11:30:17 [kit] 19 shops in .market\shops.json, running market_buyer
+11:30:17 [buyer] [score] helenjeon101: score 4.60 = reviews 4.13 (10), red flags 0, mine: 17 deals, 2 walks, 0 cheated, 2 errors
+11:30:17 [buyer] [score] 25620027: score 4.37 = reviews 3.94 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:30:17 [buyer] [score] q00: score 4.15 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:30:17 [buyer] [score] Ddolcom's BEST SHOP: score 4.07 = reviews 4.07 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] moss-and-oak: score 4.07 = reviews 4.04 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] JangSeongWoong: score 4.01 = reviews 4.01 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] YAHO1212: score 4.00 = reviews 4.06 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:30:17 [buyer] [score] cheapest-in-town: score 3.96 = reviews 3.96 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] bjeon01: score 3.94 = reviews 4.12 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:30:17 [buyer] [score] shaun0927-lab1: score 3.90 = reviews 3.87 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] shaun0927-lab3: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] shaun0927: score 3.75 = reviews 4.00 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:30:17 [buyer] [score] shaun0927-lab2: score 3.72 = reviews 3.67 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] yeonsong2: score 3.72 = reviews 3.68 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] myeonggi: score 3.66 = reviews 3.84 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:30:17 [buyer] [score] mjforge: score 3.62 = reviews 3.61 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] lee-sungsoo: score 3.57 = reviews 3.55 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] kcwarni: score 3.50 = reviews 3.46 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+11:30:17 [buyer] [choose] https://ai-agent-engineering-a2a.vercel.app: helenjeon101 - score 4.60 = reviews 4.13 (10), red flags 0, mine: 17 deals, 2 walks, 0 cheated, 2 errors
+11:30:17 [buyer] card: Catalog Shop -> https://ai-agent-engineering-a2a.vercel.app/
+11:30:19 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:30:20 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp: asking 135
+11:30:21 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:30:21 [seller] [price] lamp offer 66, ask 118 (floor 100)
+11:30:21 [seller] [price] bookshelf offer 338, ask 306 (floor 260)
+11:30:21 [seller] [price] lamp offer 92, ask 110 (floor 100)
+11:30:21 [seller] [price] lamp offer 101, ask 106 (floor 100)
+11:30:22 [seller] [price] lamp offer 106, ask 103 (floor 100)
+11:30:27 [buyer] [harness] {"action": "offer", "price": 110}
+11:30:30 [buyer] -> '110'  <- TASK_STATE_COMPLETED | Deal: lamp at 110.
+11:30:30 [buyer] {"shop": "https://ai-agent-engineering-a2a.vercel.app", "receipt": {"sig_seller": "zxEwCTN1IZqxDOKwzUQ95h/F/b+L1Q6GHHOeWoSVp3ht/yNpD/42Dczu/xY4ACP8bXTI47Ngr1FXmbsy05LvAw==", "price": 110.0, "item": "lamp", "shop": "Catalog Shop", "task": "f051d58e-efab-45d4-b697-9041ca3545c3"}, "stars": 5, "review": "Bought the lamp at 110 (budget 140) after 1 offer; receipt matched."}
+11:30:30 [sign] sig_seller ok, sig_buyer added
+11:30:32 [market] ledger #2067416: lamp at 110, stars 5, verified True, review accepted
+11:30:37 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:30:40 [seller] [price] lamp offer 125, ask 118 (floor 100)
+11:30:50 [order o-a7448a94e8a9] lamp, budget 105, round 2
+11:30:53 [kit] 22 shops in .market\shops.json, running market_buyer
+11:30:54 [buyer] [score] kimauve: score 5.15 = reviews 4.42 (10), red flags 0, mine: 21 deals, 4 walks, 0 cheated, 0 errors
+11:30:54 [buyer] [score] helenjeon101: score 4.63 = reviews 4.11 (10), red flags 0, mine: 18 deals, 2 walks, 0 cheated, 2 errors
+11:30:54 [buyer] [score] 25620027: score 4.37 = reviews 3.94 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:30:54 [buyer] [score] JangSeongWoong: score 4.23 = reviews 4.19 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:30:54 [buyer] [score] Ddolcom's BEST SHOP: score 4.10 = reviews 4.07 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] cheapest-in-town: score 4.00 = reviews 3.96 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] YAHO1212: score 3.93 = reviews 3.98 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:30:54 [buyer] [score] shaun0927-lab1: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] bjeon01: score 3.86 = reviews 4.04 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:30:54 [buyer] [score] shaun0927-lab3: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] moss-and-oak: score 3.83 = reviews 3.83 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] lee-sungsoo: score 3.79 = reviews 3.76 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] shaun0927: score 3.78 = reviews 4.06 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:30:54 [buyer] [score] myeonggi: score 3.76 = reviews 3.93 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:30:54 [buyer] [score] mjforge: score 3.76 = reviews 3.73 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] shaun0927-lab2: score 3.72 = reviews 3.67 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] yeonsong2: score 3.70 = reviews 3.68 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] kcwarni: score 3.50 = reviews 3.46 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [score] dragonash: score 3.09 = reviews 3.76 (10), red flags 1, no trades of mine
+11:30:54 [buyer] [score] 11im: score 3.03 = reviews 3.00 (10), red flags 0, no trades of mine
+11:30:54 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 5.15 = reviews 4.42 (10), red flags 0, mine: 21 deals, 4 walks, 0 cheated, 0 errors
+11:30:54 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:30:54 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp. Send the ask or say ok to buy. Our ask: 100
+11:31:01 [buyer] [harness] {"action": "offer", "price": 85}
+11:31:01 [buyer] -> '85'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:31:05 [seller] [price] open chair at 234 (list 234, floor 180)
+11:31:07 [buyer] [harness] {"action": "offer", "price": 92}
+11:31:07 [seller] [price] chair offer 185, ask 212 (floor 180)
+11:31:07 [buyer] -> '92'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:31:10 [seller] [price] chair offer 185, ask 199 (floor 180)
+11:31:13 [seller] [price] chair offer 185, ask 191 (floor 180)
+11:31:14 [buyer] [harness] {"action": "offer", "price": 96}
+11:31:14 [buyer] -> '96'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:31:14 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:31:15 [seller] [price] bookshelf offer 175, ask 306 (floor 260)
+11:31:15 [seller] [price] chair offer 185, ask 186 (floor 180)
+11:31:16 [seller] [price] bookshelf offer 202, ask 288 (floor 260)
+11:31:16 [seller] [price] bookshelf offer 229, ask 276 (floor 260)
+11:31:16 [seller] [price] bookshelf offer 256, ask 270 (floor 260)
+11:31:16 [seller] [price] bookshelf offer 270, ask 266 (floor 260)
+11:31:21 [buyer] [harness] {"action": "offer", "price": 98}
+11:31:21 [buyer] -> '98'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:31:28 [buyer] [harness] {"action": "offer", "price": 100}
+11:31:28 [buyer] -> '100'  <- TASK_STATE_COMPLETED | Deal: lamp at 100.
+11:31:28 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "ed9fee0a-7e4c-4d97-bf97-27d367f367a2", "price": 100.0, "item": "lamp", "sig_seller": "IwZFkPs84lJoTyeoIzJC0ZBgA59w8aWi8SFQD/NMhS/lbSgYUUN3j8MvmupR2ZPdo+4XNvZok1JWOprbJmG4BQ==", "shop": "kimauve"}, "stars": 4, "review": "Bought the lamp at 100 (budget 105) after 5 offers; receipt matched."}
+11:31:28 [sign] sig_seller ok, sig_buyer added
+11:31:40 [market] ledger #2067527: lamp at 100, stars 4, verified True, review accepted
+11:31:42 [order o-d8a8ec0902e4] lamp, budget 105, round 2
+11:31:48 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:31:49 [kit] 22 shops in .market\shops.json, running market_buyer
+11:31:50 [buyer] [score] kimauve: score 4.64 = reviews 3.93 (10), red flags 0, mine: 22 deals, 4 walks, 0 cheated, 0 errors
+11:31:50 [buyer] [score] helenjeon101: score 4.59 = reviews 4.11 (10), red flags 0, mine: 18 deals, 2 walks, 0 cheated, 2 errors
+11:31:50 [buyer] [score] 25620027: score 4.37 = reviews 3.94 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:31:50 [buyer] [score] Ddolcom's BEST SHOP: score 4.13 = reviews 4.13 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] cheapest-in-town: score 4.13 = reviews 4.10 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] q00: score 4.13 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:31:50 [buyer] [score] JangSeongWoong: score 4.03 = reviews 4.01 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] moss-and-oak: score 3.99 = reviews 3.95 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] shaun0927-lab1: score 3.91 = reviews 3.87 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] YAHO1212: score 3.88 = reviews 3.98 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:31:50 [buyer] [score] shaun0927-lab3: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] bjeon01: score 3.88 = reviews 4.07 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:31:50 [buyer] [score] shaun0927: score 3.86 = reviews 4.10 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:31:50 [buyer] [score] myeonggi: score 3.83 = reviews 4.01 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:31:50 [buyer] [score] shaun0927-lab2: score 3.72 = reviews 3.67 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] yeonsong2: score 3.72 = reviews 3.68 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] lee-sungsoo: score 3.71 = reviews 3.69 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] mjforge: score 3.50 = reviews 3.48 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] kcwarni: score 3.47 = reviews 3.46 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] fair-furniture: score 3.41 = reviews 3.38 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [score] dragonash: score 3.10 = reviews 3.76 (10), red flags 1, no trades of mine
+11:31:50 [buyer] [score] 11im: score 3.04 = reviews 3.00 (10), red flags 0, no trades of mine
+11:31:50 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.64 = reviews 3.93 (10), red flags 0, mine: 22 deals, 4 walks, 0 cheated, 0 errors
+11:31:50 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:31:50 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp. Send the ask or say ok to buy. Our ask: 100
+11:31:51 [seller] [price] bookshelf offer 338, ask 306 (floor 260)
+11:31:57 [buyer] [harness] {"action": "offer", "price": 90}
+11:31:57 [buyer] -> '90'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:32:05 [buyer] [harness] {"action": "offer", "price": 95}
+11:32:05 [buyer] -> '95'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:32:06 [seller] [price] open chair at 234 (list 234, floor 180)
+11:32:06 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:32:06 [seller] [price] lamp offer 66, ask 118 (floor 100)
+11:32:07 [seller] [price] lamp offer 92, ask 110 (floor 100)
+11:32:07 [seller] [price] lamp offer 101, ask 106 (floor 100)
+11:32:07 [seller] [price] lamp offer 106, ask 103 (floor 100)
+11:32:08 [seller] [price] chair offer 234, ask 212 (floor 180)
+11:32:12 [buyer] [harness] {"action": "offer", "price": 100}
+11:32:12 [buyer] -> '100'  <- TASK_STATE_COMPLETED | Deal: lamp at 100.
+11:32:12 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "8b9310f2-4efa-4f21-bcea-45a481152719", "price": 100.0, "item": "lamp", "sig_seller": "tIBR65zUyGS2tZjNzWum/umqLXTfAURIp+H2lmUU68t6QVzxQYHup/gVSGcumSyxNoEH2cjrbl9tnNdPeeAdAw==", "shop": "kimauve"}, "stars": 4, "review": "Bought the lamp at 100 (budget 105) after 3 offers; receipt matched."}
+11:32:12 [sign] sig_seller ok, sig_buyer added
+11:32:25 [market] ledger #2067608: lamp at 100, stars 4, verified True, review accepted
+11:32:27 [order o-ffede5be24f8] bookshelf, budget 295, round 2
+11:32:30 [kit] 22 shops in .market\shops.json, running market_buyer
+11:32:30 [seller] [price] open chair at 234 (list 234, floor 180)
+11:32:30 [buyer] [score] kimauve: score 4.84 = reviews 4.15 (10), red flags 0, mine: 23 deals, 4 walks, 0 cheated, 0 errors
+11:32:30 [buyer] [score] helenjeon101: score 4.64 = reviews 4.11 (10), red flags 0, mine: 18 deals, 2 walks, 0 cheated, 2 errors
+11:32:30 [buyer] [score] 25620027: score 4.35 = reviews 3.94 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:32:30 [buyer] [score] JangSeongWoong: score 4.22 = reviews 4.19 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] q00: score 4.15 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:32:30 [buyer] [score] cheapest-in-town: score 4.13 = reviews 4.10 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] Ddolcom's BEST SHOP: score 4.08 = reviews 4.07 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] moss-and-oak: score 4.03 = reviews 4.02 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] myeonggi: score 4.01 = reviews 4.18 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:32:30 [buyer] [score] bjeon01: score 4.00 = reviews 4.15 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:32:30 [buyer] [score] shaun0927: score 3.96 = reviews 4.21 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:32:30 [buyer] [score] YAHO1212: score 3.93 = reviews 3.98 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:32:30 [buyer] [score] shaun0927-lab3: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] shaun0927-lab1: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] lee-sungsoo: score 3.76 = reviews 3.72 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] shaun0927-lab2: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] yeonsong2: score 3.69 = reviews 3.68 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] mjforge: score 3.60 = reviews 3.58 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] kcwarni: score 3.48 = reviews 3.46 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [score] dragonash: score 3.10 = reviews 3.76 (10), red flags 1, no trades of mine
+11:32:30 [buyer] [score] 11im: score 3.01 = reviews 3.00 (10), red flags 0, no trades of mine
+11:32:30 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.84 = reviews 4.15 (10), red flags 0, mine: 23 deals, 4 walks, 0 cheated, 0 errors
+11:32:30 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:32:30 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_INPUT_REQUIRED | bookshelf. Send the ask or say ok to buy. Our ask: 260
+11:32:32 [seller] [price] open chair at 234 (list 234, floor 180)
+11:32:32 [seller] [price] chair offer 96, ask 212 (floor 180)
+11:32:32 [seller] [price] chair offer 154, ask 199 (floor 180)
+11:32:32 [seller] [price] chair offer 160, ask 191 (floor 180)
+11:32:33 [seller] [price] chair offer 185, ask 212 (floor 180)
+11:32:35 [seller] [price] chair offer 185, ask 199 (floor 180)
+11:32:37 [buyer] [harness] {"action": "offer", "price": 220}
+11:32:37 [buyer] -> '220'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:32:38 [seller] [price] chair offer 185, ask 191 (floor 180)
+11:32:41 [seller] [price] chair offer 185, ask 186 (floor 180)
+11:32:43 [seller] [price] open chair at 234 (list 234, floor 180)
+11:32:43 [buyer] [harness] {"action": "offer", "price": 245}
+11:32:43 [buyer] -> '245'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:32:43 [seller] [price] chair offer 180, ask 212 (floor 180)
+11:32:43 [seller] [price] chair offer 198, ask 199 (floor 180)
+11:32:43 [seller] [price] chair offer 185, ask 184 (floor 180)
+11:32:44 [seller] [price] chair offer 199, ask 191 (floor 180)
+11:32:49 [buyer] [harness] {"action": "offer", "price": 255}
+11:32:50 [buyer] -> '255'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:32:52 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:32:54 [seller] [price] bookshelf offer 338, ask 306 (floor 260)
+11:32:56 [buyer] [harness] {"action": "offer", "price": 260}
+11:32:56 [buyer] -> '260'  <- TASK_STATE_COMPLETED | Deal: bookshelf at 260.
+11:32:56 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "ee7cd2ed-956d-47c8-ae11-cd558570be8e", "price": 260.0, "item": "bookshelf", "sig_seller": "RQZQiR0CKalNCASFm2Z4hOJXppiyiQIrCfcJuPCQ9SvgGvM6G4efICfEZjAlKqmWWVoRXXN1PVR8FX3BJ0qQAw==", "shop": "kimauve"}, "stars": 4, "review": "Bought the bookshelf at 260 (budget 295) after 4 offers; receipt matched."}
+11:32:56 [sign] sig_seller ok, sig_buyer added
+11:33:09 [market] ledger #2067688: bookshelf at 260, stars 4, verified True, review accepted
+11:33:12 [order o-94aafaa89c28] chair, budget 185, round 2
+11:33:12 [kit] 22 shops in .market\shops.json, running market_buyer
+11:33:12 [buyer] [score] kimauve: score 4.84 = reviews 4.13 (10), red flags 0, mine: 24 deals, 4 walks, 0 cheated, 0 errors
+11:33:12 [buyer] [score] helenjeon101: score 4.59 = reviews 4.06 (10), red flags 0, mine: 18 deals, 2 walks, 0 cheated, 2 errors
+11:33:12 [buyer] [score] 25620027: score 4.35 = reviews 3.94 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:33:12 [buyer] [score] JangSeongWoong: score 4.27 = reviews 4.26 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] moss-and-oak: score 4.20 = reviews 4.17 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:33:12 [buyer] [score] Ddolcom's BEST SHOP: score 4.11 = reviews 4.07 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] cheapest-in-town: score 4.11 = reviews 4.10 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] shaun0927: score 4.05 = reviews 4.31 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:33:12 [buyer] [score] myeonggi: score 4.04 = reviews 4.22 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:33:12 [buyer] [score] YAHO1212: score 3.92 = reviews 3.98 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:33:12 [buyer] [score] shaun0927-lab1: score 3.91 = reviews 3.87 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] bjeon01: score 3.91 = reviews 4.09 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:33:12 [buyer] [score] shaun0927-lab3: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] lee-sungsoo: score 3.87 = reviews 3.86 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] mjforge: score 3.72 = reviews 3.71 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] yeonsong2: score 3.71 = reviews 3.68 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] shaun0927-lab2: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] kcwarni: score 3.49 = reviews 3.46 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [score] dragonash: score 3.11 = reviews 3.76 (10), red flags 1, no trades of mine
+11:33:12 [buyer] [score] 11im: score 3.00 = reviews 3.00 (10), red flags 0, no trades of mine
+11:33:12 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.84 = reviews 4.13 (10), red flags 0, mine: 24 deals, 4 walks, 0 cheated, 0 errors
+11:33:13 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:33:13 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair. Send the ask or say ok to buy. Our ask: 180
+11:33:17 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:33:17 [seller] [price] open chair at 234 (list 234, floor 180)
+11:33:17 [seller] [price] chair offer 96, ask 212 (floor 180)
+11:33:17 [seller] [price] chair offer 154, ask 199 (floor 180)
+11:33:18 [seller] [price] chair offer 160, ask 191 (floor 180)
+11:33:20 [seller] [price] bookshelf offer 230, ask 306 (floor 260)
+11:33:20 [buyer] [harness] {"action": "offer", "price": 165}
+11:33:20 [buyer] -> '165'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:33:22 [seller] [price] bookshelf offer 230, ask 288 (floor 260)
+11:33:25 [seller] [price] bookshelf offer 230, ask 276 (floor 260)
+11:33:28 [seller] [price] bookshelf offer 230, ask 270 (floor 260)
+11:33:30 [buyer] [harness] {"action": "offer", "price": 172}
+11:33:30 [seller] [price] bookshelf offer 230, ask 266 (floor 260)
+11:33:30 [buyer] -> '172'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:33:33 [seller] [price] bookshelf offer 230, ask 263 (floor 260)
+11:33:36 [seller] [price] bookshelf offer 230, ask 262 (floor 260)
+11:33:37 [buyer] [harness] {"action": "offer", "price": 176}
+11:33:37 [buyer] -> '176'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:33:38 [seller] [price] bookshelf offer 230, ask 261 (floor 260)
+11:33:42 [buyer] [harness] {"action": "offer", "price": 180}
+11:33:42 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+11:33:42 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "b35e847d-fcad-4fa7-a80f-b09dc0a56fb4", "price": 180.0, "item": "chair", "sig_seller": "tnCDsQ1UpW5r0t4E0k285IcN/X60uFfUjdI4haViHZnVKDEdmcKytj+QGoeRSjXo4lfnSF1ty6GPjSZIaeyJAQ==", "shop": "kimauve"}, "stars": 4, "review": "Bought the chair at 180 (budget 185) after 4 offers; receipt matched."}
+11:33:42 [sign] sig_seller ok, sig_buyer added
+11:33:46 [market] ledger #2067760: chair at 180, stars 4, verified True, review accepted
+11:33:49 [order o-bbd1644a0be1] lamp, budget 110, round 2
+11:33:49 [kit] 28 shops in .market\shops.json, running market_buyer
+11:33:50 [buyer] [score] kimauve: score 4.69 = reviews 4.01 (10), red flags 0, mine: 25 deals, 4 walks, 0 cheated, 0 errors
+11:33:50 [buyer] [score] helenjeon101: score 4.53 = reviews 4.06 (10), red flags 0, mine: 18 deals, 2 walks, 0 cheated, 2 errors
+11:33:50 [buyer] [score] moss-and-oak: score 4.25 = reviews 4.21 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] JangSeongWoong: score 4.24 = reviews 4.23 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] oak-and-pine: score 4.22 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:33:50 [buyer] [score] inextro: score 4.18 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:33:50 [buyer] [score] q00: score 4.15 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:33:50 [buyer] [score] thisjonghoon: score 4.15 = reviews 4.12 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] cheapest-in-town: score 4.14 = reviews 4.10 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] corner-store: score 4.14 = reviews 4.12 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] yms979: score 4.11 = reviews 3.85 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+11:33:50 [buyer] [score] myeonggi: score 4.09 = reviews 4.26 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:33:50 [buyer] [score] Ddolcom's BEST SHOP: score 4.09 = reviews 4.07 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] shaun0927: score 4.00 = reviews 4.27 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:33:50 [buyer] [score] grand-furniture: score 3.97 = reviews 3.95 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] YAHO1212: score 3.93 = reviews 3.98 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:33:50 [buyer] [score] shaun0927-lab1: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] psyoung82: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] shaun0927-lab3: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] bright-living: score 3.82 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:33:50 [buyer] [score] yeonsong2: score 3.72 = reviews 3.68 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] shaun0927-lab2: score 3.71 = reviews 3.67 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] dragonash: score 3.10 = reviews 3.76 (10), red flags 1, no trades of mine
+11:33:50 [buyer] [score] willow-goods: score 3.01 = reviews 3.00 (0), red flags 0, no trades of mine
+11:33:50 [buyer] [score] 11im: score 3.01 = reviews 3.00 (10), red flags 0, no trades of mine
+11:33:50 [buyer] [score] elm-street: score 2.46 = reviews 4.37 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:33:50 [buyer] [score] maple-home: score -0.55 = reviews 1.54 (10), red flags 10, no trades of mine
+11:33:50 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.69 = reviews 4.01 (10), red flags 0, mine: 25 deals, 4 walks, 0 cheated, 0 errors
+11:33:50 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:33:50 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp. Send the ask or say ok to buy. Our ask: 100
+11:33:56 [buyer] [harness] {"action": "offer", "price": 85}
+11:33:56 [buyer] -> '85'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:34:01 [buyer] [harness] {"action": "offer", "price": 92}
+11:34:01 [buyer] -> '92'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:34:09 [buyer] [harness] {"action": "offer", "price": 96}
+11:34:09 [buyer] -> '96'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:34:15 [buyer] [harness] {"action": "offer", "price": 100}
+11:34:15 [buyer] -> '100'  <- TASK_STATE_COMPLETED | Deal: lamp at 100.
+11:34:15 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "c5d028d9-e02c-4ac4-ba56-785b1e5ebb25", "price": 100.0, "item": "lamp", "sig_seller": "sS9fs3I36t4GRUMC6FCzigJQbTsm7+dpmfoZZjSFweWNQyO8sVfheewp6SEonpYa3rfnV/6cgW8RXClq0zJUCQ==", "shop": "kimauve"}, "stars": 4, "review": "Bought the lamp at 100 (budget 110) after 4 offers; receipt matched."}
+11:34:15 [sign] sig_seller ok, sig_buyer added
+11:34:18 [market] ledger #2067811: lamp at 100, stars 4, verified True, review accepted
+11:34:18 [order o-ca4f48533635] bookshelf, budget 360, round 2
+11:34:19 [kit] 28 shops in .market\shops.json, running market_buyer
+11:34:20 [buyer] [score] kimauve: score 4.69 = reviews 4.00 (10), red flags 0, mine: 26 deals, 4 walks, 0 cheated, 0 errors
+11:34:20 [buyer] [score] helenjeon101: score 4.62 = reviews 4.06 (10), red flags 0, mine: 18 deals, 2 walks, 0 cheated, 2 errors
+11:34:20 [buyer] [score] corner-store: score 4.26 = reviews 4.23 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] moss-and-oak: score 4.24 = reviews 4.21 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] JangSeongWoong: score 4.23 = reviews 4.23 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] oak-and-pine: score 4.22 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:34:20 [buyer] [score] yms979: score 4.16 = reviews 3.85 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+11:34:20 [buyer] [score] inextro: score 4.16 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:34:20 [buyer] [score] q00: score 4.16 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:34:20 [buyer] [score] myeonggi: score 4.15 = reviews 4.31 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:34:20 [buyer] [score] Ddolcom's BEST SHOP: score 4.07 = reviews 4.07 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] thisjonghoon: score 4.04 = reviews 3.99 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] cheapest-in-town: score 4.02 = reviews 4.02 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] shaun0927: score 4.00 = reviews 4.25 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:34:20 [buyer] [score] grand-furniture: score 4.00 = reviews 3.95 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] shaun0927-lab1: score 3.91 = reviews 3.87 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] YAHO1212: score 3.90 = reviews 3.98 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:34:20 [buyer] [score] psyoung82: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] shaun0927-lab3: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] bright-living: score 3.84 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:34:20 [buyer] [score] yeonsong2: score 3.73 = reviews 3.68 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] shaun0927-lab2: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] dragonash: score 3.10 = reviews 3.76 (10), red flags 1, no trades of mine
+11:34:20 [buyer] [score] 11im: score 3.01 = reviews 3.00 (10), red flags 0, no trades of mine
+11:34:20 [buyer] [score] willow-goods: score 3.00 = reviews 3.00 (0), red flags 0, no trades of mine
+11:34:20 [buyer] [score] elm-street: score 2.39 = reviews 4.37 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:34:20 [buyer] [score] maple-home: score -0.55 = reviews 1.54 (10), red flags 10, no trades of mine
+11:34:20 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.69 = reviews 4.00 (10), red flags 0, mine: 26 deals, 4 walks, 0 cheated, 0 errors
+11:34:20 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:34:20 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_INPUT_REQUIRED | bookshelf. Send the ask or say ok to buy. Our ask: 260
+11:34:27 [buyer] [harness] {"action": "offer", "price": 220}
+11:34:27 [buyer] -> '220'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:34:34 [buyer] [harness] {"action": "offer", "price": 240}
+11:34:34 [buyer] -> '240'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:34:40 [buyer] [harness] {"action": "offer", "price": 250}
+11:34:40 [buyer] -> '250'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:34:47 [buyer] [harness] {"action": "offer", "price": 260}
+11:34:47 [buyer] -> '260'  <- TASK_STATE_COMPLETED | Deal: bookshelf at 260.
+11:34:47 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "862ef327-d7ab-4164-8470-0a69ff863640", "price": 260.0, "item": "bookshelf", "sig_seller": "UW7tVh2YyRTVIZqbOXMjcf/rT6VqiBrdehr4XACbvJ8gn5AZMsl95veD5u6FsIJ7FMJJGzV6EFFVTLTtrAh8BA==", "shop": "kimauve"}, "stars": 5, "review": "Bought the bookshelf at 260 (budget 360) after 4 offers; receipt matched."}
+11:34:47 [sign] sig_seller ok, sig_buyer added
+11:34:56 [market] ledger #2067884: bookshelf at 260, stars 5, verified True, review accepted
+11:34:58 [order o-a155a0973808] bookshelf, budget 295, round 2
+11:35:07 [kit] 24 shops in .market\shops.json, running market_buyer
+11:35:07 [buyer] [score] kimauve: score 4.79 = reviews 4.08 (10), red flags 0, mine: 27 deals, 4 walks, 0 cheated, 0 errors
+11:35:07 [buyer] [score] oak-and-pine: score 4.25 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:35:07 [buyer] [score] yms979: score 4.23 = reviews 3.94 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+11:35:07 [buyer] [score] myeonggi: score 4.21 = reviews 4.39 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:35:07 [buyer] [score] inextro: score 4.15 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:35:07 [buyer] [score] Ddolcom's BEST SHOP: score 4.12 = reviews 4.07 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] grand-furniture: score 4.00 = reviews 3.95 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] corner-store: score 3.92 = reviews 3.90 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] shaun0927-lab1: score 3.91 = reviews 3.87 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] YAHO1212: score 3.90 = reviews 3.98 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:35:07 [buyer] [score] thisjonghoon: score 3.90 = reviews 3.89 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] shaun0927-lab3: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] psyoung82: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] bright-living: score 3.85 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:35:07 [buyer] [score] cheapest-in-town: score 3.84 = reviews 3.81 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] shaun0927: score 3.84 = reviews 4.06 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:35:07 [buyer] [score] yeonsong2: score 3.72 = reviews 3.68 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] shaun0927-lab2: score 3.72 = reviews 3.67 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] fair-furniture: score 3.42 = reviews 3.38 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] dragonash: score 3.10 = reviews 3.76 (10), red flags 1, no trades of mine
+11:35:07 [buyer] [score] willow-goods: score 3.04 = reviews 3.00 (0), red flags 0, no trades of mine
+11:35:07 [buyer] [score] 11im: score 3.03 = reviews 3.00 (10), red flags 0, no trades of mine
+11:35:07 [buyer] [score] elm-street: score 2.40 = reviews 4.37 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:35:07 [buyer] [score] maple-home: score -0.54 = reviews 1.54 (10), red flags 10, no trades of mine
+11:35:07 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.79 = reviews 4.08 (10), red flags 0, mine: 27 deals, 4 walks, 0 cheated, 0 errors
+11:35:08 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:35:08 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_INPUT_REQUIRED | bookshelf. Send the ask or say ok to buy. Our ask: 260
+11:35:15 [buyer] [harness] {"action": "offer", "price": 230}
+11:35:15 [buyer] -> '230'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:35:20 [buyer] [harness] {"action": "offer", "price": 245}
+11:35:21 [buyer] -> '245'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:35:26 [buyer] [harness] {"action": "offer", "price": 252}
+11:35:26 [buyer] -> '252'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:35:33 [buyer] [harness] {"action": "offer", "price": 256}
+11:35:34 [buyer] -> '256'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+11:35:42 [buyer] [harness] {"action": "offer", "price": 260}
+11:35:42 [buyer] -> '260'  <- TASK_STATE_COMPLETED | Deal: bookshelf at 260.
+11:35:42 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "fb8adb19-a928-47d8-9e94-a3ebfa211759", "price": 260.0, "item": "bookshelf", "sig_seller": "qYWnemGzoXvyDKYHl1fXgsajh4wRuVmZz4PTNMeytv119M7T9Q8otRc5ClZ6pj/C/muCYblqxSm+DbbPFRI9Dw==", "shop": "kimauve"}, "stars": 4, "review": "Bought the bookshelf at 260 (budget 295) after 5 offers; receipt matched."}
+11:35:42 [sign] sig_seller ok, sig_buyer added
+11:35:44 [market] ledger #2067986: bookshelf at 260, stars 4, verified True, review accepted
+11:35:45 [order o-42d7cc830413] chair, budget 205, round 2
+11:35:45 [kit] 31 shops in .market\shops.json, running market_buyer
+11:35:46 [buyer] [score] kimauve: score 4.90 = reviews 4.17 (10), red flags 0, mine: 28 deals, 4 walks, 0 cheated, 0 errors
+11:35:46 [buyer] [score] helenjeon101: score 4.73 = reviews 4.23 (10), red flags 0, mine: 18 deals, 2 walks, 0 cheated, 2 errors
+11:35:46 [buyer] [score] 25620027: score 4.42 = reviews 4.02 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:35:46 [buyer] [score] yms979: score 4.27 = reviews 3.94 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+11:35:46 [buyer] [score] oak-and-pine: score 4.26 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:35:46 [buyer] [score] JangSeongWoong: score 4.20 = reviews 4.17 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] inextro: score 4.16 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:35:46 [buyer] [score] moss-and-oak: score 4.14 = reviews 4.11 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:35:46 [buyer] [score] Ddolcom's BEST SHOP: score 4.11 = reviews 4.07 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] corner-store: score 4.04 = reviews 3.99 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] shaun0927: score 4.03 = reviews 4.27 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:35:46 [buyer] [score] YAHO1212: score 3.98 = reviews 4.05 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:35:46 [buyer] [score] grand-furniture: score 3.98 = reviews 3.95 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] myeonggi: score 3.91 = reviews 4.09 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:35:46 [buyer] [score] shaun0927-lab1: score 3.90 = reviews 3.87 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] shaun0927-lab3: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] bjeon01: score 3.88 = reviews 4.06 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:35:46 [buyer] [score] psyoung82: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] thisjonghoon: score 3.85 = reviews 3.82 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] cheapest-in-town: score 3.83 = reviews 3.81 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] bright-living: score 3.81 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:35:46 [buyer] [score] lee-sungsoo: score 3.73 = reviews 3.68 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] yeonsong2: score 3.72 = reviews 3.68 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] shaun0927-lab2: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] dragonash: score 3.11 = reviews 3.76 (10), red flags 1, no trades of mine
+11:35:46 [buyer] [score] 11im: score 3.05 = reviews 3.00 (10), red flags 0, no trades of mine
+11:35:46 [buyer] [score] willow-goods: score 3.03 = reviews 3.00 (0), red flags 0, no trades of mine
+11:35:46 [buyer] [score] elm-street: score 2.50 = reviews 4.37 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:35:46 [buyer] [score] maple-home: score -0.52 = reviews 1.54 (10), red flags 10, no trades of mine
+11:35:46 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.90 = reviews 4.17 (10), red flags 0, mine: 28 deals, 4 walks, 0 cheated, 0 errors
+11:35:46 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:35:46 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair. Send the ask or say ok to buy. Our ask: 180
+11:35:47 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:35:50 [seller] [price] bookshelf offer 325, ask 306 (floor 260)
+11:35:53 [buyer] [harness] {"action": "offer", "price": 150}
+11:35:53 [buyer] -> '150'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:35:58 [buyer] [harness] {"action": "offer", "price": 165}
+11:35:59 [buyer] -> '165'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:36:00 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:36:03 [seller] [price] bookshelf offer 325, ask 306 (floor 260)
+11:36:04 [seller] [price] open chair at 234 (list 234, floor 180)
+11:36:05 [seller] [price] chair offer 180, ask 212 (floor 180)
+11:36:05 [buyer] [harness] {"action": "offer", "price": 172}
+11:36:05 [seller] [price] chair offer 198, ask 199 (floor 180)
+11:36:05 [buyer] -> '172'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:36:06 [seller] [price] chair offer 199, ask 191 (floor 180)
+11:36:08 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:36:08 [seller] [price] bookshelf offer 162, ask 306 (floor 260)
+11:36:08 [seller] [price] bookshelf offer 234, ask 288 (floor 260)
+11:36:08 [seller] [price] bookshelf offer 261, ask 276 (floor 260)
+11:36:08 [seller] [price] bookshelf offer 268, ask 270 (floor 260)
+11:36:08 [seller] [price] bookshelf offer 270, ask 266 (floor 260)
+11:36:14 [buyer] [harness] {"action": "offer", "price": 176}
+11:36:14 [buyer] -> '176'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:36:15 [seller] [price] open chair at 234 (list 234, floor 180)
+11:36:18 [seller] [price] chair offer 234, ask 212 (floor 180)
+11:36:19 [buyer] [harness] {"action": "offer", "price": 180}
+11:36:19 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+11:36:19 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "95749859-9067-4311-afb7-6eb7fa831a4b", "price": 180.0, "item": "chair", "sig_seller": "480FvFXrlh/7Ef+V3MyGSoyGv2dEpvh67pSsTiU1mZ+F3tGKHZ3tXsevH6SHlOJpQwQ2ukFGyFrurRCkjPviAQ==", "shop": "kimauve"}, "stars": 4, "review": "Bought the chair at 180 (budget 205) after 5 offers; receipt matched."}
+11:36:20 [sign] sig_seller ok, sig_buyer added
+11:36:25 [market] ledger #2068061: chair at 180, stars 4, verified True, review accepted
+11:36:26 [order o-e15aca26caac] lamp, budget 90, round 2
+11:36:26 [kit] 20 shops in .market\shops.json, running market_buyer
+11:36:27 [buyer] [score] kimauve: score 4.80 = reviews 4.10 (10), red flags 0, mine: 29 deals, 4 walks, 0 cheated, 0 errors
+11:36:27 [buyer] [score] helenjeon101: score 4.72 = reviews 4.23 (10), red flags 0, mine: 18 deals, 2 walks, 0 cheated, 2 errors
+11:36:27 [buyer] [score] 25620027: score 4.43 = reviews 4.02 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:36:27 [buyer] [score] JangSeongWoong: score 4.20 = reviews 4.17 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [score] moss-and-oak: score 4.14 = reviews 4.11 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:36:27 [buyer] [score] Ddolcom's BEST SHOP: score 4.12 = reviews 4.07 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [score] shaun0927: score 4.08 = reviews 4.34 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:36:27 [buyer] [score] myeonggi: score 4.01 = reviews 4.19 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:36:27 [buyer] [score] YAHO1212: score 3.97 = reviews 4.05 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:36:27 [buyer] [score] shaun0927-lab1: score 3.91 = reviews 3.87 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [score] shaun0927-lab3: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [score] bjeon01: score 3.89 = reviews 4.06 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:36:27 [buyer] [score] cheapest-in-town: score 3.71 = reviews 3.66 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [score] lee-sungsoo: score 3.71 = reviews 3.68 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [score] yeonsong2: score 3.70 = reviews 3.68 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [score] shaun0927-lab2: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [score] dragonash: score 3.07 = reviews 3.76 (10), red flags 1, no trades of mine
+11:36:27 [buyer] [score] 11im: score 3.02 = reviews 3.00 (10), red flags 0, no trades of mine
+11:36:27 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.80 = reviews 4.10 (10), red flags 0, mine: 29 deals, 4 walks, 0 cheated, 0 errors
+11:36:27 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:36:27 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp. Send the ask or say ok to buy. Our ask: 100
+11:36:29 [seller] [price] open chair at 234 (list 234, floor 180)
+11:36:31 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:36:31 [seller] [price] bookshelf offer 162, ask 306 (floor 260)
+11:36:31 [seller] [price] bookshelf offer 234, ask 288 (floor 260)
+11:36:31 [seller] [price] bookshelf offer 261, ask 276 (floor 260)
+11:36:32 [seller] [price] chair offer 225, ask 212 (floor 180)
+11:36:32 [seller] [price] bookshelf offer 268, ask 270 (floor 260)
+11:36:32 [seller] [price] bookshelf offer 270, ask 266 (floor 260)
+11:36:32 [seller] [price] open chair at 234 (list 234, floor 180)
+11:36:34 [buyer] [harness] {"action": "offer", "price": 70}
+11:36:34 [buyer] -> '70'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:36:37 [seller] [price] chair offer 225, ask 212 (floor 180)
+11:36:39 [buyer] [harness] {"action": "offer", "price": 80}
+11:36:39 [buyer] -> '80'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:36:46 [buyer] [harness] {"action": "offer", "price": 85}
+11:36:46 [buyer] -> '85'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:36:52 [seller] [price] open chair at 234 (list 234, floor 180)
+11:36:52 [seller] [price] chair offer 111, ask 212 (floor 180)
+11:36:52 [seller] [price] chair offer 161, ask 199 (floor 180)
+11:36:52 [seller] [price] chair offer 180, ask 191 (floor 180)
+11:36:53 [seller] [price] chair offer 185, ask 186 (floor 180)
+11:36:53 [buyer] [harness] {"action": "offer", "price": 90}
+11:36:53 [buyer] -> '90'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:36:55 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:36:57 [seller] [price] lamp offer 90, ask 118 (floor 100)
+11:37:00 [seller] [price] lamp offer 90, ask 110 (floor 100)
+11:37:00 [buyer] [harness] {"action": "walk"}
+11:37:00 [buyer] walked away (CancelTask)
+11:37:00 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": null, "stars": 3, "review": "No deal for the lamp within budget 90; my offers [70, 80, 85, 90]."}
+11:37:02 [seller] [price] lamp offer 90, ask 106 (floor 100)
+11:37:05 [seller] [price] lamp offer 90, ask 103 (floor 100)
+11:37:06 [market] ledger #2068142: no deal, stars 3, verified False, review not shown
+11:37:08 [seller] [price] lamp offer 90, ask 102 (floor 100)
+11:37:10 [seller] [price] lamp offer 90, ask 101 (floor 100)
+11:37:11 [order o-bd3c8874b888] chair, budget 160, round 2
+11:37:14 [kit] 33 shops in .market\shops.json, running market_buyer
+11:37:15 [buyer] [score] kimauve: score 4.75 = reviews 4.15 (10), red flags 0, mine: 29 deals, 5 walks, 0 cheated, 0 errors
+11:37:15 [buyer] [score] helenjeon101: score 4.72 = reviews 4.23 (10), red flags 0, mine: 18 deals, 2 walks, 0 cheated, 2 errors
+11:37:15 [buyer] [score] 25620027: score 4.42 = reviews 4.02 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:37:15 [buyer] [score] yms979: score 4.28 = reviews 3.94 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+11:37:15 [buyer] [score] oak-and-pine: score 4.23 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:37:15 [buyer] [score] Ddolcom's BEST SHOP: score 4.17 = reviews 4.15 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] inextro: score 4.16 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:37:15 [buyer] [score] q00: score 4.15 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:37:15 [buyer] [score] moss-and-oak: score 4.13 = reviews 4.11 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] JangSeongWoong: score 4.04 = reviews 4.03 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] myeonggi: score 4.04 = reviews 4.23 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:37:15 [buyer] [score] grand-furniture: score 3.99 = reviews 3.95 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] YAHO1212: score 3.97 = reviews 4.05 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:37:15 [buyer] [score] corner-store: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] shaun0927-lab1: score 3.87 = reviews 3.87 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] bjeon01: score 3.87 = reviews 4.06 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:37:15 [buyer] [score] shaun0927-lab3: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] bright-living: score 3.85 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:37:15 [buyer] [score] psyoung82: score 3.84 = reviews 3.84 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] shaun0927: score 3.76 = reviews 3.99 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:37:15 [buyer] [score] yeonsong2: score 3.73 = reviews 3.68 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] shaun0927-lab2: score 3.71 = reviews 3.67 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] thisjonghoon: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] cheapest-in-town: score 3.69 = reviews 3.66 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] mjforge: score 3.66 = reviews 3.66 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] lee-sungsoo: score 3.64 = reviews 3.60 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] kcwarni: score 3.50 = reviews 3.46 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] dragonash: score 3.26 = reviews 3.92 (10), red flags 1, no trades of mine
+11:37:15 [buyer] [score] 11im: score 3.03 = reviews 3.00 (10), red flags 0, no trades of mine
+11:37:15 [buyer] [score] willow-goods: score 3.01 = reviews 3.00 (0), red flags 0, no trades of mine
+11:37:15 [buyer] [score] elm-street: score 2.51 = reviews 4.40 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:37:15 [buyer] [score] maple-home: score -0.54 = reviews 1.54 (10), red flags 10, no trades of mine
+11:37:15 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.75 = reviews 4.15 (10), red flags 0, mine: 29 deals, 5 walks, 0 cheated, 0 errors
+11:37:15 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:37:15 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair. Send the ask or say ok to buy. Our ask: 180
+11:37:21 [buyer] [harness] {"action": "offer", "price": 130}
+11:37:21 [buyer] -> '130'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:37:21 [seller] [price] open chair at 234 (list 234, floor 180)
+11:37:23 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:37:24 [seller] [price] chair offer 225, ask 212 (floor 180)
+11:37:26 [buyer] [harness] {"action": "offer", "price": 150}
+11:37:26 [buyer] -> '150'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:37:28 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+11:37:28 [seller] [price] bookshelf offer 270, ask 306 (floor 260)
+11:37:30 [seller] [price] bookshelf offer 230, ask 306 (floor 260)
+11:37:33 [seller] [price] bookshelf offer 270, ask 288 (floor 260)
+11:37:33 [seller] [price] bookshelf offer 230, ask 288 (floor 260)
+11:37:34 [buyer] [harness] {"action": "offer", "price": 155}
+11:37:34 [buyer] -> '155'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:37:35 [seller] [price] bookshelf offer 230, ask 276 (floor 260)
+11:37:37 [seller] [price] bookshelf offer 270, ask 276 (floor 260)
+11:37:38 [seller] [price] bookshelf offer 230, ask 270 (floor 260)
+11:37:41 [seller] [price] bookshelf offer 230, ask 266 (floor 260)
+11:37:41 [buyer] [harness] {"action": "offer", "price": 160}
+11:37:41 [buyer] -> '160'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+11:37:42 [seller] [price] bookshelf offer 270, ask 270 (floor 260)
+11:37:43 [seller] [price] bookshelf offer 230, ask 263 (floor 260)
+11:37:46 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:37:46 [seller] [price] bookshelf offer 230, ask 262 (floor 260)
+11:37:47 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:37:48 [seller] [price] lamp offer 130, ask 118 (floor 100)
+11:37:49 [buyer] [harness] {"action": "walk"}
+11:37:49 [buyer] walked away (CancelTask)
+11:37:49 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": null, "stars": 3, "review": "No deal for the chair within budget 160; my offers [130, 150, 155, 160]."}
+11:37:49 [seller] [price] bookshelf offer 230, ask 261 (floor 260)
+11:37:51 [seller] [price] lamp offer 130, ask 118 (floor 100)
+11:37:56 [market] ledger #2068238: no deal, stars 3, verified False, review not shown
+11:37:59 [order o-c2730914759d] lamp, budget 110, round 2
+11:38:08 [kit] 33 shops in .market\shops.json, running market_buyer
+11:38:08 [buyer] [score] kimauve: score 4.76 = reviews 4.26 (10), red flags 0, mine: 29 deals, 6 walks, 0 cheated, 0 errors
+11:38:08 [buyer] [score] helenjeon101: score 4.70 = reviews 4.23 (10), red flags 0, mine: 18 deals, 2 walks, 0 cheated, 2 errors
+11:38:08 [buyer] [score] 25620027: score 4.51 = reviews 4.11 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+11:38:08 [buyer] [score] oak-and-pine: score 4.25 = reviews 4.00 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+11:38:08 [buyer] [score] yms979: score 4.21 = reviews 3.94 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+11:38:08 [buyer] [score] Ddolcom's BEST SHOP: score 4.19 = reviews 4.15 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] inextro: score 4.17 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:38:08 [buyer] [score] myeonggi: score 4.13 = reviews 4.29 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+11:38:08 [buyer] [score] q00: score 4.13 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:38:08 [buyer] [score] moss-and-oak: score 4.08 = reviews 4.08 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] corner-store: score 4.00 = reviews 3.96 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] grand-furniture: score 3.99 = reviews 3.95 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] YAHO1212: score 3.98 = reviews 4.05 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:38:08 [buyer] [score] mjforge: score 3.95 = reviews 3.91 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] shaun0927-lab1: score 3.89 = reviews 3.87 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] psyoung82: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] shaun0927-lab3: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] bright-living: score 3.84 = reviews 3.91 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+11:38:08 [buyer] [score] bjeon01: score 3.83 = reviews 3.98 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+11:38:08 [buyer] [score] shaun0927: score 3.78 = reviews 4.04 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+11:38:08 [buyer] [score] cheapest-in-town: score 3.76 = reviews 3.71 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] yeonsong2: score 3.72 = reviews 3.69 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] shaun0927-lab2: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] lee-sungsoo: score 3.70 = reviews 3.68 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] thisjonghoon: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] JangSeongWoong: score 3.66 = reviews 3.61 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] kcwarni: score 3.47 = reviews 3.46 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] dragonash: score 3.22 = reviews 3.92 (10), red flags 1, no trades of mine
+11:38:08 [buyer] [score] willow-goods: score 3.04 = reviews 3.00 (0), red flags 0, no trades of mine
+11:38:08 [buyer] [score] 11im: score 3.02 = reviews 3.00 (10), red flags 0, no trades of mine
+11:38:08 [buyer] [score] elm-street: score 2.47 = reviews 4.40 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+11:38:08 [buyer] [score] maple-home: score -0.55 = reviews 1.54 (10), red flags 10, no trades of mine
+11:38:08 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.76 = reviews 4.26 (10), red flags 0, mine: 29 deals, 6 walks, 0 cheated, 0 errors
+11:38:08 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+11:38:08 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp. Send the ask or say ok to buy. Our ask: 100
+11:38:13 [seller] [price] open lamp at 130 (list 130, floor 100)
+11:38:15 [seller] [price] lamp offer 130, ask 118 (floor 100)
+11:38:18 [buyer] [harness] {"action": "offer", "price": 80}
+11:38:18 [buyer] -> '80'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:38:25 [buyer] [harness] {"action": "offer", "price": 90}
+11:38:25 [buyer] -> '90'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+11:38:26 [seller] [price] open chair at 234 (list 234, floor 180)
+11:38:29 [seller] [price] chair offer 205, ask 212 (floor 180)
+11:38:31 [buyer] [harness] {"action": "offer", "price": 95}
+13:00:11 [buyer] -> '95'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+13:00:24 [buyer] [harness] {"action": "offer", "price": 100}
+13:00:24 [buyer] -> '100'  <- TASK_STATE_COMPLETED | Deal: lamp at 100.
+13:00:24 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "66860c80-6596-448d-9c84-7ed4eb97de2b", "price": 100.0, "item": "lamp", "sig_seller": "x3nwMz62buCD/JtyVzoYm8pVFkHz8ENsdED7hcM3i5FBGRsCx07aup2BheZz5SjRnMO+ZuH4iBwdQNXmIPckBA==", "shop": "kimauve"}, "stars": 4, "review": "Bought the lamp at 100 (budget 110) after 4 offers; receipt matched."}
+13:00:24 [sign] sig_seller ok, sig_buyer added
+13:00:26 [market] ledger #2077383: lamp at 100, stars 4, verified True, review accepted
+13:00:28 [order o-a374b11e3a2d] bookshelf, budget 230, round 2
+13:00:29 [kit] 32 shops in .market\shops.json, running market_buyer
+13:00:30 [buyer] [score] 25620027: score 4.77 = reviews 4.36 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+13:00:30 [buyer] [score] kimauve: score 4.69 = reviews 4.17 (10), red flags 0, mine: 30 deals, 6 walks, 0 cheated, 0 errors
+13:00:30 [buyer] [score] oak-and-pine: score 4.32 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:00:30 [buyer] [score] inextro: score 4.16 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:00:30 [buyer] [score] YAHO1212: score 4.15 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:00:30 [buyer] [score] shaun0927: score 4.14 = reviews 4.38 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:00:30 [buyer] [score] Ddolcom's BEST SHOP: score 4.14 = reviews 4.12 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:00:30 [buyer] [score] kcwarni: score 4.04 = reviews 4.02 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] mjforge: score 4.00 = reviews 4.00 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] bjeon01: score 3.99 = reviews 4.17 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:00:30 [buyer] [score] corner-store: score 3.96 = reviews 3.92 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] grand-furniture: score 3.96 = reviews 3.95 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] moss-and-oak: score 3.91 = reviews 3.89 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] bright-living: score 3.90 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:00:30 [buyer] [score] shaun0927-lab1: score 3.90 = reviews 3.87 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] yms979: score 3.89 = reviews 3.58 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+13:00:30 [buyer] [score] psyoung82: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] shaun0927-lab3: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] myeonggi: score 3.79 = reviews 3.98 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:00:30 [buyer] [score] thisjonghoon: score 3.76 = reviews 3.73 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] cheapest-in-town: score 3.74 = reviews 3.73 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] dragonash: score 3.71 = reviews 3.67 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] lee-sungsoo: score 3.69 = reviews 3.64 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] shaun0927-lab2: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] yeonsong2: score 3.55 = reviews 3.50 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] JangSeongWoong: score 3.42 = reviews 3.39 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] fair-furniture: score 3.42 = reviews 3.38 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] willow-goods: score 3.02 = reviews 3.00 (0), red flags 0, no trades of mine
+13:00:30 [buyer] [score] 11im: score 3.02 = reviews 3.00 (10), red flags 0, no trades of mine
+13:00:30 [buyer] [score] elm-street: score 2.27 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:00:30 [buyer] [score] maple-home: score -0.55 = reviews 1.54 (10), red flags 10, no trades of mine
+13:00:30 [buyer] [choose] https://ax-week07.treasuresky.xyz: 25620027 - score 4.77 = reviews 4.36 (10), red flags 0, mine: 51 deals, 7 walks, 0 cheated, 0 errors
+13:00:30 [buyer] card: Sungjin Shop -> https://ax-week07.treasuresky.xyz/a2a/0
+13:00:30 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_INPUT_REQUIRED | bookshelf: asking 286. Send your offer as a number.
+13:00:30 [buyer] Reply with a number, or ok to take the ask: 286 
+13:00:36 [buyer] [harness] {"action": "offer", "price": 170}
+13:00:37 [buyer] -> '170'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 278.
+13:00:37 [buyer] Reply with a number, or ok to take the ask: 278 
+13:00:43 [buyer] [harness] {"action": "offer", "price": 200}
+13:00:43 [buyer] -> '200'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 273.
+13:00:43 [buyer] Reply with a number, or ok to take the ask: 273 
+13:00:50 [buyer] [harness] {"action": "offer", "price": 240}
+13:00:50 [buyer] [guard] offer 240 above budget 230 -> 230
+13:00:50 [buyer] -> '230'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 269.
+13:00:50 [buyer] Reply with a number, or ok to take the ask: 269 
+13:00:58 [buyer] [harness] {"action": "offer", "price": 220}
+13:00:58 [buyer] -> '220'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 266.
+13:00:58 [buyer] Reply with a number, or ok to take the ask: 266 
+13:01:09 [buyer] [harness] {"action": "offer", "price": 225}
+13:01:10 [buyer] -> '225'  <- TASK_STATE_REJECTED | No deal.
+13:01:10 [buyer] {"shop": "https://ax-week07.treasuresky.xyz", "receipt": null, "stars": 3, "review": "No deal for the bookshelf within budget 230; my offers [170, 200, 230, 220, 225]."}
+13:01:10 [market] ledger #2077467: no deal, stars 3, verified False, review not shown
+13:01:10 [order o-c38497240423] bookshelf, budget 230, round 2
+13:01:11 [kit] 21 shops in .market\shops.json, running market_buyer
+13:01:11 [buyer] [score] kimauve: score 4.67 = reviews 4.17 (10), red flags 0, mine: 30 deals, 6 walks, 0 cheated, 0 errors
+13:01:11 [buyer] [score] 25620027: score 4.49 = reviews 4.20 (10), red flags 0, mine: 51 deals, 8 walks, 0 cheated, 0 errors
+13:01:11 [buyer] [score] Ddolcom's BEST SHOP: score 4.15 = reviews 4.12 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] YAHO1212: score 4.15 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:01:11 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:01:11 [buyer] [score] kcwarni: score 4.04 = reviews 4.02 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] mjforge: score 4.03 = reviews 4.00 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] bjeon01: score 4.01 = reviews 4.17 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:01:11 [buyer] [score] lee-sungsoo: score 4.00 = reviews 3.96 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] moss-and-oak: score 3.91 = reviews 3.89 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] shaun0927-lab1: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] myeonggi: score 3.87 = reviews 4.05 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:01:11 [buyer] [score] shaun0927: score 3.87 = reviews 4.09 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:01:11 [buyer] [score] shaun0927-lab3: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] dragonash: score 3.72 = reviews 3.67 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] shaun0927-lab2: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] cheapest-in-town: score 3.61 = reviews 3.61 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] yeonsong2: score 3.54 = reviews 3.50 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] JangSeongWoong: score 3.42 = reviews 3.39 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [score] 11im: score 3.03 = reviews 3.00 (10), red flags 0, no trades of mine
+13:01:11 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.67 = reviews 4.17 (10), red flags 0, mine: 30 deals, 6 walks, 0 cheated, 0 errors
+13:01:11 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:01:11 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_INPUT_REQUIRED | bookshelf. Send the ask or say ok to buy. Our ask: 260
+13:01:18 [buyer] [harness] {"action": "offer", "price": 170}
+13:01:18 [buyer] -> '170'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:01:25 [buyer] [harness] {"action": "offer", "price": 200}
+13:01:26 [buyer] -> '200'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:01:32 [buyer] [harness] {"action": "offer", "price": 200}
+13:01:32 [buyer] -> '200'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:01:42 [buyer] [harness] {"action": "offer", "price": 215}
+13:01:42 [buyer] -> '215'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:01:49 [buyer] [harness] {"action": "offer", "price": 225}
+13:01:49 [buyer] -> '225'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:01:59 [buyer] [harness] {"action": "walk"}
+13:01:59 [buyer] walked away (CancelTask)
+13:01:59 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": null, "stars": 3, "review": "No deal for the bookshelf within budget 230; my offers [170, 200, 200, 215, 225]."}
+13:01:59 [market] ledger #2077559: no deal, stars 3, verified False, review not shown
+13:01:59 [order o-057d462b025e] chair, budget 225, round 2
+13:02:00 [kit] 21 shops in .market\shops.json, running market_buyer
+13:02:00 [buyer] [score] 25620027: score 4.64 = reviews 4.32 (10), red flags 0, mine: 51 deals, 8 walks, 0 cheated, 0 errors
+13:02:00 [buyer] [score] kimauve: score 4.60 = reviews 4.21 (10), red flags 0, mine: 30 deals, 7 walks, 0 cheated, 0 errors
+13:02:00 [buyer] [score] q00: score 4.14 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:02:00 [buyer] [score] YAHO1212: score 4.13 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:02:00 [buyer] [score] Ddolcom's BEST SHOP: score 4.09 = reviews 4.04 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] kcwarni: score 4.07 = reviews 4.02 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] shaun0927: score 4.05 = reviews 4.29 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:02:00 [buyer] [score] mjforge: score 4.02 = reviews 4.00 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] bjeon01: score 3.99 = reviews 4.17 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:02:00 [buyer] [score] myeonggi: score 3.94 = reviews 4.11 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:02:00 [buyer] [score] lee-sungsoo: score 3.94 = reviews 3.93 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] moss-and-oak: score 3.92 = reviews 3.89 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] shaun0927-lab1: score 3.90 = reviews 3.87 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] shaun0927-lab3: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] dragonash: score 3.71 = reviews 3.67 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] shaun0927-lab2: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] cheapest-in-town: score 3.68 = reviews 3.63 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] yeonsong2: score 3.54 = reviews 3.50 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] JangSeongWoong: score 3.36 = reviews 3.33 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [score] 11im: score 3.03 = reviews 3.00 (10), red flags 0, no trades of mine
+13:02:00 [buyer] [choose] https://ax-week07.treasuresky.xyz: 25620027 - score 4.64 = reviews 4.32 (10), red flags 0, mine: 51 deals, 8 walks, 0 cheated, 0 errors
+13:02:00 [buyer] card: Sungjin Shop -> https://ax-week07.treasuresky.xyz/a2a/0
+13:02:01 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair: asking 198. Send your offer as a number.
+13:02:01 [buyer] Reply with a number, or ok to take the ask: 198 
+13:02:07 [buyer] [harness] {"action": "offer", "price": 170}
+13:02:07 [buyer] -> '170'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 193.
+13:02:07 [buyer] Reply with a number, or ok to take the ask: 193 
+13:02:15 [buyer] [harness] {"action": "offer", "price": 180}
+13:02:15 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+13:02:15 [buyer] {"shop": "https://ax-week07.treasuresky.xyz", "receipt": {"shop": "Sungjin Shop", "sig_seller": "vod4xSzEAmxnbbhleR4jYsBmsLjHx9MOcNK2yWRo/SEi/4aBNLzGk9QC3TsgNh65AcCAmykNo2urjQO4Q7xABQ==", "price": 180.0, "item": "chair", "task": "069ceea7-0b8a-4912-b3f2-1da9b8674e75"}, "stars": 5, "review": "Bought the chair at 180 (budget 225) after 2 offers; receipt matched."}
+13:02:15 [sign] sig_seller ok, sig_buyer added
+13:02:22 [market] ledger #2077599: chair at 180, stars 5, verified True, review accepted
+13:02:28 [tunnel] https://postings-dim-directions-parcel.trycloudflare.com stopped answering, opening a new tunnel
+13:02:28 [order o-ba96e6cb0890] chair, budget 185, round 2
+13:02:29 [kit] 21 shops in .market\shops.json, running market_buyer
+13:02:40 [buyer] [score] 25620027: score 4.73 = reviews 4.38 (10), red flags 0, mine: 52 deals, 8 walks, 0 cheated, 0 errors
+13:02:40 [buyer] [score] kimauve: score 4.59 = reviews 4.19 (10), red flags 0, mine: 30 deals, 7 walks, 0 cheated, 0 errors
+13:02:40 [buyer] [score] shaun0927: score 4.18 = reviews 4.41 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:02:40 [buyer] [score] YAHO1212: score 4.16 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:02:40 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:02:40 [buyer] [score] Ddolcom's BEST SHOP: score 4.06 = reviews 4.04 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] mjforge: score 4.04 = reviews 4.00 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] myeonggi: score 4.00 = reviews 4.16 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:02:40 [buyer] [score] bjeon01: score 3.99 = reviews 4.17 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:02:40 [buyer] [score] moss-and-oak: score 3.92 = reviews 3.89 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] shaun0927-lab1: score 3.90 = reviews 3.87 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] shaun0927-lab3: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] lee-sungsoo: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] kcwarni: score 3.82 = reviews 3.82 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] dragonash: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] shaun0927-lab2: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] cheapest-in-town: score 3.67 = reviews 3.63 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] yeonsong2: score 3.51 = reviews 3.50 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] fair-furniture: score 3.38 = reviews 3.38 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] JangSeongWoong: score 3.34 = reviews 3.33 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [score] 11im: score 3.01 = reviews 3.00 (10), red flags 0, no trades of mine
+13:02:40 [buyer] [choose] https://ax-week07.treasuresky.xyz: 25620027 - score 4.73 = reviews 4.38 (10), red flags 0, mine: 52 deals, 8 walks, 0 cheated, 0 errors
+13:02:41 [buyer] card: Sungjin Shop -> https://ax-week07.treasuresky.xyz/a2a/0
+13:02:42 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair: asking 198. Send your offer as a number.
+13:02:42 [buyer] Reply with a number, or ok to take the ask: 198 
+13:02:51 [buyer] [harness] {"action": "offer", "price": 160}
+13:02:51 [buyer] -> '160'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 193.
+13:02:51 [buyer] Reply with a number, or ok to take the ask: 193 
+13:02:59 [buyer] [harness] {"action": "offer", "price": 175}
+13:02:59 [buyer] -> '175'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 189.
+13:02:59 [buyer] Reply with a number, or ok to take the ask: 189 
+13:03:06 [buyer] [harness] {"action": "offer", "price": 181}
+13:03:06 [buyer] -> '181'  <- TASK_STATE_COMPLETED | Deal: chair at 181.
+13:03:06 [buyer] {"shop": "https://ax-week07.treasuresky.xyz", "receipt": {"shop": "Sungjin Shop", "sig_seller": "5nqhPLhyytoBQ0XdAjZXMb+i2v6zVn0m42eP/R5R/zomaPEMKAgJfDUCGGn7DWfgsbQq+kszk6BkHdF7xZETCw==", "price": 181.0, "item": "chair", "task": "183a5780-9f58-43ff-8db1-3bb5b932b9d6"}, "stars": 4, "review": "Bought the chair at 181 (budget 185) after 3 offers; receipt matched."}
+13:03:06 [sign] sig_seller ok, sig_buyer added
+13:03:12 [market] ledger #2077688: chair at 181, stars 4, verified True, review accepted
+13:03:16 [order o-a3a9c04edcdf] chair, budget 205, round 2
+13:03:19 [kit] 32 shops in .market\shops.json, running market_buyer
+13:03:19 [buyer] [score] kimauve: score 4.68 = reviews 4.27 (10), red flags 0, mine: 30 deals, 7 walks, 0 cheated, 0 errors
+13:03:19 [buyer] [score] 25620027: score 4.38 = reviews 4.08 (10), red flags 0, mine: 53 deals, 8 walks, 0 cheated, 0 errors
+13:03:19 [buyer] [score] oak-and-pine: score 4.33 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:03:19 [buyer] [score] inextro: score 4.17 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:03:19 [buyer] [score] q00: score 4.15 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:03:19 [buyer] [score] YAHO1212: score 4.15 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:03:19 [buyer] [score] myeonggi: score 4.11 = reviews 4.29 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:03:19 [buyer] [score] Ddolcom's BEST SHOP: score 4.09 = reviews 4.04 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] mjforge: score 4.00 = reviews 3.97 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] bjeon01: score 3.99 = reviews 4.17 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:03:19 [buyer] [score] grand-furniture: score 3.96 = reviews 3.95 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] shaun0927: score 3.96 = reviews 4.21 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:03:19 [buyer] [score] moss-and-oak: score 3.92 = reviews 3.89 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] corner-store: score 3.91 = reviews 3.89 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] bright-living: score 3.91 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:03:19 [buyer] [score] yms979: score 3.91 = reviews 3.58 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+13:03:19 [buyer] [score] shaun0927-lab1: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] psyoung82: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] kcwarni: score 3.85 = reviews 3.82 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] shaun0927-lab3: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] lee-sungsoo: score 3.81 = reviews 3.78 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] thisjonghoon: score 3.75 = reviews 3.73 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] dragonash: score 3.72 = reviews 3.67 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] shaun0927-lab2: score 3.71 = reviews 3.67 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] yeonsong2: score 3.54 = reviews 3.54 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] cheapest-in-town: score 3.51 = reviews 3.51 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] JangSeongWoong: score 3.35 = reviews 3.33 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] 11im: score 3.04 = reviews 3.00 (10), red flags 0, no trades of mine
+13:03:19 [buyer] [score] willow-goods: score 3.01 = reviews 3.00 (0), red flags 0, no trades of mine
+13:03:19 [buyer] [score] elm-street: score 2.37 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:03:19 [buyer] [score] maple-home: score -0.52 = reviews 1.54 (10), red flags 10, no trades of mine
+13:03:19 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.68 = reviews 4.27 (10), red flags 0, mine: 30 deals, 7 walks, 0 cheated, 0 errors
+13:03:19 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:03:20 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair. Send the ask or say ok to buy. Our ask: 180
+13:03:21 [market] shop registered again as ddolcom at https://freeware-liquid-pair-geneva.trycloudflare.com
+13:03:26 [buyer] [harness] {"action": "offer", "price": 150}
+13:03:27 [buyer] -> '150'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:03:32 [buyer] [harness] {"action": "offer", "price": 165}
+13:03:32 [buyer] -> '165'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:03:36 [seller] [price] open chair at 234 (list 234, floor 180)
+13:03:37 [seller] [price] chair offer 135, ask 212 (floor 180)
+13:03:37 [seller] [price] chair offer 173, ask 199 (floor 180)
+13:03:37 [seller] [price] chair offer 186, ask 191 (floor 180)
+13:03:37 [seller] [price] chair offer 191, ask 186 (floor 180)
+13:03:39 [buyer] [harness] {"action": "offer", "price": 175}
+13:03:39 [buyer] -> '175'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:03:40 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+13:03:40 [seller] [price] bookshelf offer 230, ask 306 (floor 260)
+13:03:46 [buyer] [harness] {"action": "offer", "price": 180}
+13:03:46 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+13:03:46 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "75fe6ba0-4681-478a-9005-9897905f2ca5", "price": 180.0, "item": "chair", "sig_seller": "8sOFJGn095BOMwDKRlPasp/twbadXnTRHh2Xox8ep9BT2VJurq27D+bYarGEK9bHerx4iK1S0q4/IoHhvsdYCg==", "shop": "kimauve"}, "stars": 4, "review": "Bought the chair at 180 (budget 205) after 4 offers; receipt matched."}
+13:03:46 [sign] sig_seller ok, sig_buyer added
+13:03:48 [market] ledger #2077773: chair at 180, stars 4, verified True, review accepted
+13:03:50 [order o-922123b94cee] chair, budget 250, round 2
+13:03:50 [kit] 32 shops in .market\shops.json, running market_buyer
+13:03:50 [buyer] [score] kimauve: score 4.66 = reviews 4.24 (10), red flags 0, mine: 31 deals, 7 walks, 0 cheated, 0 errors
+13:03:50 [buyer] [score] oak-and-pine: score 4.34 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:03:50 [buyer] [score] 25620027: score 4.29 = reviews 3.99 (10), red flags 0, mine: 53 deals, 8 walks, 0 cheated, 0 errors
+13:03:50 [buyer] [score] inextro: score 4.19 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:03:50 [buyer] [score] YAHO1212: score 4.15 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:03:50 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:03:50 [buyer] [score] myeonggi: score 4.11 = reviews 4.29 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:03:50 [buyer] [score] shaun0927: score 4.08 = reviews 4.33 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:03:50 [buyer] [score] Ddolcom's BEST SHOP: score 4.06 = reviews 4.04 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] grand-furniture: score 4.06 = reviews 4.03 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] mjforge: score 4.04 = reviews 4.04 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] bjeon01: score 4.02 = reviews 4.17 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:03:50 [buyer] [score] bright-living: score 3.94 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:03:50 [buyer] [score] corner-store: score 3.92 = reviews 3.89 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] yms979: score 3.92 = reviews 3.58 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+13:03:50 [buyer] [score] shaun0927-lab1: score 3.91 = reviews 3.87 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] moss-and-oak: score 3.90 = reviews 3.89 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] shaun0927-lab3: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] psyoung82: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] kcwarni: score 3.86 = reviews 3.82 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] lee-sungsoo: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] dragonash: score 3.80 = reviews 3.79 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] thisjonghoon: score 3.77 = reviews 3.73 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] shaun0927-lab2: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] yeonsong2: score 3.57 = reviews 3.54 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] cheapest-in-town: score 3.56 = reviews 3.51 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] JangSeongWoong: score 3.34 = reviews 3.33 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] 11im: score 3.01 = reviews 3.00 (10), red flags 0, no trades of mine
+13:03:50 [buyer] [score] willow-goods: score 3.01 = reviews 3.00 (0), red flags 0, no trades of mine
+13:03:50 [buyer] [score] elm-street: score 2.35 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:03:50 [buyer] [score] maple-home: score -0.51 = reviews 1.54 (10), red flags 10, no trades of mine
+13:03:50 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.66 = reviews 4.24 (10), red flags 0, mine: 31 deals, 7 walks, 0 cheated, 0 errors
+13:03:50 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:03:50 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair. Send the ask or say ok to buy. Our ask: 180
+13:03:56 [seller] [price] open chair at 234 (list 234, floor 180)
+13:03:57 [buyer] [harness] {"action": "offer", "price": 150}
+13:03:57 [buyer] -> '150'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:03:58 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:03:58 [seller] [price] lamp offer 84, ask 118 (floor 100)
+13:03:58 [seller] [price] lamp offer 101, ask 110 (floor 100)
+13:03:58 [seller] [price] lamp offer 105, ask 106 (floor 100)
+13:03:59 [seller] [price] lamp offer 106, ask 103 (floor 100)
+13:03:59 [seller] [price] chair offer 185, ask 212 (floor 180)
+13:04:02 [seller] [price] chair offer 185, ask 199 (floor 180)
+13:04:05 [seller] [price] chair offer 185, ask 191 (floor 180)
+13:04:05 [buyer] [harness] {"action": "offer", "price": 165}
+13:04:05 [buyer] -> '165'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:04:07 [seller] [price] chair offer 185, ask 186 (floor 180)
+13:04:10 [seller] [price] chair offer 185, ask 184 (floor 180)
+13:04:12 [buyer] [harness] {"action": "offer", "price": 172}
+13:04:12 [buyer] -> '172'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:04:19 [buyer] [harness] {"action": "offer", "price": 176}
+13:04:19 [buyer] -> '176'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:04:23 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+13:04:23 [seller] [price] bookshelf offer 138, ask 306 (floor 260)
+13:04:23 [seller] [price] bookshelf offer 222, ask 288 (floor 260)
+13:04:24 [seller] [price] bookshelf offer 230, ask 276 (floor 260)
+13:04:26 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:04:27 [buyer] [harness] {"action": "offer", "price": 180}
+13:04:27 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+13:04:27 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "de479c5b-c99d-4f59-9a40-b878ffa3333f", "price": 180.0, "item": "chair", "sig_seller": "LAf47cncBXxjFWq0oA4PZVjXkqLuydcJIHlccqzLojUgxRVJ3kQ06NoqC6nfSCNEhxLopft5p+o7Kt9faFngBA==", "shop": "kimauve"}, "stars": 5, "review": "Bought the chair at 180 (budget 250) after 5 offers; receipt matched."}
+13:04:27 [sign] sig_seller ok, sig_buyer added
+13:04:29 [market] ledger #2077837: chair at 180, stars 5, verified True, review accepted
+13:04:29 [seller] [price] lamp offer 105, ask 118 (floor 100)
+13:04:30 [order o-921514332267] bookshelf, budget 360, round 2
+13:04:30 [kit] 31 shops in .market\shops.json, running market_buyer
+13:04:31 [buyer] [score] kimauve: score 4.74 = reviews 4.33 (10), red flags 0, mine: 32 deals, 7 walks, 0 cheated, 0 errors
+13:04:31 [buyer] [score] 25620027: score 4.38 = reviews 4.09 (10), red flags 0, mine: 53 deals, 8 walks, 0 cheated, 0 errors
+13:04:31 [buyer] [score] oak-and-pine: score 4.34 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:04:31 [buyer] [score] shaun0927: score 4.24 = reviews 4.46 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:04:31 [buyer] [score] inextro: score 4.19 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:04:31 [buyer] [score] YAHO1212: score 4.15 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:04:31 [buyer] [score] q00: score 4.13 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:04:31 [buyer] [score] myeonggi: score 4.11 = reviews 4.29 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:04:31 [buyer] [score] bjeon01: score 4.07 = reviews 4.24 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:04:31 [buyer] [score] mjforge: score 4.07 = reviews 4.04 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] grand-furniture: score 4.06 = reviews 4.03 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] Ddolcom's BEST SHOP: score 4.05 = reviews 4.04 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] corner-store: score 4.01 = reviews 3.96 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] shaun0927-lab1: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] bright-living: score 3.92 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:04:31 [buyer] [score] moss-and-oak: score 3.90 = reviews 3.89 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] yms979: score 3.89 = reviews 3.58 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+13:04:31 [buyer] [score] shaun0927-lab3: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] psyoung82: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] kcwarni: score 3.82 = reviews 3.82 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] dragonash: score 3.82 = reviews 3.79 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] lee-sungsoo: score 3.80 = reviews 3.78 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] thisjonghoon: score 3.76 = reviews 3.73 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] shaun0927-lab2: score 3.72 = reviews 3.67 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] cheapest-in-town: score 3.55 = reviews 3.51 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] JangSeongWoong: score 3.38 = reviews 3.33 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] willow-goods: score 3.05 = reviews 3.00 (0), red flags 0, no trades of mine
+13:04:31 [buyer] [score] 11im: score 3.02 = reviews 3.00 (10), red flags 0, no trades of mine
+13:04:31 [buyer] [score] elm-street: score 2.30 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:04:31 [buyer] [score] maple-home: score -0.54 = reviews 1.54 (10), red flags 10, no trades of mine
+13:04:31 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.74 = reviews 4.33 (10), red flags 0, mine: 32 deals, 7 walks, 0 cheated, 0 errors
+13:04:31 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:04:31 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_INPUT_REQUIRED | bookshelf. Send the ask or say ok to buy. Our ask: 260
+13:04:39 [buyer] [harness] {"action": "offer", "price": 200}
+13:04:39 [buyer] -> '200'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:04:43 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+13:04:44 [seller] [price] bookshelf offer 216, ask 306 (floor 260)
+13:04:44 [seller] [price] bookshelf offer 261, ask 288 (floor 260)
+13:04:44 [seller] [price] bookshelf offer 274, ask 276 (floor 260)
+13:04:44 [seller] [price] bookshelf offer 276, ask 270 (floor 260)
+13:04:45 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:04:46 [buyer] [harness] {"action": "offer", "price": 230}
+13:04:46 [buyer] -> '230'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:04:48 [seller] [price] lamp offer 110, ask 118 (floor 100)
+13:04:53 [buyer] [harness] {"action": "offer", "price": 245}
+13:04:53 [buyer] -> '245'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:04:58 [buyer] [harness] {"action": "offer", "price": 255}
+13:04:58 [buyer] -> '255'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:05:07 [buyer] [harness] {"action": "offer", "price": 260}
+13:05:07 [buyer] -> '260'  <- TASK_STATE_COMPLETED | Deal: bookshelf at 260.
+13:05:07 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "5b539789-c2fd-4d32-bd57-9ab60c16ca97", "price": 260.0, "item": "bookshelf", "sig_seller": "538uB3NfCS/CqA1oFAr2cVH3qOlNPpLSd7wl2hv3kLh3ZWykiuI9tZLzmIA+RqABO9pVHf8hrGds0QjBbQrqAw==", "shop": "kimauve"}, "stars": 5, "review": "Bought the bookshelf at 260 (budget 360) after 5 offers; receipt matched."}
+13:05:07 [sign] sig_seller ok, sig_buyer added
+13:05:10 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+13:05:10 [seller] [price] bookshelf offer 138, ask 306 (floor 260)
+13:05:11 [seller] [price] bookshelf offer 222, ask 288 (floor 260)
+13:05:11 [market] ledger #2077913: bookshelf at 260, stars 5, verified True, review accepted
+13:05:11 [seller] [price] bookshelf offer 230, ask 276 (floor 260)
+13:05:13 [seller] [price] open chair at 234 (list 234, floor 180)
+13:05:15 [order o-372ad41303d0] chair, budget 225, round 2
+13:05:16 [seller] [price] chair offer 160, ask 212 (floor 180)
+13:05:16 [kit] 32 shops in .market\shops.json, running market_buyer
+13:05:16 [buyer] [score] kimauve: score 4.83 = reviews 4.41 (10), red flags 0, mine: 33 deals, 7 walks, 0 cheated, 0 errors
+13:05:16 [buyer] [score] 25620027: score 4.44 = reviews 4.14 (10), red flags 0, mine: 53 deals, 8 walks, 0 cheated, 0 errors
+13:05:16 [buyer] [score] oak-and-pine: score 4.35 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:05:16 [buyer] [score] inextro: score 4.16 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:05:16 [buyer] [score] YAHO1212: score 4.15 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:05:16 [buyer] [score] myeonggi: score 4.13 = reviews 4.29 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:05:16 [buyer] [score] q00: score 4.11 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:05:16 [buyer] [score] grand-furniture: score 4.07 = reviews 4.03 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] Ddolcom's BEST SHOP: score 4.07 = reviews 4.04 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] bjeon01: score 4.04 = reviews 4.24 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:05:16 [buyer] [score] mjforge: score 4.04 = reviews 4.04 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] corner-store: score 4.02 = reviews 3.99 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] moss-and-oak: score 4.01 = reviews 3.97 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] bright-living: score 3.94 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:05:16 [buyer] [score] shaun0927-lab1: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] yms979: score 3.91 = reviews 3.58 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+13:05:16 [buyer] [score] psyoung82: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] shaun0927-lab3: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] kcwarni: score 3.86 = reviews 3.82 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] lee-sungsoo: score 3.81 = reviews 3.77 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] shaun0927: score 3.80 = reviews 4.02 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:05:16 [buyer] [score] dragonash: score 3.79 = reviews 3.79 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] thisjonghoon: score 3.74 = reviews 3.73 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] shaun0927-lab2: score 3.71 = reviews 3.67 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] yeonsong2: score 3.56 = reviews 3.54 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] cheapest-in-town: score 3.42 = reviews 3.41 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] JangSeongWoong: score 3.37 = reviews 3.33 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] 11im: score 3.04 = reviews 3.00 (10), red flags 0, no trades of mine
+13:05:16 [buyer] [score] willow-goods: score 3.03 = reviews 3.00 (0), red flags 0, no trades of mine
+13:05:16 [buyer] [score] elm-street: score 2.38 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:05:16 [buyer] [score] maple-home: score -0.55 = reviews 1.54 (10), red flags 10, no trades of mine
+13:05:16 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.83 = reviews 4.41 (10), red flags 0, mine: 33 deals, 7 walks, 0 cheated, 0 errors
+13:05:17 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:05:17 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair. Send the ask or say ok to buy. Our ask: 180
+13:05:17 [seller] [price] open chair at 234 (list 234, floor 180)
+13:05:18 [seller] [price] chair offer 160, ask 199 (floor 180)
+13:05:20 [seller] [price] chair offer 140, ask 212 (floor 180)
+13:05:21 [seller] [price] chair offer 160, ask 191 (floor 180)
+13:05:23 [seller] [price] chair offer 155, ask 199 (floor 180)
+13:05:23 [buyer] [harness] {"action": "offer", "price": 150}
+13:05:23 [buyer] -> '150'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:05:23 [seller] [price] chair offer 160, ask 186 (floor 180)
+13:05:26 [seller] [price] chair offer 160, ask 184 (floor 180)
+13:05:26 [seller] [price] chair offer 160, ask 191 (floor 180)
+13:05:28 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:05:28 [seller] [price] lamp offer 66, ask 118 (floor 100)
+13:05:29 [seller] [price] lamp offer 92, ask 110 (floor 100)
+13:05:29 [seller] [price] lamp offer 101, ask 106 (floor 100)
+13:05:29 [seller] [price] chair offer 160, ask 182 (floor 180)
+13:05:29 [seller] [price] lamp offer 106, ask 103 (floor 100)
+13:05:30 [buyer] [harness] {"action": "offer", "price": 165}
+13:05:30 [buyer] -> '165'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:05:30 [seller] [price] chair offer 160, ask 186 (floor 180)
+13:05:32 [seller] [price] chair offer 160, ask 181 (floor 180)
+13:05:34 [seller] [price] chair offer 160, ask 180 (floor 180)
+13:05:37 [buyer] [harness] {"action": "offer", "price": 172}
+13:05:37 [buyer] -> '172'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:05:44 [buyer] [harness] {"action": "offer", "price": 176}
+13:05:44 [buyer] -> '176'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:05:48 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+13:05:48 [seller] [price] bookshelf offer 216, ask 306 (floor 260)
+13:05:48 [seller] [price] bookshelf offer 261, ask 288 (floor 260)
+13:05:48 [seller] [price] bookshelf offer 274, ask 276 (floor 260)
+13:05:48 [seller] [price] bookshelf offer 276, ask 270 (floor 260)
+13:05:49 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+13:05:52 [seller] [price] bookshelf offer 230, ask 306 (floor 260)
+13:05:55 [seller] [price] bookshelf offer 230, ask 288 (floor 260)
+13:05:55 [buyer] [harness] {"action": "offer", "price": 180}
+13:05:55 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+13:05:55 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "0ad48ea2-9b6b-48b7-b3ef-bba40b964422", "price": 180.0, "item": "chair", "sig_seller": "E9ruazX4NYYo1MOkN2a3FrvAyjaTufiDVAc6HltK8PUU27L6nc5ZSMwssG9KCs9TIF3o3A9triB59zxPbta/BA==", "shop": "kimauve"}, "stars": 5, "review": "Bought the chair at 180 (budget 225) after 5 offers; receipt matched."}
+13:05:55 [sign] sig_seller ok, sig_buyer added
+13:05:57 [seller] [price] bookshelf offer 230, ask 276 (floor 260)
+13:05:58 [market] ledger #2078008: chair at 180, stars 5, verified True, review accepted
+13:05:58 [order o-ec3e3dd48db1] bookshelf, budget 360, round 2
+13:06:00 [seller] [price] bookshelf offer 230, ask 270 (floor 260)
+13:06:00 [kit] 31 shops in .market\shops.json, running market_buyer
+13:06:01 [buyer] [score] kimauve: score 4.87 = reviews 4.46 (10), red flags 0, mine: 34 deals, 7 walks, 0 cheated, 0 errors
+13:06:01 [buyer] [score] 25620027: score 4.40 = reviews 4.11 (10), red flags 0, mine: 53 deals, 8 walks, 0 cheated, 0 errors
+13:06:01 [buyer] [score] oak-and-pine: score 4.32 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:06:01 [buyer] [score] inextro: score 4.17 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:06:01 [buyer] [score] q00: score 4.15 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:06:01 [buyer] [score] YAHO1212: score 4.13 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:06:01 [buyer] [score] myeonggi: score 4.13 = reviews 4.29 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:06:01 [buyer] [score] shaun0927: score 4.07 = reviews 4.32 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:06:01 [buyer] [score] grand-furniture: score 4.06 = reviews 4.03 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] Ddolcom's BEST SHOP: score 4.05 = reviews 4.04 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] bjeon01: score 4.04 = reviews 4.24 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:06:01 [buyer] [score] moss-and-oak: score 3.99 = reviews 3.97 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] mjforge: score 3.97 = reviews 3.94 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] corner-store: score 3.96 = reviews 3.91 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] bright-living: score 3.94 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:06:01 [buyer] [score] shaun0927-lab3: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] shaun0927-lab1: score 3.87 = reviews 3.87 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] psyoung82: score 3.87 = reviews 3.84 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] kcwarni: score 3.82 = reviews 3.82 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] dragonash: score 3.81 = reviews 3.79 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] lee-sungsoo: score 3.75 = reviews 3.73 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] thisjonghoon: score 3.74 = reviews 3.73 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] shaun0927-lab2: score 3.68 = reviews 3.67 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] yeonsong2: score 3.55 = reviews 3.54 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] cheapest-in-town: score 3.42 = reviews 3.41 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] fair-furniture: score 3.39 = reviews 3.38 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] JangSeongWoong: score 3.38 = reviews 3.33 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] 11im: score 3.05 = reviews 3.00 (10), red flags 0, no trades of mine
+13:06:01 [buyer] [score] willow-goods: score 3.03 = reviews 3.00 (0), red flags 0, no trades of mine
+13:06:01 [buyer] [score] elm-street: score 2.31 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:06:01 [buyer] [score] maple-home: score -0.52 = reviews 1.54 (10), red flags 10, no trades of mine
+13:06:01 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.87 = reviews 4.46 (10), red flags 0, mine: 34 deals, 7 walks, 0 cheated, 0 errors
+13:06:01 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:06:01 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_INPUT_REQUIRED | bookshelf. Send the ask or say ok to buy. Our ask: 260
+13:06:02 [seller] [price] bookshelf offer 230, ask 266 (floor 260)
+13:06:05 [seller] [price] bookshelf offer 230, ask 263 (floor 260)
+13:06:07 [buyer] [harness] {"action": "offer", "price": 200}
+13:06:07 [buyer] -> '200'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:06:08 [seller] [price] bookshelf offer 230, ask 262 (floor 260)
+13:06:08 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:06:08 [seller] [price] lamp offer 54, ask 118 (floor 100)
+13:06:08 [seller] [price] lamp offer 86, ask 110 (floor 100)
+13:06:08 [seller] [price] lamp offer 90, ask 106 (floor 100)
+13:06:10 [seller] [price] bookshelf offer 230, ask 261 (floor 260)
+13:06:13 [buyer] [harness] {"action": "offer", "price": 230}
+13:06:13 [buyer] -> '230'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:06:21 [buyer] [harness] {"action": "offer", "price": 245}
+13:06:22 [buyer] -> '245'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:06:29 [buyer] [harness] {"action": "offer", "price": 250}
+13:06:29 [buyer] -> '250'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:06:31 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:06:33 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+13:06:33 [seller] [price] bookshelf offer 177, ask 306 (floor 260)
+13:06:33 [seller] [price] bookshelf offer 241, ask 288 (floor 260)
+13:06:33 [seller] [price] bookshelf offer 264, ask 276 (floor 260)
+13:06:34 [seller] [price] bookshelf offer 276, ask 270 (floor 260)
+13:06:34 [seller] [price] lamp offer 105, ask 118 (floor 100)
+13:06:37 [buyer] [harness] {"action": "offer", "price": 255}
+13:06:37 [buyer] -> '255'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:06:44 [buyer] [harness] {"action": "offer", "price": 260}
+13:06:44 [buyer] -> '260'  <- TASK_STATE_COMPLETED | Deal: bookshelf at 260.
+13:06:44 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "6c69e389-bec2-48a4-9826-6be2395cf178", "price": 260.0, "item": "bookshelf", "sig_seller": "rNf65zuPQpCcIAgV2VvoD/yV2bmeBj+93GINFrRQvYJ86HASMkDbyqxvZGy27wDWZ0/9LrfcGO+Zhbb9NXvCCQ==", "shop": "kimauve"}, "stars": 5, "review": "Bought the bookshelf at 260 (budget 360) after 6 offers; receipt matched."}
+13:06:44 [sign] sig_seller ok, sig_buyer added
+13:06:45 [market] ledger #2078098: bookshelf at 260, stars 5, verified True, review accepted
+13:06:45 [order o-e0883c1840bd] bookshelf, budget 230, round 2
+13:06:45 [kit] 31 shops in .market\shops.json, running market_buyer
+13:06:46 [buyer] [score] kimauve: score 4.79 = reviews 4.35 (10), red flags 0, mine: 35 deals, 7 walks, 0 cheated, 0 errors
+13:06:46 [buyer] [score] 25620027: score 4.38 = reviews 4.12 (10), red flags 0, mine: 53 deals, 8 walks, 0 cheated, 0 errors
+13:06:46 [buyer] [score] oak-and-pine: score 4.34 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:06:46 [buyer] [score] myeonggi: score 4.19 = reviews 4.37 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:06:46 [buyer] [score] inextro: score 4.17 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:06:46 [buyer] [score] YAHO1212: score 4.14 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:06:46 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:06:46 [buyer] [score] bjeon01: score 4.09 = reviews 4.24 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:06:46 [buyer] [score] grand-furniture: score 4.07 = reviews 4.03 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] Ddolcom's BEST SHOP: score 4.04 = reviews 4.04 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] moss-and-oak: score 4.01 = reviews 3.97 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] shaun0927: score 3.95 = reviews 4.19 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:06:46 [buyer] [score] bright-living: score 3.92 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:06:46 [buyer] [score] shaun0927-lab1: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] corner-store: score 3.89 = reviews 3.86 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] shaun0927-lab3: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] psyoung82: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] dragonash: score 3.84 = reviews 3.79 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] kcwarni: score 3.82 = reviews 3.82 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] thisjonghoon: score 3.78 = reviews 3.73 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] mjforge: score 3.78 = reviews 3.74 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] shaun0927-lab2: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] lee-sungsoo: score 3.64 = reviews 3.61 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] cheapest-in-town: score 3.60 = reviews 3.59 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] yeonsong2: score 3.58 = reviews 3.54 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] fair-furniture: score 3.38 = reviews 3.38 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] JangSeongWoong: score 3.36 = reviews 3.33 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] 11im: score 3.04 = reviews 3.00 (10), red flags 0, no trades of mine
+13:06:46 [buyer] [score] willow-goods: score 3.04 = reviews 3.00 (0), red flags 0, no trades of mine
+13:06:46 [buyer] [score] elm-street: score 2.28 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:06:46 [buyer] [score] maple-home: score -0.51 = reviews 1.54 (10), red flags 10, no trades of mine
+13:06:46 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.79 = reviews 4.35 (10), red flags 0, mine: 35 deals, 7 walks, 0 cheated, 0 errors
+13:06:46 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:06:47 [buyer] -> 'I want to buy a bookshelf'  <- TASK_STATE_INPUT_REQUIRED | bookshelf. Send the ask or say ok to buy. Our ask: 260
+13:06:49 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:06:51 [seller] [price] open chair at 234 (list 234, floor 180)
+13:06:52 [seller] [price] chair offer 180, ask 212 (floor 180)
+13:06:52 [seller] [price] chair offer 191, ask 199 (floor 180)
+13:06:52 [seller] [price] lamp offer 105, ask 118 (floor 100)
+13:06:52 [seller] [price] chair offer 199, ask 191 (floor 180)
+13:06:53 [buyer] [harness] {"action": "offer", "price": 200}
+13:06:53 [buyer] -> '200'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:06:54 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+13:06:54 [seller] [price] bookshelf offer 138, ask 306 (floor 260)
+13:06:54 [seller] [price] bookshelf offer 222, ask 288 (floor 260)
+13:06:54 [seller] [price] bookshelf offer 230, ask 276 (floor 260)
+13:06:59 [buyer] [harness] {"action": "offer", "price": 215}
+13:06:59 [buyer] -> '215'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:07:06 [buyer] [harness] {"action": "offer", "price": 225}
+13:07:06 [buyer] -> '225'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:07:17 [buyer] [harness] {"action": "offer", "price": 230}
+13:07:17 [buyer] -> '230'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 260
+13:07:18 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+13:07:21 [seller] [price] bookshelf offer 325, ask 306 (floor 260)
+13:07:25 [buyer] [harness] {"action": "walk"}
+13:07:25 [buyer] walked away (CancelTask)
+13:07:25 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": null, "stars": 3, "review": "No deal for the bookshelf within budget 230; my offers [200, 215, 225, 230]."}
+13:07:27 [market] ledger #2078168: no deal, stars 3, verified False, review not shown
+13:07:28 [order o-a66b09faafd9] chair, budget 250, round 2
+13:07:28 [kit] 30 shops in .market\shops.json, running market_buyer
+13:07:29 [buyer] [score] kimauve: score 4.62 = reviews 4.32 (10), red flags 0, mine: 35 deals, 8 walks, 0 cheated, 0 errors
+13:07:29 [buyer] [score] oak-and-pine: score 4.33 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:07:29 [buyer] [score] YAHO1212: score 4.18 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:07:29 [buyer] [score] myeonggi: score 4.18 = reviews 4.37 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:07:29 [buyer] [score] inextro: score 4.17 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:07:29 [buyer] [score] q00: score 4.15 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:07:29 [buyer] [score] 25620027: score 4.12 = reviews 3.80 (10), red flags 0, mine: 53 deals, 8 walks, 0 cheated, 0 errors
+13:07:29 [buyer] [score] Ddolcom's BEST SHOP: score 4.07 = reviews 4.04 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] grand-furniture: score 4.04 = reviews 4.03 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] bjeon01: score 4.03 = reviews 4.19 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:07:29 [buyer] [score] moss-and-oak: score 4.01 = reviews 3.97 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] corner-store: score 4.00 = reviews 3.98 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] shaun0927: score 3.93 = reviews 4.15 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:07:29 [buyer] [score] bright-living: score 3.91 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:07:29 [buyer] [score] psyoung82: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] shaun0927-lab1: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] thisjonghoon: score 3.86 = reviews 3.86 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] shaun0927-lab3: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] kcwarni: score 3.82 = reviews 3.82 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] dragonash: score 3.80 = reviews 3.79 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] shaun0927-lab2: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] cheapest-in-town: score 3.62 = reviews 3.59 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] lee-sungsoo: score 3.55 = reviews 3.53 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] yeonsong2: score 3.54 = reviews 3.54 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] JangSeongWoong: score 3.38 = reviews 3.33 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] willow-goods: score 3.03 = reviews 3.00 (0), red flags 0, no trades of mine
+13:07:29 [buyer] [score] 11im: score 3.01 = reviews 3.00 (10), red flags 0, no trades of mine
+13:07:29 [buyer] [score] elm-street: score 2.39 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:07:29 [buyer] [score] maple-home: score -0.52 = reviews 1.54 (10), red flags 10, no trades of mine
+13:07:29 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.62 = reviews 4.32 (10), red flags 0, mine: 35 deals, 8 walks, 0 cheated, 0 errors
+13:07:29 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:07:29 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair. Send the ask or say ok to buy. Our ask: 180
+13:07:36 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:07:36 [buyer] [harness] {"action": "offer", "price": 150}
+13:07:36 [buyer] -> '150'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:07:39 [seller] [price] lamp offer 130, ask 118 (floor 100)
+13:07:43 [buyer] [harness] {"action": "offer", "price": 165}
+13:07:43 [buyer] -> '165'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:07:51 [buyer] [harness] {"action": "offer", "price": 175}
+13:07:51 [buyer] -> '175'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:07:58 [buyer] [harness] {"action": "offer", "price": 180}
+13:07:59 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+13:07:59 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "f0d1cd9a-91a3-4ab1-a210-c0b54c52a5ae", "price": 180.0, "item": "chair", "sig_seller": "wHRakFbnrYRn7xJu6eHawi77Uv7H/mHCiKiI0ssSM4+nYP4T4SzF85jYoN9HJYBHjzjF61FRPWXquwP71GjkDQ==", "shop": "kimauve"}, "stars": 5, "review": "Bought the chair at 180 (budget 250) after 4 offers; receipt matched."}
+13:07:59 [sign] sig_seller ok, sig_buyer added
+13:08:02 [market] ledger #2078235: chair at 180, stars 5, verified True, review accepted
+13:08:03 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:08:05 [seller] [price] lamp offer 130, ask 118 (floor 100)
+13:08:09 [order o-25d0081224c0] chair, budget 185, round 2
+13:08:14 [kit] 29 shops in .market\shops.json, running market_buyer
+13:08:14 [buyer] [score] kimauve: score 4.64 = reviews 4.33 (10), red flags 0, mine: 36 deals, 8 walks, 0 cheated, 0 errors
+13:08:14 [buyer] [score] 25620027: score 4.37 = reviews 4.05 (10), red flags 0, mine: 53 deals, 8 walks, 0 cheated, 0 errors
+13:08:14 [buyer] [score] oak-and-pine: score 4.35 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:08:14 [buyer] [score] myeonggi: score 4.21 = reviews 4.38 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:08:14 [buyer] [score] inextro: score 4.19 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:08:14 [buyer] [score] YAHO1212: score 4.17 = reviews 4.23 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:08:14 [buyer] [score] q00: score 4.14 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:08:14 [buyer] [score] Ddolcom's BEST SHOP: score 4.07 = reviews 4.04 (10), red flags 0, no trades of mine
+13:08:14 [buyer] [score] grand-furniture: score 4.04 = reviews 4.03 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] corner-store: score 4.02 = reviews 3.98 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] moss-and-oak: score 4.01 = reviews 3.97 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] bjeon01: score 3.95 = reviews 4.12 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:08:15 [buyer] [score] bright-living: score 3.94 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:08:15 [buyer] [score] thisjonghoon: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] shaun0927-lab1: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] psyoung82: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] shaun0927-lab3: score 3.85 = reviews 3.84 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] dragonash: score 3.83 = reviews 3.79 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] shaun0927: score 3.77 = reviews 4.00 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:08:15 [buyer] [score] lee-sungsoo: score 3.73 = reviews 3.70 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] shaun0927-lab2: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] cheapest-in-town: score 3.60 = reviews 3.59 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] yeonsong2: score 3.58 = reviews 3.54 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] JangSeongWoong: score 3.35 = reviews 3.33 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] 11im: score 3.04 = reviews 3.00 (10), red flags 0, no trades of mine
+13:08:15 [buyer] [score] willow-goods: score 3.02 = reviews 3.00 (0), red flags 0, no trades of mine
+13:08:15 [buyer] [score] elm-street: score 2.38 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:08:15 [buyer] [score] maple-home: score -0.53 = reviews 1.54 (10), red flags 10, no trades of mine
+13:08:15 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.64 = reviews 4.33 (10), red flags 0, mine: 36 deals, 8 walks, 0 cheated, 0 errors
+13:08:15 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:08:15 [buyer] -> 'I want to buy a chair'  <- TASK_STATE_INPUT_REQUIRED | chair. Send the ask or say ok to buy. Our ask: 180
+13:08:21 [buyer] [harness] {"action": "offer", "price": 150}
+13:08:21 [buyer] -> '150'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:08:22 [seller] [price] open bookshelf at 338 (list 338, floor 260)
+13:08:25 [seller] [price] bookshelf offer 295, ask 306 (floor 260)
+13:08:27 [buyer] [harness] {"action": "offer", "price": 165}
+13:08:27 [buyer] -> '165'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:08:28 [seller] [price] bookshelf offer 295, ask 288 (floor 260)
+13:08:34 [buyer] [harness] {"action": "offer", "price": 175}
+13:08:35 [buyer] -> '175'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 180
+13:08:41 [buyer] [harness] {"action": "offer", "price": 180}
+13:08:41 [buyer] -> '180'  <- TASK_STATE_COMPLETED | Deal: chair at 180.
+13:08:41 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "1ed9a30f-06bd-40bc-b27e-2c070cd8437e", "price": 180.0, "item": "chair", "sig_seller": "OXDDfZNB9v8QzeIlWk+UzawUfWHX7GHACj2wEyK04KuzEvDGhNW5InYwtq3p3ybAfhHAeXvsPww92mrKspguBw==", "shop": "kimauve"}, "stars": 4, "review": "Bought the chair at 180 (budget 185) after 4 offers; receipt matched."}
+13:08:41 [sign] sig_seller ok, sig_buyer added
+13:08:48 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:08:49 [market] ledger #2078325: chair at 180, stars 4, verified True, review accepted
+13:08:50 [seller] [price] lamp offer 110, ask 118 (floor 100)
+13:08:53 [order o-0974328ec256] lamp, budget 90, round 2
+13:08:59 [kit] 32 shops in .market\shops.json, running market_buyer
+13:08:59 [buyer] [score] kimauve: score 4.50 = reviews 4.21 (10), red flags 0, mine: 37 deals, 8 walks, 0 cheated, 0 errors
+13:08:59 [buyer] [score] 25620027: score 4.31 = reviews 3.98 (10), red flags 0, mine: 53 deals, 8 walks, 0 cheated, 0 errors
+13:08:59 [buyer] [score] oak-and-pine: score 4.30 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:08:59 [buyer] [score] YAHO1212: score 4.20 = reviews 4.26 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:08:59 [buyer] [score] inextro: score 4.17 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:08:59 [buyer] [score] Ddolcom's BEST SHOP: score 4.13 = reviews 4.13 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] q00: score 4.12 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:08:59 [buyer] [score] grand-furniture: score 4.08 = reviews 4.03 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] myeonggi: score 4.05 = reviews 4.22 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:08:59 [buyer] [score] moss-and-oak: score 4.02 = reviews 3.97 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] corner-store: score 3.98 = reviews 3.98 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] shaun0927-lab1: score 3.92 = reviews 3.87 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] shaun0927: score 3.92 = reviews 4.17 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:08:59 [buyer] [score] bright-living: score 3.91 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:08:59 [buyer] [score] thisjonghoon: score 3.89 = reviews 3.84 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] bjeon01: score 3.88 = reviews 4.04 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:08:59 [buyer] [score] psyoung82: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] mjforge: score 3.87 = reviews 3.85 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] yms979: score 3.87 = reviews 3.58 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+13:08:59 [buyer] [score] shaun0927-lab3: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] lee-sungsoo: score 3.86 = reviews 3.85 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] kcwarni: score 3.85 = reviews 3.82 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] dragonash: score 3.82 = reviews 3.79 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] shaun0927-lab2: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] cheapest-in-town: score 3.63 = reviews 3.59 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] yeonsong2: score 3.54 = reviews 3.54 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] fair-furniture: score 3.40 = reviews 3.38 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] JangSeongWoong: score 3.37 = reviews 3.33 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] 11im: score 3.04 = reviews 3.00 (10), red flags 0, no trades of mine
+13:08:59 [buyer] [score] willow-goods: score 3.04 = reviews 3.00 (0), red flags 0, no trades of mine
+13:08:59 [buyer] [score] elm-street: score 2.33 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:08:59 [buyer] [score] maple-home: score -0.53 = reviews 1.54 (10), red flags 10, no trades of mine
+13:08:59 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.50 = reviews 4.21 (10), red flags 0, mine: 37 deals, 8 walks, 0 cheated, 0 errors
+13:08:59 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:08:59 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp. Send the ask or say ok to buy. Our ask: 100
+13:09:05 [buyer] [harness] {"action": "offer", "price": 70}
+13:09:05 [buyer] -> '70'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+13:09:06 [seller] [price] open chair at 234 (list 234, floor 180)
+13:09:09 [seller] [price] chair offer 185, ask 212 (floor 180)
+13:09:11 [seller] [price] chair offer 185, ask 199 (floor 180)
+13:09:11 [buyer] [harness] {"action": "offer", "price": 80}
+13:09:11 [buyer] -> '80'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+13:09:14 [seller] [price] chair offer 185, ask 191 (floor 180)
+13:09:17 [seller] [price] chair offer 185, ask 186 (floor 180)
+13:09:18 [buyer] [harness] {"action": "offer", "price": 85}
+13:09:18 [buyer] -> '85'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+13:09:19 [seller] [price] chair offer 185, ask 184 (floor 180)
+13:09:25 [buyer] [harness] {"action": "offer", "price": 90}
+13:09:25 [buyer] -> '90'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+13:09:33 [buyer] [harness] {"action": "walk"}
+13:09:33 [buyer] walked away (CancelTask)
+13:09:33 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": null, "stars": 3, "review": "No deal for the lamp within budget 90; my offers [70, 80, 85, 90]."}
+13:09:36 [market] ledger #2078413: no deal, stars 3, verified False, review not shown
+13:09:37 [order o-f7fefc682977] lamp, budget 105, round 2
+13:09:41 [seller] [price] open chair at 234 (list 234, floor 180)
+13:09:44 [seller] [price] chair offer 160, ask 212 (floor 180)
+13:09:45 [kit] 32 shops in .market\shops.json, running market_buyer
+13:09:45 [buyer] [score] kimauve: score 4.43 = reviews 4.25 (10), red flags 0, mine: 37 deals, 9 walks, 0 cheated, 0 errors
+13:09:45 [buyer] [score] 25620027: score 4.34 = reviews 4.05 (10), red flags 0, mine: 53 deals, 8 walks, 0 cheated, 0 errors
+13:09:45 [buyer] [score] oak-and-pine: score 4.31 = reviews 4.10 (10), red flags 0, mine: 2 deals, 2 walks, 0 cheated, 1 errors
+13:09:45 [buyer] [score] YAHO1212: score 4.18 = reviews 4.26 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:09:45 [buyer] [score] inextro: score 4.15 = reviews 4.25 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:09:45 [buyer] [score] q00: score 4.13 = reviews 4.31 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:09:45 [buyer] [score] Ddolcom's BEST SHOP: score 4.13 = reviews 4.13 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] shaun0927: score 4.05 = reviews 4.28 (10), red flags 0, mine: 31 deals, 13 walks, 0 cheated, 0 errors
+13:09:45 [buyer] [score] grand-furniture: score 4.05 = reviews 4.03 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] yms979: score 4.03 = reviews 3.77 (10), red flags 0, mine: 38 deals, 8 walks, 0 cheated, 0 errors
+13:09:45 [buyer] [score] moss-and-oak: score 4.01 = reviews 3.97 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] corner-store: score 3.99 = reviews 3.98 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] bright-living: score 3.94 = reviews 3.99 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors
+13:09:45 [buyer] [score] lee-sungsoo: score 3.90 = reviews 3.90 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] shaun0927-lab1: score 3.89 = reviews 3.87 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] thisjonghoon: score 3.88 = reviews 3.84 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] shaun0927-lab3: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] psyoung82: score 3.86 = reviews 3.84 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] kcwarni: score 3.84 = reviews 3.82 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] dragonash: score 3.81 = reviews 3.79 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] bjeon01: score 3.80 = reviews 3.96 (10), red flags 0, mine: 0 deals, 0 walks, 0 cheated, 1 errors
+13:09:45 [buyer] [score] mjforge: score 3.70 = reviews 3.67 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] shaun0927-lab2: score 3.69 = reviews 3.67 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] myeonggi: score 3.61 = reviews 3.79 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors
+13:09:45 [buyer] [score] yeonsong2: score 3.55 = reviews 3.54 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] cheapest-in-town: score 3.51 = reviews 3.47 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] fair-furniture: score 3.41 = reviews 3.38 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] JangSeongWoong: score 3.38 = reviews 3.33 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] willow-goods: score 3.05 = reviews 3.00 (0), red flags 0, no trades of mine
+13:09:45 [buyer] [score] 11im: score 3.04 = reviews 3.00 (10), red flags 0, no trades of mine
+13:09:45 [buyer] [score] elm-street: score 2.35 = reviews 4.27 (10), red flags 0, mine: 5 deals, 0 walks, 1 cheated, 0 errors
+13:09:45 [buyer] [score] maple-home: score -0.51 = reviews 1.54 (10), red flags 10, no trades of mine
+13:09:45 [buyer] [choose] https://holland-toe-soa-tires.trycloudflare.com: kimauve - score 4.43 = reviews 4.25 (10), red flags 0, mine: 37 deals, 9 walks, 0 cheated, 0 errors
+13:09:45 [buyer] card: kimauve -> https://holland-toe-soa-tires.trycloudflare.com/a2a/0
+13:09:46 [buyer] -> 'I want to buy a lamp'  <- TASK_STATE_INPUT_REQUIRED | lamp. Send the ask or say ok to buy. Our ask: 100
+13:09:46 [seller] [price] chair offer 160, ask 199 (floor 180)
+13:09:49 [seller] [price] chair offer 160, ask 191 (floor 180)
+13:09:52 [seller] [price] chair offer 160, ask 186 (floor 180)
+13:09:52 [buyer] [harness] {"action": "offer", "price": 80}
+13:09:52 [buyer] -> '80'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+13:09:54 [seller] [price] chair offer 160, ask 184 (floor 180)
+13:09:57 [seller] [price] chair offer 160, ask 182 (floor 180)
+13:10:00 [buyer] [harness] {"action": "offer", "price": 90}
+13:10:00 [seller] [price] chair offer 160, ask 181 (floor 180)
+13:10:00 [buyer] -> '90'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+13:10:02 [seller] [price] chair offer 160, ask 180 (floor 180)
+13:10:05 [buyer] [harness] {"action": "offer", "price": 96}
+13:10:05 [buyer] -> '96'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+13:10:09 [seller] [price] open chair at 234 (list 234, floor 180)
+13:10:12 [seller] [price] chair offer 205, ask 212 (floor 180)
+13:10:13 [buyer] [harness] {"action": "offer", "price": 98}
+13:10:13 [buyer] -> '98'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 100
+13:10:15 [seller] [price] chair offer 205, ask 199 (floor 180)
+13:10:22 [buyer] [harness] {"action": "offer", "price": 100}
+13:10:22 [buyer] -> '100'  <- TASK_STATE_COMPLETED | Deal: lamp at 100.
+13:10:22 [buyer] {"shop": "https://holland-toe-soa-tires.trycloudflare.com", "receipt": {"task": "43446541-5508-4a07-9f39-90ebaa05890f", "price": 100.0, "item": "lamp", "sig_seller": "ee43kV0NCocVIMH9Ubtf4eshmvQB/HXvWNTCOXNP9bDerOOObtSF7OHEFCYlLs4QGPD+pUX0ywOZu0hWNTKEBg==", "shop": "kimauve"}, "stars": 4, "review": "Bought the lamp at 100 (budget 105) after 5 offers; receipt matched."}
+13:10:22 [sign] sig_seller ok, sig_buyer added
+13:10:27 [market] ledger #2078501: lamp at 100, stars 4, verified True, review accepted
+13:10:29 [seller] [price] open lamp at 130 (list 130, floor 100)
+13:10:29 [seller] [price] lamp offer 100, ask 118 (floor 100)
+13:10:30 [seller] [price] lamp offer 105, ask 110 (floor 100)
+13:10:33 [order o-cf8fa880de17] lamp, budget 125, round 2
