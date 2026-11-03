@@ -24,6 +24,8 @@ import json
 import os
 import random
 import re
+import subprocess
+import sys
 import time
 import uuid
 from pathlib import Path
@@ -320,6 +322,19 @@ def main():
     if entry.get("shop"):
         save_memory(mem, entry)
     print(json.dumps(result, ensure_ascii=False), flush=True)
+    if acceptable:
+        forum_later(a.shops)
+
+
+def forum_later(shops_path):
+    """Round 3: forum.py decides whether there is news worth a post; detached, so the kit is not kept waiting."""
+    try:
+        flags = subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP if os.name == "nt" else 0
+        subprocess.Popen([sys.executable, str(Path(__file__).with_name("forum.py")), "--shops", shops_path],
+                         stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                         creationflags=flags, start_new_session=os.name != "nt")
+    except OSError as e:
+        print(f"[forum] not started: {e}", flush=True)
 
 
 if __name__ == "__main__":
