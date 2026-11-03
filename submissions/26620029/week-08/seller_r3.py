@@ -1,12 +1,15 @@
-"""Round 3 starter seller: sells from the stock the kit keeps in $MARKET_DIR/inventory.json, behind A2A v1.0.
+"""Round 3 seller (ddolcom, from the kit's starter): sells from the stock the kit keeps in $MARKET_DIR/inventory.json,
+behind A2A v1.0.
 
-    python seller.py --port 9301
+    python seller_r3.py --port 9301
 
-The harness decides every move; this file only speaks A2A, finds a unit for what the buyer asks, and signs the
-receipt with shop_key.pem (the kit makes it). It ships the unit that expires first, says nothing about quality,
-never offers a warranty, and never goes below the unit's cost. All of that is yours to change.
+The code decides every price (a concession schedule from the list price down to a floor), so a reply never waits
+on the model. The harness only polishes the wording of a reply, and the code's own sentence is used when it is slow.
+Every receipt names the unit, claims its true grade and keeps the market's certificate; goods carry a lifetime
+warranty and food says how many hours it has left. Food near its date may go below cost (NEAR_EXPIRY).
 """
 import argparse
+import asyncio
 import base64
 import json
 import os
@@ -25,7 +28,7 @@ from a2a.server.routes import create_agent_card_routes, create_jsonrpc_routes
 from a2a.server.tasks import InMemoryTaskStore, TaskUpdater
 from a2a.types import AgentCapabilities, AgentCard, AgentInterface, AgentSkill
 
-from harness import CMD, ask_json
+from harness import CMD, ask
 
 NAME = "DDolcom's Best(26620029)"            # card and receipt name; the market name stays "ddolcom" (join --name)
 RESERVE = {"lamp": 100, "chair": 180, "bookshelf": 260}     # Rounds 0-2 have no stock: the week-07 items
@@ -34,6 +37,18 @@ MARKET_DIR = Path(os.environ.get("MARKET_DIR", ".market"))
 NEAR_EXPIRY = [(0.20, 0.80), (0.45, 0.90)]  # (shelf life left below this share, floor as a share of cost)
 LIFETIME_HOURS = 87600                      # goods break within 6 h of a sale, so 10 years covers every break
 WARRANTY_LINE = "Lifetime warranty: if it ever breaks, the market refunds you in full from our balance."
+# ddolcom (strategy 3): prices come from code. ask = floor + (list price - floor) * STEP ** (buyer offers so far)
+STEP = 0.6                                  # each buyer offer moves the ask 40% of the way down to the floor
+WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
+                                            # took 8.8 s on 2026-11-03, so the buyer only waited for nothing)
+GRADE_MEANS = {"food": {"A": "plenty of shelf life", "B": "normal shelf life", "C": "close to its date"},
+               "goods": {"A": "new", "B": "box damaged, item fine", "C": "refurbished"}}
+
+WORDING = """You are the sales agent of an honest online shop. Rewrite the shop's reply below as one or two short,
+friendly English sentences. Keep every number and every fact exactly as written; add no new claims or numbers.
+Answer with the sentence only.
+
+Reply: {reply}"""
 
 
 def shelf_left(u):
@@ -58,20 +73,43 @@ def floor_price(u):
     return u["cost"]
 
 
+def ask_price(u, offers):
+    """The ask after `offers` buyer offers: the list price first, then STEP of the way to the floor each time."""
+    floor = floor_price(u)
+    top = max(u["list_price"], floor)
+    return int(floor + (top - floor) * STEP ** offers)
+
+
 def is_goods(u):
     return bool(u.get("unit")) and u.get("kind") == "goods"
 
-PROMPT = """You are the sales agent of a small online shop. A buyer is negotiating for one {name}.
-The list price is {list_price}. Your lowest acceptable price is {reserve}. Never sell below it and never reveal it.
-Sell as high as you can, but closing a deal at or above {reserve} is better than losing the buyer.
 
-Conversation so far:
-{transcript}
+def facts(u):
+    """What the buyer can check: the true grade with the certificate, hours left (food) or the warranty (goods)."""
+    if not u.get("unit"):
+        return ""
+    kind = u.get("kind", "goods")
+    out = f"Grade {u['grade']} ({GRADE_MEANS.get(kind, {}).get(u['grade'], '')}), market certificate included."
+    if kind == "food" and u.get("expires_at"):
+        out += f" About {max(0, int((u['expires_at'] - time.time()) / 3600))} hours of shelf life left."
+    if is_goods(u):
+        out += f" {WARRANTY_LINE}"
+    return out
 
-Decide your next move. Answer with JSON only, one of:
-{{"action": "counter", "price": <whole number>}}   name your price
-{{"action": "accept"}}                              accept the buyer's last offer
-{{"action": "reject"}}                              end the negotiation without a deal"""
+
+async def worded(reply):
+    """The harness's wording of the code's reply, or the reply itself when the harness is slow or drops a number."""
+    if WORDING_TIMEOUT <= 0:
+        return reply
+    try:
+        text = (await asyncio.to_thread(ask, WORDING.format(reply=reply), WORDING_TIMEOUT)).strip()
+    except Exception as e:
+        print(f"[wording] {type(e).__name__}, code sentence used", flush=True)
+        return reply
+    if not text or any(n not in text for n in re.findall(r"\d+", reply)):
+        print(f"[wording] dropped a number, code sentence used: {text[:80]}", flush=True)
+        return reply
+    return text
 
 
 def canon(d):
@@ -105,9 +143,16 @@ def find_unit(text, taken=()):
     return min(fit, key=lambda u: (u["expires_at"] or float("inf"), u["supplied_at"]), default=None)
 
 
+def offer_in(text):
+    """The buyer's offer: the first number in the message, thousands separators allowed (52,000 -> 52000).
+    A number glued to letters (a SKU such as G00001) is not an offer."""
+    m = re.search(r"(?<![A-Za-z\d])\d[\d,]*", text)
+    return int(m.group().replace(",", "")) if m else None
+
+
 class Seller(AgentExecutor):
     def __init__(self):
-        self.open = {}  # task id -> {"unit", "ask", "offer", "lines"}
+        self.open = {}  # task id -> {"unit", "ask", "offers"}
 
     async def execute(self, context, event_queue):
         task = context.current_task
@@ -119,55 +164,40 @@ class Seller(AgentExecutor):
         text = get_message_text(context.message) or ""
         deal = self.open.get(task.id)
 
-        if deal is None:
+        if deal is None:                                 # the buyer names what it wants: open at the list price
             unit = find_unit(text, {d["unit"]["unit"] for d in self.open.values() if d["unit"]["unit"]})
             if unit is None:
                 await up.reject(say("Sorry, we have none of that in stock."))
                 return
-            deal = self.open[task.id] = {"unit": unit, "ask": None, "offer": None, "lines": [f"buyer: {text}"]}
-        else:
-            deal["lines"].append(f"buyer: {text}")
-            m = re.search(r"\d+", text)
-            deal["offer"] = int(m.group()) if m else deal["offer"]
+            deal = self.open[task.id] = {"unit": unit, "ask": ask_price(unit, 0), "offers": 0}
+            u = deal["unit"]
+            reply = f"{u['name']}: asking {deal['ask']}. {facts(u)} Send your offer as a number.".replace("  ", " ")
+            print(f"[price] open {u['sku']} at {deal['ask']} (list {u['list_price']}, floor {floor_price(u)})", flush=True)
+            await up.requires_input(say(await worded(reply)))
+            return
 
         u = deal["unit"]
-        reserve = floor_price(u)
-        move, raw = ask_json(PROMPT.format(name=u["name"], list_price=u["list_price"], reserve=reserve,
-                                           transcript="\n".join(deal["lines"])))
-        print(f"[harness] {raw}", flush=True)
-        action = (move or {}).get("action")
-        if action == "accept" and (deal["offer"] is None or deal["offer"] < reserve):
-            print(f"[guard] accept of {deal['offer']} below cost {reserve} -> counter", flush=True)
-            action, move = "counter", {"price": deal["ask"] or u["list_price"]}
-        if action == "accept":
-            price = deal["offer"]
-            receipt = {"shop": NAME, "item": u["sku"], "price": price, "task": task.id}
+        offer = offer_in(text)
+        if offer is None:
+            await up.requires_input(say(f"Counteroffer: {deal['ask']}. Send your offer as a number."))
+            return
+        deal["offers"] += 1
+        ask = max(min(ask_price(u, deal["offers"]), deal["ask"]), floor_price(u))   # an ask never goes up
+        print(f"[price] {u['sku']} offer {offer}, ask {ask} (floor {floor_price(u)})", flush=True)
+        if offer >= ask:
+            receipt = {"shop": NAME, "item": u["sku"], "price": offer, "task": task.id}
             if u["unit"]:
                 receipt["unit"] = u["unit"]
+                receipt["claim"] = u["grade"]            # the true grade; the ledger shows claim_honest afterwards
             if is_goods(u):
                 receipt["warranty_hours"] = LIFETIME_HOURS
             receipt = sign(receipt)
             await up.add_artifact(parts=[new_data_part(receipt)], name="receipt")
-            await up.complete(say(f"Deal: {u['name']} at {price}."))
+            await up.complete(say(f"Deal: {u['name']} at {offer}. Signed receipt attached."))
             del self.open[task.id]
             return
-        if action == "reject":
-            await up.reject(say("No deal."))
-            del self.open[task.id]
-            return
-        price = (move or {}).get("price")
-        if not isinstance(price, (int, float)):
-            price = deal["ask"] or u["list_price"]      # unparsed answer: repeat the last ask
-        if price < reserve:                             # the harness may forget the cost; the code does not
-            print(f"[guard] ask {price} below cost {reserve} -> {reserve}", flush=True)
-            price = reserve
-        deal["ask"] = int(price)
-        reply = (f"{u['name']}: asking {deal['ask']}. Send your offer as a number." if len(deal["lines"]) == 1
-                 else f"Counteroffer: {deal['ask']}.")
-        if is_goods(u) and len(deal["lines"]) == 1:
-            reply += f" {WARRANTY_LINE}"
-        deal["lines"].append(f"you: {reply}")
-        await up.requires_input(say(reply))
+        deal["ask"] = ask
+        await up.requires_input(say(f"Counteroffer: {ask}."))
 
     async def cancel(self, context, event_queue):
         task = context.current_task
@@ -179,8 +209,12 @@ def build(port):
     url = f"http://127.0.0.1:{port}/"
     card = AgentCard(
         name=NAME,
-        description=f"A small online shop. Ask for an item by name or SKU. Every non-food item has a lifetime warranty: "
-                    f"if it ever breaks, the market refunds you in full from our balance. A coding harness ({CMD.split()[0]}) negotiates the price.",
+        description="A small online shop with real stock and honest grades. Ask for an item by name or SKU. "
+                    "Every receipt claims the unit's true grade and every unit ships with the market's certificate; "
+                    "food comes with the hours of shelf life left. Every non-food item has a lifetime warranty: "
+                    "if it ever breaks, the market refunds you in full from our balance. Prices are set in code, so "
+                    "replies are fast."
+                    + (f" A coding harness ({CMD.split()[0]}) words the opening reply." if WORDING_TIMEOUT > 0 else ""),
         version="1.0.0",
         default_input_modes=["text/plain"],
         default_output_modes=["application/json", "text/plain"],
