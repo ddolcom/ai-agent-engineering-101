@@ -97,6 +97,11 @@ def favourites(cu):
     return fav
 
 
+def popular(cu):
+    """category -> settled deals in the whole market since we started reading the ledger (any buyer, any shop)."""
+    return {cat: sum(skus.values()) for cat, skus in cu.get("sku_buys", {}).items()}
+
+
 def best_sku(cu, cat):
     """The SKU of a category that settled most often in the market, or None."""
     s = cu.get("sku_buys", {}).get(cat)

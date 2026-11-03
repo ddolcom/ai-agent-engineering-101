@@ -9,7 +9,9 @@ rotted unsold. Memory: restock_memory.json in the agent folder (what we held, wh
 
 Customers first (customers.py): buyers who settled with my shop are remembered from the public ledger, with
 what they buy anywhere; their favourite categories are stocked before anything else, with more units.
-Cheap first: until the shop has CHEAP_PHASE sales, only categories and SKUs up to CHEAP_MAX_LIST.
+Then what the whole market buys: categories by their share of settled deals on the ledger, more units for a
+bigger share; once the market has MARKET_DATA deals, categories nobody bought are not stocked.
+Cheap first: until the shop has CHEAP_PHASE sales, only categories and SKUs up to CHEAP_MAX_LIST, except hot ones.
 Supply opens every 20 minutes for 3 minutes; outside a window the run only learns and buys nothing, because
 the kit would wait 90 s per line and could miss the window itself.
 """
@@ -28,7 +30,13 @@ MAX_LINES = 10              # the kit buys at most 10 lines per run
 CHEAP_PHASE = 20            # until the shop has sold this many units, stock cheap SKUs only
 CHEAP_MAX_LIST = 50_000     # "cheap": list price up to this
 CHEAP_SHARE = 0.6           # cheapest SKU at or above this share of the category median (orders accept 0.5-1.5x)
-FOOD_MAX_QTY = 2            # food rots: never more than this per category
+FOOD_MAX_QTY = 4            # food rots: never more than this per category
+MARKET_DATA = 200           # market deals seen before "nobody bought it" means something
+HOT_MAX_LIST = 700_000      # hot categories (e.g. mattresses) may go this dear; the SKU is the one the market buys
+HOT_SHARE = 0.03            # a category with this share of market deals is hot: dear SKUs allowed in the cheap phase
+POP_QTY = [(0.10, 5), (0.05, 4), (0.02, 3), (0.005, 2)]   # (share of market deals, units to keep)
+DEAR = 100_000              # list price above this: at most DEAR_QTY units
+DEAR_QTY = 2
 LINE_SHARE = 0.1            # one line spends at most this share of the balance (fewer units of dear SKUs)
 EARLY = 60                  # buy when the window opens within this many seconds (the kit runs us every 60 s)
 MEMORY = Path("restock_memory.json")
@@ -70,12 +78,18 @@ def pick_sku(skus, median, best, cheap):
     return min(skus, key=lambda c: abs(c["list_price"] - median))
 
 
+def pop_qty(share):
+    return next((q for at, q in POP_QTY if share >= at), 1)
+
+
 def plan(inv, catalog, demand, mem, cu=None):
     sold, expired = mem.get("sold", {}), mem.get("expired", {})
     cu = cu or {}
     fav = customers.favourites(cu)
+    pop = customers.popular(cu)
+    total = sum(pop.values())
+    share = {cat: n / total for cat, n in pop.items()} if total else {}
     cheap = sum(sold.values()) < CHEAP_PHASE
-    max_list = CHEAP_MAX_LIST if cheap else MAX_LIST
     stock = {}
     for u in inv["units"]:
         if u.get("grade") != "expired":
@@ -87,25 +101,31 @@ def plan(inv, catalog, demand, mem, cu=None):
     cats = []
     for d in demand:
         cat = d["category"]
-        if d["median_price"] > max_list or cat not in by_cat:
+        hot = share.get(cat, 0) >= HOT_SHARE            # a regular's one-off buy does not make a sofa hot
+        if d["median_price"] > (HOT_MAX_LIST if hot else CHEAP_MAX_LIST if cheap else MAX_LIST) or cat not in by_cat:
             continue
+        if total >= MARKET_DATA and not (pop.get(cat) or fav.get(cat) or sold.get(cat)):
+            continue                                    # the market has spoken: nobody buys this
         if d["kind"] == "food" and (d.get("shelf_hours") or 0) < MIN_SHELF_HOURS:
             continue
         if expired.get(cat, 0) >= 2 and not sold.get(cat):
             continue                                    # rotted twice and never sold: stop
-        want = max(fav_qty(fav.get(cat, 0)), 2 if sold.get(cat, 0) >= 2 else 1)
+        want = max(fav_qty(fav.get(cat, 0)), pop_qty(share.get(cat, 0)), 2 if sold.get(cat, 0) >= 2 else 1)
         if d["kind"] == "food":
             want = min(want, FOOD_MAX_QTY)
         if stock.get(cat, 0) < want:
-            cats.append((-fav.get(cat, 0), -sold.get(cat, 0), d["median_price"], cat, want - stock.get(cat, 0)))
-    cats.sort()                                         # customers' favourites, then most sold, then cheapest
+            cats.append((-fav.get(cat, 0), -pop.get(cat, 0), -sold.get(cat, 0), d["median_price"], cat,
+                         want - stock.get(cat, 0), cheap and not hot))
+    cats.sort()                                         # customers' favourites, market's best sellers, my sales, cheapest
 
     spend = (inv.get("balance") or 0) - CASH_FLOOR
     buy = []
-    for _, _, median, cat, qty in cats:
+    for _, _, _, median, cat, qty, cheap_cat in cats:
         if len(buy) >= MAX_LINES:
             break
-        sku = pick_sku(by_cat[cat], median, customers.best_sku(cu, cat), cheap)
+        sku = pick_sku(by_cat[cat], median, customers.best_sku(cu, cat), cheap_cat)
+        if sku["list_price"] > DEAR:
+            qty = min(qty, DEAR_QTY)
         qty = max(1, min(qty, int(LINE_SHARE * inv["balance"] / (sku["list_price"] * COST_GUESS))))
         cost = sku["list_price"] * COST_GUESS * qty
         if cost > spend:
