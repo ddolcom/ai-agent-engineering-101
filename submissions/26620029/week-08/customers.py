@@ -1,0 +1,113 @@
+"""Who buys from my shop, and what those buyers buy anywhere in the market (Round 3, read from the public ledger).
+
+The market says each buyer has a few favourite categories most of its orders come from, and publishes neither.
+The ledger shows every settled deal with its buyer, shop and SKU, so:
+  customers[buyer]        deals that buyer settled with my shop
+  buys[buyer][category]   deals that buyer settled anywhere (any shop), by category
+  sku_buys[category][sku] how often each SKU of a category settled (any buyer), to pick the SKU to stock
+restock.py stocks the favourite categories of my customers first.
+
+State lives in the restock memory dict under "ledger" (cursor) and "customers" (the counts above).
+"""
+import json
+import os
+
+import httpx
+
+MARKET = os.environ.get("MARKET_URL", "https://market.ourolabs.ai")
+ME = "ddolcom"                  # the market name (join --name); receipts say "DDolcom's Best(26620029)"
+PAGES = 20                      # at most 20 x 500 ledger entries per run
+FIRST_LOOKBACK = 5000           # first run: start this many entries before the newest
+
+
+def get(c, path, **params):
+    r = c.get(f"{MARKET}{path}", params=params, timeout=20)
+    r.raise_for_status()
+    return r.json()
+
+
+def deal_of(e):
+    """(order, buyer, shop url, sku) for a settled deal, else None. Round 3 `settle` entries carry the SKU as
+    `item`; a `result` entry carries it in its receipt. Round 2 items (lamp, chair) are not SKUs and are dropped."""
+    d = e.get("data") or {}
+    if e.get("kind") not in ("settle", "result"):
+        return None
+    sku = d.get("item") or d.get("sku") or (d.get("receipt") or {}).get("item")
+    buyer, shop = d.get("buyer"), d.get("shop")
+    if not (sku and buyer and shop):
+        return None
+    if e["kind"] == "result" and not d.get("receipt"):
+        return None
+    return d.get("order") or f"seq{e.get('seq')}", buyer, shop, sku
+
+
+def update(mem, catalog, client=None):
+    """Read the ledger since the last run and fold the settled deals into mem["customers"]. Never raises."""
+    cu = mem.setdefault("customers", {"my_urls": [], "customers": {}, "buys": {}, "sku_buys": {}, "seen": []})
+    c = client or httpx.Client()
+    try:
+        shops = get(c, "/api/shops").get("shops", [])
+        for s in shops:
+            if s.get("name") == ME and s.get("url") not in cu["my_urls"]:
+                cu["my_urls"].append(s["url"])
+        after = mem.get("ledger", -FIRST_LOOKBACK)
+        seen = set(cu["seen"])
+        for _ in range(PAGES):
+            rows = get(c, "/api/ledger", after=after)
+            if not rows:
+                break
+            after = rows[-1]["seq"]
+            for e in rows:
+                d = e.get("data") or {}
+                if e.get("kind") == "join" and d.get("name") == ME and d.get("role") == "shop" \
+                        and d.get("url") not in cu["my_urls"]:
+                    cu["my_urls"].append(d["url"])
+                deal = deal_of(e)
+                if not deal or deal[0] in seen:
+                    continue
+                order, buyer, shop, sku = deal
+                seen.add(order)
+                if shop in cu["my_urls"]:                 # Round 2 lamps count too: that buyer already trusts us
+                    cu["customers"][buyer] = cu["customers"].get(buyer, 0) + 1
+                if sku not in catalog:
+                    continue
+                cat = catalog[sku]["category"]
+                b = cu["buys"].setdefault(buyer, {})
+                b[cat] = b.get(cat, 0) + 1
+                s = cu["sku_buys"].setdefault(cat, {})
+                s[sku] = s.get(sku, 0) + 1
+            if len(rows) < 500:
+                break
+        mem["ledger"] = after
+        cu["seen"] = list(seen)[-5000:]                 # order ids, against a settle and a result for one deal
+    except (httpx.HTTPError, ValueError, KeyError) as e:
+        print(f"customers: ledger not read ({type(e).__name__})")
+    finally:
+        if client is None:
+            c.close()
+    return cu
+
+
+def favourites(cu):
+    """category -> weight: each customer's buys by category, weighted by how often that customer bought from me."""
+    fav = {}
+    for buyer, mine in cu.get("customers", {}).items():
+        for cat, n in cu.get("buys", {}).get(buyer, {}).items():
+            fav[cat] = fav.get(cat, 0) + n * mine
+    return fav
+
+
+def best_sku(cu, cat):
+    """The SKU of a category that settled most often in the market, or None."""
+    s = cu.get("sku_buys", {}).get(cat)
+    return max(s, key=s.get) if s else None
+
+
+if __name__ == "__main__":                              # python customers.py: what the ledger says right now
+    from pathlib import Path
+    md = Path(os.environ.get("MARKET_DIR", ".market"))
+    cat = json.loads((md / "catalog.json").read_text(encoding="utf-8")) if (md / "catalog.json").exists() else {}
+    m = {}
+    cu = update(m, cat)
+    print(json.dumps({"my_urls": cu["my_urls"], "customers": cu["customers"],
+                      "favourites": sorted(favourites(cu).items(), key=lambda x: -x[1])[:10]}, ensure_ascii=False, indent=1))
