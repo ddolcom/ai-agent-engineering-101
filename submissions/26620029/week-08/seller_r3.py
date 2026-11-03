@@ -36,13 +36,14 @@ MARKET_DIR = Path(os.environ.get("MARKET_DIR", ".market"))
 # ddolcom: food close to its date may go below cost (a small loss beats throwing it away at full cost)
 NEAR_EXPIRY = [(0.20, 0.80), (0.45, 0.90)]  # (shelf life left below this share, floor as a share of cost)
 LIFETIME_HOURS = 87600                      # goods break within 6 h of a sale, so 10 years covers every break
-# ddolcom: the lifetime warranty is the buyer's choice and costs WARRANTY_PREMIUM times the price (a refund takes
-# the whole price back out of balance and revenue, and the break rate is not published)
+# ddolcom: goods come with the lifetime warranty at WARRANTY_PREMIUM times the price unless the buyer says
+# "no warranty" (71% of goods deals in the first 11 min of Round 3 carried a warranty; buyers that require one in
+# their accept policy never say so, and the kit refuses to pay without it)
 WARRANTY_PREMIUM = 1.2
 WANTS_WARRANTY = re.compile(r"warrant|보증", re.I)
 NO_WARRANTY = re.compile(r"\b(no|without)\s+(a\s+|the\s+)?warrant|보증\s*(없이|없는|빼|제외)", re.I)
-WARRANTY_LINE = ("Lifetime warranty optional for +20%: if it ever breaks, the market refunds you in full from our "
-                 "balance. Say 'with warranty' to add it.")
+WARRANTY_LINE = ("Lifetime warranty included (+20%): if it ever breaks, the market refunds you in full from our "
+                 "balance. Say 'no warranty' to buy without it at the lower price.")
 # ddolcom (strategy 3): prices come from code. ask = floor + (list price - floor) * STEP ** (buyer offers so far)
 STEP = 0.6                                  # each buyer offer moves the ask 40% of the way down to the floor
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
@@ -105,9 +106,9 @@ def quote(deal):
 def quote_line(deal):
     u = deal["unit"]
     if deal.get("warranty"):
-        return f"{quote(deal)} with the lifetime warranty"
+        return f"{quote(deal)} with the lifetime warranty ({deal['ask']} without it)"
     if is_goods(u):
-        return f"{deal['ask']} (with the lifetime warranty: {int(deal['ask'] * WARRANTY_PREMIUM)})"
+        return f"{deal['ask']} without the warranty"
     return f"{deal['ask']}"
 
 
@@ -197,7 +198,7 @@ class Seller(AgentExecutor):
                 await up.reject(say("Sorry, we have none of that in stock."))
                 return
             deal = self.open[task.id] = {"unit": unit, "ask": ask_price(unit, 0), "offers": 0,
-                                         "warranty": is_goods(unit) and wants_warranty(text, False)}
+                                         "warranty": is_goods(unit) and wants_warranty(text, True)}
             u = deal["unit"]
             reply = f"{u['name']}: asking {quote_line(deal)}. {facts(u)} Send your offer as a number.".replace("  ", " ")
             print(f"[price] open {u['sku']} at {deal['ask']} (list {u['list_price']}, floor {floor_price(u)})", flush=True)
@@ -243,9 +244,9 @@ def build(port):
         name=NAME,
         description="A small online shop with real stock and honest grades. Ask for an item by name or SKU. "
                     "Every receipt claims the unit's true grade and every unit ships with the market's certificate; "
-                    "food comes with the hours of shelf life left. Any non-food item can come with a lifetime warranty "
-                    "for 20% more (say 'with warranty'): if it ever breaks, the market refunds you in full from our "
-                    "balance. Prices are set in code, so "
+                    "food comes with the hours of shelf life left. Every non-food item comes with a lifetime warranty "
+                    "for 20% more (say 'no warranty' for the lower price): if it ever breaks, the market refunds you "
+                    "in full from our balance. Prices are set in code, so "
                     "replies are fast."
                     + (f" A coding harness ({CMD.split()[0]}) words the opening reply." if WORDING_TIMEOUT > 0 else ""),
         version="1.0.0",
