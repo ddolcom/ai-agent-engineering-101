@@ -3,6 +3,10 @@
 # Log : powershell Get-Content D:\ai-agent-engineering-101\.market\join.log -Tail 10 -Wait
 # Mode: $Deployed set -> shop on Cloudflare Workers; empty -> local seller via $Mode
 # Stop: powershell "taskkill /T /F /PID (Get-Content D:\ai-agent-engineering-101\.market\kit.pid)"
+# Keep: the script starts itself again hidden with -Supervise; that copy restarts the kit whenever it exits
+#       (e.g. the market could not read the card through a fresh tunnel and refused the join), and logs each
+#       start and exit to .market\supervisor.log. kit.pid holds the supervisor, so Stop ends both.
+param([switch]$Supervise)
 
 $ErrorActionPreference = "Stop"
 
@@ -22,6 +26,8 @@ New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 $Log    = Join-Path $OutDir "join.log"
 $ErrLog = Join-Path $OutDir "join.err.log"
 $PidF   = Join-Path $OutDir "kit.pid"
+$SupLog = Join-Path $OutDir "supervisor.log"
+$RestartWait, $ShortRun, $ShortMax, $BackoffWait = 30, 300, 3, 900   # seconds; 3 runs under 5 min in a row -> wait 15 min
 
 # ---- environment ----
 $env:PYTHONUTF8   = "1"
@@ -32,11 +38,37 @@ $env:MARKET_OWNER = (Get-Content $OwnerF -TotalCount 1).Trim()
 # make sure the child process can find cloudflared and claude
 $env:Path = "C:\Program Files (x86)\cloudflared;C:\Program Files\cloudflared;$env:USERPROFILE\.local\bin;$env:Path"
 
+if ($Deployed) { $ModeArgs = @("--deployed", $Deployed) } else { $ModeArgs = @($Mode) }
+$ArgList = @("-u", "`"$Kit`"", "join", "--dir", "`"$Agent`"", "--market", $Market, "--name", $Nick) + $ModeArgs
+
+# ---- supervisor: run the kit, and start it again whenever it exits ----
+if ($Supervise) {
+    $short = 0
+    while ($true) {
+        try {
+            $t0 = Get-Date
+            Add-Content $SupLog "$(Get-Date -Format 'MM-dd HH:mm:ss') kit start"
+            $p = Start-Process -FilePath $Py -ArgumentList $ArgList -WorkingDirectory $Root -WindowStyle Hidden -PassThru `
+                -RedirectStandardOutput $Log -RedirectStandardError $ErrLog
+            $p.WaitForExit()
+            $secs = [int]((Get-Date) - $t0).TotalSeconds
+            Add-Content $SupLog "$(Get-Date -Format 'MM-dd HH:mm:ss') kit exited (code $($p.ExitCode)) after $secs s; last error lines:"
+            Get-Content $ErrLog -Tail 3 -ErrorAction SilentlyContinue | ForEach-Object { Add-Content $SupLog "    $_" }
+            if ($secs -lt $ShortRun) { $short++ } else { $short = 0 }
+        } catch {
+            Add-Content $SupLog "$(Get-Date -Format 'MM-dd HH:mm:ss') supervisor error: $_"
+            $short++
+        }
+        if ($short -ge $ShortMax) { $wait = $BackoffWait; $short = 0 } else { $wait = $RestartWait }
+        Add-Content $SupLog "$(Get-Date -Format 'MM-dd HH:mm:ss') restarting in $wait s"
+        Start-Sleep -Seconds $wait
+    }
+}
+
 # ---- pre-checks ----
 foreach ($f in @($Py, $Kit, (Join-Path $Agent "agent.json"))) {
     if (-not (Test-Path $f)) { Write-Host "MISSING: $f"; exit 1 }
 }
-if ($Deployed) { $ModeArgs = @("--deployed", $Deployed) } else { $ModeArgs = @($Mode) }
 if (-not $Deployed -and $Mode -eq "--tunnel" -and -not (Get-Command cloudflared -ErrorAction SilentlyContinue)) {
     Write-Host "cloudflared not found. Run: winget install --id Cloudflare.cloudflared"; exit 1
 }
@@ -55,13 +87,11 @@ if (Test-Path $PidF) {
     }
 }
 
-# ---- start in background ----
-$ArgList = @("-u", "`"$Kit`"", "join", "--dir", "`"$Agent`"", "--market", $Market, "--name", $Nick) + $ModeArgs
+# ---- start the supervisor in background ----
 Write-Host ("kit args: " + ($ArgList -join " "))
-$p = Start-Process -FilePath $Py `
-    -ArgumentList $ArgList `
-    -WorkingDirectory $Root -WindowStyle Hidden -PassThru `
-    -RedirectStandardOutput $Log -RedirectStandardError $ErrLog
+$p = Start-Process -FilePath "powershell.exe" -WindowStyle Hidden -PassThru `
+    -ArgumentList @("-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "`"$PSCommandPath`"", "-Supervise")
 
 $p.Id | Out-File $PidF -Encoding ascii
-Write-Host "kit started (PID $($p.Id)). Watch: Get-Content $Log -Tail 10 -Wait"
+Write-Host "supervisor started (PID $($p.Id)); it restarts the kit when it exits. Watch: Get-Content $Log -Tail 10 -Wait"
+Write-Host "Restarts: Get-Content $SupLog -Tail 10"
