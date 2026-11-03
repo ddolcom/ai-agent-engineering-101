@@ -404,5 +404,618 @@
   "price": 195,
   "task": "67d92a82-91ac-4773-b759-349135e4d74b",
   "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:30:11",
+  "item": "bookshelf",
+  "budget": 325,
+  "shop": "shaun0927",
+  "offers": [
+   250,
+   300
+  ],
+  "price": 300,
+  "task": "ef46470e-ba8c-463c-ab0b-c41f696661c3",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:30:27",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "shaun0927",
+  "offers": [
+   95,
+   100,
+   103,
+   104
+  ],
+  "price": 104,
+  "task": "8dfaa729-56c1-4ad6-9b2b-176d97b98c1e",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:31:02",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "shaun0927",
+  "offers": [
+   180,
+   215,
+   225,
+   228,
+   230
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:32:01",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "shaun0927",
+  "offers": [
+   200,
+   255,
+   265,
+   260,
+   266
+  ],
+  "price": 266,
+  "task": "057d2205-e81c-43e1-b11f-11ed4a7ef21c",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:32:50",
+  "item": "lamp",
+  "budget": 90,
+  "shop": "shaun0927",
+  "offers": [
+   75,
+   85,
+   88,
+   90
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:33:35",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "shaun0927",
+  "offers": [
+   100,
+   110
+  ],
+  "price": 110,
+  "task": "561a46c9-1ffe-41c8-bbf7-6d64bdd0ee2b",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:34:00",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "shaun0927",
+  "offers": [
+   95,
+   100,
+   104
+  ],
+  "price": 104,
+  "task": "7eab3412-d1bf-4478-91a2-bb0a4ac350e5",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:34:54",
+  "item": "chair",
+  "budget": 160,
+  "shop": "shaun0927",
+  "offers": [
+   140,
+   150,
+   158,
+   160
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:35:46",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "shaun0927",
+  "offers": [
+   190,
+   215,
+   230
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:36:33",
+  "item": "lamp",
+  "budget": 90,
+  "shop": "shaun0927",
+  "offers": [
+   70,
+   85,
+   90
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:37:14",
+  "item": "chair",
+  "budget": 225,
+  "shop": "shaun0927",
+  "offers": [
+   170,
+   200,
+   190
+  ],
+  "price": 190,
+  "task": "2f412aab-2774-4d26-b01b-d0da0e18b4c9",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:37:50",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "shaun0927",
+  "offers": [
+   95,
+   112
+  ],
+  "price": 112,
+  "task": "afb9aa58-b2fc-44fe-9470-6218ae9a4aa4",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:38:10",
+  "item": "bookshelf",
+  "budget": 325,
+  "shop": "q00",
+  "result": "error",
+  "error": "{'code': -32603, 'message': 'harness exit 1: Traceback (most recent call last):\\n  File \"/var/lib/w07/q00/proxy_llm.py\", line 19, in <module>\\n    with urllib.request.urlopen(req, timeout=170) as r:\\n"
+ },
+ {
+  "time": "2026-11-02T17:38:33",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "myeonggi",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:39:14",
+  "item": "chair",
+  "budget": 185,
+  "shop": "bright-living",
+  "offers": [
+   160,
+   175,
+   180,
+   182,
+   183,
+   185,
+   185
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:40:34",
+  "item": "bookshelf",
+  "budget": 325,
+  "shop": "YAHO1212",
+  "offers": [
+   260,
+   295,
+   315,
+   320,
+   325
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:41:34",
+  "item": "bookshelf",
+  "budget": 230,
+  "shop": "dyishappy",
+  "offers": [
+   200
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:42:00",
+  "item": "lamp",
+  "budget": 110,
+  "shop": "myeonggi",
+  "offers": [
+   70
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:43:03",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "shaun0927",
+  "offers": [
+   200,
+   250,
+   265,
+   269
+  ],
+  "price": 269,
+  "task": "3c414821-46c2-47b0-86d3-96497c941790",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:43:41",
+  "item": "chair",
+  "budget": 250,
+  "shop": "oak-and-pine",
+  "offers": [
+   170,
+   200,
+   230,
+   245
+  ],
+  "price": 245,
+  "task": "0ab914e3-c769-4729-9a90-1507196687fb",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:44:19",
+  "item": "bookshelf",
+  "budget": 295,
+  "shop": "oak-and-pine",
+  "offers": [
+   240,
+   265,
+   280,
+   290,
+   295
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:45:24",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "oak-and-pine",
+  "offers": [
+   200,
+   250,
+   265
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:46:08",
+  "item": "chair",
+  "budget": 160,
+  "shop": "shaun0927",
+  "offers": [
+   140,
+   150,
+   155,
+   158,
+   160
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-02T17:47:01",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "oak-and-pine",
+  "offers": [
+   290,
+   330,
+   350,
+   355
+  ],
+  "price": 355,
+  "task": "b155cff9-fe76-4aa5-bc91-02aaba1f94f0",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:47:39",
+  "item": "chair",
+  "budget": 225,
+  "shop": "oak-and-pine",
+  "result": "error",
+  "error": "harness exit 1: "
+ },
+ {
+  "time": "2026-11-02T17:49:29",
+  "item": "bookshelf",
+  "budget": 325,
+  "shop": "helenjeon101",
+  "offers": [
+   245,
+   275
+  ],
+  "price": 275,
+  "task": "ab301251-ae72-4077-a7da-08e2f54446eb",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:49:54",
+  "item": "chair",
+  "budget": 250,
+  "shop": "helenjeon101",
+  "offers": [
+   200
+  ],
+  "price": 200,
+  "task": "86482c36-27c2-40c8-be8a-b716a70f6ebd",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-02T17:50:16",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "helenjeon101",
+  "result": "error",
+  "error": "[WinError 10054] 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다"
+ },
+ {
+  "time": "2026-11-03T09:05:34",
+  "item": "lamp",
+  "budget": 140,
+  "shop": "inextro",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:05:53",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "yms979",
+  "offers": [
+   90,
+   97,
+   100
+  ],
+  "price": 100,
+  "task": "c410105c-3195-4e3d-a57a-356bc0b10fee",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:06:36",
+  "item": "bookshelf",
+  "budget": 270,
+  "shop": "yms979",
+  "offers": [
+   240,
+   260,
+   262
+  ],
+  "price": 262,
+  "task": "da260b46-e12b-4475-ac8d-8d9954cee5f5",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:07:13",
+  "item": "chair",
+  "budget": 250,
+  "shop": "yms979",
+  "offers": [
+   180,
+   188
+  ],
+  "price": 188,
+  "task": "d5667645-e96b-48a5-b101-e522a3e400e8",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:07:43",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "yms979",
+  "offers": [
+   100,
+   112
+  ],
+  "price": 108,
+  "task": "cc2d50a7-2142-4e0e-967d-f6fad0cd2db1",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:08:21",
+  "item": "bookshelf",
+  "budget": 295,
+  "shop": "yms979",
+  "offers": [
+   250,
+   265,
+   269
+  ],
+  "price": 269,
+  "task": "ced2d9fa-5d8a-400e-bda3-e6ef5a9beacc",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:09:03",
+  "item": "lamp",
+  "budget": 125,
+  "shop": "yms979",
+  "offers": [
+   100,
+   108
+  ],
+  "price": 108,
+  "task": "918a24d3-bd60-4cda-9de3-dcd212f98937",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:09:25",
+  "item": "chair",
+  "budget": 225,
+  "shop": "yms979",
+  "offers": [
+   170,
+   200
+  ],
+  "price": 190,
+  "task": "4bce0816-dc92-4a93-89c5-2db20b261c08",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:09:55",
+  "item": "bookshelf",
+  "budget": 360,
+  "shop": "yms979",
+  "offers": [
+   250,
+   265,
+   275
+  ],
+  "price": 271,
+  "task": "20835ae2-c8b3-4fde-9f87-aaa6e4e055cf",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:10:27",
+  "item": "lamp",
+  "budget": 90,
+  "shop": "yms979",
+  "offers": [
+   70,
+   80,
+   85,
+   90
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-03T09:11:27",
+  "item": "lamp",
+  "budget": 105,
+  "shop": "yms979",
+  "offers": [
+   90,
+   98,
+   100
+  ],
+  "price": 100,
+  "task": "37079ee2-4320-4c49-9577-bbde72d58442",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:12:00",
+  "item": "lamp",
+  "budget": 140,
+  "shop": "yms979",
+  "offers": [
+   95,
+   110
+  ],
+  "price": 106,
+  "task": "7985bd78-5580-43e4-a841-2a5a95d0b848",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:12:21",
+  "item": "chair",
+  "budget": 205,
+  "shop": "yms979",
+  "offers": [
+   180,
+   188
+  ],
+  "price": 188,
+  "task": "e3f710cb-562b-4ac6-89a9-dbc52b331e51",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:12:49",
+  "item": "bookshelf",
+  "budget": 325,
+  "shop": "yms979",
+  "offers": [
+   250,
+   262,
+   266
+  ],
+  "price": 266,
+  "task": "7acc223b-acf9-4c9a-92ea-5d82b4d699b0",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:13:27",
+  "item": "bookshelf",
+  "budget": 295,
+  "shop": "yms979",
+  "offers": [
+   240,
+   260,
+   262
+  ],
+  "price": 262,
+  "task": "4798d235-58c8-4707-800b-170a26e0cf78",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:14:13",
+  "item": "chair",
+  "budget": 205,
+  "shop": "yms979",
+  "offers": [
+   180,
+   188
+  ],
+  "price": 188,
+  "task": "1e337408-8791-4dab-9535-6798a65bf530",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:14:40",
+  "item": "chair",
+  "budget": 250,
+  "shop": "yms979",
+  "offers": [
+   180,
+   188
+  ],
+  "price": 188,
+  "task": "08463584-6e2e-4f33-bd88-b65c78144677",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:15:09",
+  "item": "chair",
+  "budget": 250,
+  "shop": "yms979",
+  "offers": [
+   175,
+   200
+  ],
+  "price": 193,
+  "task": "60e98d02-04de-4b94-af7d-3dbc29383ffa",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-03T09:15:34",
+  "item": "chair",
+  "budget": 185,
+  "shop": "bjeon01",
+  "result": "error",
+  "error": "harness exit 1: "
+ },
+ {
+  "time": "2026-11-03T09:16:26",
+  "item": "chair",
+  "budget": 185,
+  "shop": "yms979",
+  "offers": [
+   160,
+   175,
+   177,
+   180
+  ],
+  "price": 180,
+  "task": "933ddf00-8e98-4e05-be76-87c1328ae512",
+  "result": "deal"
  }
 ]
