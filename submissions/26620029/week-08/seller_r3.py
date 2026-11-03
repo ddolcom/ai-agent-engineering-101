@@ -27,7 +27,7 @@ from a2a.types import AgentCapabilities, AgentCard, AgentInterface, AgentSkill
 
 from harness import CMD, ask_json
 
-NAME = "Harness Shop"
+NAME = "DDolcom's Best(26620029)"            # card and receipt name; the market name stays "ddolcom" (join --name)
 RESERVE = {"lamp": 100, "chair": 180, "bookshelf": 260}     # Rounds 0-2 have no stock: the week-07 items
 MARKET_DIR = Path(os.environ.get("MARKET_DIR", ".market"))
 # ddolcom: food close to its date may go below cost (a small loss beats throwing it away at full cost)
