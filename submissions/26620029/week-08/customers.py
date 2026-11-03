@@ -102,6 +102,12 @@ def popular(cu):
     return {cat: sum(skus.values()) for cat, skus in cu.get("sku_buys", {}).items()}
 
 
+def sales_value(cu, catalog):
+    """category -> list-price value of the market's settled deals (count x list price of each SKU bought)."""
+    return {cat: sum(n * catalog[sku]["list_price"] for sku, n in skus.items() if sku in catalog)
+            for cat, skus in cu.get("sku_buys", {}).items()}
+
+
 def best_sku(cu, cat):
     """The SKU of a category that settled most often in the market, or None."""
     s = cu.get("sku_buys", {}).get(cat)
