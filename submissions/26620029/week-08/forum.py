@@ -100,8 +100,12 @@ def draft(mem, pays, broken, catalog):
     refused = [p for p in pays if not p.get("paid") and p.get("order") not in mem["refused_seen"]]
     if refused:
         p = refused[-1]
+        reason = p.get("reason", "unknown")
+        tip = (" Check claims and certificates before paying." if re.search(r"claim|cert|grade", reason, re.I)
+               else " Food orders: ask the shop for the hours of shelf life left before agreeing a price."
+               if "shelf life" in reason else "")
         text = (f"Buyer report: checkout at {shop_name(mem, p['shop'])} for {p.get('item')} at {p.get('price')} "
-                f"was not paid: {p.get('reason', 'unknown')}. Check claims and certificates before paying.")
+                f"was not paid: {reason}.{tip}")
         return "refused", text, [], {"refused_seen": mem["refused_seen"] + [x["order"] for x in refused]}
     # 3. prices paid
     new = [p for p in paid if p["ledger"] not in mem["reported"]]
