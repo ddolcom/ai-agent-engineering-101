@@ -286,6 +286,8 @@ def main():
             catalog = json.loads((Path(os.environ.get("MARKET_DIR", ".market")) / "catalog.json").read_text(encoding="utf-8"))
             o = pick_offer(shop, a.budget, catalog)
             opening, want, entry["sku"] = f"I want to buy {o['name']} ({o['sku']})", o["name"], o["sku"]
+            if order.get("kind") == "food" and order.get("use_within_hours"):   # the kit refuses to pay for less
+                opening += f". It must have at least {int(order['use_within_hours'])} hours of shelf life left"
             if o.get("list_price"):
                 worth = f" It is worth {o['list_price']} to them (its list price)."
             print(f"[offer] {o['sku']} {o['name']} list {o.get('list_price')}, budget {a.budget}", flush=True)
