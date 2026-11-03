@@ -15,7 +15,7 @@ import os
 import httpx
 
 MARKET = os.environ.get("MARKET_URL", "https://market.ourolabs.ai")
-ME = "ddolcom"                  # the market name (join --name); receipts say "DDolcom's Best(26620029)"
+ME = "ddolcom"                  # the market name (join --name), also the card and receipt name
 PAGES = 20                      # at most 20 x 500 ledger entries per run
 FIRST_LOOKBACK = 5000           # first run: start this many entries before the newest
 
