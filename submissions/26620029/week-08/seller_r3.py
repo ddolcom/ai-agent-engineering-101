@@ -39,16 +39,11 @@ NEAR_EXPIRY = [(0.20, 0.80), (0.45, 0.90)]  # (shelf life left below this share,
 # claim_and_warranty_well_formed check: 9 goods deals agreed on 2026-11-03 never settled; 24 h is the most any
 # settle in the ledger carried, and a buyer policy asking for up to 24 h still pays
 WARRANTY_HOURS = 24
-# ddolcom: goods come with the break warranty at WARRANTY_PREMIUM times the price unless the buyer says
-# "no warranty" (71% of goods deals in the first 11 min of Round 3 carried a warranty; buyers that require one in
-# their accept policy never say so, and the kit refuses to pay without it)
-WARRANTY_PREMIUM = 1.2
-WANTS_WARRANTY = re.compile(r"warrant|보증", re.I)
-NO_WARRANTY = re.compile(r"\b(no|without)\s+(a\s+|the\s+)?warrant|보증\s*(없이|없는|빼|제외)", re.I)
-# no digits in this line: a buyer took the "20" of "+20%" for our first ask
-WARRANTY_LINE = ("Break warranty included, a fifth on top of the price: goods can only break in the first hours "
-                 "after a sale, and if it breaks the market refunds you in full from our balance. Say 'no warranty' "
-                 "to buy without it at the lower price.")
+# ddolcom: every goods unit carries the warranty at no extra charge. The +20% premium with a 'no warranty' opt-out
+# is gone (2026-11-03): no top-8 shop charges for a warranty, and they saw only 1-2 breaks each in Round 3
+# no digits in this line: a buyer took the "20" of an earlier "+20%" for our first ask
+WARRANTY_LINE = ("Break warranty included at no extra charge: goods can only break in the first hours after a sale, "
+                 "and if it breaks the market refunds you in full from our balance.")
 # ddolcom (strategy 3): prices come from code. ask = floor + (list price - floor) * STEP ** (buyer offers so far)
 STEP = 0.6                                  # each buyer offer moves the ask 40% of the way down to the floor
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
@@ -94,27 +89,6 @@ def ask_price(u, offers):
 
 def is_goods(u):
     return bool(u.get("unit")) and u.get("kind") == "goods"
-
-
-def wants_warranty(text, before):
-    """The buyer's choice so far: 'with warranty' turns it on, 'no warranty' off, anything else keeps it."""
-    if NO_WARRANTY.search(text):
-        return False
-    return before or bool(WANTS_WARRANTY.search(text))
-
-
-def quote(deal):
-    """What the buyer pays: the ask, plus the premium when a goods buyer chose the warranty."""
-    return int(deal["ask"] * WARRANTY_PREMIUM) if deal.get("warranty") else deal["ask"]
-
-
-def quote_line(deal):
-    u = deal["unit"]
-    if deal.get("warranty"):
-        return f"{quote(deal)} with the break warranty ({deal['ask']} without it)"
-    if is_goods(u):
-        return f"{deal['ask']} without the warranty"
-    return f"{deal['ask']}"
 
 
 def facts(u):
@@ -202,40 +176,36 @@ class Seller(AgentExecutor):
             if unit is None:
                 await up.reject(say("Sorry, we have none of that in stock."))
                 return
-            deal = self.open[task.id] = {"unit": unit, "ask": ask_price(unit, 0), "offers": 0,
-                                         "warranty": is_goods(unit) and wants_warranty(text, True)}
+            deal = self.open[task.id] = {"unit": unit, "ask": ask_price(unit, 0), "offers": 0}
             u = deal["unit"]
-            reply = f"{u['name']}: asking {quote_line(deal)}. {facts(u)} Send your offer as a number.".replace("  ", " ")
+            reply = f"{u['name']}: asking {deal['ask']}. {facts(u)} Send your offer as a number.".replace("  ", " ")
             print(f"[price] open {u['sku']} at {deal['ask']} (list {u['list_price']}, floor {floor_price(u)})", flush=True)
             await up.requires_input(say(await worded(reply)))
             return
 
         u = deal["unit"]
-        if is_goods(u):
-            deal["warranty"] = wants_warranty(text, deal.get("warranty"))
         offer = offer_in(text)
         if offer is None:
-            await up.requires_input(say(f"Counteroffer: {quote_line(deal)}. Send your offer as a number."))
+            await up.requires_input(say(f"Counteroffer: {deal['ask']}. Send your offer as a number."))
             return
         deal["offers"] += 1
         deal["ask"] = max(min(ask_price(u, deal["offers"]), deal["ask"]), floor_price(u))   # an ask never goes up
-        ask = quote(deal)
-        print(f"[price] {u['sku']} offer {offer}, ask {ask} (floor {floor_price(u)}"
-              f"{', warranty x%s' % WARRANTY_PREMIUM if deal.get('warranty') else ''})", flush=True)
+        ask = deal["ask"]
+        print(f"[price] {u['sku']} offer {offer}, ask {ask} (floor {floor_price(u)})", flush=True)
         if offer >= ask:
             receipt = {"shop": NAME, "item": u["sku"], "price": offer, "task": task.id}
             if u["unit"]:
                 receipt["unit"] = u["unit"]
                 receipt["claim"] = u["grade"]            # the true grade; the ledger shows claim_honest afterwards
-            if deal.get("warranty"):
+            if is_goods(u):
                 receipt["warranty_hours"] = WARRANTY_HOURS
             receipt = sign(receipt)
             await up.add_artifact(parts=[new_data_part(receipt)], name="receipt")
             await up.complete(say(f"Deal: {u['name']} at {offer}"
-                                  f"{' with the break warranty' if deal.get('warranty') else ''}. Signed receipt attached."))
+                                  f"{' with the break warranty' if is_goods(u) else ''}. Signed receipt attached."))
             del self.open[task.id]
             return
-        await up.requires_input(say(f"Counteroffer: {quote_line(deal)}."))
+        await up.requires_input(say(f"Counteroffer: {deal['ask']}."))
 
     async def cancel(self, context, event_queue):
         task = context.current_task
@@ -250,8 +220,7 @@ def build(port):
         description="A small online shop with real stock and honest grades. Ask for an item by name or SKU. "
                     "Every receipt claims the unit's true grade and every unit ships with the market's certificate; "
                     "food comes with the hours of shelf life left. Every non-food item comes with a break warranty "
-                    "for a fifth more (say 'no warranty' for the lower price): if it breaks, the market refunds you "
-                    "in full from our balance. Prices are set in code, so "
+                    "at no extra charge: if it breaks, the market refunds you in full from our balance. Prices are set in code, so "
                     "replies are fast."
                     + (f" A coding harness ({CMD.split()[0]}) words the opening reply." if WORDING_TIMEOUT > 0 else ""),
         version="1.0.0",
