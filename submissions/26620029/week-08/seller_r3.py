@@ -5,7 +5,7 @@ behind A2A v1.0.
 
 The code decides every price (a concession schedule from the list price down to a floor), so a reply never waits
 on the model. The harness only polishes the wording of a reply, and the code's own sentence is used when it is slow.
-Every receipt names the unit, claims its true grade and keeps the market's certificate; goods carry a lifetime
+Every receipt names the unit, claims its true grade and keeps the market's certificate; goods carry a break
 warranty and food says how many hours it has left. Food near its date may go below cost (NEAR_EXPIRY).
 """
 import argparse
@@ -35,15 +35,20 @@ RESERVE = {"lamp": 100, "chair": 180, "bookshelf": 260}     # Rounds 0-2 have no
 MARKET_DIR = Path(os.environ.get("MARKET_DIR", ".market"))
 # ddolcom: food close to its date may go below cost (a small loss beats throwing it away at full cost)
 NEAR_EXPIRY = [(0.20, 0.80), (0.45, 0.90)]  # (shelf life left below this share, floor as a share of cost)
-LIFETIME_HOURS = 87600                      # goods break within 6 h of a sale, so 10 years covers every break
-# ddolcom: goods come with the lifetime warranty at WARRANTY_PREMIUM times the price unless the buyer says
+# ddolcom: goods break within 6 h of a sale, so 24 h covers every break. 87600 (10 years) failed the market's
+# claim_and_warranty_well_formed check: 9 goods deals agreed on 2026-11-03 never settled; 24 h is the most any
+# settle in the ledger carried, and a buyer policy asking for up to 24 h still pays
+WARRANTY_HOURS = 24
+# ddolcom: goods come with the break warranty at WARRANTY_PREMIUM times the price unless the buyer says
 # "no warranty" (71% of goods deals in the first 11 min of Round 3 carried a warranty; buyers that require one in
 # their accept policy never say so, and the kit refuses to pay without it)
 WARRANTY_PREMIUM = 1.2
 WANTS_WARRANTY = re.compile(r"warrant|보증", re.I)
 NO_WARRANTY = re.compile(r"\b(no|without)\s+(a\s+|the\s+)?warrant|보증\s*(없이|없는|빼|제외)", re.I)
-WARRANTY_LINE = ("Lifetime warranty included (+20%): if it ever breaks, the market refunds you in full from our "
-                 "balance. Say 'no warranty' to buy without it at the lower price.")
+# no digits in this line: a buyer took the "20" of "+20%" for our first ask
+WARRANTY_LINE = ("Break warranty included, a fifth on top of the price: goods can only break in the first hours "
+                 "after a sale, and if it breaks the market refunds you in full from our balance. Say 'no warranty' "
+                 "to buy without it at the lower price.")
 # ddolcom (strategy 3): prices come from code. ask = floor + (list price - floor) * STEP ** (buyer offers so far)
 STEP = 0.6                                  # each buyer offer moves the ask 40% of the way down to the floor
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
@@ -106,7 +111,7 @@ def quote(deal):
 def quote_line(deal):
     u = deal["unit"]
     if deal.get("warranty"):
-        return f"{quote(deal)} with the lifetime warranty ({deal['ask']} without it)"
+        return f"{quote(deal)} with the break warranty ({deal['ask']} without it)"
     if is_goods(u):
         return f"{deal['ask']} without the warranty"
     return f"{deal['ask']}"
@@ -223,11 +228,11 @@ class Seller(AgentExecutor):
                 receipt["unit"] = u["unit"]
                 receipt["claim"] = u["grade"]            # the true grade; the ledger shows claim_honest afterwards
             if deal.get("warranty"):
-                receipt["warranty_hours"] = LIFETIME_HOURS
+                receipt["warranty_hours"] = WARRANTY_HOURS
             receipt = sign(receipt)
             await up.add_artifact(parts=[new_data_part(receipt)], name="receipt")
             await up.complete(say(f"Deal: {u['name']} at {offer}"
-                                  f"{' with the lifetime warranty' if deal.get('warranty') else ''}. Signed receipt attached."))
+                                  f"{' with the break warranty' if deal.get('warranty') else ''}. Signed receipt attached."))
             del self.open[task.id]
             return
         await up.requires_input(say(f"Counteroffer: {quote_line(deal)}."))
@@ -244,8 +249,8 @@ def build(port):
         name=NAME,
         description="A small online shop with real stock and honest grades. Ask for an item by name or SKU. "
                     "Every receipt claims the unit's true grade and every unit ships with the market's certificate; "
-                    "food comes with the hours of shelf life left. Every non-food item comes with a lifetime warranty "
-                    "for 20% more (say 'no warranty' for the lower price): if it ever breaks, the market refunds you "
+                    "food comes with the hours of shelf life left. Every non-food item comes with a break warranty "
+                    "for a fifth more (say 'no warranty' for the lower price): if it breaks, the market refunds you "
                     "in full from our balance. Prices are set in code, so "
                     "replies are fast."
                     + (f" A coding harness ({CMD.split()[0]}) words the opening reply." if WORDING_TIMEOUT > 0 else ""),
