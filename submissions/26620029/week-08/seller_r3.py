@@ -36,7 +36,13 @@ MARKET_DIR = Path(os.environ.get("MARKET_DIR", ".market"))
 # ddolcom: food close to its date may go below cost (a small loss beats throwing it away at full cost)
 NEAR_EXPIRY = [(0.20, 0.80), (0.45, 0.90)]  # (shelf life left below this share, floor as a share of cost)
 LIFETIME_HOURS = 87600                      # goods break within 6 h of a sale, so 10 years covers every break
-WARRANTY_LINE = "Lifetime warranty: if it ever breaks, the market refunds you in full from our balance."
+# ddolcom: the lifetime warranty is the buyer's choice and costs WARRANTY_PREMIUM times the price (a refund takes
+# the whole price back out of balance and revenue, and the break rate is not published)
+WARRANTY_PREMIUM = 1.2
+WANTS_WARRANTY = re.compile(r"warrant|보증", re.I)
+NO_WARRANTY = re.compile(r"\b(no|without)\s+(a\s+|the\s+)?warrant|보증\s*(없이|없는|빼|제외)", re.I)
+WARRANTY_LINE = ("Lifetime warranty optional for +20%: if it ever breaks, the market refunds you in full from our "
+                 "balance. Say 'with warranty' to add it.")
 # ddolcom (strategy 3): prices come from code. ask = floor + (list price - floor) * STEP ** (buyer offers so far)
 STEP = 0.6                                  # each buyer offer moves the ask 40% of the way down to the floor
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
@@ -82,6 +88,27 @@ def ask_price(u, offers):
 
 def is_goods(u):
     return bool(u.get("unit")) and u.get("kind") == "goods"
+
+
+def wants_warranty(text, before):
+    """The buyer's choice so far: 'with warranty' turns it on, 'no warranty' off, anything else keeps it."""
+    if NO_WARRANTY.search(text):
+        return False
+    return before or bool(WANTS_WARRANTY.search(text))
+
+
+def quote(deal):
+    """What the buyer pays: the ask, plus the premium when a goods buyer chose the warranty."""
+    return int(deal["ask"] * WARRANTY_PREMIUM) if deal.get("warranty") else deal["ask"]
+
+
+def quote_line(deal):
+    u = deal["unit"]
+    if deal.get("warranty"):
+        return f"{quote(deal)} with the lifetime warranty"
+    if is_goods(u):
+        return f"{deal['ask']} (with the lifetime warranty: {int(deal['ask'] * WARRANTY_PREMIUM)})"
+    return f"{deal['ask']}"
 
 
 def facts(u):
@@ -169,35 +196,40 @@ class Seller(AgentExecutor):
             if unit is None:
                 await up.reject(say("Sorry, we have none of that in stock."))
                 return
-            deal = self.open[task.id] = {"unit": unit, "ask": ask_price(unit, 0), "offers": 0}
+            deal = self.open[task.id] = {"unit": unit, "ask": ask_price(unit, 0), "offers": 0,
+                                         "warranty": is_goods(unit) and wants_warranty(text, False)}
             u = deal["unit"]
-            reply = f"{u['name']}: asking {deal['ask']}. {facts(u)} Send your offer as a number.".replace("  ", " ")
+            reply = f"{u['name']}: asking {quote_line(deal)}. {facts(u)} Send your offer as a number.".replace("  ", " ")
             print(f"[price] open {u['sku']} at {deal['ask']} (list {u['list_price']}, floor {floor_price(u)})", flush=True)
             await up.requires_input(say(await worded(reply)))
             return
 
         u = deal["unit"]
+        if is_goods(u):
+            deal["warranty"] = wants_warranty(text, deal.get("warranty"))
         offer = offer_in(text)
         if offer is None:
-            await up.requires_input(say(f"Counteroffer: {deal['ask']}. Send your offer as a number."))
+            await up.requires_input(say(f"Counteroffer: {quote_line(deal)}. Send your offer as a number."))
             return
         deal["offers"] += 1
-        ask = max(min(ask_price(u, deal["offers"]), deal["ask"]), floor_price(u))   # an ask never goes up
-        print(f"[price] {u['sku']} offer {offer}, ask {ask} (floor {floor_price(u)})", flush=True)
+        deal["ask"] = max(min(ask_price(u, deal["offers"]), deal["ask"]), floor_price(u))   # an ask never goes up
+        ask = quote(deal)
+        print(f"[price] {u['sku']} offer {offer}, ask {ask} (floor {floor_price(u)}"
+              f"{', warranty x%s' % WARRANTY_PREMIUM if deal.get('warranty') else ''})", flush=True)
         if offer >= ask:
             receipt = {"shop": NAME, "item": u["sku"], "price": offer, "task": task.id}
             if u["unit"]:
                 receipt["unit"] = u["unit"]
                 receipt["claim"] = u["grade"]            # the true grade; the ledger shows claim_honest afterwards
-            if is_goods(u):
+            if deal.get("warranty"):
                 receipt["warranty_hours"] = LIFETIME_HOURS
             receipt = sign(receipt)
             await up.add_artifact(parts=[new_data_part(receipt)], name="receipt")
-            await up.complete(say(f"Deal: {u['name']} at {offer}. Signed receipt attached."))
+            await up.complete(say(f"Deal: {u['name']} at {offer}"
+                                  f"{' with the lifetime warranty' if deal.get('warranty') else ''}. Signed receipt attached."))
             del self.open[task.id]
             return
-        deal["ask"] = ask
-        await up.requires_input(say(f"Counteroffer: {ask}."))
+        await up.requires_input(say(f"Counteroffer: {quote_line(deal)}."))
 
     async def cancel(self, context, event_queue):
         task = context.current_task
@@ -211,8 +243,9 @@ def build(port):
         name=NAME,
         description="A small online shop with real stock and honest grades. Ask for an item by name or SKU. "
                     "Every receipt claims the unit's true grade and every unit ships with the market's certificate; "
-                    "food comes with the hours of shelf life left. Every non-food item has a lifetime warranty: "
-                    "if it ever breaks, the market refunds you in full from our balance. Prices are set in code, so "
+                    "food comes with the hours of shelf life left. Any non-food item can come with a lifetime warranty "
+                    "for 20% more (say 'with warranty'): if it ever breaks, the market refunds you in full from our "
+                    "balance. Prices are set in code, so "
                     "replies are fast."
                     + (f" A coding harness ({CMD.split()[0]}) words the opening reply." if WORDING_TIMEOUT > 0 else ""),
         version="1.0.0",
