@@ -5,8 +5,8 @@ behind A2A v1.0.
 
 The code decides every price (a concession schedule from the list price down to a floor), so a reply never waits
 on the model. The harness only polishes the wording of a reply, and the code's own sentence is used when it is slow.
-Every receipt names the unit, claims its true grade and keeps the market's certificate; goods carry a break
-warranty and food says how many hours it has left. Food near its date may go below cost (NEAR_EXPIRY).
+Every receipt names the unit, claims its true grade and keeps the market's certificate; goods of grade A and B carry
+a break warranty and food says how many hours it has left. Food near its date may go below cost (NEAR_EXPIRY).
 """
 import argparse
 import asyncio
@@ -44,6 +44,11 @@ WARRANTY_HOURS = 24
 # no digits in this line: a buyer took the "20" of an earlier "+20%" for our first ask
 WARRANTY_LINE = ("Break warranty included at no extra charge: goods can only break in the first hours after a sale, "
                  "and if it breaks the market refunds you in full from our balance.")
+# ddolcom: grade C goods carry no warranty (trial from 2026-11-04). Over the first 20 h of Round 3 C broke 27.7% of the
+# time in the market (A 2.5%, B 9.3%), which leaves about 2% of list price after refunds; here 13 of 29 C units broke,
+# 1,330,855 refunded against 972,322 of margin. 45% of the market's C units sold without a warranty
+NO_WARRANTY = {"C"}
+NO_WARRANTY_LINE = "Refurbished unit sold as is, without a break warranty."
 # ddolcom (strategy 3): prices come from code. ask = floor + (list price - floor) * STEP ** (buyer offers so far)
 STEP = 0.6                                  # each buyer offer moves the ask 40% of the way down to the floor
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
@@ -91,6 +96,10 @@ def is_goods(u):
     return bool(u.get("unit")) and u.get("kind") == "goods"
 
 
+def has_warranty(u):
+    return is_goods(u) and u.get("grade") not in NO_WARRANTY
+
+
 def facts(u):
     """What the buyer can check: the true grade with the certificate, hours left (food) or the warranty (goods)."""
     if not u.get("unit"):
@@ -100,7 +109,7 @@ def facts(u):
     if kind == "food" and u.get("expires_at"):
         out += f" About {max(0, int((u['expires_at'] - time.time()) / 3600))} hours of shelf life left."
     if is_goods(u):
-        out += f" {WARRANTY_LINE}"
+        out += f" {WARRANTY_LINE if has_warranty(u) else NO_WARRANTY_LINE}"
     return out
 
 
@@ -197,12 +206,12 @@ class Seller(AgentExecutor):
             if u["unit"]:
                 receipt["unit"] = u["unit"]
                 receipt["claim"] = u["grade"]            # the true grade; the ledger shows claim_honest afterwards
-            if is_goods(u):
+            if has_warranty(u):
                 receipt["warranty_hours"] = WARRANTY_HOURS
             receipt = sign(receipt)
             await up.add_artifact(parts=[new_data_part(receipt)], name="receipt")
             await up.complete(say(f"Deal: {u['name']} at {offer}"
-                                  f"{' with the break warranty' if is_goods(u) else ''}. Signed receipt attached."))
+                                  f"{' with the break warranty' if has_warranty(u) else ''}. Signed receipt attached."))
             del self.open[task.id]
             return
         await up.requires_input(say(f"Counteroffer: {deal['ask']}."))
@@ -219,9 +228,9 @@ def build(port):
         name=NAME,
         description="A small online shop with real stock and honest grades. Ask for an item by name or SKU. "
                     "Every receipt claims the unit's true grade and every unit ships with the market's certificate; "
-                    "food comes with the hours of shelf life left. Every non-food item comes with a break warranty "
-                    "at no extra charge: if it breaks, the market refunds you in full from our balance. Prices are set in code, so "
-                    "replies are fast."
+                    "food comes with the hours of shelf life left. Grade A and B non-food items come with a break warranty "
+                    "at no extra charge: if one breaks, the market refunds you in full from our balance. Grade C "
+                    "(refurbished) items are sold without one. Prices are set in code, so replies are fast."
                     + (f" A coding harness ({CMD.split()[0]}) words the opening reply." if WORDING_TIMEOUT > 0 else ""),
         version="1.0.0",
         default_input_modes=["text/plain"],
