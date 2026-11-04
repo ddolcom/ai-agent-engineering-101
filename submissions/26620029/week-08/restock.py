@@ -11,8 +11,9 @@ Customers first (customers.py): buyers who settled with my shop are remembered f
 what they buy anywhere; their favourite categories are stocked before anything else, with more units.
 Then what the whole market buys: categories by their share of settled deals on the ledger, more units for a
 bigger share; once the market has MARKET_DATA deals, categories nobody bought are not stocked.
-Money first: categories with VALUE_FOCUS of the market's sales value (deals x list price) come before all others;
-where they also have many deals (mattresses, bedding, kimchi) the shop keeps FOCUS_QTY units, dear or not.
+Money first: goods categories with VALUE_FOCUS of the market's sales value (deals x list price) are stocked by SKU,
+not by category: the FOCUS_SKUS SKUs with the most value that the balance can carry, each to a target set by how
+often it sells (focus_want). They come before all others, within FOCUS_SPEND of the spendable cash.
 Categories with under MIN_VALUE of the value are not stocked unless the shop already sold there.
 Cheap first: until the shop has CHEAP_PHASE sales, only categories and SKUs up to CHEAP_MAX_LIST, except hot ones.
 Supply opens every 20 minutes for 3 minutes; outside a window the run only learns and buys nothing, because
@@ -42,12 +43,17 @@ POP_QTY = [(0.10, 5), (0.05, 4), (0.02, 3), (0.005, 2)]   # (share of market dea
 DEAR = 100_000              # list price above this: at most DEAR_QTY units (outside the deep categories)
 DEAR_QTY = 2
 LINE_SHARE = 0.1            # one line spends at most this share of the balance (fewer units of dear SKUs)
-# ddolcom: by 23:00 on 2026-11-03 mattresses were 50% of the market's settled value, bedding 16%, kimchi 7%, sofas
-# 5%; the top three shops sold mostly these, while 88 SKUs spread over 78 categories earned us 1.9M of revenue
-VALUE_FOCUS = 0.05          # a category with this share of the market's sales value is stocked deep and first
-FOCUS_QTY = 5               # units kept in a focus category that is also HOT_SHARE of deals (sofas: 5% of value
-                            # but 1.4% of deals, so 2); food still at most FOOD_MAX_QTY
-FOCUS_LINE_SHARE = 0.3      # a deep line may spend this share of the balance
+# ddolcom: over the first 20 h of Round 3 mattresses were 44% of the money paid, sofas 31% (36% in the last 12 h),
+# bedding 12%. Category counts kept us on one SKU: 5 unsold SS mattresses (G07ec17d5) stopped any purchase of the
+# market's best seller G1515d951 (2,698 deals, about 73,000 margin a unit), which we never stocked
+VALUE_FOCUS = 0.05          # a goods category with this share of the market's sales value is stocked by SKU and first
+FOCUS_SKUS = 3              # SKUs kept per focus category, by value (deals x list price)
+FOCUS_QTY = [(0.02, 5), (0.005, 3)]     # (SKU's share of market deals, units to keep); below these, 2
+FOCUS_DEAR = 500_000        # list price above this: at most 2 units, however often it sells
+UNIT_SHARE = 0.1            # one unit's cost at most this share of the balance: dearer sofas come as the balance grows
+FOCUS_LINE_SHARE = 0.2      # one focus line spends at most this share of the balance
+FOCUS_SPEND = 0.6           # focus lines spend at most this share of the spendable cash per run: food still refills
+FOCUS_MAX_LINES = 6         # focus SKUs take at most this many of a run's MAX_LINES lines
 MIN_VALUE = 0.003           # with MARKET_DATA deals seen: below this share of value, stock only what I already sold
 EARLY = 60                  # buy when the window opens within this many seconds (the kit runs us every 60 s)
 MEMORY = Path("restock_memory.json")
@@ -93,6 +99,32 @@ def pop_qty(share):
     return next((q for at, q in POP_QTY if share >= at), 1)
 
 
+def focus_want(sku_share, list_price):
+    """Units to keep of one focus SKU: more where it sells often, at most 2 of the dearest."""
+    want = next((q for at, q in FOCUS_QTY if sku_share >= at), 2)
+    return min(want, 2) if list_price > FOCUS_DEAR else want
+
+
+def focus_lines(inv, catalog, focus_cats, cu):
+    """[(sku, qty)] missing in the focus categories, the SKU with the most market value first."""
+    balance = inv.get("balance") or 0
+    total = sum(customers.popular(cu).values())
+    have = {}
+    for u in inv["units"]:
+        if u.get("grade") != "expired":
+            have[u["sku"]] = have.get(u["sku"], 0) + 1
+    lines = []
+    for cat in focus_cats:
+        skus = cu.get("sku_buys", {}).get(cat, {})
+        fit = [s for s in skus if s in catalog and catalog[s]["list_price"] * COST_GUESS <= UNIT_SHARE * balance]
+        fit.sort(key=lambda s: -skus[s] * catalog[s]["list_price"])
+        for s in fit[:FOCUS_SKUS]:
+            missing = focus_want(skus[s] / total, catalog[s]["list_price"]) - have.get(s, 0)
+            if missing > 0:
+                lines.append((-skus[s] * catalog[s]["list_price"], s, missing))
+    return [(s, qty) for _, s, qty in sorted(lines)]
+
+
 def plan(inv, catalog, demand, mem, cu=None):
     sold, expired = mem.get("sold", {}), mem.get("expired", {})
     cu = cu or {}
@@ -112,12 +144,14 @@ def plan(inv, catalog, demand, mem, cu=None):
     for sku, c in catalog.items():
         by_cat.setdefault(c["category"], []).append(c)
 
+    focus_cats = [d["category"] for d in demand if d["kind"] == "goods" and vshare.get(d["category"], 0) >= VALUE_FOCUS]
+
     cats = []
     for d in demand:
         cat = d["category"]
-        focus = vshare.get(cat, 0) >= VALUE_FOCUS
-        hot = focus or share.get(cat, 0) >= HOT_SHARE   # a regular's one-off buy does not make a sofa hot
-        deep = focus and share.get(cat, 0) >= HOT_SHARE  # deep stock only where deals are many, not just dear
+        if cat in focus_cats:                           # stocked by SKU, below
+            continue
+        hot = share.get(cat, 0) >= HOT_SHARE            # a regular's one-off buy does not make a sofa hot
         if d["median_price"] > (HOT_MAX_LIST if hot else CHEAP_MAX_LIST if cheap else MAX_LIST) or cat not in by_cat:
             continue
         if total >= MARKET_DATA and not (pop.get(cat) or fav.get(cat) or sold.get(cat)):
@@ -128,27 +162,36 @@ def plan(inv, catalog, demand, mem, cu=None):
             continue
         if expired.get(cat, 0) >= 2 and not sold.get(cat):
             continue                                    # rotted twice and never sold: stop
-        want = max(fav_qty(fav.get(cat, 0)), pop_qty(share.get(cat, 0)), 2 if sold.get(cat, 0) >= 2 else 1,
-                   FOCUS_QTY if deep else 1)
+        want = max(fav_qty(fav.get(cat, 0)), pop_qty(share.get(cat, 0)), 2 if sold.get(cat, 0) >= 2 else 1)
         if d["kind"] == "food":
             want = min(want, FOOD_MAX_QTY)
         if stock.get(cat, 0) < want:
-            cats.append((not focus, -vshare.get(cat, 0) if focus else 0, -fav.get(cat, 0), -pop.get(cat, 0),
-                         -sold.get(cat, 0), d["median_price"], cat, want - stock.get(cat, 0), cheap and not hot, deep))
-    cats.sort()             # focus categories by value, then customers' favourites, market's best sellers, my sales, cheapest
+            cats.append((-fav.get(cat, 0), -pop.get(cat, 0), -sold.get(cat, 0), d["median_price"], cat,
+                         want - stock.get(cat, 0), cheap and not hot))
+    cats.sort()             # customers' favourites, then the market's best sellers, my sales, cheapest
 
     spend = (inv.get("balance") or 0) - CASH_FLOOR
     buy = []
-    for *_, median, cat, qty, cheap_cat, deep in cats:
+    focus_left = FOCUS_SPEND * spend
+    for s, qty in focus_lines(inv, catalog, focus_cats, cu):
+        if len(buy) >= FOCUS_MAX_LINES:
+            break
+        unit = catalog[s]["list_price"] * COST_GUESS
+        qty = min(qty, int(FOCUS_LINE_SHARE * inv["balance"] / unit), int(focus_left / unit))
+        if qty <= 0:
+            continue
+        focus_left -= unit * qty
+        spend -= unit * qty
+        buy.append({"sku": s, "qty": qty})
+    for *_, median, cat, qty, cheap_cat in cats:
         if len(buy) >= MAX_LINES:
             break
         sku = pick_sku(by_cat[cat], median, customers.best_sku(cu, cat), cheap_cat)
-        if sku["list_price"] > DEAR and not deep:        # dear SKUs: at most DEAR_QTY in stock, not per line
+        if sku["list_price"] > DEAR:                     # dear SKUs: at most DEAR_QTY in stock, not per line
             qty = min(qty, DEAR_QTY - stock.get(cat, 0))
             if qty <= 0:
                 continue
-        line_share = FOCUS_LINE_SHARE if deep else LINE_SHARE
-        qty = max(1, min(qty, int(line_share * inv["balance"] / (sku["list_price"] * COST_GUESS))))
+        qty = max(1, min(qty, int(LINE_SHARE * inv["balance"] / (sku["list_price"] * COST_GUESS))))
         cost = sku["list_price"] * COST_GUESS * qty
         if cost > spend:
             continue
