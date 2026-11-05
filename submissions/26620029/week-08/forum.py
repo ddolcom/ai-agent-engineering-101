@@ -9,11 +9,11 @@ what this agent saw itself:
 and appends at most one post and a few votes to .market/outbox.jsonl, which the kit sends.
 
 When to post (Horvitz 1999: speak first only when it is likely worth reading):
-  1. one of my goods broke                -> warning naming the shop that sold it
-  2. a checkout was refused               -> what the shop sent and why the kit would not pay
-  3. at least DEAL_BATCH new paid deals   -> prices paid as a share of list price, with ledger refs
-and never more often than MIN_GAP. Every number in a post comes from the records, so other buyers can check
-it on the ledger; that is what should earn votes (0.3 of buyer ALL).
+  1. one of my goods broke, and I can cite the sale  -> warning naming the shop that sold it
+  2. at least DEAL_BATCH new paid deals              -> prices paid as a share of list price, with grade and refs
+and never more often than MIN_GAP. Every post carries ledger refs, so other buyers can check it. In the newest
+100 posts (2026-11-05) buyer posts with refs averaged 5.35 likes and score 0.474; without refs, 0 likes and score 0.
+A refused checkout has no ledger entry to cite, so it goes to the log only.
 Votes: +1 on other agents' buyer posts that carry ledger refs, each once.
 
 Usage: python forum.py [--shops shops.json] [--dry-run]
@@ -29,8 +29,10 @@ MARKET_DIR = Path(os.environ.get("MARKET_DIR", ".market"))
 MEMORY = Path("forum_memory.json")       # in the agent folder, next to buyer_memory.json
 LOCK = MARKET_DIR / "forum.lock"
 LOG = MARKET_DIR / "forum.log"
+KIT_LOG = Path("logs/market-kit.log")    # the kit's "[acp] paid" lines carry the grade; payments.jsonl does not
+KIT_LOG_TAIL = 2_000_000                 # bytes read from its end
 ME = "ddolcom"
-MIN_GAP = 30 * 60                        # seconds between my posts (the market allows one per 5 min)
+MIN_GAP = 6 * 60                         # seconds between my posts (the market allows one per 5 min)
 DEAL_BATCH = 3                           # paid deals needed before a price report
 MAX_REFS = 5
 MAX_VOTES = 5                            # per run
@@ -78,39 +80,50 @@ def shop_name(mem, url):
     return mem["shop_names"].get(url) or re.sub(r"^https?://", "", url or "?").split("/")[0]
 
 
-def deal_line(mem, p, catalog):
+def grades_paid():
+    """Ledger seq -> grade, from the kit's log of what I paid for. A deal missing here just goes without a grade."""
+    try:
+        with open(KIT_LOG, "rb") as f:
+            f.seek(0, os.SEEK_END)
+            f.seek(max(0, f.tell() - KIT_LOG_TAIL))
+            text = f.read().decode("utf-8", errors="replace")
+    except OSError:
+        return {}
+    return {int(s): g for s, g in re.findall(r"\[acp\] paid .*?settled at ledger #(\d+):.*?, grade ([ABC])\b", text)}
+
+
+def deal_line(mem, p, catalog, grades):
     c = catalog.get(p["item"], {})
     name, lst = c.get("name", p["item"]), c.get("list_price")
     share = f", {round(100 * p['price'] / lst)}% of list {lst}" if lst else ""
-    return f"{name} ({p['item']}) at {shop_name(mem, p['shop'])}: paid {p['price']}{share} (ledger #{p['ledger']})"
+    grade = f", grade {grades[p['ledger']]}" if p["ledger"] in grades else ""
+    return f"{name} ({p['item']}) at {shop_name(mem, p['shop'])}: paid {p['price']}{share}{grade} (ledger #{p['ledger']})"
 
 
 def draft(mem, pays, broken, catalog):
     """The post this run would make, as (kind, text, refs, mark), or None when there is no news."""
     paid = [p for p in pays if p.get("paid") and p.get("ledger")]
-    # 1. broken goods: match the name to my latest paid deal of that item
+    # a refused checkout: no ledger entry to cite, so the log only
+    refused = [p for p in pays if not p.get("paid") and p.get("order") not in mem["refused_seen"]]
+    for p in refused:
+        log(f"[refused] {shop_name(mem, p['shop'])} {p.get('item')} at {p.get('price')}: {p.get('reason', 'unknown')}")
+    mem["refused_seen"] += [p.get("order") for p in refused]
+    # 1. broken goods: match the name to my latest paid deal of that item; no sale to cite, no post
     if len(broken) > mem["broken_seen"]:
         b = broken[-1]
         hit = next((p for p in reversed(paid) if catalog.get(p["item"], {}).get("name") == b.get("name")), None)
-        where = f" bought at {shop_name(mem, hit['shop'])} for {hit['price']} (ledger #{hit['ledger']})" if hit else ""
-        text = (f"Buyer report: {b.get('name')}{where} broke within 6 hours of the sale. "
-                "Ask for warranty_hours in accept before paying for goods.")
-        return "broken", text, [hit["ledger"]] if hit else [], {"broken_seen": len(broken)}
-    # 2. a refused checkout
-    refused = [p for p in pays if not p.get("paid") and p.get("order") not in mem["refused_seen"]]
-    if refused:
-        p = refused[-1]
-        reason = p.get("reason", "unknown")
-        tip = (" Check claims and certificates before paying." if re.search(r"claim|cert|grade", reason, re.I)
-               else " Food orders: ask the shop for the hours of shelf life left before agreeing a price."
-               if "shelf life" in reason else "")
-        text = (f"Buyer report: checkout at {shop_name(mem, p['shop'])} for {p.get('item')} at {p.get('price')} "
-                f"was not paid: {reason}.{tip}")
-        return "refused", text, [], {"refused_seen": mem["refused_seen"] + [x["order"] for x in refused]}
-    # 3. prices paid
+        if hit:
+            text = (f"Buyer report: {b.get('name')} bought at {shop_name(mem, hit['shop'])} for {hit['price']} "
+                    f"(ledger #{hit['ledger']}) broke within 6 hours of the sale. "
+                    "Ask for warranty_hours in accept before paying for goods.")
+            return "broken", text, [hit["ledger"]], {"broken_seen": len(broken)}
+        log(f"[broken] no paid deal to cite for {b.get('name')}, not posted")
+        mem["broken_seen"] = len(broken)
+    # 2. prices paid
     new = [p for p in paid if p["ledger"] not in mem["reported"]]
     if len(new) >= DEAL_BATCH:
-        lines = [deal_line(mem, p, catalog) for p in new[-MAX_REFS:]]
+        grades = grades_paid()
+        lines = [deal_line(mem, p, catalog, grades) for p in new[-MAX_REFS:]]
         text = "Buyer price report, all settled and on the ledger:\n- " + "\n- ".join(lines)
         return "prices", text, [p["ledger"] for p in new[-MAX_REFS:]], {"reported": mem["reported"] + [p["ledger"] for p in new]}
     return None
