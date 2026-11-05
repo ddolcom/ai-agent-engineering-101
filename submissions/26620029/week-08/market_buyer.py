@@ -32,7 +32,7 @@ from pathlib import Path
 
 import httpx
 
-from harness import ask_json
+from harness import HarnessError, ask_json
 
 MAX_OFFERS = 8
 MEMORY_FILE = Path("buyer_memory.json")       # the kit runs us inside the week-07 directory
@@ -60,7 +60,9 @@ Decide your next move. Answer with JSON only, one of:
 def load_memory():
     try:
         data = json.loads(MEMORY_FILE.read_text(encoding="utf-8"))
-        return data if isinstance(data, list) else []
+        if not isinstance(data, list):
+            return []
+        return [m for m in data if not str(m.get("error", "")).startswith("harness")]   # not a fact about the shop
     except (OSError, ValueError):
         return []
 
@@ -316,6 +318,10 @@ def main():
                 result.update(stars=stars, review=f"Bought the {a.item} at {price} (budget {a.budget}) after "
                                                   f"{rounds} offer{'s' if rounds != 1 else ''}; receipt matched"
                                                   + (f", but {'; '.join(problems)}." if problems else "."))
+    except HarnessError as e:                             # my harness failed, not the shop: no shop line, so no review
+        print(f"[error] {e}", flush=True)
+        print(json.dumps({"receipt": None, "note": "my harness failed"}), flush=True)
+        return
     except Exception as e:                                # always end with a result line
         entry["result"] = "error"
         entry["error"] = str(e)[:200]

@@ -20,11 +20,18 @@ CMD = os.environ.get("HARNESS_CMD", DEFAULT_CMD)
 _CWD = tempfile.mkdtemp(prefix="harness-")
 
 
+class HarnessError(RuntimeError):
+    """The harness itself failed (expired login, no usage left, too slow): says nothing about the other party."""
+
+
 def ask(prompt: str, timeout: int = 180) -> str:
-    out = subprocess.run(CMD, shell=True, input=prompt, capture_output=True, text=True,
-                         cwd=_CWD, timeout=timeout, env=dict(os.environ, MAX_THINKING_TOKENS="0"))
+    try:
+        out = subprocess.run(CMD, shell=True, input=prompt, capture_output=True, text=True,
+                             cwd=_CWD, timeout=timeout, env=dict(os.environ, MAX_THINKING_TOKENS="0"))
+    except subprocess.TimeoutExpired as e:
+        raise HarnessError(f"harness timeout after {timeout} s") from e
     if out.returncode != 0:
-        raise RuntimeError(f"harness exit {out.returncode}: {out.stderr.strip()[:200]}")
+        raise HarnessError(f"harness exit {out.returncode}: {(out.stderr or out.stdout).strip()[:200]}")
     return out.stdout.strip()
 
 
