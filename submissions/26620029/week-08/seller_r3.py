@@ -51,6 +51,10 @@ NO_WARRANTY = {"C"}
 NO_WARRANTY_LINE = "Refurbished unit sold as is, without a break warranty."
 # ddolcom (strategy 3): prices come from code. ask = floor + (list price - floor) * STEP ** (buyer offers so far)
 STEP = 0.6                                  # each buyer offer moves the ask 40% of the way down to the floor
+# ddolcom: a buyer that leaves without cancelling kept its unit promised until a restart. On 2026-11-06 after 34 h of
+# uptime 10 of 14 high-value SKUs answered "none in stock" with units on the shelf. A negotiation silent this long is
+# over; 300 s is above the 180 s a harness call may take between two offers
+OPEN_TTL = 300
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
                                             # took 8.8 s on 2026-11-03, so the buyer only waited for nothing)
 GRADE_MEANS = {"food": {"A": "plenty of shelf life", "B": "normal shelf life", "C": "close to its date"},
@@ -178,14 +182,19 @@ class Seller(AgentExecutor):
         up = TaskUpdater(event_queue=event_queue, task_id=task.id, context_id=task.context_id)
         say = lambda text: up.new_agent_message(parts=[new_text_part(text)])
         text = get_message_text(context.message) or ""
+        now = time.time()
+        for k in [k for k, d in self.open.items() if now - d["seen"] > OPEN_TTL]:
+            del self.open[k]                             # the buyer left without cancelling: its unit is free again
         deal = self.open.get(task.id)
+        if deal:
+            deal["seen"] = now
 
         if deal is None:                                 # the buyer names what it wants: open at the list price
             unit = find_unit(text, {d["unit"]["unit"] for d in self.open.values() if d["unit"]["unit"]})
             if unit is None:
                 await up.reject(say("Sorry, we have none of that in stock."))
                 return
-            deal = self.open[task.id] = {"unit": unit, "ask": ask_price(unit, 0), "offers": 0}
+            deal = self.open[task.id] = {"unit": unit, "ask": ask_price(unit, 0), "offers": 0, "seen": now}
             u = deal["unit"]
             reply = f"{u['name']}: asking {deal['ask']}. {facts(u)} Send your offer as a number.".replace("  ", " ")
             print(f"[price] open {u['sku']} at {deal['ask']} (list {u['list_price']}, floor {floor_price(u)})", flush=True)
