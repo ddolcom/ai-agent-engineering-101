@@ -80,11 +80,14 @@ def main():
     player = next((i + 1, p) for i, p in enumerate(board["players"]) if p["player"] == ME)
     print(f"balance {inv['balance']:,}  profit {shop['profit']:,}  revenue {shop['revenue']:,}  deals {shop['deals']}  stars {shop['stars']}  "
           f"broken {shop['broken']}  refunds {shop['refunds']}  bankruptcies {shop['bankruptcies']}")
-    for key in ("all", "profit", "revenue", "stars"):
+    for key in ("all", "book", "profit", "revenue", "stars"):   # the market's rules since 2026-11-06: ALL uses book, not cash
         r, n = rank(board["shops"], key)
         print(f"  shop {key} {shop.get(key)}: rank {r} of {n}")
     r, n = rank(board["buyers"], "all")
-    print(f"  buyer all {buyer['all']}: rank {r} of {n}; surplus {buyer['surplus']:,}, forum {buyer['forum']}, posts {buyer['posts']}, deals {buyer['deals']}")
+    print(f"  buyer all {buyer['all']}: rank {r} of {n}; surplus {buyer['surplus']:,}, deals {buyer['deals']}")
+    for key in ("saved", "forum", "deals", "posts"):            # buyer ALL weighs them 0.5, 0.3, 0.1, 0.1
+        r, n = rank(board["buyers"], key)
+        print(f"  buyer {key} {buyer.get(key)}: rank {r} of {n}")
     print(f"  players rank {player[0]} of {len(board['players'])}, total {player[1]['total']}, counted shop {player[1]['shop']['name']!r} all {player[1]['shop']['all']}")
     if state.get("all") is not None:
         print(f"  since last check: shop all {state['all']} -> {shop['all']}, profit {state['profit']:,} -> {shop['profit']:,}, buyer all {state['buyer_all']} -> {buyer['all']}")
