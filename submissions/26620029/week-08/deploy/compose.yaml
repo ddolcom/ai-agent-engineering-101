@@ -29,8 +29,8 @@ services:
       - /srv/market/state/restock_memory.json:/srv/market/repo/submissions/26620029/week-08/restock_memory.json
       - /srv/market/state/forum_memory.json:/srv/market/repo/submissions/26620029/week-08/forum_memory.json
       - /srv/market/state/shop_prices.json:/srv/market/repo/submissions/26620029/week-08/shop_prices.json
-      - /srv/market/secrets/shop_key.pem:/srv/market/repo/submissions/26620029/week-08/shop_key.pem:ro
-      - /srv/market/secrets/buyer_key.pem:/srv/market/repo/submissions/26620029/week-08/buyer_key.pem:ro
+      - /srv/market/secrets/shop_key.pem:/srv/market/repo/submissions/26620029/week-08/shop_key.pem
+      - /srv/market/secrets/buyer_key.pem:/srv/market/repo/submissions/26620029/week-08/buyer_key.pem
       - /srv/market/secrets/market_owner.txt:/srv/market/repo/submissions/26620029/week-08/market_owner.txt:ro
     healthcheck:
       test: ["CMD-SHELL", "test $(( $(date +%s) - $(stat -c %Y /srv/market/repo/submissions/26620029/week-08/logs/market-kit.log) )) -lt 600"]

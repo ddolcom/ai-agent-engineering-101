@@ -1,76 +1,5 @@
 [
  {
-  "time": "2026-11-06T12:27:13",
-  "item": "김치",
-  "budget": 47460,
-  "shop": "Kiro729",
-  "sku": "G200e39a3",
-  "offers": [
-   20845,
-   23498,
-   26151,
-   28804
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T12:27:34",
-  "item": "비타민/미네랄/영양제",
-  "budget": 55720,
-  "shop": "25620027",
-  "sku": "G918fb858",
-  "offers": [
-   25575
-  ],
-  "price": 25575,
-  "task": "b44ffe9a-52bf-42fd-be88-7d79f3825c18",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T12:27:55",
-  "item": "김치",
-  "budget": 15030,
-  "shop": "nocha12",
-  "sku": "G37da7a5c",
-  "offers": [
-   5445,
-   6138,
-   6831,
-   7524,
-   7582
-  ],
-  "price": 7582,
-  "task": "4afaeb8f-f751-4b2a-89ed-edab7ef16814",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T12:28:52",
-  "item": "조리/가공 견과류",
-  "budget": 43120,
-  "shop": "olstjr",
-  "sku": "G010744b7",
-  "offers": [
-   16995
-  ],
-  "price": 16995,
-  "task": "da344205-cc00-4d5b-8069-74a4ae852df3",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T12:29:13",
-  "item": "김치",
-  "budget": 42410,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [
-   20845,
-   22500
-  ],
-  "price": 22500,
-  "task": "4d069239-cca5-43c7-abad-d44bc11fff14",
-  "result": "deal"
- },
- {
   "time": "2026-11-06T12:29:36",
   "item": "찌개/탕류/장류",
   "budget": 35010,
@@ -3978,5 +3907,70 @@
   "price": 9300,
   "task": "e10a76cb-485d-47c2-a030-361f39f699d9",
   "result": "deal"
+ },
+ {
+  "time": "2026-11-06T15:15:14",
+  "item": "침구",
+  "budget": 191120,
+  "shop": "inextro",
+  "sku": "G5cd4ffbc",
+  "offers": [
+   109450,
+   122250
+  ],
+  "result": "refused_c",
+  "price": 122250
+ },
+ {
+  "time": "2026-11-06T15:15:34",
+  "item": "찌개/탕류/장류",
+  "budget": 17910,
+  "shop": "jiseokkk",
+  "sku": "G476cc094",
+  "offers": [
+   14190,
+   15996
+  ],
+  "price": 15996,
+  "task": "fd7938b3-71d4-49cd-9ea0-af413cab3edf",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T15:15:54",
+  "item": "곡물",
+  "budget": 44910,
+  "shop": "outseop-26510122",
+  "sku": "G80435d53",
+  "offers": [
+   14575,
+   16430,
+   17100,
+   17800
+  ],
+  "price": 17800,
+  "task": "26bbf5be-9852-4813-b6c0-abf62550effe",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T15:18:33",
+  "item": "가공/조리 육류",
+  "budget": 14310,
+  "shop": "olstjr",
+  "sku": "G2560a8c9",
+  "offers": [
+   9845
+  ],
+  "price": 9845,
+  "task": "cf065462-709e-4ca5-a5fa-063a91d0724a",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T15:18:53",
+  "item": "즉석조리식품",
+  "budget": 18540,
+  "shop": "Kiro729",
+  "sku": "G67efbcf0",
+  "offers": [],
+  "result": "walk"
  }
 ]

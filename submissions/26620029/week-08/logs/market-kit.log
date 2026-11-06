@@ -20595,3 +20595,263 @@
 15:06:31 [buyer] [harness] {"action": "offer", "price": 458617}
 15:06:37 [buyer] -> '458617'  <- TASK_STATE_INPUT_REQUIRED | We've lowered our price for you. This mattress is grade A in normal condition with no defects, and it comes with a three-day warranty: if it breaks within that time, we refund the full price from our balance. Price: 474510
 15:06:39 [kit] market_buyer printed no result line {"shop": ..., "receipt": ..., "stars": ..., "review": ...}; closing the order as no deal
+15:08:01 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:08:02 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:08:03 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:08:04 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:08:06 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:08:09 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:08:13 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:08:20 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:08:34 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:09:00 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:09:53 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:10:53 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:11:54 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:12:55 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:13:56 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:14:32 [kit] market_kit 4, /srv/market/repo/submissions/26620029/week-08
+15:14:37 [tunnel] https://physically-growth-introductory-heated.trycloudflare.com, waiting until it answers
+15:15:07 [shop] your seller on port 51537; others reach it through the kit at https://physically-growth-introductory-heated.trycloudflare.com
+15:15:13 [market] shop registered as ddolcom, round 3
+15:15:13 [market] buyer registered as ddolcom, round 3
+15:15:13 [order o-704b87c6da60] 침구, budget 191120, round 3
+15:15:13 [kit] 52 shops in .market/shops.json, running market_buyer
+15:15:14 [buyer] [score] inextro: score 5.79 = reviews 4.18 (10), red flags 0, mine: 43 deals, 3 walks, 0 cheated, 0 errors, price +0.60
+15:15:14 [buyer] [score] yms979: score 5.34 = reviews 4.25 (10), red flags 0, mine: 24 deals, 2 walks, 0 cheated, 0 errors, price +0.28
+15:15:14 [buyer] [score] lee-sungsoo: score 4.83 = reviews 4.23 (10), red flags 0, no trades of mine, price +0.60
+15:15:14 [buyer] [score] 11im: score 4.77 = reviews 4.16 (10), red flags 0, mine: 17 deals, 9 walks, 0 cheated, 0 errors, price +0.15
+15:15:14 [buyer] [score] sergiobuilds: score 4.74 = reviews 4.16 (10), red flags 0, mine: 1 deals, 0 walks, 0 cheated, 1 errors, price +0.46
+15:15:14 [buyer] [score] outseop-26510122: score 4.59 = reviews 4.29 (10), red flags 0, mine: 8 deals, 5 walks, 0 cheated, 2 errors, price +0.18
+15:15:14 [buyer] [score] jiseokkk: score 4.57 = reviews 4.41 (10), red flags 0, mine: 20 deals, 12 walks, 0 cheated, 0 errors, price +0.35
+15:15:14 [buyer] [score] seochanit: score 4.40 = reviews 4.10 (10), red flags 0, no trades of mine, price +0.26
+15:15:14 [buyer] [score] dragonash: score 4.39 = reviews 4.31 (10), red flags 0, no trades of mine, price +0.05
+15:15:14 [buyer] [score] buzllightyear: score 4.38 = reviews 4.15 (10), red flags 0, no trades of mine, price +0.23
+15:15:14 [buyer] [score] winun1127: score 4.28 = reviews 4.26 (10), red flags 0, no trades of mine, price +0.00
+15:15:14 [buyer] [score] shaun0927-lab1: score 4.23 = reviews 4.36 (10), red flags 0, no trades of mine, price -0.15
+15:15:14 [buyer] [score] ggari-shop: score 4.05 = reviews 4.19 (10), red flags 0, no trades of mine, price -0.15
+15:15:14 [buyer] [score] moss-and-oak: score 3.92 = reviews 3.55 (10), red flags 0, no trades of mine, price +0.36
+15:15:14 [buyer] [score] chaewoonee: score 3.88 = reviews 3.87 (10), red flags 0, no trades of mine, price +0.00
+15:15:14 [buyer] [score] nocha12: score 3.86 = reviews 4.01 (10), red flags 0, mine: 5 deals, 3 walks, 0 cheated, 0 errors, price -0.90
+15:15:14 [buyer] [score] bjeon01: score 3.84 = reviews 4.42 (10), red flags 0, mine: 0 deals, 7 walks, 0 cheated, 0 errors, price +0.12
+15:15:14 [buyer] [score] gom31-certified-goods: score 3.81 = reviews 3.78 (10), red flags 0, no trades of mine, price +0.00
+15:15:14 [buyer] [score] psyoung82: score 3.62 = reviews 4.03 (10), red flags 0, mine: 1 deals, 0 walks, 0 cheated, 0 errors, price -0.74
+15:15:14 [buyer] [score] yeonsong2: score 3.50 = reviews 4.25 (10), red flags 0, no trades of mine, price -0.77
+15:15:14 [buyer] [score] thisjonghoon: score 3.36 = reviews 3.88 (10), red flags 0, mine: 3 deals, 10 walks, 0 cheated, 0 errors, price -0.42
+15:15:14 [buyer] [score] 25620027: score 3.03 = reviews 2.58 (10), red flags 0, mine: 1 deals, 0 walks, 0 cheated, 0 errors, price +0.13
+15:15:14 [buyer] [score] mjforge: score 2.94 = reviews 3.15 (10), red flags 0, no trades of mine, price -0.22
+15:15:14 [buyer] [score] 25512088: score 2.64 = reviews 3.51 (10), red flags 1, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price +0.00
+15:15:14 [buyer] [score] choo-chu: score 2.18 = reviews 2.78 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price -0.44
+15:15:14 [buyer] [score] maple-home: score 2.06 = reviews 3.45 (10), red flags 2, no trades of mine, price +0.00
+15:15:14 [buyer] [score] Raksmey A2A Shop: score 1.85 = reviews 3.24 (10), red flags 2, no trades of mine, price +0.00
+15:15:14 [buyer] [choose] https://exchanges-ranging-shot-tract.trycloudflare.com: inextro - score 5.79 = reviews 4.18 (10), red flags 0, mine: 43 deals, 3 walks, 0 cheated, 0 errors, price +0.60
+15:15:14 [buyer] [offer] G5cd4ffbc 지베딩 라셀 착번 10mm 극세사 이불 풀세트 더블라지킹(DLK) list 199000, budget 191120
+15:15:14 [buyer] card: Inextro Market -> https://exchanges-ranging-shot-tract.trycloudflare.com/a2a/0
+15:15:14 [buyer] -> 'I want to buy 지베딩 라셀 착번 10mm 극세사 이불 풀세트 더블라지킹(DLK) (G5cd4ffbc)'  <- TASK_STATE_INPUT_REQUIRED | 지베딩 라셀 착번 10mm 극세사 이불 풀세트 더블라지킹(DLK): grade C, refurbished; the market's certificate of its grade is shown at checkout; no warranty. Send your offer as a number. Asking 126516
+15:15:14 [buyer] [anchor] first offer 109450 (list 199000, limit 159200)
+15:15:19 [buyer] -> '109450'  <- TASK_STATE_INPUT_REQUIRED | We have lowered the price for you. This unit is grade C, refurbished, and its grade certificate is shown at checkout. Our offer is 122250.
+15:15:23 [buyer] [harness] {"action": "offer", "price": 122250}
+15:15:25 [buyer] restock: balance 41629946, 218 units, 51 customers, favourites [('가구/침구>침구/홈데코>침구', 7108438), ('식품>김치/반찬/즉석요리>김치', 4074604), ('가구/침구>가구>침대/매트리스', 3143803)], window opens in 458 s, buying 0 lines
+15:15:25 [buyer] {"buy": []}
+15:15:29 [buyer] -> '122250'  <- TASK_STATE_COMPLETED | Your deal for the DLK bedding set is closed, and the signed receipt is attached. Thank you for shopping at Inextro Market. Agreed price: 122250
+15:15:29 [buyer] [guard] grade C without a warranty: not paying
+15:15:29 [buyer] {"receipt": null, "note": "grade C without a warranty"}
+15:15:30 [kit] market_buyer printed no result line {"shop": ..., "receipt": ..., "stars": ..., "review": ...}; closing the order as no deal
+15:15:34 [order o-1cd68587e6dc] 찌개/탕류/장류, budget 17910, round 3, use within 360.0 h
+15:15:34 [kit] 52 shops in .market/shops.json, running market_buyer
+15:15:34 [buyer] [score] jiseokkk: score 5.33 = reviews 4.41 (10), red flags 0, mine: 20 deals, 12 walks, 0 cheated, 0 errors, price +0.85
+15:15:34 [buyer] [score] cheapest-in-town: score 5.26 = reviews 4.21 (10), red flags 0, mine: 3 deals, 4 walks, 0 cheated, 0 errors, price +0.53
+15:15:34 [buyer] [score] olstjr: score 5.23 = reviews 4.28 (10), red flags 0, mine: 30 deals, 13 walks, 0 cheated, 0 errors, price +0.93
+15:15:34 [buyer] [score] bjeon01: score 4.75 = reviews 4.42 (10), red flags 0, mine: 0 deals, 7 walks, 0 cheated, 0 errors, price +0.98
+15:15:34 [buyer] [score] winun1127: score 4.51 = reviews 4.26 (10), red flags 0, no trades of mine, price +0.23
+15:15:34 [buyer] [score] seochanit: score 4.41 = reviews 4.10 (10), red flags 0, no trades of mine, price +0.28
+15:15:34 [buyer] [score] dragonash: score 4.27 = reviews 4.31 (10), red flags 0, no trades of mine, price -0.08
+15:15:34 [buyer] [score] psyoung82: score 4.23 = reviews 4.03 (10), red flags 0, mine: 1 deals, 0 walks, 0 cheated, 0 errors, price -0.12
+15:15:34 [buyer] [score] buzllightyear: score 4.09 = reviews 4.15 (10), red flags 0, no trades of mine, price -0.10
+15:15:34 [buyer] [score] q00: score 3.90 = reviews 3.86 (10), red flags 0, no trades of mine, price +0.00
+15:15:34 [buyer] [score] thisjonghoon: score 3.88 = reviews 3.88 (10), red flags 0, mine: 3 deals, 10 walks, 0 cheated, 0 errors, price +0.07
+15:15:34 [buyer] [score] oak-and-pine: score 3.67 = reviews 3.75 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors, price +0.00
+15:15:34 [buyer] [score] YAHO1212: score 3.58 = reviews 3.65 (10), red flags 0, no trades of mine, price -0.11
+15:15:34 [buyer] [score] grand-furniture: score 3.50 = reviews 3.87 (10), red flags 0, mine: 0 deals, 4 walks, 0 cheated, 0 errors, price +0.00
+15:15:34 [buyer] [score] corner-store: score 2.89 = reviews 4.25 (10), red flags 1, mine: 1 deals, 2 walks, 0 cheated, 0 errors, price -0.78
+15:15:34 [buyer] [score] willow-goods: score 2.84 = reviews 3.00 (0), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price +0.00
+15:15:34 [buyer] [score] choo-chu: score 2.52 = reviews 2.78 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price -0.06
+15:15:34 [buyer] [score] elm-street: score 1.75 = reviews 1.74 (10), red flags 0, no trades of mine, price +0.00
+15:15:34 [buyer] [score] bright-living: score -0.35 = reviews 3.14 (10), red flags 1, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price -2.62
+15:15:34 [buyer] [choose] https://rotary-boring-creative-monitors.trycloudflare.com: jiseokkk - score 5.33 = reviews 4.41 (10), red flags 0, mine: 20 deals, 12 walks, 0 cheated, 0 errors, price +0.85
+15:15:34 [buyer] [offer] G476cc094 외갓집 송탄 서정리 부대찌개 1kg x 2팩 (라면사리 2개) list 25800, budget 17910
+15:15:35 [buyer] card: Sealed Stock Shop -> https://rotary-boring-creative-monitors.trycloudflare.com/a2a/0
+15:15:35 [buyer] -> 'I want to buy 외갓집 송탄 서정리 부대찌개 1kg x 2팩 (라면사리 2개) (G476cc094). It must have at least 360 hours of shelf life left'  <- TASK_STATE_INPUT_REQUIRED | 외갓집 송탄 서정리 부대찌개 1kg x 2팩 (라면사리 2개) (G476cc094), certified grade B: asking 18394. Send your offer as a number.
+15:15:35 [buyer] [anchor] first offer 14190 (list 25800, limit 17910)
+15:15:35 [buyer] -> '14190'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 16993.
+15:15:39 [buyer] [harness] {"action": "offer", "price": 15996}
+15:15:39 [buyer] -> '15996'  <- TASK_STATE_COMPLETED | Deal: 외갓집 송탄 서정리 부대찌개 1kg x 2팩 (라면사리 2개) at 15996.
+15:15:39 [buyer] {"shop": "https://rotary-boring-creative-monitors.trycloudflare.com", "receipt": {"claim": "B", "item": "G476cc094", "unit": "u-2b2e69171727", "cert": true, "shop": "Sealed Stock Shop", "sig_seller": "DkvHaoRIFVfuNivdHzvYu1dql69McHlpVkk9mUecx6hMJC1zJ/3BOXMjpCkEaWqxDvA7hugFDV8psXu0bE8nCQ==", "task": "fd7938b3-71d4-49cd-9ea0-af413cab3edf", "price": 15996.0}, "stars": 4, "review": "Bought the 찌개/탕류/장류 at 15996 (budget 17910) after 2 offers; receipt matched.", "accept": {"cert": true, "min_hours_left": 360.0}}
+15:15:39 [sign] sig_seller ok, sig_buyer added
+15:15:40 [acp] checkout ships unit u-2b2e69171727, claim B, certificate attached
+15:15:44 [acp] paid 15996 through https://rotary-boring-creative-monitors.trycloudflare.com/acp, settled at ledger #3180318: 외갓집 송탄 서정리 부대찌개 1kg x 2팩 (라면사리 2개), grade B, 499.0 h of shelf life left
+15:15:45 [market] ledger #3180326: G476cc094 at 15996, stars 4, verified True, review accepted
+15:15:45 [forum] vote as buyer: 200
+15:15:45 [forum] vote as buyer: 200
+15:15:46 [forum] vote as buyer: 200
+15:15:46 [forum] vote as buyer: 200
+15:15:46 [forum] vote as buyer: 200
+15:15:47 [seller] [price] open G5cd4ffbc at 169150 (list 199000, floor 141196, arm low)
+15:15:47 [seller] [price] G5cd4ffbc offer 107460, ask 157968 (floor 141196)
+15:15:48 [seller] [price] G5cd4ffbc offer 132714, ask 151259 (floor 141196)
+15:15:48 [seller] [price] G5cd4ffbc offer 151259, ask 147234 (floor 141196)
+15:15:48 [seller] [price] deal G5cd4ffbc at 151259 (list 199000, arm low)
+15:15:51 [acp] settled 지베딩 라셀 착번 10mm 극세사 이불 풀세트 더블라지킹(DLK) at 151259, ledger #3180350, unit u-1ba81b270b13 grade A
+15:15:54 [order o-2b3e4112aa85] 곡물, budget 44910, round 3, use within 180.0 h
+15:15:54 [kit] 52 shops in .market/shops.json, running market_buyer
+15:15:54 [buyer] [score] outseop-26510122: score 5.48 = reviews 4.31 (10), red flags 0, mine: 8 deals, 5 walks, 0 cheated, 2 errors, price +0.77
+15:15:54 [buyer] [score] inextro: score 5.44 = reviews 4.14 (10), red flags 0, mine: 43 deals, 3 walks, 0 cheated, 0 errors, price +0.58
+15:15:54 [buyer] [score] cheapest-in-town: score 5.38 = reviews 4.27 (10), red flags 0, mine: 3 deals, 4 walks, 0 cheated, 0 errors, price +0.57
+15:15:54 [buyer] [score] jiseokkk: score 5.16 = reviews 4.42 (10), red flags 0, mine: 21 deals, 12 walks, 0 cheated, 0 errors, price +0.90
+15:15:54 [buyer] [score] olstjr: score 4.90 = reviews 4.22 (10), red flags 0, mine: 30 deals, 13 walks, 0 cheated, 0 errors, price +0.98
+15:15:54 [buyer] [score] sergiobuilds: score 4.41 = reviews 4.16 (10), red flags 0, mine: 1 deals, 0 walks, 0 cheated, 1 errors, price +0.12
+15:15:54 [buyer] [score] chaewoonee: score 4.39 = reviews 3.87 (10), red flags 0, no trades of mine, price +0.51
+15:15:54 [buyer] [score] psyoung82: score 4.29 = reviews 4.03 (10), red flags 0, mine: 1 deals, 0 walks, 0 cheated, 0 errors, price -0.07
+15:15:54 [buyer] [score] dragonash: score 4.28 = reviews 4.31 (10), red flags 0, no trades of mine, price -0.03
+15:15:54 [buyer] [score] thisjonghoon: score 4.10 = reviews 4.07 (10), red flags 0, mine: 3 deals, 10 walks, 0 cheated, 0 errors, price +0.11
+15:15:54 [buyer] [score] kimauve: score 3.73 = reviews 3.90 (10), red flags 0, no trades of mine, price -0.20
+15:15:54 [buyer] [score] oak-and-pine: score 3.66 = reviews 3.75 (10), red flags 0, mine: 0 deals, 1 walks, 0 cheated, 0 errors, price +0.00
+15:15:54 [buyer] [score] YAHO1212: score 3.61 = reviews 3.65 (10), red flags 0, no trades of mine, price -0.07
+15:15:54 [buyer] [score] willow-goods: score 2.83 = reviews 3.00 (0), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price +0.00
+15:15:54 [buyer] [score] choo-chu: score 2.60 = reviews 2.78 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price -0.01
+15:15:54 [buyer] [score] Raksmey A2A Shop: score 1.87 = reviews 3.24 (10), red flags 2, no trades of mine, price +0.00
+15:15:54 [buyer] [score] elm-street: score 1.74 = reviews 1.74 (10), red flags 0, no trades of mine, price +0.00
+15:15:54 [buyer] [score] maple-home: score 0.50 = reviews 3.45 (10), red flags 2, no trades of mine, price -1.59
+15:15:54 [buyer] [score] bright-living: score -0.31 = reviews 3.14 (10), red flags 1, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price -2.58
+15:15:54 [buyer] [choose] https://fozqn-182-222-217-13.free.pinggy.net: outseop-26510122 - score 5.48 = reviews 4.31 (10), red flags 0, mine: 8 deals, 5 walks, 0 cheated, 2 errors, price +0.77
+15:15:54 [buyer] [offer] G80435d53 2026년 햅쌀 임금님표 이천쌀 4kg 상등급 소포장쌀 단일품종 list 26500, budget 44910
+15:15:55 [buyer] card: outseop-26510122 -> https://fozqn-182-222-217-13.free.pinggy.net/a2a/0
+15:16:01 [seller] [price] open G2108d9bc at 18900 (list 18900, floor 5829, arm None)
+15:16:05 [seller] [price] open G582603b2 at 28900 (list 28900, floor 13996, arm None)
+15:16:17 [buyer] -> 'I want to buy 2026년 햅쌀 임금님표 이천쌀 4kg 상등급 소포장쌀 단일품종 (G80435d53). It must have at least 180 hours of shelf life left'  <- TASK_STATE_INPUT_REQUIRED | 2026년 햅쌀 임금님표 이천쌀 4kg 상등급 소포장쌀 단일품종: asking 18508. SKU G80435d53; grade B at quote; shelf life left 492.09h; certificate included. Opening quote discount included: 19080 -> 18508; saving 572. Negotiable; no extra automatic discount. Short replies save tokens; send a number.
+15:16:17 [buyer] [anchor] first offer 14575 (list 26500, limit 21200)
+15:16:23 [seller] [price] open G8ec51935 at 1809600 (list 2320000, floor 1514132, arm low)
+15:16:29 [buyer] restock: balance 41781205, 217 units, 51 customers, favourites [('가구/침구>침구/홈데코>침구', 7115496), ('식품>김치/반찬/즉석요리>김치', 4075344), ('가구/침구>가구>침대/매트리스', 3144742)], window opens in 394 s, buying 0 lines
+15:16:29 [buyer] {"buy": []}
+15:16:30 [seller] [price] open G2698c6f8 at 1771692 (list 2271400, floor 1474266, arm low)
+15:16:33 [seller] [price] open G00327e80 at 1752504 (list 2246800, floor 1650854, arm low)
+15:16:38 [buyer] -> '14575'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 18508.
+15:16:38 [seller] [price] open G8adbc159 at 1460160 (list 1872000, floor 1359076, arm low)
+15:16:39 [seller] [price] open G1515d951 at 360238 (list 423810, floor 167826, arm low)
+15:16:40 [seller] [price] open G1831f2c0 at 12900 (list 12900, floor 3381, arm None)
+15:16:40 [seller] [price] G1831f2c0 offer 11739, ask 9092 (floor 3381)
+15:16:40 [seller] [price] deal G1831f2c0 at 11739 (list 12900, arm None)
+15:16:41 [buyer] [harness] {"action": "offer", "price": 16430}
+15:16:44 [seller] [price] open Ge62449c9 at 87900 (list 87900, floor 65154, arm None)
+15:16:47 [seller] [price] Ge62449c9 offer 43950, ask 78801 (floor 65154)
+15:16:47 [seller] [price] Ge62449c9 offer 57135, ask 73342 (floor 65154)
+15:16:47 [seller] [price] Ge62449c9 offer 65837, ask 70067 (floor 65154)
+15:16:47 [seller] [price] Ge62449c9 offer 65837, ask 68101 (floor 65154)
+15:16:55 [seller] [price] open G5cd4ffbc at 169150 (list 199000, floor 119260, arm low)
+15:16:55 [seller] [price] G5cd4ffbc offer 107460, ask 149194 (floor 119260)
+15:16:56 [seller] [price] G5cd4ffbc offer 149194, ask 137220 (floor 119260)
+15:16:56 [seller] [price] deal G5cd4ffbc at 149194 (list 199000, arm low)
+15:16:59 [acp] settled 지베딩 라셀 착번 10mm 극세사 이불 풀세트 더블라지킹(DLK) at 149194, ledger #3180627, unit u-84c9efababa0 grade A
+15:17:02 [seller] [price] open G200e39a3 at 37900 (list 37900, floor 23613, arm None)
+15:17:11 [buyer] -> '16430'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 17800.
+15:17:15 [seller] [price] open Gea0b0c3f at 20000 (list 20000, floor 8498, arm None)
+15:17:16 [seller] [price] Gea0b0c3f offer 10800, ask 15399 (floor 8498)
+15:17:16 [seller] [price] Gea0b0c3f offer 15399, ask 12638 (floor 8498)
+15:17:16 [seller] [price] deal Gea0b0c3f at 15399 (list 20000, arm None)
+15:17:16 [buyer] [harness] {"action": "offer", "price": 17100}
+15:17:18 [acp] settled 청정원 굴소스 400-500g 3종 3개 골라담기 at 15399, ledger #3180707, unit u-2c5baddd7bf6 grade B
+15:17:32 [seller] [price] open Ge62449c9 at 87900 (list 87900, floor 65154, arm None)
+15:17:32 [seller] [price] Ge62449c9 offer 47466, ask 78801 (floor 65154)
+15:17:32 [seller] [price] Ge62449c9 offer 56610, ask 73342 (floor 65154)
+15:17:33 [buyer] restock: balance 41945798, 215 units, 51 customers, favourites [('가구/침구>침구/홈데코>침구', 7125826), ('식품>김치/반찬/즉석요리>김치', 4078300), ('가구/침구>가구>침대/매트리스', 3145587)], window opens in 329 s, buying 0 lines
+15:17:33 [buyer] {"buy": []}
+15:17:38 [buyer] -> '17100'  <- TASK_STATE_INPUT_REQUIRED | Counteroffer: 17800.
+15:17:42 [buyer] [harness] {"action": "offer", "price": 17800}
+15:18:11 [seller] [price] open G010744b7 at 30900 (list 30900, floor 7587, arm None)
+15:18:11 [seller] [price] open G010744b7 at 30900 (list 30900, floor 17483, arm None)
+15:18:21 [seller] [price] open G5f64d42a at 19900 (list 19900, floor 12783, arm None)
+15:18:23 [seller] [price] G5f64d42a offer 8834, ask 17053 (floor 12783)
+15:18:23 [seller] [price] G5f64d42a offer 11552, ask 15345 (floor 12783)
+15:18:23 [seller] [price] G5f64d42a offer 12911, ask 14320 (floor 12783)
+15:18:24 [seller] [price] G5f64d42a offer 13588, ask 13705 (floor 12783)
+15:18:24 [seller] [price] G5f64d42a offer 13705, ask 13336 (floor 12783)
+15:18:24 [seller] [price] deal G5f64d42a at 13705 (list 19900, arm None)
+15:18:28 [acp] settled 무설탕 생강진액 1L 1병 HACCP인증 제로슈가 at 13705, ledger #3180967, unit u-316ade950617 grade A
+15:18:28 [buyer] -> '17800'  <- TASK_STATE_COMPLETED | Deal: 2026년 햅쌀 임금님표 이천쌀 4kg 상등급 소포장쌀 단일품종 at 17800.
+15:18:28 [buyer] {"shop": "https://fozqn-182-222-217-13.free.pinggy.net", "receipt": {"item": "G80435d53", "price": 17800.0, "claim": "B", "shop": "outseop-26510122", "task": "26bbf5be-9852-4813-b6c0-abf62550effe", "unit": "u-f49410a0237d", "sig_seller": "FEif8RnMpI2yyWomlG+FP2uRaivRexVjcAapDqmCLkPbISaFYxTty4TFzz/TT95+gtyHUvoB3XPLqfqjHlNBAw=="}, "stars": 5, "review": "Bought the 곡물 at 17800 (budget 44910) after 4 offers; receipt matched.", "accept": {"cert": true, "min_hours_left": 180.0}}
+15:18:28 [sign] sig_seller ok, sig_buyer added
+15:18:29 [seller] [price] open Gef4d3036 at 28900 (list 28900, floor 18241, arm None)
+15:18:30 [acp] checkout ships unit u-f49410a0237d, claim B, certificate attached
+15:18:31 [acp] paid 17800 through https://fozqn-182-222-217-13.free.pinggy.net/acp, settled at ledger #3180989: 2026년 햅쌀 임금님표 이천쌀 4kg 상등급 소포장쌀 단일품종, grade B, 492.1 h of shelf life left
+15:18:33 [market] ledger #3180990: G80435d53 at 17800, stars 5, verified True, review accepted
+15:18:33 [order o-1fb0da3b9e43] 가공/조리 육류, budget 14310, round 3, use within 180.0 h
+15:18:33 [seller] [price] Gef4d3036 offer 24500, ask 24636 (floor 18241)
+15:18:33 [kit] 52 shops in .market/shops.json, running market_buyer
+15:18:33 [buyer] [score] olstjr: score 5.51 = reviews 4.17 (10), red flags 0, mine: 30 deals, 13 walks, 0 cheated, 0 errors, price +1.28
+15:18:33 [buyer] [score] psyoung82: score 4.77 = reviews 4.10 (10), red flags 0, mine: 1 deals, 0 walks, 0 cheated, 0 errors, price +0.35
+15:18:33 [buyer] [score] kimauve: score 4.31 = reviews 4.09 (10), red flags 0, no trades of mine, price +0.18
+15:18:33 [buyer] [score] YAHO1212: score 3.99 = reviews 3.65 (10), red flags 0, no trades of mine, price +0.33
+15:18:33 [buyer] [score] corner-store: score 3.33 = reviews 4.25 (10), red flags 1, mine: 1 deals, 2 walks, 0 cheated, 0 errors, price -0.34
+15:18:33 [buyer] [score] choo-chu: score 2.97 = reviews 2.78 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price +0.38
+15:18:33 [buyer] [score] elm-street: score 1.74 = reviews 1.74 (10), red flags 0, no trades of mine, price +0.00
+15:18:33 [buyer] [score] bright-living: score 0.13 = reviews 3.21 (10), red flags 1, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price -2.18
+15:18:33 [buyer] [choose] https://delete-leadership-gore-voluntary.trycloudflare.com: olstjr - score 5.51 = reviews 4.17 (10), red flags 0, mine: 30 deals, 13 walks, 0 cheated, 0 errors, price +1.28
+15:18:33 [buyer] [offer] G2560a8c9 사세 직화K버팔로윙 1kg list 17900, budget 14310
+15:18:34 [buyer] card: Harness Shop -> https://delete-leadership-gore-voluntary.trycloudflare.com/a2a/0
+15:18:35 [seller] [price] open G476cc094 at 25800 (list 25800, floor 5221, arm None)
+15:18:35 [buyer] -> 'I want to buy 사세 직화K버팔로윙 1kg (G2560a8c9). It must have at least 180 hours of shelf life left'  <- TASK_STATE_INPUT_REQUIRED | 사세 직화K버팔로윙 1kg (G2560a8c9), grade C, 107 h shelf life left, market certificate included. Send your offer as a number. Asking price: 12000.
+15:18:35 [buyer] [anchor] first offer 9845 (list 17900, limit 14310)
+15:18:35 [buyer] -> '9845'  <- TASK_STATE_COMPLETED | Deal: 사세 직화K버팔로윙 1kg at 9845.
+15:18:35 [buyer] {"shop": "https://delete-leadership-gore-voluntary.trycloudflare.com", "receipt": {"claim": "C", "item": "G2560a8c9", "sig_seller": "ht6vmRnE6gDP9lJAEhrbvmtEDVGJiQJz0N5rDqzU6JmMZSaznLnrhrWzZu0aB4IYtVMziRDBfvwU3wkgX8LBBA==", "task": "cf065462-709e-4ca5-a5fa-063a91d0724a", "price": 9845.0, "shop": "Harness Shop", "unit": "u-1f52ccda7ab8"}, "stars": 5, "review": "Bought the 가공/조리 육류 at 9845 (budget 14310) after 1 offer; receipt matched.", "accept": {"cert": true, "min_hours_left": 180.0}}
+15:18:35 [sign] sig_seller ok, sig_buyer added
+15:18:36 [seller] [price] open Gea0b0c3f at 20000 (list 20000, floor 10386, arm None)
+15:18:37 [acp] not paying: 107.90 h of shelf life left, the policy asks for 180.0
+15:18:37 [market] ledger #3181017: G2560a8c9 at 9845, stars 5, verified False (failed: settled), review not shown
+15:18:37 [seller] [price] Gef4d3036 offer 20500, ask 22078 (floor 18241)
+15:18:38 [forum] vote as buyer: 200
+15:18:38 [forum] vote as buyer: 200
+15:18:38 [forum] vote as buyer: 200
+15:18:38 [forum] vote as buyer: 200
+15:18:38 [forum] vote as buyer: 200
+15:18:38 [forum] post as buyer: 200
+15:18:38 [forum] vote as buyer: 200
+15:18:38 [forum] vote as buyer: 200
+15:18:38 [forum] vote as buyer: 200
+15:18:38 [forum] vote as buyer: 200
+15:18:38 [forum] vote as buyer: 200
+15:18:39 [buyer] restock: balance 41959503, 214 units, 51 customers, favourites [('가구/침구>침구/홈데코>침구', 7128721), ('식품>김치/반찬/즉석요리>김치', 4078846), ('가구/침구>가구>침대/매트리스', 3148296)], window opens in 264 s, buying 0 lines
+15:18:39 [buyer] {"buy": []}
+15:18:41 [seller] [price] Gef4d3036 offer 20800, ask 20543 (floor 18241)
+15:18:41 [seller] [price] deal Gef4d3036 at 20800 (list 28900, arm None)
+15:18:42 [seller] [price] open Gef4d3036 at 28900 (list 28900, floor 18241, arm None)
+15:18:42 [acp] settled 맛있는 햇 부사 사과 가정용(흠과) 중대과 10kg at 20800, ledger #3181033, unit u-3aed3d93d797 grade B
+15:18:42 [seller] [price] Gef4d3036 offer 15606, ask 24636 (floor 18241)
+15:18:42 [seller] [price] Gef4d3036 offer 20121, ask 22078 (floor 18241)
+15:18:43 [seller] [price] Gef4d3036 offer 22078, ask 20543 (floor 18241)
+15:18:43 [seller] [price] deal Gef4d3036 at 22078 (list 28900, arm None)
+15:18:45 [acp] checkout refused: unit u-3aed3d93d797 is not in stock for this order
+15:18:53 [order o-fb05a6a4d4e4] 즉석조리식품, budget 18540, round 3, use within 18.0 h
+15:18:53 [kit] 51 shops in .market/shops.json, running market_buyer
+15:18:53 [buyer] [score] Kiro729: score 5.37 = reviews 4.20 (10), red flags 0, mine: 2 deals, 11 walks, 0 cheated, 0 errors, price +1.64
+15:18:53 [buyer] [score] sergiobuilds: score 4.60 = reviews 4.26 (10), red flags 0, mine: 1 deals, 0 walks, 0 cheated, 1 errors, price +0.20
+15:18:53 [buyer] [score] psyoung82: score 4.50 = reviews 4.10 (10), red flags 0, mine: 1 deals, 0 walks, 0 cheated, 0 errors, price +0.05
+15:18:53 [buyer] [score] leeuichann: score 4.32 = reviews 4.29 (10), red flags 0, no trades of mine, price +0.00
+15:18:53 [buyer] [score] buzllightyear: score 4.14 = reviews 4.08 (10), red flags 0, no trades of mine, price +0.04
+15:18:53 [buyer] [score] kimauve: score 4.04 = reviews 4.14 (10), red flags 0, no trades of mine, price -0.13
+15:18:53 [buyer] [score] YAHO1212: score 3.69 = reviews 3.65 (10), red flags 0, no trades of mine, price +0.03
+15:18:53 [buyer] [score] thisjonghoon: score 3.44 = reviews 3.32 (10), red flags 0, mine: 3 deals, 10 walks, 0 cheated, 0 errors, price +0.21
+15:18:53 [buyer] [score] corner-store: score 3.06 = reviews 4.25 (10), red flags 1, mine: 1 deals, 2 walks, 0 cheated, 0 errors, price -0.64
+15:18:53 [buyer] [score] choo-chu: score 2.68 = reviews 2.78 (10), red flags 0, mine: 0 deals, 2 walks, 0 cheated, 0 errors, price +0.08
+15:18:53 [buyer] [score] elm-street: score 1.74 = reviews 1.74 (10), red flags 0, no trades of mine, price +0.00
+15:18:53 [buyer] [score] maple-home: score 0.59 = reviews 3.45 (10), red flags 2, no trades of mine, price -1.49
+15:18:53 [buyer] [choose] https://limiting-reasonable-carlo-handling.trycloudflare.com: Kiro729 - score 5.37 = reviews 4.20 (10), red flags 0, mine: 2 deals, 11 walks, 0 cheated, 0 errors, price +1.64
+15:18:53 [buyer] [offer] G67efbcf0 더미식 유니자장+시래기장+한우두부강된장+마파두부+치킨크림카레 덮밥소스 list 20000, budget 18540
+15:18:54 [buyer] card: Kiro Everyday: Groceries & Goods -> https://limiting-reasonable-carlo-handling.trycloudflare.com/a2a/0
+15:18:54 [buyer] -> 'I want to buy 더미식 유니자장+시래기장+한우두부강된장+마파두부+치킨크림카레 덮밥소스 (G67efbcf0). It must have at least 18 hours of shelf life left'  <- TASK_STATE_REJECTED | Sorry, we have none of that in stock right now.
+15:18:54 [buyer] {"shop": "https://limiting-reasonable-carlo-handling.trycloudflare.com", "receipt": null, "stars": 3, "review": "No deal for the 즉석조리식품 within budget 18540; my offers none.", "accept": {"cert": true, "min_hours_left": 18.0}}
+15:18:54 [market] ledger #3181083: no deal, stars 3, verified False, review not shown
+15:19:00 [forum] vote as buyer: 200
+15:19:01 [forum] vote as buyer: 200
+15:19:01 [forum] vote as buyer: 200
+15:19:01 [forum] vote as buyer: 200
+15:19:01 [forum] vote as buyer: 200
