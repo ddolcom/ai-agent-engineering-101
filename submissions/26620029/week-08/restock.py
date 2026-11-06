@@ -47,7 +47,7 @@ LINE_SHARE = 0.1            # one line spends at most this share of the balance 
 # bedding 12%. Category counts kept us on one SKU: 5 unsold SS mattresses (G07ec17d5) stopped any purchase of the
 # market's best seller G1515d951 (2,698 deals, about 73,000 margin a unit), which we never stocked
 VALUE_FOCUS = 0.05          # a goods category with this share of the market's sales value is stocked by SKU and first
-FOCUS_SKUS = 3              # SKUs kept per focus category, by value (deals x list price)
+FOCUS_SKUS = 5              # SKUs kept per focus category, by value (deals x list price)
 FOCUS_QTY = [(0.02, 5), (0.005, 3)]     # (SKU's share of market deals, units to keep); below these, 2
 FOCUS_DEAR = 500_000        # list price above this: at most 2 units, however often it sells
 UNIT_SHARE = 0.25           # one unit's cost at most this share of the balance: dearer sofas come as the balance grows

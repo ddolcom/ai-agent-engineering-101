@@ -64,6 +64,11 @@ TRIAL_SHARE = 0.85
 # the market's money is. Market deals there settle near 72% of list, so the low arm of those units now opens closer to that
 TRIAL_DEAR_MIN = 1_000_000
 TRIAL_DEAR_SHARE = 0.78
+# ddolcom (2026-11-06, the user's instruction): dead stock goes at cost or a little above, to free the cash. 5 grade A sofas
+# sat 11-39 h at a cost of 65-73% of list while the market's grade A at 1,000,000 or more settled near 72.6%. The floor stays the cost
+DEAD_AGE_HOURS = 12
+DEAD_MIN_LIST = 100_000
+DEAD_MARKUP = 1.02
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
                                             # took 8.8 s on 2026-11-03, so the buyer only waited for nothing)
 GRADE_MEANS = {"food": {"A": "plenty of shelf life", "B": "normal shelf life", "C": "close to its date"},
@@ -98,15 +103,25 @@ def floor_price(u):
     return u["cost"]
 
 
+def is_dead(u):
+    """Goods worth at least DEAD_MIN_LIST, unsold for DEAD_AGE_HOURS since they arrived."""
+    return (is_goods(u) and u.get("list_price", 0) >= DEAD_MIN_LIST
+            and time.time() - (u.get("supplied_at") or time.time()) >= DEAD_AGE_HOURS * 3600)
+
+
 def trial_arm(u):
     """The trial ended 2026-11-06 14:33 and low won: at 1,000,000 or more 9 deals of 71 opens against 3 of 63, about the
     same margin per open and 2.3 times the revenue; under that 45 of 106 against 35 of 119, more margin and revenue."""
+    if is_dead(u):
+        return "dead"
     return "low" if u.get("list_price", 0) >= TRIAL_MIN else None
 
 
 def ask_price(u, offers, arm=None):
     """The ask after `offers` buyer offers: the first ask, then STEP of the way to the floor each time."""
     floor = floor_price(u)
+    if arm == "dead":
+        return int(floor + (floor * DEAD_MARKUP - floor) * STEP ** offers)
     share = 1 if arm != "low" else TRIAL_DEAR_SHARE if u["list_price"] >= TRIAL_DEAR_MIN else TRIAL_SHARE
     top = max(u["list_price"] * share, floor)
     return int(floor + (top - floor) * STEP ** offers)
