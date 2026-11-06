@@ -13,7 +13,6 @@ import asyncio
 import base64
 import json
 import os
-import random
 import re
 import time
 from pathlib import Path
@@ -100,10 +99,9 @@ def floor_price(u):
 
 
 def trial_arm(u):
-    """Which first ask this negotiation gets: "low" or "list" at random for dear units, None below TRIAL_MIN."""
-    if u.get("list_price", 0) < TRIAL_MIN:
-        return None
-    return random.choice(("low", "list"))
+    """The trial ended 2026-11-06 14:33 and low won: at 1,000,000 or more 9 deals of 71 opens against 3 of 63, about the
+    same margin per open and 2.3 times the revenue; under that 45 of 106 against 35 of 119, more margin and revenue."""
+    return "low" if u.get("list_price", 0) >= TRIAL_MIN else None
 
 
 def ask_price(u, offers, arm=None):
