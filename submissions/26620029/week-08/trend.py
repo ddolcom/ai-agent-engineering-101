@@ -44,7 +44,7 @@ def main():
     surge = {s["sku"]: s["factor"] for s in get("/api/supply-prices")["surge"]}
     stock = collections.Counter(u["sku"] for u in inv["units"] if u.get("grade") != "expired")
 
-    sold = collections.defaultdict(lambda: {"n": 0, "paid": 0, "share": 0.0, "mine": 0})
+    sold = collections.defaultdict(lambda: {"n": 0, "paid": 0, "share": 0.0, "mine": 0, "grade": {}})
     for r in rows:
         d = r["data"]
         if r["kind"] != "settle" or d.get("sku") not in catalog:
@@ -54,6 +54,9 @@ def main():
         s["paid"] += d["amount"]
         s["share"] += d["amount"] / catalog[d["sku"]]["list_price"]
         s["mine"] += d["shop"] in mine
+        g = s["grade"].setdefault(d.get("grade"), [0, 0])
+        g[0] += 1
+        g[1] += d["amount"]
     print(f"== {hours:.1f} h, {sum(s['n'] for s in sold.values())} deals; goods by estimated market margin an hour")
     print("deals/h, avg paid/list, list, est margin/h, my deals, my stock, surge, sku name")
     goods = [(k, s) for k, s in sold.items() if catalog[k].get("kind") != "food"]
@@ -72,11 +75,14 @@ def main():
     for hrs in (12, 24, 48):
         old = [u for u in units if now - u["supplied_at"] >= hrs * 3600]
         print(f"  unsold {hrs} h+: {len(old)} units, cost {sum(u['cost'] for u in old):,}")
-    print("  dearest unsold 12 h+: age h, cost/list, grade, market deals/h, sku name")
+    print("  dearest unsold 12 h+: age h, cost/list, grade, market deals/h, same grade avg paid (COST ABOVE if under my cost), sku name")
     old = [u for u in units if now - u["supplied_at"] >= 12 * 3600]
     for u in sorted(old, key=lambda u: -u["cost"])[:8]:
+        n, paid = sold[u["sku"]]["grade"].get(u["grade"], [0, 0])
+        avg = paid // n if n else 0
+        flag = " COST ABOVE" if n and avg < u["cost"] else ""
         print(f"  {(now - u['supplied_at']) / 3600:.0f}, {u['cost'] / u['list_price']:.2f}, {u['grade']}, "
-              f"{sold[u['sku']]['n'] / hours:.1f}, {u['sku']} {u['name'][:28]}")
+              f"{sold[u['sku']]['n'] / hours:.1f}, {avg:,}{flag}, {u['sku']} {u['name'][:28]}")
 
 
 if __name__ == "__main__":

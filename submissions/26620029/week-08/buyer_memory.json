@@ -1,1103 +1,5 @@
 [
  {
-  "time": "2026-11-06T14:01:22",
-  "item": "소파/의자/스툴",
-  "budget": 2359140,
-  "shop": "inextro",
-  "sku": "G8ec51935",
-  "offers": [
-   1276000,
-   1438400,
-   1600800,
-   1700000,
-   1753242
-  ],
-  "price": 1752491,
-  "task": "fca35d22-cc67-44e6-83aa-148134bca90a",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:02:29",
-  "item": "우유/두유",
-  "budget": 23750,
-  "shop": "bright-living",
-  "sku": "G17d416cc",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:02:49",
-  "item": "조리/가공 견과류",
-  "budget": 61840,
-  "shop": "olstjr",
-  "sku": "G010744b7",
-  "offers": [
-   16995,
-   19158,
-   21321,
-   23343
-  ],
-  "price": 23343,
-  "task": "5488ff05-d2b3-4aa0-9502-f79927645547",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:03:16",
-  "item": "소스/양념/조미료",
-  "budget": 28240,
-  "shop": "jiseokkk",
-  "sku": "Gcd39795a",
-  "offers": [
-   15174,
-   16870
-  ],
-  "price": 16870,
-  "task": "72ff5101-b093-4337-b3b0-14210f3cc335",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:03:36",
-  "item": "김치",
-  "budget": 52110,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [
-   20845
-  ],
-  "price": 20845,
-  "task": "9c5333b9-3393-4ef3-b2ba-7b5ec63de088",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:03:56",
-  "item": "김치",
-  "budget": 39060,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [
-   20845
-  ],
-  "price": 20845,
-  "task": "6d724adf-dfc6-436c-81c5-c401efc5e338",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:04:16",
-  "item": "소파/의자/스툴",
-  "budget": 989790,
-  "shop": "inextro",
-  "sku": "G429bd69e",
-  "offers": [
-   510400,
-   575360,
-   640320,
-   650910
-  ],
-  "price": 650910,
-  "task": "6d895a76-3132-458b-881e-6a09216632d6",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:05:02",
-  "item": "소파/의자/스툴",
-  "budget": 3248000,
-  "shop": "inextro",
-  "sku": "G4a12722c",
-  "offers": [
-   1683308,
-   1897547,
-   1950000,
-   1973122
-  ],
-  "price": 1973122,
-  "task": "a620fc4a-17f6-482c-becb-65f6f2484fcb",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:05:42",
-  "item": "소파/의자/스툴",
-  "budget": 1684800,
-  "shop": "inextro",
-  "sku": "G19a70f63",
-  "offers": [
-   920040,
-   1037136,
-   1154232,
-   1172000
-  ],
-  "price": 1172000,
-  "task": "63bb58ad-fbbd-486f-b7fa-d6cbfc5c9274",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:06:27",
-  "item": "김치",
-  "budget": 48180,
-  "shop": "Kiro729",
-  "sku": "G200e39a3",
-  "offers": [
-   20845,
-   23498,
-   26151,
-   28804
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:06:49",
-  "item": "김치",
-  "budget": 18460,
-  "shop": "Kiro729",
-  "sku": "G66ded25b",
-  "offers": [
-   9845,
-   11098
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:07:09",
-  "item": "소파/의자/스툴",
-  "budget": 2520800,
-  "shop": "inextro",
-  "sku": "G8ec51935",
-  "offers": [
-   1276000,
-   1438400,
-   1500000,
-   1539910
-  ],
-  "price": 1539910,
-  "task": "0fcd95f3-5a4d-4223-9d91-86169b3d9fd2",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:07:54",
-  "item": "소파/의자/스툴",
-  "budget": 4270000,
-  "shop": "inextro",
-  "sku": "G24f5f979",
-  "offers": [
-   2098800,
-   2365920,
-   2633040,
-   2720000,
-   2720000
-  ],
-  "price": 2720000,
-  "task": "664feac7-e2f3-4e54-970f-aad2d450461f",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:09:03",
-  "item": "우유/두유",
-  "budget": 34620,
-  "shop": "psyoung82",
-  "sku": "G582603b2",
-  "offers": [
-   15895
-  ],
-  "price": 15895,
-  "task": "184ed53a-f02c-4c25-abf1-8195deb97d78",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:09:23",
-  "item": "소파/의자/스툴",
-  "budget": 2973600,
-  "shop": "inextro",
-  "sku": "G6cd0e9d4",
-  "offers": [
-   1438800,
-   1621920,
-   1805040,
-   1988160
-  ],
-  "price": 1988160,
-  "task": "caf30334-6d68-42f0-9d29-3b166632ac51",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:10:07",
-  "item": "김치",
-  "budget": 49240,
-  "shop": "jiseokkk",
-  "sku": "G32bf9a8e",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:10:28",
-  "item": "김치",
-  "budget": 81060,
-  "shop": "outseop-26510122",
-  "sku": "G16dcdc73",
-  "offers": [
-   42240,
-   47616,
-   48000
-  ],
-  "price": 48000,
-  "task": "b8c9497a-dc32-472d-8324-f65410074142",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:12:49",
-  "item": "우유/두유",
-  "budget": 62890,
-  "shop": "grand-furniture",
-  "sku": "G68a4ed40",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:13:10",
-  "item": "소파/의자/스툴",
-  "budget": 3434400,
-  "shop": "inextro",
-  "sku": "G47788edd",
-  "offers": [
-   1878800,
-   2117920,
-   2281353
-  ],
-  "price": 2281353,
-  "task": "1aa1d06d-8819-4b06-8374-a70cc7f3d5be",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:13:41",
-  "item": "신선과일(부패주의)",
-  "budget": 97860,
-  "shop": "inextro",
-  "sku": "Gfb2c0249",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:14:03",
-  "item": "신선육류",
-  "budget": 13500,
-  "shop": "thisjonghoon",
-  "sku": "G0a1e986d",
-  "offers": [
-   8250
-  ],
-  "price": 8250,
-  "task": "2d13f125-feb7-473f-96cd-23441009e953",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:14:23",
-  "item": "소파/의자/스툴",
-  "budget": 23750,
-  "shop": "yms979",
-  "sku": "G2d348ccc",
-  "offers": [
-   10450,
-   11780
-  ],
-  "price": 11780,
-  "task": "736dfc98-1c00-4f85-a5a7-76d53ad43e73",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:14:43",
-  "item": "김치",
-  "budget": 39220,
-  "shop": "outseop-26510122",
-  "sku": "G200e39a3",
-  "offers": [
-   20845,
-   21450
-  ],
-  "price": 21450,
-  "task": "f8c73f43-9a6e-4682-900f-11817a1488fe",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:16:07",
-  "item": "가공/조리 육류",
-  "budget": 41890,
-  "shop": "olstjr",
-  "sku": "G28455a86",
-  "offers": [
-   13970,
-   14900,
-   15756
-  ],
-  "price": 15756,
-  "task": "587ac0f4-d088-4865-9b76-ef107c3f498b",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:16:28",
-  "item": "김치",
-  "budget": 26650,
-  "shop": "olstjr",
-  "sku": "G66ded25b",
-  "offers": [
-   9845
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:16:49",
-  "item": "키보드/입력장치",
-  "budget": 37200,
-  "shop": "yms979",
-  "sku": "Gac3a59ab",
-  "offers": [
-   19486,
-   21966,
-   24100
-  ],
-  "price": 24100,
-  "task": "cd0c6fcd-785a-4743-9cf9-f66ae9f810e5",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:17:09",
-  "item": "찌개/탕류/장류",
-  "budget": 27190,
-  "shop": "olstjr",
-  "sku": "G476cc094",
-  "offers": [
-   14190
-  ],
-  "price": 14190,
-  "task": "1ac07e36-26ce-4303-a718-7e4986990638",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:17:29",
-  "item": "김치",
-  "budget": 12870,
-  "shop": "nocha12",
-  "sku": "G37da7a5c",
-  "offers": [
-   5445,
-   6138,
-   6831,
-   7524,
-   7857
-  ],
-  "price": 7857,
-  "task": "635a1796-6f97-40ae-82de-bddbac2eccc9",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:18:19",
-  "item": "김치",
-  "budget": 23840,
-  "shop": "olstjr",
-  "sku": "G66ded25b",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:18:39",
-  "item": "신선과일(부패주의)",
-  "budget": 19430,
-  "shop": "thisjonghoon",
-  "sku": "G74e686be",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:19:00",
-  "item": "소파/의자/스툴",
-  "budget": 64250,
-  "shop": "oak-and-pine",
-  "sku": "Gba79917f",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:19:20",
-  "item": "김치",
-  "budget": 22260,
-  "shop": "olstjr",
-  "sku": "G66ded25b",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:19:42",
-  "item": "김치",
-  "budget": 57260,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:20:01",
-  "item": "소파/의자/스툴",
-  "budget": 1900800,
-  "shop": "inextro",
-  "sku": "G8adbc159",
-  "offers": [
-   1029600,
-   1160640,
-   1291680,
-   1396024
-  ],
-  "price": 1396024,
-  "task": "f824d9df-4dba-4dd4-943c-63411b55e4c8",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:20:43",
-  "item": "김치",
-  "budget": 72190,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:21:03",
-  "item": "김치",
-  "budget": 66580,
-  "shop": "outseop-26510122",
-  "sku": "G200e39a3",
-  "offers": [
-   20845
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:22:25",
-  "item": "소파/의자/스툴",
-  "budget": 4167230,
-  "shop": "inextro",
-  "sku": "G24f5f979",
-  "offers": [
-   2098800,
-   2365920,
-   2633040,
-   2800000,
-   2927174
-  ],
-  "price": 2926259,
-  "task": "ba71e503-b751-4c01-91ce-e6cce34d188d",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:23:33",
-  "item": "찌개/탕류/장류",
-  "budget": 52780,
-  "shop": "olstjr",
-  "sku": "G476cc094",
-  "offers": [
-   14190,
-   14350
-  ],
-  "price": 14350,
-  "task": "c5ec6ffb-387a-4752-9e65-17736172ce18",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:23:53",
-  "item": "침구",
-  "budget": 20860,
-  "shop": "11im",
-  "sku": "G054ff120",
-  "offers": [
-   4345,
-   4898,
-   5451,
-   6004,
-   5920,
-   6100
-  ],
-  "price": 6100,
-  "task": "8913c606-363a-4fc2-8008-d03050cf1938",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:24:36",
-  "item": "찌개/탕류/장류",
-  "budget": 22490,
-  "shop": "Afford Shop",
-  "sku": "G039b6fd2",
-  "offers": [
-   6256
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:24:55",
-  "item": "김치",
-  "budget": 38230,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [
-   20845
-  ],
-  "price": 20845,
-  "task": "5fe2b0a8-d280-48d5-a174-a3b58724c4f5",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:25:16",
-  "item": "소파/의자/스툴",
-  "budget": 2620800,
-  "shop": "inextro",
-  "sku": "G6cd0e9d4",
-  "offers": [
-   1438800,
-   1530000,
-   1636209
-  ],
-  "price": 1636209,
-  "task": "a0f1a9a2-6bec-4b97-a026-110a1e28598f",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:25:51",
-  "item": "김치",
-  "budget": 72370,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [
-   20845,
-   23498,
-   26151,
-   28804,
-   29393,
-   29982
-  ],
-  "price": 29982,
-  "task": "09510534-b6a6-4928-8632-76a6a50c65ba",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:26:54",
-  "item": "찌개/탕류/장류",
-  "budget": 37660,
-  "shop": "shaun0927",
-  "sku": "Gd1f907d6",
-  "offers": [
-   20295,
-   22500,
-   25080
-  ],
-  "price": 25080,
-  "task": "f65255d4-c741-4374-8d55-ef2d1411ee8e",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:27:15",
-  "item": "소파/의자/스툴",
-  "budget": 1867590,
-  "shop": "inextro",
-  "sku": "G9f7c7d1b",
-  "offers": [
-   976800,
-   1101120,
-   1225440,
-   1248245
-  ],
-  "price": 1248245,
-  "task": "84d5ddb4-b61f-4ef8-9ef6-10f8803a9b36",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:27:58",
-  "item": "소파/의자/스툴",
-  "budget": 2152800,
-  "shop": "inextro",
-  "sku": "G0e4deffc",
-  "offers": [
-   1161600,
-   1309440,
-   1420000,
-   1470000,
-   1500000
-  ],
-  "price": 1494519,
-  "task": "4f3a733c-fea9-4c0a-816d-36b95bc5f2e1",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:29:04",
-  "item": "신선과일(부패주의)",
-  "budget": 12490,
-  "shop": "thisjonghoon",
-  "sku": "G74e686be",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:29:27",
-  "item": "신선과일(부패주의)",
-  "budget": 22260,
-  "shop": "bjeon01",
-  "sku": "G022ce883",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:29:46",
-  "item": "김치",
-  "budget": 27810,
-  "shop": "jiseokkk",
-  "sku": "G32bf9a8e",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:30:07",
-  "item": "소파/의자/스툴",
-  "budget": 513070,
-  "shop": "inextro",
-  "sku": "Gaae7863f",
-  "offers": [
-   211750,
-   238700,
-   265650,
-   280000,
-   287000
-  ],
-  "price": 287000,
-  "task": "7c7b738f-78d8-40c8-81ca-eeee309fdc44",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:31:19",
-  "item": "침구",
-  "budget": 37370,
-  "shop": "yms979",
-  "sku": "Ga3fcf3dc",
-  "offers": [
-   20295,
-   22800
-  ],
-  "result": "refused_c",
-  "price": 22800
- },
- {
-  "time": "2026-11-06T14:31:39",
-  "item": "찌개/탕류/장류",
-  "budget": 11380,
-  "shop": "corner-store",
-  "sku": "Gee2fccaf",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:32:00",
-  "item": "조리/가공 견과류",
-  "budget": 38980,
-  "shop": "olstjr",
-  "sku": "G010744b7",
-  "offers": [
-   16995
-  ],
-  "price": 16995,
-  "task": "b63adeb3-8f02-4149-bc46-05eae2b2d022",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:32:20",
-  "item": "침구",
-  "budget": 468380,
-  "shop": "inextro",
-  "sku": "Gea0cca52",
-  "offers": [
-   176000,
-   190000,
-   206583
-  ],
-  "price": 206583,
-  "task": "1e1bac02-2685-405b-8ecc-3114537e0290",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:32:52",
-  "item": "소파/의자/스툴",
-  "budget": 2152800,
-  "shop": "inextro",
-  "sku": "G0e4deffc",
-  "offers": [
-   863951
-  ],
-  "result": "refused_c",
-  "price": 863951
- },
- {
-  "time": "2026-11-06T14:33:14",
-  "item": "소파/의자/스툴",
-  "budget": 2973600,
-  "shop": "inextro",
-  "sku": "G6cd0e9d4",
-  "offers": [
-   1438800,
-   1621920,
-   1690000,
-   1749412
-  ],
-  "price": 1749412,
-  "task": "91f1f9d2-3ea6-4993-a970-0278f3e35830",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:35:10",
-  "item": "김치",
-  "budget": 23660,
-  "shop": "11im",
-  "sku": "Gac0c1622",
-  "offers": [
-   10989,
-   12387,
-   13717
-  ],
-  "price": 13717,
-  "task": "e1263c2f-11de-420e-ac49-d96fa5a1c861",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:35:26",
-  "item": "김치",
-  "budget": 30760,
-  "shop": "11im",
-  "sku": "G32bf9a8e",
-  "offers": [
-   14058,
-   15847,
-   17636,
-   19425,
-   20000,
-   20200,
-   20300,
-   20448
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:36:19",
-  "item": "김치",
-  "budget": 82370,
-  "shop": "Kiro729",
-  "sku": "G200e39a3",
-  "offers": [
-   20845,
-   23498,
-   26151,
-   28804
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:36:40",
-  "item": "김치",
-  "budget": 44730,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [
-   20845,
-   23498,
-   26151,
-   28804,
-   29562,
-   30000,
-   30320
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:37:41",
-  "item": "김치",
-  "budget": 30690,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [
-   20845
-  ],
-  "price": 20845,
-  "task": "66c17012-ec13-41c5-98f8-99ec6638ee00",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:38:04",
-  "item": "우유/두유",
-  "budget": 48180,
-  "shop": "bjeon01",
-  "sku": "G582603b2",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:38:24",
-  "item": "소파/의자/스툴",
-  "budget": 948750,
-  "shop": "inextro",
-  "sku": "G429bd69e",
-  "offers": [
-   510400,
-   575360,
-   638771
-  ],
-  "price": 638771,
-  "task": "4036c2b1-cb57-4f0f-ba0e-4c3f9e0a9440",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:38:57",
-  "item": "소파/의자/스툴",
-  "budget": 3434400,
-  "shop": "inextro",
-  "sku": "G47788edd",
-  "offers": [
-   1878800,
-   2117920,
-   2333939
-  ],
-  "price": 2333939,
-  "task": "19c44d35-9766-4d2f-887f-1bb6168b8ba2",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:39:30",
-  "item": "김치",
-  "budget": 21510,
-  "shop": "Kiro729",
-  "sku": "G66ded25b",
-  "offers": [
-   9845,
-   11098,
-   12351,
-   12700
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:39:54",
-  "item": "김치",
-  "budget": 66580,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [
-   20845
-  ],
-  "price": 20845,
-  "task": "1e218d4e-afcf-4219-adfa-56f2b06744cf",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:40:14",
-  "item": "소파/의자/스툴",
-  "budget": 1035990,
-  "shop": "inextro",
-  "sku": "G429bd69e",
-  "offers": [
-   510400,
-   575360,
-   640320,
-   656000,
-   656000
-  ],
-  "price": 656000,
-  "task": "a2bad518-db20-4bbd-9b58-e6de9211e155",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:41:25",
-  "item": "김치",
-  "budget": 14310,
-  "shop": "nocha12",
-  "sku": "G37da7a5c",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:41:48",
-  "item": "우유/두유",
-  "budget": 41350,
-  "shop": "bjeon01",
-  "sku": "G582603b2",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:42:06",
-  "item": "신선육류",
-  "budget": 75460,
-  "shop": "thisjonghoon",
-  "sku": "G479dbcd6",
-  "offers": [
-   18535
-  ],
-  "price": 18535,
-  "task": "24d869d9-3b5c-4654-93bb-5ec296b706c3",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:42:27",
-  "item": "잠옷/슬립/내복/홈웨어",
-  "budget": 29290,
-  "shop": "yms979",
-  "sku": "G35b68cee",
-  "offers": [
-   15345,
-   17298,
-   19251,
-   20375
-  ],
-  "price": 20375,
-  "task": "5e4075a4-31b1-46d2-865a-13a2ac61c9cd",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:42:55",
-  "item": "우유/두유",
-  "budget": 38980,
-  "shop": "thisjonghoon",
-  "sku": "Gb2ce25c0",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:43:15",
-  "item": "우유/두유",
-  "budget": 23770,
-  "shop": "thisjonghoon",
-  "sku": "Gb2ce25c0",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:43:35",
-  "item": "김치",
-  "budget": 30510,
-  "shop": "olstjr",
-  "sku": "G200e39a3",
-  "offers": [
-   20845,
-   23498
-  ],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:43:58",
-  "item": "찌개/탕류/장류",
-  "budget": 27860,
-  "shop": "olstjr",
-  "sku": "G476cc094",
-  "offers": [
-   14190
-  ],
-  "price": 14190,
-  "task": "e3ac6ed3-5d8e-43bb-9e05-2cff65bdc14c",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:44:19",
-  "item": "김치",
-  "budget": 29320,
-  "shop": "jiseokkk",
-  "sku": "G32bf9a8e",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:44:40",
-  "item": "소파/의자/스툴",
-  "budget": 3586800,
-  "shop": "inextro",
-  "sku": "G47788edd",
-  "offers": [
-   1878800,
-   2117920,
-   2356468
-  ],
-  "price": 2356468,
-  "task": "cb214133-65a8-47ed-b727-30bc12733919",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:45:15",
-  "item": "소파/의자/스툴",
-  "budget": 4770000,
-  "shop": "inextro",
-  "sku": "G24f5f979",
-  "offers": [
-   2098800,
-   2365920,
-   2633040,
-   2662528
-  ],
-  "price": 2662528,
-  "task": "acabc30c-9e08-4d89-8371-f678172d58bc",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:46:13",
-  "item": "소파/의자/스툴",
-  "budget": 2900000,
-  "shop": "inextro",
-  "sku": "G6cd0e9d4",
-  "offers": [
-   1438800,
-   1621920,
-   1805040,
-   1988160
-  ],
-  "price": 1988160,
-  "task": "4cd8ea8f-63f7-4f23-b44d-f74708f40e8f",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:46:59",
-  "item": "우유/두유",
-  "budget": 62850,
-  "shop": "bjeon01",
-  "sku": "G582603b2",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:47:20",
-  "item": "김치",
-  "budget": 27480,
-  "shop": "jiseokkk",
-  "sku": "G32bf9a8e",
-  "offers": [],
-  "result": "walk"
- },
- {
-  "time": "2026-11-06T14:47:42",
-  "item": "우유/두유",
-  "budget": 45620,
-  "shop": "jiseokkk",
-  "sku": "G582603b2",
-  "offers": [
-   15895,
-   17918
-  ],
-  "price": 17918,
-  "task": "e76362e9-1f29-4dd1-a469-10c24ef66211",
-  "result": "deal"
- },
- {
-  "time": "2026-11-06T14:48:02",
-  "item": "소파/의자/스툴",
-  "budget": 948750,
-  "shop": "inextro",
-  "sku": "G429bd69e",
-  "offers": [
-   510400,
-   575360,
-   590000,
-   601060
-  ],
-  "price": 601060,
-  "task": "0527f6ef-6be3-4fa1-9870-e2b8fd93bc80",
-  "result": "deal"
- },
- {
   "time": "2026-11-06T14:48:51",
   "item": "김치",
   "budget": 15190,
@@ -4125,5 +3027,1102 @@
   ],
   "result": "refused_c",
   "price": 1029600
+ },
+ {
+  "time": "2026-11-06T16:48:36",
+  "item": "우유/두유",
+  "budget": 22220,
+  "shop": "jiseokkk",
+  "sku": "G582603b2",
+  "offers": [
+   15895,
+   17500
+  ],
+  "price": 17500,
+  "task": "f44d4819-7c2a-4f66-b0f3-84647a6165e8",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:48:56",
+  "item": "소파/의자/스툴",
+  "budget": 3270000,
+  "shop": "totato2203-r3",
+  "sku": "G00327e80",
+  "result": "error",
+  "error": "{'code': -32603, 'message': 'Invalid profit policy: inventory_equity_fraction'}"
+ },
+ {
+  "time": "2026-11-06T16:49:16",
+  "item": "김치",
+  "budget": 52110,
+  "shop": "11im",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   22000,
+   22815
+  ],
+  "price": 22815,
+  "task": "6f5e45b2-c0b6-485f-92e5-a8cf06f86c42",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:49:36",
+  "item": "초콜릿/캔디/젤리",
+  "budget": 24970,
+  "shop": "totato2203-r3",
+  "sku": "Gfbb10ae2",
+  "result": "error",
+  "error": "{'code': -32603, 'message': 'Invalid profit policy: inventory_equity_fraction'}"
+ },
+ {
+  "time": "2026-11-06T16:49:57",
+  "item": "김치",
+  "budget": 72370,
+  "shop": "11im",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   23498,
+   26151,
+   26800,
+   27542
+  ],
+  "price": 27542,
+  "task": "40916c3d-b640-4430-a6b8-e34a5382808f",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:50:21",
+  "item": "김치",
+  "budget": 66370,
+  "shop": "11im",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   23498,
+   26151,
+   28804,
+   30320
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T16:50:45",
+  "item": "소파/의자/스툴",
+  "budget": 302400,
+  "shop": "yms979",
+  "sku": "G2cb8041b",
+  "offers": [
+   162800,
+   180000
+  ],
+  "price": 180000,
+  "task": "b1e2b60b-58e0-4bff-a908-9c9441870df1",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:51:06",
+  "item": "소파/의자/스툴",
+  "budget": 3145520,
+  "shop": "yms979",
+  "sku": "G4a12722c",
+  "offers": [
+   1683308,
+   1897547
+  ],
+  "price": 1897547,
+  "task": "97937889-a753-4d4e-9ba0-2da6131f2184",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:52:09",
+  "item": "김치",
+  "budget": 15210,
+  "shop": "11im",
+  "sku": "G66ded25b",
+  "offers": [
+   9845,
+   10400,
+   10440
+  ],
+  "price": 10440,
+  "task": "08b98b29-b70c-45e6-90cb-f23534b71099",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:52:25",
+  "item": "김치",
+  "budget": 20970,
+  "shop": "totato2203-r3",
+  "sku": "Gac0c1622",
+  "result": "error",
+  "error": "{'code': -32603, 'message': 'Invalid profit policy: inventory_equity_fraction'}"
+ },
+ {
+  "time": "2026-11-06T16:52:46",
+  "item": "김치",
+  "budget": 22260,
+  "shop": "11im",
+  "sku": "Gac0c1622",
+  "offers": [
+   10989,
+   12387,
+   13785,
+   15183,
+   15561,
+   15939
+  ],
+  "price": 15939,
+  "task": "362d1906-1475-445b-b5d4-39e836b90a6d",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:53:19",
+  "item": "김치",
+  "budget": 81060,
+  "shop": "11im",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   23498,
+   26000,
+   28600,
+   30320
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T16:53:45",
+  "item": "우유/두유",
+  "budget": 36260,
+  "shop": "Afford Shop",
+  "sku": "G0011e806",
+  "offers": [
+   6522
+  ],
+  "price": 6522,
+  "task": "ca1cb7a5-3820-4036-a113-85d6e2c3e53c",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:54:07",
+  "item": "김치",
+  "budget": 14860,
+  "shop": "totato2203-r3",
+  "sku": "Gac0c1622",
+  "result": "error",
+  "error": "{'code': -32603, 'message': 'Invalid profit policy: inventory_equity_fraction'}"
+ },
+ {
+  "time": "2026-11-06T16:54:27",
+  "item": "소파/의자/스툴",
+  "budget": 2612110,
+  "shop": "inextro",
+  "sku": "G8ec51935",
+  "offers": [
+   1276000,
+   1438400
+  ],
+  "price": 1438400,
+  "task": "888da467-d1e4-4251-90ff-db8e39d92ce7",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:54:57",
+  "item": "소파/의자/스툴",
+  "budget": 3423080,
+  "shop": "inextro",
+  "sku": "G47788edd",
+  "offers": [
+   1878800,
+   2117920,
+   2204000,
+   2241000,
+   2241000
+  ],
+  "price": 2241000,
+  "task": "2cee5bed-96b8-45fb-b2c7-22e51ace2dd6",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:56:04",
+  "item": "김치",
+  "budget": 72450,
+  "shop": "11im",
+  "sku": "G200e39a3",
+  "result": "error",
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "time": "2026-11-06T16:56:24",
+  "item": "김치",
+  "budget": 13520,
+  "shop": "11im",
+  "sku": "G66ded25b",
+  "result": "error",
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "time": "2026-11-06T16:56:45",
+  "item": "소파/의자/스툴",
+  "budget": 503160,
+  "shop": "yms979",
+  "sku": "Gcc06fe5c",
+  "offers": [
+   263560,
+   297104,
+   325000,
+   352258
+  ],
+  "price": 352258,
+  "task": "31499e81-f14c-4442-9efc-6759078671bb",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:57:04",
+  "item": "조리/가공 견과류",
+  "budget": 22370,
+  "shop": "olstjr",
+  "sku": "G7ced7d9f",
+  "offers": [
+   11495
+  ],
+  "price": 11495,
+  "task": "0e04fc79-5a7b-41ea-b42d-9abdcdf4d6d2",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:57:25",
+  "item": "즉석조리식품",
+  "budget": 34110,
+  "shop": "bjeon01",
+  "sku": "G67efbcf0",
+  "offers": [
+   11000,
+   12000,
+   12900
+  ],
+  "price": 12900,
+  "task": "3c5b0c24-fd22-4d66-8ea4-6bf0ce521d8c",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:57:51",
+  "item": "김치",
+  "budget": 32440,
+  "shop": "jiseokkk",
+  "sku": "G32bf9a8e",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T16:58:11",
+  "item": "소파/의자/스툴",
+  "budget": 1067200,
+  "shop": "inextro",
+  "sku": "G429bd69e",
+  "offers": [
+   510400,
+   575360,
+   591000,
+   599270
+  ],
+  "price": 599270,
+  "task": "caea3243-0320-4ba6-907a-b407137c9150",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T16:58:54",
+  "item": "김치",
+  "budget": 88090,
+  "shop": "outseop-26510122",
+  "sku": "G16dcdc73",
+  "offers": [
+   42240,
+   47616,
+   48800,
+   48820
+  ],
+  "price": 48820,
+  "task": "0954fa71-440d-46ed-b1e0-c51f7ae168e5",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:01:43",
+  "item": "김치",
+  "budget": 81060,
+  "shop": "outseop-26510122",
+  "sku": "G16dcdc73",
+  "offers": [
+   42240,
+   47616,
+   49955
+  ],
+  "price": 49955,
+  "task": "e225e32d-d644-491d-a9b3-7eadf59b2a4d",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:03:34",
+  "item": "소파/의자/스툴",
+  "budget": 835200,
+  "shop": "yms979",
+  "sku": "G10693924",
+  "offers": [
+   388850,
+   438340,
+   446000
+  ],
+  "price": 446000,
+  "task": "aeef0e97-b393-45ca-a544-49bc9aa5ccf4",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:03:55",
+  "item": "찌개/탕류/장류",
+  "budget": 17910,
+  "shop": "jiseokkk",
+  "sku": "G476cc094",
+  "offers": [
+   14190,
+   15500
+  ],
+  "price": 15500,
+  "task": "43b07ab1-fbb3-4934-8523-4c81c1fb6eac",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:04:14",
+  "item": "김치",
+  "budget": 75460,
+  "shop": "olstjr",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   23498
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:04:35",
+  "item": "김치",
+  "budget": 18120,
+  "shop": "totato2203-r3",
+  "sku": "Gac0c1622",
+  "result": "error",
+  "error": "{'code': -32603, 'message': 'Invalid profit policy: inventory_equity_fraction'}"
+ },
+ {
+  "time": "2026-11-06T17:04:57",
+  "item": "김치",
+  "budget": 72370,
+  "shop": "olstjr",
+  "sku": "G200e39a3",
+  "offers": [
+   20845
+  ],
+  "price": 20845,
+  "task": "8ff59767-bb70-47bf-9f58-4478e3156636",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:05:16",
+  "item": "김치",
+  "budget": 10930,
+  "shop": "bjeon01",
+  "sku": "G66ded25b",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:05:36",
+  "item": "찌개/탕류/장류",
+  "budget": 26140,
+  "shop": "Afford Shop",
+  "sku": "G039b6fd2",
+  "offers": [
+   9817,
+   10570
+  ],
+  "price": 10570,
+  "task": "bd580934-c32e-499f-9c8a-4f0cd2522dd0",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:06:05",
+  "item": "찌개/탕류/장류",
+  "budget": 16870,
+  "shop": "corner-store",
+  "sku": "Gee2fccaf",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:06:25",
+  "item": "소파/의자/스툴",
+  "budget": 3270000,
+  "shop": "yms979",
+  "sku": "G4a12722c",
+  "offers": [
+   1683308,
+   1897547
+  ],
+  "result": "refused_c",
+  "price": 1897547
+ },
+ {
+  "time": "2026-11-06T17:06:46",
+  "item": "김치",
+  "budget": 33920,
+  "shop": "totato2203-r3",
+  "sku": "Gac0c1622",
+  "result": "error",
+  "error": "{'code': -32603, 'message': 'Invalid profit policy: inventory_equity_fraction'}"
+ },
+ {
+  "time": "2026-11-06T17:07:07",
+  "item": "곡물",
+  "budget": 90450,
+  "shop": "olstjr",
+  "sku": "Gf0e58a76",
+  "offers": [
+   40645
+  ],
+  "price": 40645,
+  "task": "31cfc2a1-2222-4f44-a710-487b254dec72",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:07:26",
+  "item": "우유/두유",
+  "budget": 40410,
+  "shop": "Afford Shop",
+  "sku": "G0011e806",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:07:46",
+  "item": "스캐너/프린터/PC소품",
+  "budget": 1043100,
+  "shop": "yms979",
+  "sku": "G9c9f8f94",
+  "offers": [
+   329450,
+   371380,
+   385000
+  ],
+  "price": 385000,
+  "task": "2b390541-8c7d-4189-8827-1b120bd69b49",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:08:07",
+  "item": "우유/두유",
+  "budget": 49330,
+  "shop": "Afford Shop",
+  "sku": "G0011e806",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:08:30",
+  "item": "조리/가공 견과류",
+  "budget": 40460,
+  "shop": "Afford Shop",
+  "sku": "G010744b7",
+  "offers": [
+   14520
+  ],
+  "price": 14520,
+  "task": "a2469a06-86a5-43ef-91bc-8725c516cfc1",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:08:49",
+  "item": "찌개/탕류/장류",
+  "budget": 20890,
+  "shop": "Afford Shop",
+  "sku": "G039b6fd2",
+  "offers": [
+   9817,
+   11066,
+   12315,
+   12818
+  ],
+  "price": 12818,
+  "task": "28ebaff6-762f-470b-a19b-1a09314ac53c",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:09:31",
+  "item": "찌개/탕류/장류",
+  "budget": 54600,
+  "shop": "shaun0927",
+  "sku": "Gd1f907d6",
+  "offers": [
+   20295,
+   22300
+  ],
+  "price": 22300,
+  "task": "d256e922-52b3-4e8c-a2fc-1af26de0caf6",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:09:54",
+  "item": "소파/의자/스툴",
+  "budget": 2220000,
+  "shop": "inextro",
+  "sku": "G7a341425",
+  "offers": [
+   1205600,
+   1359040,
+   1512480,
+   1545000
+  ],
+  "price": 1545000,
+  "task": "98a0e92a-8fd6-4440-9d41-ca783a00d437",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:10:34",
+  "item": "우유/두유",
+  "budget": 56340,
+  "shop": "jiseokkk",
+  "sku": "G582603b2",
+  "offers": [
+   15895,
+   17918
+  ],
+  "price": 17918,
+  "task": "4fc9ad16-f969-4796-b46c-ed7b6c8bd238",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:10:55",
+  "item": "우유/두유",
+  "budget": 43700,
+  "shop": "Afford Shop",
+  "sku": "G0011e806",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:11:15",
+  "item": "김치",
+  "budget": 79700,
+  "shop": "outseop-26510122",
+  "sku": "G16dcdc73",
+  "result": "error",
+  "error": "The read operation timed out"
+ },
+ {
+  "time": "2026-11-06T17:11:36",
+  "item": "소파/의자/스툴",
+  "budget": 3423080,
+  "shop": "yms979",
+  "sku": "G47788edd",
+  "offers": [
+   1878800,
+   2117920,
+   2220000
+  ],
+  "price": 2220000,
+  "task": "51ad6229-8979-40d4-a0c5-6205c721733e",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:11:57",
+  "item": "김치",
+  "budget": 12060,
+  "shop": "11im",
+  "sku": "G66ded25b",
+  "offers": [
+   9845,
+   11098,
+   11600,
+   11900,
+   12060
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:12:24",
+  "item": "김치",
+  "budget": 48180,
+  "shop": "olstjr",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   23498
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:12:43",
+  "item": "우유/두유",
+  "budget": 27190,
+  "shop": "Afford Shop",
+  "sku": "G0011e806",
+  "offers": [
+   6522
+  ],
+  "price": 6522,
+  "task": "a7ab6a53-2fef-46ca-bf58-f543578a1ac7",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:13:04",
+  "item": "김치",
+  "budget": 16160,
+  "shop": "jiseokkk",
+  "sku": "G32bf9a8e",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:13:24",
+  "item": "침구",
+  "budget": 63940,
+  "shop": "jiseokkk",
+  "sku": "Ge62449c9",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:13:46",
+  "item": "신선과일(부패주의)",
+  "budget": 26010,
+  "shop": "yms979",
+  "sku": "Gef4d3036",
+  "offers": [
+   15895,
+   17918
+  ],
+  "price": 17918,
+  "task": "6d45002e-c218-468e-93ed-0e01950060fc",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:14:05",
+  "item": "침구",
+  "budget": 129870,
+  "shop": "yms979",
+  "sku": "G75f11c19",
+  "offers": [
+   67595,
+   76198,
+   81000,
+   85918
+  ],
+  "price": 85918,
+  "task": "c8bdd954-2414-4b97-905c-ef9c047462fa",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:14:26",
+  "item": "소파/의자/스툴",
+  "budget": 3213580,
+  "shop": "inextro",
+  "sku": "G4a12722c",
+  "offers": [
+   1683308,
+   1873308,
+   2041010
+  ],
+  "price": 2041010,
+  "task": "53796094-b2b3-4b34-a0d8-0629097fc3d1",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:14:55",
+  "item": "소파/의자/스툴",
+  "budget": 1965600,
+  "shop": "inextro",
+  "sku": "G8adbc159",
+  "offers": [
+   1029600,
+   1160640,
+   1209436
+  ],
+  "price": 1209436,
+  "task": "dfcaec9b-6aed-4f14-a7f3-da45fec78e69",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:15:26",
+  "item": "침구",
+  "budget": 30930,
+  "shop": "kimauve",
+  "sku": "G0be9ed07",
+  "offers": [
+   21945,
+   24738,
+   26300
+  ],
+  "result": "refused_c",
+  "price": 26300
+ },
+ {
+  "time": "2026-11-06T17:15:46",
+  "item": "침대/매트리스",
+  "budget": 354560,
+  "shop": "inextro",
+  "sku": "G30604071",
+  "offers": [
+   189552,
+   213676,
+   230000,
+   238000,
+   244708
+  ],
+  "price": 244484,
+  "task": "6e626cee-d1b3-4d9b-9732-355b171c3db9",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:16:47",
+  "item": "욕실용품",
+  "budget": 98680,
+  "shop": "yms979",
+  "sku": "G4a8b7aed",
+  "offers": [
+   60307,
+   67982,
+   74600
+  ],
+  "price": 74600,
+  "task": "a9d3bf30-6fe9-4c77-baf2-cc2c11a4d913",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:17:10",
+  "item": "김치",
+  "budget": 60790,
+  "shop": "olstjr",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   23498,
+   26151,
+   28804,
+   30320
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:17:37",
+  "item": "우유/두유",
+  "budget": 19110,
+  "shop": "Afford Shop",
+  "sku": "G0011e806",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:17:57",
+  "item": "김치",
+  "budget": 17100,
+  "shop": "11im",
+  "sku": "G66ded25b",
+  "offers": [
+   9845,
+   11098,
+   12351,
+   12900,
+   13000,
+   13251
+  ],
+  "price": 13251,
+  "task": "e2b2632b-3bdd-4532-b18b-3259c34df9b8",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:18:27",
+  "item": "소파/의자/스툴",
+  "budget": 455000,
+  "shop": "inextro",
+  "sku": "Gaae7863f",
+  "offers": [
+   211750,
+   220000,
+   222000
+  ],
+  "result": "refused_c",
+  "price": 222000
+ },
+ {
+  "time": "2026-11-06T17:19:00",
+  "item": "찌개/탕류/장류",
+  "budget": 40130,
+  "shop": "cheapest-in-town",
+  "sku": "Gd1f907d6",
+  "offers": [
+   20295,
+   22878,
+   25461,
+   28044
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:19:20",
+  "item": "김치",
+  "budget": 46870,
+  "shop": "olstjr",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   22777
+  ],
+  "price": 22777,
+  "task": "b305c238-ab69-4109-b584-c186a6b6b06e",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:19:40",
+  "item": "김치",
+  "budget": 65660,
+  "shop": "olstjr",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   23498
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:20:03",
+  "item": "김치",
+  "budget": 59260,
+  "shop": "olstjr",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   23498,
+   26000,
+   28500,
+   29800,
+   30200,
+   30320
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:20:43",
+  "item": "소파/의자/스툴",
+  "budget": 384800,
+  "shop": "inextro",
+  "sku": "G0c3a9365",
+  "offers": [
+   201564,
+   221564,
+   228000,
+   232316
+  ],
+  "price": 232316,
+  "task": "b49cf570-d74b-4b75-b307-e46940137b54",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:21:20",
+  "item": "우유/두유",
+  "budget": 26320,
+  "shop": "Afford Shop",
+  "sku": "G0011e806",
+  "result": "error",
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "time": "2026-11-06T17:21:44",
+  "item": "커피/차",
+  "budget": 12600,
+  "shop": "winun1127",
+  "sku": "G00c60e91",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:22:03",
+  "item": "우유/두유",
+  "budget": 26010,
+  "shop": "Afford Shop",
+  "sku": "G0011e806",
+  "result": "error",
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "time": "2026-11-06T17:22:24",
+  "item": "소파/의자/스툴",
+  "budget": 2088000,
+  "shop": "inextro",
+  "sku": "G8adbc159",
+  "offers": [
+   1029600,
+   1160640,
+   1254022
+  ],
+  "price": 1254022,
+  "task": "1b2fbd03-8798-4600-a21f-84f68ebbcfc0",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:22:55",
+  "item": "침구",
+  "budget": 14590,
+  "shop": "25620027",
+  "sku": "G054ff120",
+  "offers": [
+   4345
+  ],
+  "price": 4345,
+  "task": "f3172d73-5f93-4678-9c0f-41bed6edf85b",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:23:15",
+  "item": "소파/의자/스툴",
+  "budget": 3074400,
+  "shop": "inextro",
+  "sku": "G4a12722c",
+  "offers": [
+   1683308,
+   1897547,
+   1970796,
+   2022248
+  ],
+  "price": 2022248,
+  "task": "621f743b-0d32-4cc8-9c4a-2d1d40a4e961",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:23:52",
+  "item": "김치",
+  "budget": 19200,
+  "shop": "11im",
+  "sku": "G66ded25b",
+  "offers": [
+   9845,
+   10500,
+   10765
+  ],
+  "price": 10765,
+  "task": "27f3a086-ed55-46c4-ad1a-b51d8611756b",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:24:13",
+  "item": "우유/두유",
+  "budget": 72660,
+  "shop": "kimauve",
+  "sku": "G582603b2",
+  "offers": [
+   15895,
+   17918,
+   19941,
+   21160
+  ],
+  "price": 21160,
+  "task": "cf1c0ae2-25aa-402d-b9ae-8e01167a6da4",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:24:33",
+  "item": "김치",
+  "budget": 21120,
+  "shop": "11im",
+  "sku": "Gac0c1622",
+  "offers": [
+   10989,
+   11846
+  ],
+  "price": 11846,
+  "task": "e068a836-f53c-47b5-82ff-50182266de41",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:24:53",
+  "item": "음향/영상액세서리",
+  "budget": 383250,
+  "shop": "25620027",
+  "sku": "G831b99a0",
+  "offers": [
+   210650,
+   237460,
+   255000,
+   260000,
+   264273
+  ],
+  "price": 264273,
+  "task": "14bbf553-d665-46e2-a492-b011469b5a5b",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:25:17",
+  "item": "김치",
+  "budget": 20890,
+  "shop": "11im",
+  "sku": "Gac0c1622",
+  "offers": [
+   10989,
+   11700,
+   12976
+  ],
+  "price": 12976,
+  "task": "756ea343-e777-4739-afa5-48d701faf0b4",
+  "result": "deal"
+ },
+ {
+  "time": "2026-11-06T17:25:37",
+  "item": "즉석조리식품",
+  "budget": 57640,
+  "shop": "sergiobuilds",
+  "sku": "G9df06998",
+  "offers": [],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:25:57",
+  "item": "김치",
+  "budget": 21510,
+  "shop": "seochanit",
+  "sku": "G66ded25b",
+  "offers": [
+   9845,
+   11098,
+   12351,
+   13604,
+   14000
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:26:20",
+  "item": "김치",
+  "budget": 47960,
+  "shop": "olstjr",
+  "sku": "G200e39a3",
+  "offers": [
+   20845,
+   23498,
+   26151,
+   28804,
+   29600,
+   30000,
+   30320
+  ],
+  "result": "walk"
+ },
+ {
+  "time": "2026-11-06T17:27:01",
+  "item": "김치",
+  "budget": 19150,
+  "shop": "Kiro729",
+  "sku": "G66ded25b",
+  "offers": [
+   9845
+  ],
+  "result": "walk"
  }
 ]
