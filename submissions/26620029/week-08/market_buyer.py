@@ -18,6 +18,8 @@ Round 3 (week-08, ddolcom): with --order the buyer reads order.json. Only shops 
 acceptable SKUs (shops.json "offers") are scored; the buyer asks for one SKU by name, preferring the highest list
 price within the budget (a deal is worth the SKU's list price to the user), checks the receipt names an acceptable
 SKU, and adds an "accept" policy so the kit pays only with the market's certificate and, for food, enough hours left.
+Since 2026-11-06 the code also sets the first offer, the top price and the step, weighs shops by what the market paid
+them (shop_prices.json), and does not pay for grade C goods without a warranty.
 """
 import argparse
 import json
@@ -35,6 +37,15 @@ import httpx
 from harness import HarnessError, ask_json
 
 MAX_OFFERS = 8
+# ddolcom (2026-11-06): saved = discount off list price, and over the last 12 h mine was 0.223, 35th of 41 buyers. The
+# first offer was 75% of list and a deal took 2 offers. Most shops lower their ask with every offer, so open low and climb
+# slowly. The harness still decides each move; the code holds the opening, the top price and the size of a step
+OPEN_SHARE = 0.55                             # first offer as a share of list price, sent by the code
+LIMIT_SHARE = 0.80                            # never pay more than this share of list price
+STEP_SHARE = 0.07                             # one offer rises at most this share of list price
+PRICE_WEIGHT = 10.0                           # shop score per unit of paid/list: 0.03 cheaper is worth 0.3 stars
+PRICE_MIN_DEALS = 10                          # market deals of a shop before its prices count
+SHOP_PRICES = Path("shop_prices.json")        # paid/list per shop and kind, from the ledger (restock.py writes it)
 MEMORY_FILE = Path("buyer_memory.json")       # the kit runs us inside the week-07 directory
 MEMORY_KEEP = 300                             # keep the newest N trades
 PRIOR, PRIOR_WEIGHT, DECAY = 3.0, 2.0, 0.85   # review score: shrink toward 3 stars, newest weighs most
@@ -43,7 +54,7 @@ RED_FLAG = re.compile(r"receipt (said|says|was)|overcharg|higher than|more than 
 
 PROMPT = """You are a buying agent. Your user wants one {item}.{worth} The budget is {budget}.
 Never offer or agree to more than {budget}. Pay as little as you can, but shops may end the negotiation after a few low offers,
-so move toward the shop's price in real steps rather than by one or two. Walking away is fine when the shop will not come down to the budget.
+so move toward the shop's price in real steps rather than by one or two. Walking away is fine when the shop will not come down to the budget.{coach}
 
 Shop: {card}
 What other buyers and your own past trades say about this shop: {reputation}
@@ -108,14 +119,37 @@ def memory_score(mem, name, item):
     return adj, note
 
 
-def choose(shops, mem, item):
+def load_prices():
+    try:
+        data = json.loads(SHOP_PRICES.read_text(encoding="utf-8"))
+        return data if isinstance(data, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def price_adjust(shops, prices, kind):
+    """Shop name -> score adjustment: above zero when the market pays this shop less of list than the other candidates."""
+    ratios = {}
+    for s in shops:
+        r = ((prices.get(s.get("name")) or {}).get(kind) or [None, 0])
+        if r[0] is not None and r[1] >= PRICE_MIN_DEALS:
+            ratios[s.get("name")] = r[0]
+    if not ratios:
+        return {}
+    mean = sum(ratios.values()) / len(ratios)
+    return {name: PRICE_WEIGHT * (mean - r) for name, r in ratios.items()}
+
+
+def choose(shops, mem, item, prices=None, kind=None):
     scored = []
+    adjust = price_adjust(shops, prices or {}, kind)
     for s in shops:
         rev, flags = review_score(s.get("reviews"))
         madj, mnote = memory_score(mem, s.get("name"), item)
-        score = rev - 0.7 * min(flags, 3) + madj + random.uniform(0, 0.05)   # tiny jitter: explore ties
+        padj = adjust.get(s.get("name"), 0.0)
+        score = rev - 0.7 * min(flags, 3) + madj + padj + random.uniform(0, 0.05)   # tiny jitter: explore ties
         n = len(s.get("reviews") or [])
-        scored.append((score, s, f"score {score:.2f} = reviews {rev:.2f} ({n}), red flags {flags}, {mnote}"))
+        scored.append((score, s, f"score {score:.2f} = reviews {rev:.2f} ({n}), red flags {flags}, {mnote}, price {padj:+.2f}"))
     scored.sort(key=lambda x: x[0], reverse=True)
     for score, s, why in scored:
         print(f"[score] {s.get('name')}: {why}", flush=True)
@@ -179,9 +213,30 @@ def whole(x):
     return int(x) if isinstance(x, float) and x.is_integer() else x
 
 
-def negotiate(base_url, item, budget, rep, opening=None, worth=""):
+def price_plan(budget, list_price):
+    """(top price, first offer, largest rise per offer). Without a list price only the budget binds."""
+    if not list_price:
+        return budget, None, None
+    limit = min(budget, int(LIMIT_SHARE * list_price))
+    return limit, min(int(OPEN_SHARE * list_price), limit), max(1, int(STEP_SHARE * list_price))
+
+
+def asked_below(said, anchor, list_price):
+    """The first offer, lowered when the shop's own reply already names a smaller price than our anchor."""
+    nums = [int(x.replace(",", "")) for x in re.findall(r"(?<![A-Za-z\d])\d[\d,]*", said)]
+    nums = [n for n in nums if 0.2 * list_price <= n < anchor]
+    return min(nums) if nums else anchor
+
+
+def negotiate(base_url, item, budget, rep, opening=None, worth="", list_price=None):
     """Returns (task, receipt or None, last offer we sent, number of offers, log of offers).
-    Round 3 passes the opening line (name and SKU) and what the SKU is worth to the user."""
+    Round 3 passes the opening line (name and SKU), what the SKU is worth to the user and its list price."""
+    limit, anchor, step = price_plan(budget, list_price)
+    coach = ""
+    if anchor is not None:
+        coach = ("\nThe user is scored on the discount off the list price. Most shops lower their price after each offer, "
+                 "so several small rises get a lower price than one big one: do not jump to the shop's price while it is "
+                 f"more than {step} above your last offer. Walk away when the shop will not come down to {limit}.")
     card = httpx.get(base_url.rstrip("/") + "/.well-known/agent-card.json", timeout=15).json()
     ifaces = card.get("supportedInterfaces") or [{}]
     url = ifaces[0].get("url") or base_url
@@ -204,22 +259,29 @@ def negotiate(base_url, item, budget, rep, opening=None, worth=""):
     for _ in range(MAX_OFFERS):
         if t["status"]["state"] != "TASK_STATE_INPUT_REQUIRED":
             break
-        move, raw = ask_json(PROMPT.format(item=item, worth=worth, budget=budget, card=card.get("description", ""),
-                                           reputation=rep, transcript="\n".join(lines)))
-        print(f"[harness] {raw}", flush=True)
-        if not move or move.get("action") != "offer" or not isinstance(move.get("price"), (int, float)):
-            rpc("CancelTask", {"id": t["id"]})
-            print("walked away (CancelTask)", flush=True)
-            return t, None, last_offer, offers
-        offer = int(move["price"])
-        if offer > budget:                       # the harness may forget the budget; the code does not
-            print(f"[guard] offer {offer} above budget {budget} -> {budget}", flush=True)
-            offer = budget
-        if offer == budget:
-            at_budget += 1
-            if at_budget > 2:                    # the shop refused our budget twice already
+        if anchor is not None and not offers:    # the first offer needs no model
+            offer = asked_below(said, anchor, list_price)
+            print(f"[anchor] first offer {offer} (list {list_price}, limit {limit})", flush=True)
+        else:
+            move, raw = ask_json(PROMPT.format(item=item, worth=worth, budget=limit, coach=coach, card=card.get("description", ""),
+                                               reputation=rep, transcript="\n".join(lines)))
+            print(f"[harness] {raw}", flush=True)
+            if not move or move.get("action") != "offer" or not isinstance(move.get("price"), (int, float)):
                 rpc("CancelTask", {"id": t["id"]})
-                print("budget refused twice, walked away (CancelTask)", flush=True)
+                print("walked away (CancelTask)", flush=True)
+                return t, None, last_offer, offers
+            offer = int(move["price"])
+            if step and last_offer is not None and offer > last_offer + step:
+                print(f"[guard] offer {offer} rises more than {step} -> {last_offer + step}", flush=True)
+                offer = last_offer + step
+            if offer > limit:                    # the harness may forget the limit; the code does not
+                print(f"[guard] offer {offer} above limit {limit} -> {limit}", flush=True)
+                offer = limit
+        if offer == limit:
+            at_budget += 1
+            if at_budget > 2:                    # the shop refused our limit twice already
+                rpc("CancelTask", {"id": t["id"]})
+                print("limit refused twice, walked away (CancelTask)", flush=True)
                 return t, None, last_offer, offers
         t, said = send(str(offer), t["id"])
         last_offer = offer
@@ -278,12 +340,12 @@ def main():
     try:
         if not shops:
             raise RuntimeError("empty shop list")
-        score, shop, why = choose(shops, mem, a.item)
+        score, shop, why = choose(shops, mem, a.item, load_prices() if acceptable else None, order.get("kind"))
         print(f"[choose] {shop['url']}: {shop.get('name')} - {why}", flush=True)
         result["shop"] = shop["url"]
         entry["shop"] = shop.get("name")
 
-        opening, worth, want = None, "", a.item
+        opening, worth, want, list_price = None, "", a.item, None
         if acceptable:
             catalog = json.loads((Path(os.environ.get("MARKET_DIR", ".market")) / "catalog.json").read_text(encoding="utf-8"))
             o = pick_offer(shop, a.budget, catalog)
@@ -292,14 +354,23 @@ def main():
                 opening += f". It must have at least {int(order['use_within_hours'])} hours of shelf life left"
             if o.get("list_price"):
                 worth = f" It is worth {o['list_price']} to them (its list price)."
+                list_price = o["list_price"]
             print(f"[offer] {o['sku']} {o['name']} list {o.get('list_price')}, budget {a.budget}", flush=True)
 
-        t, rec, last_offer, offers = negotiate(shop["url"], want, a.budget, reputation(shop, why), opening, worth)
+        t, rec, last_offer, offers = negotiate(shop["url"], want, a.budget, reputation(shop, why), opening, worth, list_price)
         entry["offers"] = offers
         if rec is None:
             entry["result"] = "walk"
             result.update(stars=3, review=f"No deal for the {a.item} within budget {a.budget}; "
                                           f"my offers {offers or 'none'}.")
+        elif acceptable and order.get("kind") == "goods" and rec.get("claim") == "C" and not rec.get("warranty_hours"):
+            # ddolcom (2026-11-06): grade C without a warranty broke 25% of the time in the market and scored 0.118 a deal
+            # (grade A 0.217, grade C with a warranty 0.260). No "shop" in the last line: closed as no deal, no review
+            entry.update(result="refused_c", price=whole(rec.get("price")))
+            print("[guard] grade C without a warranty: not paying", flush=True)
+            save_memory(mem, entry)
+            print(json.dumps({"receipt": None, "note": "grade C without a warranty"}), flush=True)
+            return
         else:
             result["receipt"] = rec                       # exactly the data Part the shop issued
             problems = check_receipt(rec, t, a.item, a.budget, last_offer, acceptable)
