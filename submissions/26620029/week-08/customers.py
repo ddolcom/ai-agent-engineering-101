@@ -18,6 +18,7 @@ MARKET = os.environ.get("MARKET_URL", "https://market.ourolabs.ai")
 ME = "ddolcom"                  # the market name (join --name), also the card and receipt name
 PAGES = 20                      # at most 20 x 500 ledger entries per run
 FIRST_LOOKBACK = 5000           # first run: start this many entries before the newest
+PRICE_ALPHA = 0.02              # paid/list per shop: an average over about the last 50 deals
 
 
 def get(c, path, **params):
@@ -41,6 +42,19 @@ def deal_of(e):
     return d.get("order") or f"seq{e.get('seq')}", buyer, shop, sku
 
 
+def fold_price(cu, e, catalog):
+    """Add one settled deal to cu["prices"][shop name][kind] = [average paid/list, deals]."""
+    d = e.get("data") or {}
+    item = catalog.get(d.get("sku") or d.get("item")) or {}
+    name = cu.setdefault("url_names", {}).get(d.get("shop"))
+    if e.get("kind") != "settle" or not name or not item.get("list_price") or not isinstance(d.get("amount"), (int, float)):
+        return
+    row = cu.setdefault("prices", {}).setdefault(name, {}).setdefault(item.get("kind") or "goods", [None, 0])
+    ratio = d["amount"] / item["list_price"]
+    row[1] += 1
+    row[0] = ratio if row[0] is None else row[0] + (ratio - row[0]) * max(1 / row[1], PRICE_ALPHA)
+
+
 def update(mem, catalog, client=None):
     """Read the ledger since the last run and fold the settled deals into mem["customers"]. Never raises."""
     cu = mem.setdefault("customers", {"my_urls": [], "customers": {}, "buys": {}, "sku_buys": {}, "seen": []})
@@ -50,6 +64,8 @@ def update(mem, catalog, client=None):
         for s in shops:
             if s.get("name") == ME and s.get("url") not in cu["my_urls"]:
                 cu["my_urls"].append(s["url"])
+            if s.get("name") and s.get("url"):
+                cu.setdefault("url_names", {})[s["url"]] = s["name"]
         after = mem.get("ledger", -FIRST_LOOKBACK)
         seen = set(cu["seen"])
         for _ in range(PAGES):
@@ -62,6 +78,9 @@ def update(mem, catalog, client=None):
                 if e.get("kind") == "join" and d.get("name") == ME and d.get("role") == "shop" \
                         and d.get("url") not in cu["my_urls"]:
                     cu["my_urls"].append(d["url"])
+                if e.get("kind") == "join" and d.get("role") == "shop" and d.get("name") and d.get("url"):
+                    cu.setdefault("url_names", {})[d["url"]] = d["name"]
+                fold_price(cu, e, catalog)
                 deal = deal_of(e)
                 if not deal or deal[0] in seen:
                     continue

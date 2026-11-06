@@ -213,6 +213,10 @@ def main():
     learn(mem, inv["units"], now)
     catalog = load(state / "catalog.json", {})
     cu = customers.update(mem, catalog)
+    try:                                        # market_buyer.py weighs shops by this; small, so it reads it per order
+        Path("shop_prices.json").write_text(json.dumps(cu.get("prices", {}), ensure_ascii=False), encoding="utf-8")
+    except OSError as e:
+        print(f"restock: shop_prices.json not written ({type(e).__name__})")
     window = inv.get("restock") or {}
     if window.get("open") or (window.get("opens_at") or 0) - now <= EARLY:
         buy = plan(inv, catalog, load(state / "demand.json", []), mem, cu)
