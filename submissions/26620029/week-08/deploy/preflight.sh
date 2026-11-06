@@ -3,7 +3,7 @@
 # It never joins the market. Run: docker compose ... run --rm --no-deps --entrypoint bash kit .../deploy/preflight.sh
 AGENT=/srv/market/repo/submissions/26620029/week-08
 cd "$AGENT" || exit 1
-export HOME=/home/kit; mkdir -p "$HOME"
+export HOME=/tmp/kit; mkdir -p "$HOME"
 ok() { echo "ok   $1"; }; bad() { echo "FAIL $1"; FAILED=1; }
 python -V; claude --version; cloudflared --version | head -1
 python -c "import a2a, httpx, uvicorn, starlette, cryptography" && ok imports || bad imports
