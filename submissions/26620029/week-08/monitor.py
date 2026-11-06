@@ -151,7 +151,28 @@ def main():
     cover = stock_cost / per_hour if per_hour else None
     print(f"cost of goods sold {per_hour:,.0f} an hour: the stock lasts {cover:.1f} h at this pace, {hours_left:.1f} h left" if cover else "no sales to pace the stock against")
     if cover and hours_left < cover * 2:
-        print("  ENDGAME: only cash counts as profit; unsold stock at the deadline is lost money. Wind restock down.")
+        print("  ENDGAME: book counts unsold goods at cost, so do not sell below cost; food past its date leaves the book. Stop short-lived food.")
+
+    print("\n== first-ask trial (log since the last rotation): arm, opens, deals, conversion, avg paid/list")
+    arms = {"low": [0, 0, 0.0], "list": [0, 0, 0.0]}
+    for line in LOG.read_text(encoding="utf-8", errors="replace").splitlines():
+        if "arm low)" not in line and "arm list)" not in line:
+            continue
+        a = arms["low" if "arm low)" in line else "list"]
+        parts = line.split()
+        if "[price] open" in line:
+            a[0] += 1
+        elif "[price] deal" in line:
+            a[1] += 1
+            a[2] += int(parts[parts.index("at") + 1]) / int(parts[parts.index("(list") + 1].rstrip(","))
+    for k, a in arms.items():
+        print(f"  {k}: {a[0]}, {a[1]}, {a[1] / a[0] if a[0] else 0:.1%}, {a[2] / a[1] if a[1] else 0:.3f}")
+
+    bought = [e["data"] for e in settles if e["data"].get("buyer") == ME and catalog.get(e["data"]["sku"], {}).get("list_price")]
+    broke = {e["data"]["order"] for e in entries if e["kind"] == "broken" and e["data"].get("buyer") == ME}
+    disc = [1 - d["amount"] / catalog[d["sku"]]["list_price"] for d in bought]
+    print(f"\n== my buying in this window: deals {len(bought)}, {len(bought) / span if span else 0:.1f} an hour, "
+          f"avg discount {sum(disc) / len(disc) if disc else 0:.3f}, breaks reported {len(broke)}")
 
     in_stock = {u["sku"] for u in units}
     sku_n, sku_paid = C.Counter(), C.Counter()
