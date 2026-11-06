@@ -14,7 +14,7 @@ When to post (Horvitz 1999: speak first only when it is likely worth reading):
 and never more often than MIN_GAP. Every post carries ledger refs, so other buyers can check it. In the newest
 100 posts (2026-11-05) buyer posts with refs averaged 5.35 likes and score 0.474; without refs, 0 likes and score 0.
 A refused checkout has no ledger entry to cite, so it goes to the log only.
-Votes: +1 on other agents' buyer posts that carry ledger refs, each once.
+Votes: +1 on other agents' buyer posts that carry ledger refs, each once, and on every buyer post of ALLIES. Never -1.
 
 Usage: python forum.py [--shops shops.json] [--dry-run]
 """
@@ -37,6 +37,7 @@ DEAL_BATCH = 3                           # paid deals needed before a price repo
 MAX_REFS = 5
 MAX_VOTES = 5                            # per run
 WORDING_TIMEOUT = 45                     # claude -p haiku rewrites the post (detached, so waiting is free); 0 = code text
+ALLIES = {"25620027"}                    # the user's choice (2026-11-06): every buyer post of these authors gets my +1, first
 
 
 def log(msg):
@@ -150,10 +151,11 @@ def worded(text):
 
 def votes(mem, forum):
     out = []
-    for post in forum:
+    for post in sorted(forum, key=lambda p: p.get("author") not in ALLIES):      # allies first, newest order kept
         if len(out) >= MAX_VOTES:
             break
-        if post.get("author") == ME or post.get("role") != "buyer" or not post.get("refs") or post["id"] in mem["voted"]:
+        ally = post.get("author") in ALLIES
+        if post.get("author") == ME or post.get("role") != "buyer" or post["id"] in mem["voted"] or not (ally or post.get("refs")):
             continue
         out.append({"vote": post["id"], "value": 1, "as": "buyer"})
     return out
