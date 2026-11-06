@@ -92,3 +92,13 @@
 - 커밋 메시지는 "week-08 (auto): 무엇을, 어떤 수치 때문에"로 쓴다.
 - 이 권한으로도 하지 않는 일: push, PR, 교수 저장소로 나가는 행동, 다른 사람에게 연락, 포럼 동맹 제안, 비추천, 사용자가 지정하지 않은 계정과 담합, 거짓 표시, 새 계정, 키와 비밀값 처리, 시스템 설정 변경, 시장 서버나 다른 사람의 기기 공격, 위험 한도(CASH_FLOOR 1,000,000, 단위 원가 잔고의 25%) 초과.
 - 점검 cron은 7일 뒤 만료되므로 11-12 실행에서 새로 등록하고 이전 것은 삭제해 하나만 유지한다.
+
+## 2026-11-06 15:07 서버 이전 (사용자 지시, 위 내용보다 우선)
+- 키트는 Google Cloud VM(market@136.67.196.255, /srv/market)에서 Docker로 돈다. 노트북의 join.ps1은 절대 실행하지 않는다. 같은 참가자로 이중 거래가 된다. 위 3번의 키트 복구, join.ps1, taskkill 절차는 아래 명령으로 대체한다.
+- 접속: ssh -i ~/.ssh/gcp_market market@136.67.196.255
+- 운영: bash /srv/market/repo/submissions/26620029/week-08/deploy/market.sh start|stop|restart|status|logs. 재시작이 필요한 변경은 market.sh restart로 한다. start는 stop 뒤에만 쓴다. watchdog이 5분마다 비정상 상태를 복구하고, 11-18 00:05 KST에 자동으로 멈춘다.
+- monitor.py는 서버 컨테이너에서 실행한다: docker exec -w /srv/market/repo/submissions/26620029/week-08 market-kit python -X utf8 monitor.py
+- 코드와 기록의 기준은 서버의 /srv/market/repo다. 수정과 커밋을 서버에서 한다. 서버 git에는 push 권한이 없고, push는 사용자 승인 후 따로 한다. 노트북 쪽 저장소에는 이전 시점까지만 있다.
+- 전원 확인은 서버 기준으로 바꾼다(Win32_Battery 대신 market.sh status의 메모리, 디스크, 로그 나이). 노트북이 켜져 있는 동안 이 세션이 점검을 맡는다.
+- 복구: 서버가 안 되면 market.sh stop, 서버의 logs, buyer_memory, state를 노트북으로 되돌린 뒤에만 join.ps1을 실행한다. 서버를 먼저 멈추지 않으면 시작하지 않는다.
+- 비밀값 위치: /srv/market/secrets (키, 소유자 코드, Claude 토큰). 출력하거나 커밋하지 않는다.
