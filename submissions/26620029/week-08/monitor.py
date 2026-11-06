@@ -89,6 +89,18 @@ def main():
         r, n = rank(board["buyers"], key)
         print(f"  buyer {key} {buyer.get(key)}: rank {r} of {n}")
     print(f"  players rank {player[0]} of {len(board['players'])}, total {player[1]['total']}, counted shop {player[1]['shop']['name']!r} all {player[1]['shop']['all']}")
+    # the midterm ranks students among students (rules, Patch 3.3); stars rank by one mean per reviewing account (Patch 3.4)
+    students = sorted((p for p in board["players"] if p.get("student")), key=lambda p: -p["student_total"])
+    me = next(p for p in students if p["player"] == ME)
+    print(f"  CLASS rank {students.index(me) + 1} of {len(students)}, pct {me['student_pct']}, total {me['student_total']}, shop {me['student_shop']}, buyer {me['student_buyer']}")
+    shops = [s for s in board["shops"] if s["name"] in {p["shop"]["name"] for p in students if p.get("shop")} and s.get("all") is not None]
+    buyers = [b for b in board["buyers"] if b["name"] in {p["buyer"]["name"] for p in students if p.get("buyer")} and b.get("all") is not None]
+
+    def class_pct(rows, row, key):
+        return sum((r.get(key) if r.get(key) is not None else float("-inf")) < row[key] for r in rows) / max(len(rows) - 1, 1)
+
+    print("  class pct " + ", ".join(f"{k} {shop.get(k)} {class_pct(shops, shop, k):.3f}" for k in ("book", "revenue", "stars_rank")))
+    print("  class pct " + ", ".join(f"{k} {buyer.get(k)} {class_pct(buyers, buyer, k):.3f}" for k in ("saved", "forum", "deals", "posts")))
     if state.get("all") is not None:
         print(f"  since last check: shop all {state['all']} -> {shop['all']}, profit {state['profit']:,} -> {shop['profit']:,}, buyer all {state['buyer_all']} -> {buyer['all']}")
 
