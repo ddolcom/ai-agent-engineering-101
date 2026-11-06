@@ -70,6 +70,9 @@ TRIAL_DEAR_SHARE = 0.78
 DEAD_UNITS = frozenset({"u-1bd898b1ae6e", "u-5ad60d23f58b", "u-eacff6b41009",
                         "u-ce3724b8836a", "u-c933d766e8aa", "u-aa2c398a88db"})
 DEAD_MARKUP = 1.02
+# ddolcom (2026-11-06, the user's instruction): this one unit may go below its cost of 1,650,854. Its cost was above the market's
+# recent grade A average of 1,603,868 and it had not sold in 14 h. Named units only: any other is the user's decision
+BELOW_COST_FLOOR = {"u-aa2c398a88db": 1_600_000}
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
                                             # took 8.8 s on 2026-11-03, so the buyer only waited for nothing)
 GRADE_MEANS = {"food": {"A": "plenty of shelf life", "B": "normal shelf life", "C": "close to its date"},
@@ -96,7 +99,9 @@ def shelf_left(u):
 
 
 def floor_price(u):
-    """Lowest price for this unit: its cost, or less for food near its date (NEAR_EXPIRY)."""
+    """Lowest price for this unit: its cost, or less for food near its date (NEAR_EXPIRY) or a named unit."""
+    if u.get("unit") in BELOW_COST_FLOOR:
+        return BELOW_COST_FLOOR[u["unit"]]
     left = shelf_left(u)
     for below, share in NEAR_EXPIRY:
         if left is not None and left < below:

@@ -47,7 +47,7 @@ LINE_SHARE = 0.1            # one line spends at most this share of the balance 
 # bedding 12%. Category counts kept us on one SKU: 5 unsold SS mattresses (G07ec17d5) stopped any purchase of the
 # market's best seller G1515d951 (2,698 deals, about 73,000 margin a unit), which we never stocked
 VALUE_FOCUS = 0.05          # a goods category with this share of the market's sales value is stocked by SKU and first
-FOCUS_SKUS = 5              # SKUs kept per focus category, by value (deals x list price)
+FOCUS_SKUS = 8              # SKUs kept per focus category, by value (deals x list price)
 FOCUS_QTY = [(0.02, 5), (0.005, 3)]     # (SKU's share of market deals, units to keep); below these, 2
 FOCUS_DEAR = 500_000        # list price above this: at most 2 units, however often it sells
 UNIT_SHARE = 0.25           # one unit's cost at most this share of the balance: dearer sofas come as the balance grows
@@ -56,6 +56,7 @@ FOCUS_SPEND = 0.6           # focus lines spend at most this share of the spenda
 FOCUS_MAX_LINES = 6         # focus SKUs take at most this many of a run's MAX_LINES lines
 MIN_VALUE = 0.003           # with MARKET_DATA deals seen: below this share of value, stock only what I already sold
 EARLY = 60                  # buy when the window opens within this many seconds (the kit runs us every 60 s)
+STOCK_CAP = 0.60             # the user's choice (2026-11-06): focus lines stop when stock cost, at COST_GUESS for new lines, passes this share of the book
 MEMORY = Path("restock_memory.json")
 
 
@@ -173,6 +174,10 @@ def plan(inv, catalog, demand, mem, cu=None):
     spend = (inv.get("balance") or 0) - CASH_FLOOR
     buy = []
     focus_left = FOCUS_SPEND * spend
+    held = sum(u.get("cost") or 0 for u in inv["units"] if u.get("grade") != "expired")
+    cash = (inv.get("balance") or 0) - (inv.get("start") or 0) - (inv.get("injected") or 0)
+    room = STOCK_CAP * (cash + held) - held     # book = cash + stock at cost; new lines move cash into stock, the book stays
+    focus_left = min(focus_left, max(room, 0))
     for s, qty in focus_lines(inv, catalog, focus_cats, cu):
         if len(buy) >= FOCUS_MAX_LINES:
             break
