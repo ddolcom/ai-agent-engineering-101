@@ -64,10 +64,11 @@ TRIAL_SHARE = 0.85
 # the market's money is. Market deals there settle near 72% of list, so the low arm of those units now opens closer to that
 TRIAL_DEAR_MIN = 1_000_000
 TRIAL_DEAR_SHARE = 0.78
-# ddolcom (2026-11-06, the user's instruction): dead stock goes at cost or a little above, to free the cash. 5 grade A sofas
-# sat 11-39 h at a cost of 65-73% of list while the market's grade A at 1,000,000 or more settled near 72.6%. The floor stays the cost
-DEAD_AGE_HOURS = 12
-DEAD_MIN_LIST = 100_000
+# ddolcom (2026-11-06, the user's instruction): one clearance only, at cost or a little above, to free the cash. These 6
+# units had sat 13-40 h and are the ones the forum post 22459 names. New units never join by age: a rule on age alone also
+# priced well-selling, cheaply drawn units near cost. Any further clearance is the user's decision after looking at this one
+DEAD_UNITS = frozenset({"u-1bd898b1ae6e", "u-5ad60d23f58b", "u-eacff6b41009",
+                        "u-ce3724b8836a", "u-c933d766e8aa", "u-aa2c398a88db"})
 DEAD_MARKUP = 1.02
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
                                             # took 8.8 s on 2026-11-03, so the buyer only waited for nothing)
@@ -104,9 +105,8 @@ def floor_price(u):
 
 
 def is_dead(u):
-    """Goods worth at least DEAD_MIN_LIST, unsold for DEAD_AGE_HOURS since they arrived."""
-    return (is_goods(u) and u.get("list_price", 0) >= DEAD_MIN_LIST
-            and time.time() - (u.get("supplied_at") or time.time()) >= DEAD_AGE_HOURS * 3600)
+    """One of the units in the one clearance (DEAD_UNITS)."""
+    return u.get("unit") in DEAD_UNITS
 
 
 def trial_arm(u):
