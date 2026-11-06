@@ -166,19 +166,20 @@ def main():
         print("  ENDGAME: book counts unsold goods at cost, so do not sell below cost; food past its date leaves the book. Stop short-lived food.")
 
     print("\n== first-ask trial (log since the last rotation): arm, opens, deals, conversion, avg paid/list")
-    arms = {"low": [0, 0, 0.0], "list": [0, 0, 0.0]}
+    arms = {}
     for line in LOG.read_text(encoding="utf-8", errors="replace").splitlines():
         if "arm low)" not in line and "arm list)" not in line:
             continue
-        a = arms["low" if "arm low)" in line else "list"]
         parts = line.split()
+        lst = int(parts[parts.index("(list") + 1].rstrip(",)"))
+        a = arms.setdefault(("low" if "arm low)" in line else "list", "1M+" if lst >= 1_000_000 else "under 1M"), [0, 0, 0.0])
         if "[price] open" in line:
             a[0] += 1
         elif "[price] deal" in line:
             a[1] += 1
-            a[2] += int(parts[parts.index("at") + 1]) / int(parts[parts.index("(list") + 1].rstrip(","))
-    for k, a in arms.items():
-        print(f"  {k}: {a[0]}, {a[1]}, {a[1] / a[0] if a[0] else 0:.1%}, {a[2] / a[1] if a[1] else 0:.3f}")
+            a[2] += int(parts[parts.index("at") + 1]) / lst
+    for k, a in sorted(arms.items()):
+        print(f"  {k[0]} {k[1]}: {a[0]}, {a[1]}, {a[1] / a[0] if a[0] else 0:.1%}, {a[2] / a[1] if a[1] else 0:.3f}")
 
     bought = [e["data"] for e in settles if e["data"].get("buyer") == ME and catalog.get(e["data"]["sku"], {}).get("list_price")]
     broke = {e["data"]["order"] for e in entries if e["kind"] == "broken" and e["data"].get("buyer") == ME}

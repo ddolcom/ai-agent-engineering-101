@@ -61,6 +61,10 @@ OPEN_TTL = 300
 # TRIAL_SHARE of list, half at list, so the log can compare them. "arm" in a [price] line says which
 TRIAL_MIN = 100_000
 TRIAL_SHARE = 0.85
+# ddolcom (2026-11-06 11:40): 85% did not move opens at 1,000,000 or more (low 1 deal of 45, list 2 of 51), where about 85% of
+# the market's money is. Market deals there settle near 72% of list, so the low arm of those units now opens closer to that
+TRIAL_DEAR_MIN = 1_000_000
+TRIAL_DEAR_SHARE = 0.78
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
                                             # took 8.8 s on 2026-11-03, so the buyer only waited for nothing)
 GRADE_MEANS = {"food": {"A": "plenty of shelf life", "B": "normal shelf life", "C": "close to its date"},
@@ -105,7 +109,8 @@ def trial_arm(u):
 def ask_price(u, offers, arm=None):
     """The ask after `offers` buyer offers: the first ask, then STEP of the way to the floor each time."""
     floor = floor_price(u)
-    top = max(u["list_price"] * (TRIAL_SHARE if arm == "low" else 1), floor)
+    share = 1 if arm != "low" else TRIAL_DEAR_SHARE if u["list_price"] >= TRIAL_DEAR_MIN else TRIAL_SHARE
+    top = max(u["list_price"] * share, floor)
     return int(floor + (top - floor) * STEP ** offers)
 
 
