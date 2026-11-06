@@ -13,6 +13,7 @@ import asyncio
 import base64
 import json
 import os
+import random
 import re
 import time
 from pathlib import Path
@@ -55,6 +56,11 @@ STEP = 0.6                                  # each buyer offer moves the ask 40%
 # uptime 10 of 14 high-value SKUs answered "none in stock" with units on the shelf. A negotiation silent this long is
 # over; 300 s is above the 180 s a harness call may take between two offers
 OPEN_TTL = 300
+# ddolcom (trial from 2026-11-06): since the 03:58 restart 7% of opens at 1,000,000 or more became deals, 9% under that
+# down to 300,000 and 19% from 100,000; others open near 80% of list. Half of the opens at TRIAL_MIN or more start at
+# TRIAL_SHARE of list, half at list, so the log can compare them. "arm" in a [price] line says which
+TRIAL_MIN = 100_000
+TRIAL_SHARE = 0.85
 WORDING_TIMEOUT = 0                         # seconds the harness gets to word a reply; 0 = off (claude -p haiku
                                             # took 8.8 s on 2026-11-03, so the buyer only waited for nothing)
 GRADE_MEANS = {"food": {"A": "plenty of shelf life", "B": "normal shelf life", "C": "close to its date"},
@@ -89,10 +95,17 @@ def floor_price(u):
     return u["cost"]
 
 
-def ask_price(u, offers):
-    """The ask after `offers` buyer offers: the list price first, then STEP of the way to the floor each time."""
+def trial_arm(u):
+    """Which first ask this negotiation gets: "low" or "list" at random for dear units, None below TRIAL_MIN."""
+    if u.get("list_price", 0) < TRIAL_MIN:
+        return None
+    return random.choice(("low", "list"))
+
+
+def ask_price(u, offers, arm=None):
+    """The ask after `offers` buyer offers: the first ask, then STEP of the way to the floor each time."""
     floor = floor_price(u)
-    top = max(u["list_price"], floor)
+    top = max(u["list_price"] * (TRIAL_SHARE if arm == "low" else 1), floor)
     return int(floor + (top - floor) * STEP ** offers)
 
 
@@ -194,10 +207,11 @@ class Seller(AgentExecutor):
             if unit is None:
                 await up.reject(say("Sorry, we have none of that in stock."))
                 return
-            deal = self.open[task.id] = {"unit": unit, "ask": ask_price(unit, 0), "offers": 0, "seen": now}
+            arm = trial_arm(unit)
+            deal = self.open[task.id] = {"unit": unit, "ask": ask_price(unit, 0, arm), "offers": 0, "seen": now, "arm": arm}
             u = deal["unit"]
             reply = f"{u['name']}: asking {deal['ask']}. {facts(u)} Send your offer as a number.".replace("  ", " ")
-            print(f"[price] open {u['sku']} at {deal['ask']} (list {u['list_price']}, floor {floor_price(u)})", flush=True)
+            print(f"[price] open {u['sku']} at {deal['ask']} (list {u['list_price']}, floor {floor_price(u)}, arm {arm})", flush=True)
             await up.requires_input(say(await worded(reply)))
             return
 
@@ -207,10 +221,11 @@ class Seller(AgentExecutor):
             await up.requires_input(say(f"Counteroffer: {deal['ask']}. Send your offer as a number."))
             return
         deal["offers"] += 1
-        deal["ask"] = max(min(ask_price(u, deal["offers"]), deal["ask"]), floor_price(u))   # an ask never goes up
+        deal["ask"] = max(min(ask_price(u, deal["offers"], deal["arm"]), deal["ask"]), floor_price(u))   # an ask never goes up
         ask = deal["ask"]
         print(f"[price] {u['sku']} offer {offer}, ask {ask} (floor {floor_price(u)})", flush=True)
         if offer >= ask:
+            print(f"[price] deal {u['sku']} at {offer} (list {u['list_price']}, arm {deal['arm']})", flush=True)
             receipt = {"shop": NAME, "item": u["sku"], "price": offer, "task": task.id}
             if u["unit"]:
                 receipt["unit"] = u["unit"]
